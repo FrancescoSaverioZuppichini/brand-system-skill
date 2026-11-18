@@ -9,7 +9,7 @@ import { cart, order, ShopHeader, usd } from "@/demo/shop"
 function Line({ line }: { line: (typeof cart)[number] }) {
 	return (
 		<li className="flex gap-4 py-5">
-			<Photo scene="object" className="size-20 shrink-0 rounded-md md:size-24" />
+			<Photo scene="object" variant={line.photo} className="size-20 shrink-0 rounded-md md:size-24" />
 			<div className="flex min-w-0 flex-1 flex-col gap-1">
 				<div className="flex items-baseline justify-between gap-3">
 					<span className="font-medium">{line.name}</span>

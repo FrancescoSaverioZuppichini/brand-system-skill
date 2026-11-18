@@ -5,10 +5,12 @@ import { MobileMenu } from "@/demo/menu"
 
 // [Agent] Keep's shop: desk goods for makers, priced in USD. The cart, checkout and tracking blocks all show this one
 // order, so 2 × $18 + $24 + $16 = $76, free shipping over $75, and New York sales tax (8.875%) of $6.75 make $82.75.
+// [Agent] `photo` picks the Photo product drawing that matches the item (0 jar, 1 notebook, 2 mug, 3 tote).
 export const goods = [
 	{
 		name: "Dot-grid notebook",
 		sku: "KP-NB-A5",
+		photo: 1,
 		price: 18,
 		line: "A5 · 192 pages · lay-flat",
 		rating: 4.8,
@@ -17,6 +19,7 @@ export const goods = [
 	{
 		name: "Planning desk pad",
 		sku: "KP-DP-A3",
+		photo: 1,
 		price: 24,
 		line: "A3 · 52 tear-off weeks",
 		rating: 4.7,
@@ -25,15 +28,25 @@ export const goods = [
 	{
 		name: "Enamel mug",
 		sku: "KP-MG-12",
+		photo: 2,
 		price: 16,
 		line: "12 oz · steel, enamelled",
 		rating: 4.9,
 		reviews: 96,
 	},
-	{ name: "Canvas tote", sku: "KP-TT-01", price: 22, line: "12 oz cotton canvas", rating: 4.6, reviews: 71 },
+	{
+		name: "Canvas tote",
+		sku: "KP-TT-01",
+		photo: 3,
+		price: 22,
+		line: "12 oz cotton canvas",
+		rating: 4.6,
+		reviews: 71,
+	},
 	{
 		name: "Release pencils",
 		sku: "KP-PC-06",
+		photo: 0,
 		price: 12,
 		line: "Six HB cedar pencils",
 		rating: 4.8,
@@ -42,6 +55,7 @@ export const goods = [
 	{
 		name: "Care log",
 		sku: "KP-CL-A5",
+		photo: 1,
 		price: 28,
 		line: "A5 hardcover · 240 pages",
 		rating: 4.9,

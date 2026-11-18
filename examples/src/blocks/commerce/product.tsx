@@ -59,7 +59,7 @@ function Gallery() {
 				))}
 			</div>
 			<div className="hidden flex-col gap-3 md:flex">
-				<Photo scene="object" className="aspect-square rounded-lg" />
+				<Photo scene="object" variant={1} className="aspect-square rounded-lg" />
 				<div className="grid grid-cols-4 gap-3">
 					{views.map((scene, index) => (
 						<Photo

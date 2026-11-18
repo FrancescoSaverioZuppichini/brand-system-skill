@@ -21,7 +21,7 @@ function Summary() {
 				{cart.map((line) => (
 					<li key={line.sku} className="flex items-center gap-3 text-sm">
 						<span className="relative">
-							<Photo scene="object" className="size-14 rounded-md border" />
+							<Photo scene="object" variant={line.photo} className="size-14 rounded-md border" />
 							<span className="absolute -top-2 -right-2 flex size-5 items-center justify-center rounded-full bg-foreground text-[11px] text-background tabular-nums">
 								{line.quantity}
 							</span>

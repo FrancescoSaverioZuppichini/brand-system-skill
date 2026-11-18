@@ -94,7 +94,7 @@ export default function CommerceTracking() {
 					<ul className="flex flex-col divide-y border-y">
 						{cart.map((line) => (
 							<li key={line.sku} className="flex items-center gap-4 py-3 text-sm">
-								<Photo scene="object" className="size-12 shrink-0 rounded-md" />
+								<Photo scene="object" variant={line.photo} className="size-12 shrink-0 rounded-md" />
 								<span className="flex min-w-0 flex-1 flex-col">
 									<span className="truncate font-medium">{line.name}</span>
 									<span className="text-muted-foreground">

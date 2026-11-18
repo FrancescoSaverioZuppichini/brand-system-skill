@@ -117,7 +117,7 @@ export default function CommerceCategory() {
 						<div className="grid grid-cols-2 gap-x-4 gap-y-8 lg:grid-cols-3 lg:gap-x-6">
 							{goods.map((item) => (
 								<a key={item.sku} href="#top" className="flex flex-col gap-1">
-									<Photo scene="object" className="mb-2 aspect-square rounded-lg" />
+									<Photo scene="object" variant={item.photo} className="mb-2 aspect-square rounded-lg" />
 									<span className="text-sm font-medium">{item.name}</span>
 									<span className="text-sm text-muted-foreground">{item.line}</span>
 									<span className="text-sm tabular-nums">{usd.format(item.price)}</span>
