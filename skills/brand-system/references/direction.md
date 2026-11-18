@@ -1,38 +1,28 @@
 # Phase 3 · Direction
 
-One page a stranger could read and then predict your logo, palette and headline from. Deliverables: the vibe, the brand idea, the NOT list, the style recipe with 3 specimens, a provisional palette and type, and the moodboard.
+One section a stranger could read and then predict your logo, palette and headline from.
 
-## The vibe, the idea, the style recipe
+## Vibe and idea
 
-- **Vibe:** one metaphor sentence, plus its senses: materials, light, era, pace (and sound only if the brand has one). Examples:
-  - "A production house in Milan that runs on a terminal"
-  - "A friend at the post-office counter with a pen"
-  - "Smoke & Signal: soft pictures, hard interface"
-- **The vibe test:** derive one colour, one typeface, one motion behaviour and one word choice from it. If you can't, rewrite it.
-- **Brand idea / motif:** the single device only this brand can own, built from what the product does, the name and the vibe. It becomes the logo's story, the signature component and the signature motion. Write it in one line. Examples: "the first crack" (a roaster); "the gloss: every Swiss money word shown twice" (a finance app).
-- **Style recipe:** follow `style-picking.md`, choosing from `styles.md`. Map the cliché, choose a base style from `styles.md` that contrasts with it while keeping the category's trust cues, then add one signature device from a second family. Render the same tiny hero in 3 candidate recipes (HTML → `shoot.sh view`), put them side by side on the page, and pick with the strategy.
-- **Provisional palette and type:** pick them now, from the recipe and the vibe. Run `palette.py` once, so the moodboard and the logo use real colours. Phase 5 finalises them; changes then are expected and cheap, because everything reads colors.json.
-- **The cultural root** is optional. It is the world the brand borrows its imagery and vocabulary from: Leonardo for "Sfumato", paperwork and stamps for a tax app, Lake Lugano paintings for a Ticino roaster. When a product has no natural root, your own renders are fine.
+- **Vibe:** one metaphor sentence plus its senses: material, light, era, pace (sound only if the brand has one). E.g. "a night bakery that runs on a stopwatch".
+- **Vibe test:** derive one colour, one typeface, one motion and one word from it (oven black, stencilled numerals, motion in ticks, "batch"). If you can't, rewrite it.
+- **Brand idea:** the single device only this brand can own, from what it does, the name and the vibe. It becomes the logo's story, the signature component and the signature motion. One line, e.g. for a finance app "every official money word shown twice: the term, then its plain meaning on a highlighter".
+- **Cultural root** (optional): the world the brand borrows imagery and vocabulary from, e.g. stamps and ledgers for a tax app. Without one, your own renders are fine.
 
 ## What the brand is NOT
 
-List concrete clichés to ban, both visual and verbal. Examples:
-- hype, neon, purple AI gradients, ✨, countdowns, income claims
-- sexualised imagery
-- "fake Renaissance" (gilt, swashes, meme versions of famous paintings)
-- cold blue SaaS, bank navy with shields
-- hacker green-on-black
-- boho arches and rainbow fills
+Concrete things to ban, visual and verbal. The client's dislikes from brief.md come first, verbatim. Then the parts of the category cliché and of the slop list for your type (`product.md` § Slop tells) that tempt this brand, and what your own first draft did, e.g. "bank navy with shields".
 
-Every item should be something a lazy competitor actually does, or something your own first draft did.
+## Style recipe
+
+Pick it with `style-picking.md` from `styles.md` (base + one device from a second family; habit 2 for taste versus cliché), e.g. "Swiss timetable base + rubber-stamp device + public-domain botanical plates". The justification against the cliché goes in branding.md § Direction.
+
+## Provisional palette and type, then specimens
+
+1. **Palette:** write `src/colors-in.json` (format in `system.md` § Colour) and run palette.py. Phase 5 finalises it; everything reads colors.json, so later changes are cheap.
+2. **Fonts:** download 2–3 candidate OFL families into `fonts/` (Tools § Fonts); the logo needs them next.
+3. **Specimens:** the same small piece of the #1 surface in `surfaces:` (a hero, a bag front, a sign band) in 3 candidate recipes, as `src/html/specimen-{a,b,c}.html` shot into `img/`. Side by side on the page, ★ on the pick, chosen with the strategy.
 
 ## Moodboard from your own renders
 
-Make 4–6 tiles yourself with PIL, SVG or HTML screenshots:
-- a type specimen (provisional fonts)
-- colour fields in context (provisional palette)
-- a texture or material study
-- a composition study
-- the motif in motion, as a frame strip
-
-Public-domain artworks from the cultural root may appear, credited. Then **check the contact sheet against your own NOT list**: a first moodboard drifting into the very cliché it bans is a common failure. If it does, redo it before the logo.
+4–6 tiles made with PIL, SVG or HTML: a type specimen, colour fields in context, a texture or material, a composition, the motif in motion as a frame strip. Public-domain art from the cultural root may appear, credited. Then check the contact sheet against the NOT list and write one line per item on the page: seen / not seen. A first moodboard often drifts into the cliché it bans; redo it before the logo.

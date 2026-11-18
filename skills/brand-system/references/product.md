@@ -1,85 +1,84 @@
-# Phase 6 · Product and landing, Phase 7 · Applications
+# Phases 6 and 7 · Surfaces
 
-## The product screen first
+## Surfaces (read in phase 0)
 
-A brand is proven inside the product, not on a poster. Design the one screen where the buyer's core loop happens as static HTML with `tokens.css`.
+The ranked `surfaces:` line in brief.md says where the buyer meets the brand. It drives phases 6–7 and what `audit.py` checks. Vocabulary: `landing`, `product`, `app`, `packaging`, `signage`, `social`, `print`.
 
-- **Use real data shapes:** names, ids, counts, dates, a log. One "sample data" chip marks the screen as placeholder.
-- **Show the product's own object states.** List the lifecycle of the main object, then show every state. That's where the signature components appear. Examples:
-  - **Operator tool (sets, jobs, leads):** done · picked · in progress · queued · failed (with the reason) · needs review.
-  - **Consumer subscription:** delivered · on its way · resting / preparing · coming up · payment declined (with the reason) · card expiring.
-  - **Finance or admin app:** done · needs you · needs review · waiting on someone else · failed (with the reason).
-- **Layout by product type:**
-  - Operator tools: sidebar + work area + inspector.
-  - Consumer apps: an account or overview page with one primary list.
-  - Mobile-first products: design the 390 screen first.
-- **The landing reuses this screen** as its product shot, either embedded live or as a screenshot. At 390 a desktop console is unreadable, so give mobile its own crop or a mobile layout, with `<picture>` or a separate block.
+- **Software:** `product, landing`, plus `app` and `social` as needed.
+- **Physical or local:** `packaging`, `signage` (facade, window, shop interior), `social`, `app`, `print` as needed; a `landing` only when the brief wants a site.
 
-## The landing page: 11 parts
+Phase 6 builds the top two in full; phase 7 builds the rest plus the channel assets in § Applications. HTML lives in `site/` (landing, product and app screens) or `src/html/` (mocks, boards); exports land where the audit looks:
 
-Cut a part only with a one-line reason on the page. For each part, pick a layout variant from `layouts.md` ("Composing a landing"). Neighbouring sections should differ in rhythm and density; never stack three equal card grids.
+| Surface | Files |
+|---|---|
+| landing | `site/index.html`, `site/shots/index-1440.png`, `site/shots/index-390.png` |
+| product, app | `site/<name>.html`, `site/shots/<name>-1440.png`, `site/shots/<name>-390.png` |
+| packaging, signage, print | `apps/<surface>-<what>.png`, e.g. `apps/packaging-bag-front.png` |
+| social | `apps/og-1200x630.png`, `apps/social-*.png`, `apps/story-*.png` |
 
-1. **Nav:** the lockup, 3–5 links, a secondary CTA and a primary CTA.
-2. **Hero:** a headline of 8 words or fewer (from the positioning), one subline saying what it is and for whom, two CTAs, and the signature visual (the brand idea, still or in motion).
-3. **Proof strip:** customer logos, numbers or quotes, each one labelled placeholder.
+Extras by type, on the landing or whichever surface carries them:
+- **Dev tool:** the primary CTA is the install command or the repo; docs in the nav; pricing in two tiers, open source self-hosted and paid cloud.
+- **Local business:** locations with opening hours and a map, the offer or menu, the story, ordering or the app download, a wholesale enquiry.
+
+## Product and app screens
+
+A brand is proven inside the product, not on a poster. Design the screen where the buyer's core loop happens as static HTML with `tokens.css`.
+
+- Real data shapes (names, ids, counts, dates) and one "sample data" chip.
+- The main object's lifecycle, every state shown; the signature components live here. E.g. an order: placed · baking · on its way · delivered · failed (with the reason).
+- Layout by type: operator tools get sidebar + work area + inspector; consumer apps an overview with one primary list; mobile-first products start at 390.
+- The landing reuses this screen as its product shot, with its own crop or layout at 390.
+
+## The landing (when `landing` is a surface)
+
+Eleven parts, each with a layout variant from `layouts.md` ("Composing a landing"). Neighbours differ in rhythm and density; never three equal card grids in a row. Cut a part, or replace it with an extra by type, only with a one-line reason on the page.
+
+1. **Nav:** the lockup, 3–5 links, a secondary and a primary CTA.
+2. **Hero:** a headline of 8 words or fewer from the positioning, one subline (what it is, for whom), two CTAs, the signature visual.
+3. **Proof:** customer logos, numbers or quotes, each labelled placeholder.
 4. **How it works:** 3 steps in the buyer's words.
-5. **The product:** the product screen, annotated.
-6. **Features:** each answers a persona's need or fear from the strategy, not a feature list.
-7. **Trust:** privacy, security, ownership. For many buyers this sells more than features; for low-risk products fold it into the FAQ.
-8. **Pricing:** placeholder, with a clear unit (per set, per seat, per bag).
-9. **FAQ:** questions buyers actually ask, taken from the research.
+5. **The product:** the product screen or the offer, annotated.
+6. **Features:** each answers a persona's need or fear, not a feature list.
+7. **Trust:** privacy, security, ownership; folded into the FAQ for low-risk products.
+8. **Pricing:** placeholder, with a clear unit.
+9. **FAQ:** questions buyers actually ask, from the research.
 10. **Closing CTA:** a line that echoes the brand idea.
-11. **Footer:** links, the placeholder-domain note, and the credits line.
+11. **Footer:** links, the placeholder-domain note, the credits line.
 
-Craft rules:
-- Copy comes from the voice table. No lorem ipsum.
-- Plain HTML + `tokens.css`. Tailwind from a CDN is OK for a mock if its config maps to the tokens. No other third-party scripts; fonts are local or from Google Fonts.
-- Responsive at 1440 and 390, with a 16 px side gutter on mobile. The mobile layout is designed, not just the desktop shrunk.
-- Semantic landmarks, visible `:focus-visible`, alt text on every image.
-- `prefers-reduced-motion` gives a designed static state for every animation and rotation.
-- Images follow habit 10. Rotating heroes and grids are welcome if they stay light (vanilla JS/CSS).
+Copy comes from the voice table, never lorem ipsum. Plain HTML + `tokens.css`; Tailwind from a CDN only if its config maps to the tokens; no other third-party scripts. Designed at 1440 and at 390 (16 px side gutter), not the desktop shrunk. Semantic landmarks, a visible `:focus-visible`, alt text on every image.
 
-### Screenshots (look at every one)
+## Physical surfaces
 
-```
-$S/shoot.sh view   site/index.html site/shots/landing-1440-hero.png 1440 900
-$S/shoot.sh full   site/index.html site/shots/landing-1440.png 1440
-$S/shoot.sh mobile site/index.html site/shots/landing-390.png 390 2      # prints OVERFLOW if it scrolls sideways
-uv run --with pillow python $S/tile.py site/shots/landing-390.png img/landing-390-sheet.png
-MOTION=1 $S/shoot.sh view site/index.html img/hero-motion.png 1440 900   # mid-animation, for the motion section
-```
+- **Packaging:** flat SVG artwork on the pack shape or its dieline (front, back, gusset), in the print inks on the stock colour (`system.md` § Print). One board shows the flat dieline, one the front.
+- **Signage:** a facade elevation at a stated scale (e.g. 1:20: sign band, window, door), plus the lockup at reading distance (`logo.md`).
+- Flat and honest: no fake photo composites; the "sample" tag sits in the board's margin.
 
-Shots are light and reduced-motion by default. Use `THEME=dark` for dark variants.
+## Checking the shots (the phase 6 gate)
 
-Open each one, and the tiled sheet for tall shots. Check for:
-- text colliding or wrapping badly, and orphans in headlines
-- images stretched or not loaded
-- line length too wide
-- OVERFLOW
-- an accent used for more than one meaning
-- an empty or half-drawn reduced-motion state
+Shoot every surface with shoot.sh (screens at 1440 and 390, everything else at real size) and view each, tall ones tiled with tile.py. Look for text collisions and orphans in headlines, stretched or missing images, lines too long, OVERFLOW, an accent with two meanings, an empty reduced-motion state.
 
-**Slop tells (instant fails, from the `web-unslop` gate; run that skill too if installed):**
-- emoji used as icons
-- gradient circles with initials instead of avatars
-- rainbow or one-note palettes
-- the same KPI strip on several pages
-- cards that don't inform, navigate, compare, configure or act
-- rows of repeated buttons (use an overflow menu)
-- a decorative icon grid instead of real product UI
-- nested card stacks
-- hero-size type inside dashboards, sidebars or modals
+The gate is the general list plus the list for the surface's type below, judged by you on the shots. Software surfaces also run the `web-unslop` skill.
 
-## Phase 7 · Applications
+**Slop tells:**
+- **General:** stock imagery, cliché icons (lightbulbs, rockets, handshakes), lorem ipsum, fake customer logos, emoji used as icons, rainbow or one-note palettes.
+- **Software:** gradient circles with initials instead of avatars; the same KPI strip on several pages; cards that don't inform, navigate, compare, configure or act; rows of repeated buttons (use an overflow menu); a decorative icon grid instead of real product UI; nested card stacks; hero-size type inside dashboards, sidebars or modals.
+- **Food and craft:** stock baguettes, faux-rustic wood, script fonts on kraft, wheat clip-art, chalkboard fonts, "since 19xx" on a new business.
+- **Local services:** stock smiling staff, a map pin or roof swoosh as the logo, "quality you can trust", a van with clip-art tools.
+
+## Applications (phase 7)
+
+Make each as HTML in `src/html/` shot at its exact size (shoot.sh view), or with PIL, into `apps/`. Next to each, a copy with the logo covered: it must still read as the brand.
 
 | Asset | Size | Notes |
 |---|---|---|
-| OG image | 1200×630 | headline + signature visual + lockup; readable as a 600 px thumbnail |
-| X / LinkedIn header | 1500×500 | keep the centre 1000 px safe; the avatar overlaps bottom-left |
-| Profile grid | 3×3 mock (one sheet) | the brand's own feed: a rhythm of image, type card and product. Export single 1080 px tiles only if asked |
-| Business card | 85×55 mm, front and back, at 12 px/mm (1020×660) | the data style, clear-space rules |
-| Packaging / label | only if the product has one (a bag, a box) | the logo at its print minimum, the data style, a regulatory placeholder |
-| App icon + avatar | already in `logo/` | show them in context |
-| Optional | email signature, slide master, invoice header | only if the buyer's world needs them |
-
-Render these as HTML pages shot at their exact pixel sizes with `shoot.sh view`, or with PIL. Each one must be recognisable as the brand with the logo covered.
+| OG image | 1200×630 | headline, signature visual, lockup; readable as a 600 px thumbnail |
+| X header | 1500×500 | keep the centre 1000 px safe; the avatar overlaps bottom-left |
+| LinkedIn banner | 1584×396 | the avatar overlaps bottom-left |
+| GitHub social preview | 1280×640 | dev tools; keep 40 px clear on every edge |
+| README banner | 1280×320, shown about 830 px wide | dev tools; reads on GitHub's light and dark themes |
+| Instagram grid | 3×3 mock on one sheet (the grid shows 3:4 tiles) | a rhythm of image, type card and product; single 1080×1440 tiles only if asked |
+| Instagram story | 1080×1920 | the top and bottom 250 px free of text |
+| Story highlight cover | 1080×1920, seen as a small circle | one centred glyph |
+| Business card | 85×55 mm at 12 px/mm (1020×660), front and back | the data style, clear space |
+| Price tag, delivery note, apron, van | real size in mm | only when the brief needs them |
+| Email signature, slide master, invoice header | real size | only when the buyer's world needs them |

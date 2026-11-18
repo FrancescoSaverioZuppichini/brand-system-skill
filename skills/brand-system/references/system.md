@@ -1,143 +1,111 @@
 # Phase 5 · System
 
-This phase finalises what phase 3 made provisional. `branding.md` follows this order, and every section opens with one line tying it to the vibe, the brand idea or the style recipe:
-
-1. Strategy
-2. Direction
-3. Logo
-4. Colour
-5. Type
-6. Space, radii, grid, icons
-7. Signature components
-8. Imagery
-9. Motion
-10. Voice
-11. Files
-
-Strategy and research live in branding.md §1 in short form; the page shows the long form with pictures. Don't keep two diverging copies: when you change one, change the other.
+This phase finalises what phase 3 made provisional. Each block below is a heading in branding.md § System that opens with one line tying it to the vibe, the idea or the recipe.
 
 ## Colour
 
-**palette.py input** (`src/colors-in.json`):
+`src/colors-in.json`: pigments as `[L, C, H, "what it is"]`, roles per theme, and the pairs to check.
 
 ```json
 {
-  "tokens":  {"carta":    [0.975, 0.007, 85, "page background, warm paper"],
-              "nerofumo": [0.205, 0.008, 60, "lamp black: text, logo, primary buttons"],
-              "notte":    [0.165, 0.006, 60, "dark background"],
-              "biacca":   [0.950, 0.008, 85, "text on dark"],
-              "sanguigna":[0.545, 0.150, 37, "red chalk: the one accent"]},
-  "roles":   {"light": {"bg": "carta", "text": "nerofumo", "accent": "sanguigna"},
-              "dark":  {"bg": "notte", "text": "biacca",   "accent": "sanguigna"}},
+  "tokens": {"flour": [0.975, 0.008, 85, "page background"],
+             "crumb": [0.995, 0.004, 85, "cards and panels"],
+             "rye":   [0.860, 0.012, 75, "hairlines"],
+             "crust": [0.220, 0.012, 55, "text, logo, primary buttons"],
+             "malt":  [0.460, 0.015, 60, "secondary text"],
+             "ember": [0.520, 0.160, 38, "the one accent"],
+             "oven":  [0.170, 0.008, 55, "dark background"],
+             "hearth":[0.215, 0.010, 55, "dark cards"],
+             "ash":   [0.330, 0.010, 60, "dark hairlines"],
+             "oat":   [0.780, 0.015, 80, "secondary text on dark"],
+             "glow":  [0.680, 0.150, 45, "the accent on dark"]},
+  "roles": {"light": {"bg": "flour", "surface": "crumb", "border": "rye", "text": "crust", "text-2": "malt",
+                      "primary": "crust", "on-primary": "flour", "accent": "ember", "on-accent": "flour", "focus": "ember"},
+            "dark":  {"bg": "oven", "surface": "hearth", "border": "ash", "text": "flour", "text-2": "oat",
+                      "primary": "flour", "on-primary": "crust", "accent": "glow", "on-accent": "crust", "focus": "glow"}},
   "default": "light",
-  "pairs":   [["nerofumo", "carta", "body text"],
-              ["carta", "sanguigna", "label on accent button", "large"],
-              ["linea", "carta", "hairline", "decorative"]]
+  "pairs": [["crust", "flour", "body text"], ["malt", "flour", "secondary text"],
+            ["flour", "crust", "label on primary"], ["flour", "ember", "label on accent"],
+            ["ember", "flour", "focus ring", "ui"], ["rye", "flour", "hairline", "decorative"],
+            ["flour", "oven", "body text, dark"], ["oat", "oven", "secondary text, dark"],
+            ["crust", "glow", "label on accent, dark"], ["glow", "oven", "focus ring, dark", "ui"]]
 }
 ```
 
-Run `python3 $S/palette.py src/colors-in.json src/colors.json --css src/colors.css --md src/colors.md`.
-- **Pair kinds:** `text` (the default) needs 4.5:1; `large` and `ui` need 3:1; `decorative` never fails.
-- **Failures:** a failing pair prints the lightness at which it would pass. A colour outside sRGB prints its maximum chroma; `--fit` clamps it for you.
-- **Outputs:** `colors.css` is the colour block of tokens.css (pigments, the default theme's roles, the other theme under `[data-theme=…]` on any element, plus a media query for unpinned pages). `colors.md` is the table for branding.md and the page.
+- **Roles:** every theme maps `bg`, `surface`, `border`, `text`, `text-2`, `primary`, `on-primary`, `accent`, `on-accent`, `focus`, plus `ok`, `warn`, `error` when the product shows status. palette.py warns on a missing role. Product code uses roles only.
+- **Required pairs:** every text role on its theme's `bg` (palette.py fails without them), the labels on `primary` and on `accent`, `focus` on `bg` as `ui`, and status colours on `surface` when they exist.
+- **Pair kinds:** `text` (the default) needs 4.5:1, `large` and `ui` need 3:1, `decorative` never fails. A failing pair prints the lightness at which it would pass; a colour outside sRGB prints its maximum chroma, and `--fit` clamps it.
+- **Outputs:** `colors.css` is the colour block of tokens.css (pigments, the default theme's roles, the other theme under `[data-theme=…]` on any element, a media query for unpinned pages). `colors.md` is the table for branding.md and the page.
 
-**How to choose colour:**
-- **Pigments, then roles.** Name the pigments after the brand's world (*carta*, *nerofumo*, *sanguigna*), never after a role. A pigment called `ok` makes `--ok: var(--ok)` point at itself, and palette.py rejects that. Product code uses roles only:
-  - surfaces: `bg`, `surface`, `sunken`, `border`
-  - text: `text`, `text-2`, `text-3`
-  - actions: `primary`, `on-primary`, `accent`, `on-accent`
-  - status: `ok`, `warn`, `error`
-  - `focus`
-- **Neutrals carry temperature.** Never use pure #000 or #fff. Warm neutrals (hue 60–85) or cool ones (220–260) at chroma 0.004–0.015 give the brand its air before any accent shows.
-- **One accent *meaning* per screen.** The accent marks one thing: the primary action, the live state, or the mark's seed.
-  - The signature device may repeat (a highlighter on key words, the ramp on progress bars), but sparingly: about three per viewport, and never as decoration.
-  - Two accent colours need a written reason.
-- **Data scales are not accents.** A roast ladder, a heat scale or a category colour set is a separate, labelled scale, used only where data is shown.
-- **Status colours** are small chips or dots next to a word, never large fills, and always paired with a glyph.
-- **Light and dark.**
-  - Accents usually need +0.10 to +0.16 L on dark; the contrast table decides.
-  - State which theme is the default and why. Product tools often default to dark; marketing sites often to light.
-  - Make dark opt-in on a light-only brief: put roles only under `light`, or keep `default` light. Screenshots are taken in light by default.
-- **On the page:**
-  - live swatches, as lowercase JSX `<div style={{background: "oklch(…)"}}>` (these render in the artifacts app), or a PNG swatch sheet
-  - the `colors.md` tables
-  - the palette applied to a real screen
+How to choose:
+- **Pigments, then roles.** Name pigments after the brand's world, never after a role: a pigment called `ok` makes `--ok: var(--ok)`, and palette.py rejects it.
+- **Neutrals carry temperature.** Never pure #000 or #fff: warm (hue 60–85) or cool (220–260) at chroma 0.004–0.015 give the brand its air before any accent shows.
+- **One accent meaning per screen:** the primary action, the live state, or the mark's seed. The signature device may repeat, about three times per viewport and never as decoration. Two accent colours need a written reason.
+- **Data and status.** A data scale (heat, categories, charts) is a separate labelled scale, used only where data is shown; for data-heavy products take the chart rules from the `dataviz` skill when it is installed. Status colours are small chips or dots next to a word and a glyph, never large fills.
+- **Themes** follow brief.md. Accents usually need +0.10 to +0.16 L on dark; the table decides. A light-only surface keeps roles under `light` only.
 
 ## Type
 
-- **Licence.** Only OFL fonts. Download TTFs + `OFL.txt` from `github.com/google/fonts/tree/main/ofl/<family>` (use the raw file URLs) into `fonts/`. Production pages may use the Google Fonts CSS URL.
-- **Pick by role:**
-  - words (sans or serif, for display and text)
-  - data (a mono, or a face with tabular digits) for numbers, ids and labels
-  - an optional display face
+- **Licence:** OFL only, files plus `OFL.txt` in `fonts/` (Tools § Fonts). Production pages may load the Google Fonts CSS URL.
+- **Roles:** words (display and text), data (a mono or tabular digits) for numbers, ids and labels, an optional display face. At most two families plus a mono; `styles.md` lists fitting fonts per style.
+- **Criteria:** character at display size, x-height and readability at 13–15 px, tabular figures, weight range (ideally variable, with opsz for serifs), language coverage for the market. Avoid unexamined defaults (Inter, Roboto, Poppins, Montserrat, Space Grotesk) unless you can say why they win here.
+- **Tabular check** in a fontTools script: the font has a `tnum` GSUB feature, or `{f['hmtx'][f.getBestCmap()[ord(d)]][0] for d in '0123456789'}` has one value.
+- **Real copy at real sizes** (the headline, a table row, a price, a label) in a rendered specimen.
+- **Scale table:** role · family · weight · size/line-height on desktop and mobile · tracking, for display, h1, h2, h3, body-l, body, small, label, data. Negative tracking on big sizes, positive on small-caps labels.
+- **Rules** in words, e.g. "every number is mono", "headlines at 500, never bold".
 
-  At most two families plus a mono. The style recipe narrows the field (`styles.md` lists fitting fonts per style).
-- **Criteria:**
-  - character at display size
-  - x-height and readability at 13–15 px
-  - tabular figures
-  - weight range (ideally variable, with opsz for serifs)
-  - language coverage for the market
-- **Avoid unexamined defaults** (Inter, Roboto, Poppins, Montserrat, Space Grotesk) unless you can say why they beat the alternatives for this brand.
-- **Tabular check:** the font has a `tnum` GSUB feature, or digits 0–9 already share one advance width. Check in fontTools: `{f['hmtx'][f.getBestCmap()[ord(d)]][0] for d in '0123456789'}` has one value.
-- **Test with real copy** at real sizes (the headline, a table row, a price, a label). Render a specimen and look at it.
-- **Scale table:** role · family · weight · size/line-height on desktop and mobile · tracking. Cover display, h1, h2, h3, body-l, body, small, label and data. Use negative tracking on big sizes and positive tracking on small caps labels.
-- **Write the rules,** e.g. "every number is mono", "headlines at 500, never bold", "labels in caps +12 %".
+## Space, radii, depth, icons
 
-## Space, radii, grid, icons
-
-- **Space.** A 4 px base and a named scale (4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128). Gutters: 32 desktop, 16 mobile. A max content width and a column grid for marketing pages.
-- **Radii.** Set per element type (0 for photographs, a small value for chips, more for controls, cards and panels), with a reason tied to the idea or the style recipe.
-- **Depth.** Borders or shadows per the style recipe. Dev-tool and editorial styles use borders; skeuomorphic and clay styles use shadows. State which, and where.
-- **Icons.** One library: Lucide (ISC), Phosphor (MIT) or Tabler (MIT). Single SVGs come from `unpkg.com/lucide-static/icons/<name>.svg`. State the stroke width, caps, joins and sizes. There may be one brand glyph (the only filled shape) for live state, bullets or the cursor.
+- **Space:** a 4 px base and the ten steps in tokens.css below. Gutters 32 px on desktop, 16 on mobile; a max content width and a column grid for marketing pages.
+- **Radii** per element type (photographs, chips, controls, cards), each with a reason from the idea or the recipe.
+- **Depth:** borders or shadows, per the recipe; say which and where.
+- **Icons:** one library (Lucide, Phosphor or Tabler; Tools § Icons) with its stroke width, caps, joins and sizes. At most one filled brand glyph.
 
 ## Signature components (3–5)
 
-These are the components where the brand idea lives inside the product, and they matter more than the colour of a button.
+Where the brand idea lives inside the product or on the pack; they matter more than the colour of a button. E.g. an order slip whose bake time is a rubber stamp, not a printed line. Specify each exactly: sizes, colours, states.
 
-Examples:
-- a progress bar whose leading edge dissolves ▓▒░
-- frame states (picked = 2 px frame; cut = greyscale with a reason "✕ hands"; rendering = noise; queued = dither)
-- "the gloss" (a local term in mono, then its plain meaning on a highlighter)
-- a live dot that steps instead of pulsing
+## Imagery
 
-Specify each one exactly: sizes, colours, states.
-
-## Imagery direction
-
-- **Framing:** aspect ratios per use, eye line, crop rules.
-- **Light and grade:** a recipe, and what is banned (e.g. teal-orange, beauty filters).
-- **Presentation:** e.g. "prints, not cards": square corners, a hairline, a mono caption.
-- **Content rules:** what is on-brand and what is never shown on brand surfaces.
-- **Sourcing for the kit:** habit 10 in SKILL.md (own renders; public domain via `commons.py`; credits; once per surface; full treatment of famous images; rotation with a reduced-motion fallback).
+- Framing (aspect ratios per use, eye line, crops), light and grade (and what is banned), presentation, and what is never shown. Rights: habit 10.
+- **Photography the brand needs but can't render** (food, interiors, people): write a shot list in branding.md (subject, framing, light, where it's used) for a photographer. On mocks use labelled placeholder frames ("photo: loaf on the board, top light"), your own illustration, or public-domain still lifes from the cultural root (commons.py).
 
 ## Motion
 
-- **Easing tokens and durations** (e.g. `cubic-bezier(0.2,0,0,1)`, 120 / 200 / 320 ms), with a stated stance on bounce and spring, per the style recipe.
-- **One signature motion:** the brand idea in time, e.g. "the resolve": noise → 4 mosaic steps → image, `steps(4)` over 480 ms.
-- **`prefers-reduced-motion`:** shows a *designed* static state, never a blank or half-drawn one. Screenshots run in reduced motion by default, so a missing fallback shows up in them. Record the motion itself as a frame strip (and an mp4 when useful).
+- Easing tokens and durations, with a stance on bounce and spring, per the recipe.
+- One signature motion: the idea in time, e.g. a status that stamps in with a two-frame ink spread over 160 ms.
+- `prefers-reduced-motion` shows a *designed* static state, never a blank or half-drawn one.
+- Record the motion as a frame strip, and an mp4 when it helps (shoot.sh strip). A brand with no screen surface writes `n/a: <reason>`.
 
 ## Voice
 
 - 3–4 principles, e.g. "Plain, exact, unhurried. Numbers over adjectives."
-- A say / don't say table of at least 7 rows drawn from the category cliché.
+- A say / don't say table of at least 7 rows, drawn from the category cliché.
 - CTAs, vocabulary (use / avoid), and microcopy for an empty state, an error, a success and a destructive confirm.
-- **Languages:** which language the brand speaks in each market, and which local words stay untranslated as product vocabulary (roast names, tax terms). Mocks use the market's main language, or English plus one local sample line; say which.
+- **Languages:** which language in each market, and which local words stay untranslated as product vocabulary. Mocks use the market's main language, or English plus one local sample line; say which.
+
+## Print (when surfaces include packaging, signage or print)
+
+- **Inks:** 1–2 spot inks or CMYK, each named after the pigment it stands for.
+- **Stock:** white, kraft or other, added as a pigment with each ink on it as a pair, so palette.py checks colour on the real stock (kraft darkens and dulls ink).
+- **Nearest CMYK or Pantone** for each ink, marked as an approximation to confirm with the printer.
+- **A one-ink version** of the lockup and of each key artwork.
 
 ## tokens.css
 
 ```css
-@import "src/colors.css";            /* or paste it: generated by palette.py, never edited by hand */
+@import "src/colors.css";            /* generated by palette.py, never edited by hand */
 @font-face { … }                     /* local fonts/ files */
 :root {
   --font-sans: …; --font-mono: …;
   --text-display: 500 clamp(48px, 7vw, 96px)/0.95 var(--font-sans); --track-display: -0.04em;
   /* … h1 → data, as in the scale table */
-  --space-1: 4px; … --space-32: 128px;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px;
+  --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px; --space-10: 128px;
   --radius-chip: 3px; --radius-control: 6px; --radius-card: 10px;
   --ease: cubic-bezier(0.2, 0, 0, 1); --dur-1: 120ms; --dur-2: 200ms; --dur-3: 320ms;
 }
 @media (prefers-reduced-motion: reduce) { :root { --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; } }
 ```
 
-Add a tiny `tw.js` mapping Tailwind's config to these variables only if the site uses Tailwind. A Tailwind/shadcn class table, like a reference brand's, is a deliverable only when the product's stack is Tailwind.
+Map Tailwind's config to these variables only if the site uses Tailwind.

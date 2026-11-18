@@ -1,6 +1,6 @@
 # Brand System Skill
 
-An agent skill that builds a complete brand identity and design system the way a senior brand/UX designer would. It starts with strategy, explores logos that survive a 16 px favicon, and ends with OKLCH tokens with computed contrast, a real product screen, a landing page and the applications, all shown on a review page.
+An agent skill that builds a brand identity and design system the way a senior brand/UX designer would. It starts with strategy, picks a style on purpose, draws a logo that survives a 16 px favicon, and ends with OKLCH tokens with computed contrast and the real surfaces the brand lives on (a landing and product screen, or packaging, signage and social), all shown on a review page.
 
 It uses the standard Agent Skills layout supported by [Vercel's skills CLI](https://github.com/vercel-labs/skills) and [skills.sh](https://skills.sh).
 
@@ -20,35 +20,38 @@ npx skills add FrancescoSaverioZuppichini/brand-system-skill --skill brand-syste
 
 | # | Phase | Output |
 |---|---|---|
-| 1 | Strategy | competitor research with screenshots, buyer voice, personas (needs, fears), the gap, positioning, personality, a name collision check |
-| 2 | Naming (only if there is no name) | candidates by territory, RDAP/DNS domain checks, a shortlist of 3 and a ★ to build on |
-| 3 | Direction | the vibe sentence, the brand idea, the NOT list, a **style recipe** picked from a catalogue of ~100 design styles, 3 specimens, a moodboard |
-| 4 | Logo | ≥3 directions, a size test, a look-alike check, the refined mark + wordmark + lockups, a pixel favicon, app icon, avatar, usage rules |
-| 5 | System | OKLCH colour with roles, themes and a WCAG table, OFL type and scale, space, radii, icons, signature components, motion, imagery, voice; `branding.md` + `tokens.css` |
-| 6 | Product | one product screen with the product's own states, an 11-part landing page, screenshots at 1440 and 390 |
-| 7 | Applications | OG image, X header, profile grid, business card, packaging if any |
-| 8 | Review + crit | a review page, an automated audit, and a crit checklist |
+| 0 | Setup | the brand folder, `brief.md` (inputs, assumptions, the client's tastes, themes, a ranked `surfaces:` line), the review page |
+| 1 | Strategy | competitor research with screenshots, buyer voice, personas, the gap, positioning, personality |
+| 2 | Naming (only if there is no name) | candidates by territory, RDAP/DNS domain and handle checks, a shortlist of 3 and a ★ to build on |
+| 3 | Direction | the vibe, the brand idea, the NOT list, a **style recipe** from a catalogue of design styles, 3 specimens of the #1 surface, a moodboard |
+| 4 | Logo | ≥3 directions, size and look-alike tests, the mark, wordmark and lockups, a pixel favicon, app icon, avatar, usage rules, signs and print |
+| 5 | System | OKLCH colour with roles, themes and a WCAG table, OFL type and scale, space, radii, icons, signature components, imagery, motion, voice, print inks; `tokens.css` |
+| 6 | Primary surfaces | the top two surfaces from the brief: a product screen and landing for software, packaging and signage for a shop |
+| 7 | Secondary surfaces / applications | the other surfaces, plus OG, social headers, Instagram, business card and print pieces as the channels need |
+| 8 | Review + crit | a complete review page, an automated audit, `crit.md`, and printable boards for a non-technical client |
 
-It can also run several directions in parallel: N designer agents with different starting lenses, then a comparison page.
+It can also run several directions in parallel: one shared brief and research, N designer agents with different lenses and style families, then a comparison page.
 
 ## Scripts
 
+Every Python script declares its dependencies inline (PEP 723) and runs with `uv run <name>.py …`, with no install step.
+
 | Script | Does |
 |---|---|
-| `palette.py` | OKLCH → hex, WCAG contrast per pair (with the lightness that would pass), sRGB fitting, roles + light/dark CSS, a markdown table; exits 1 on a failing pair |
+| `palette.py` | OKLCH → hex, WCAG contrast per pair (with the lightness that would pass), sRGB fitting, roles + light/dark CSS, a markdown table; exits 1 on a failing or missing pair |
 | `sizetest.py` | logo sheet at 16–128 px on light and dark (non-square lockups too), plus 16/32 px magnified pixel by pixel |
 | `wordmark.py` | outlined wordmark from any OFL font: HarfBuzz kerning, any variable axis, per-glyph paths, a baseline sidecar |
 | `svg2png.py` | exact-size PNG exports with resvg |
-| `shoot.sh` | headless-Chrome screenshots: first screen (file or URL), full page, a real 390 px mobile layout with an overflow check; light theme and reduced motion by default |
+| `shoot.sh` | headless-Chrome shots: first screen (file or URL), full page, a real 390 px mobile layout with an overflow check, a motion frame strip (+ mp4), print to PDF; light theme and reduced motion by default |
 | `tile.py` | cuts a tall screenshot into readable columns |
 | `commons.py` | public-domain art from Wikimedia Commons, with a licence check and a credit line |
-| `audit.py` | checks a brand folder for missing deliverables, failed contrast, alt text, reduced motion, repeated images |
+| `audit.py` | checks a brand folder for the deliverables of each surface in `brief.md`, failed contrast, alt text, reduced motion, repeated images |
 
 ## Requirements
 
-- [uv](https://docs.astral.sh/uv/) (the scripts run with `uv run --with …`)
-- Google Chrome (for screenshots)
-- `potrace` (optional, for turning raster sketches into vectors)
+- [uv](https://docs.astral.sh/uv/)
+- Google Chrome (shots and PDF)
+- Optional: `ffmpeg` (motion mp4), `potrace` (tracing a hand-drawn mark), `jq` (listing font files)
 - Optional: [artifacts](https://github.com/FrancescoSaverioZuppichini/artifacts) for live review pages with feedback
 
-Fonts must be OFL (Google Fonts). Third-party images must be public-domain or licensed, and credited in `CREDITS.md`.
+Fonts must be OFL (Google Fonts). Third-party images must be public-domain or CC0, and credited in `CREDITS.md`.

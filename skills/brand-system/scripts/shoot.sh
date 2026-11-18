@@ -4,18 +4,21 @@
 #   shoot.sh full   page.html out.png WIDTH [scale]              the whole page: measure the height first, then shoot at it
 #   shoot.sh mobile page.html out.png [WIDTH=390] [scale=2]      real narrow layout: Chrome won't lay out below ~500 px,
 #                                                                 so the page runs in an iframe of WIDTH and the shot is cropped
+#   shoot.sh strip  page.html out.png WIDTH HEIGHT ["0 150 300 600 1200"]   one frame per time in ms, side by side;
+#                                                                 MP4=1 also writes out.mp4, each frame held until the next time
+#   shoot.sh pdf    page.html|URL out.pdf                        print to PDF (boards for a client who won't open the app)
 # Env: THEME=light|dark (default light; otherwise shots follow the Mac's dark mode).
 #      MOTION=1 keeps animations; by default Chrome reports prefers-reduced-motion, so shots show the designed static
-#      state (and prove the fallback exists). Shoot motion separately as a frame strip.
+#      state (and prove the fallback exists). strip always keeps them.
 # Mobile also prints OVERFLOW when the page is wider than WIDTH (horizontal scroll on phones).
 set -e
 CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 mode=$1 page=$2 out=${3:A}
 flags=(--headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files --virtual-time-budget=8000)
 [[ ${THEME:-light} == dark ]] && flags+=(--force-dark-mode --blink-settings=preferredColorScheme=0) || flags+=(--blink-settings=preferredColorScheme=1)
-[[ -z $MOTION ]] && flags+=(--force-prefers-reduced-motion)
+[[ -z $MOTION && $mode != strip ]] && flags+=(--force-prefers-reduced-motion)
 prof=$(mktemp -d); flags+=(--user-data-dir=$prof)
-if [[ $page == http* ]]; then url=$page; [[ $mode == view ]] || { echo "full/mobile need a local file" >&2; exit 2; }
+if [[ $page == http* ]]; then url=$page; [[ $mode == (view|pdf) ]] || { echo "full/mobile/strip need a local file" >&2; exit 2; }
 else page=${page:A}; [[ -f $page ]] || { echo "no such file: $page" >&2; exit 2; }; url="file://$page"; d=${page:h}; fi
 trap 'rm -rf "$prof" "$d/.shoot-m.html" "$d/.shoot-w.html"' EXIT
 # [Agent] Inject a probe script before </body>, or at the end when the file has none (a silent failure otherwise).
@@ -40,5 +43,28 @@ case $mode in
     "$CH" $flags --force-device-scale-factor=$S --window-size=600,$H --screenshot="$out" "file://$d/.shoot-w.html" >/dev/null 2>&1
     uv run -q --with pillow python -c "from PIL import Image; im=Image.open('$out'); im.crop((0,0,$W*$S,$H*$S)).save('$out')"
     echo "$out ${W}x$H @${S}x"; (( SW > W )) && echo "OVERFLOW: content is ${SW}px wide in a ${W}px viewport" || true;;
-  *) echo "usage: shoot.sh view|full|mobile page.html out.png ..." >&2; exit 2;;
+  strip)
+    # [Agent] --virtual-time-budget does not move CSS animations to a chosen time (tested: 150 and 300 ms gave the same
+    # frame, 0 hangs Chrome), so each frame pauses every animation on the page and seeks it to t ms instead.
+    times=(${=6:-0 150 300 600 1200})
+    for i in {1..$#times}; do
+      probe "addEventListener('load',()=>setTimeout(()=>document.getAnimations().forEach(a=>{a.pause();a.currentTime=$times[i]}),50))"
+      "$CH" $flags --window-size=$4,$5 --screenshot="$prof/f$(printf %03d $i).png" "file://$d/.shoot-m.html" >/dev/null 2>&1
+    done
+    uv run -q --with pillow python -c "
+import sys; from PIL import Image, ImageDraw
+fs, ts = [Image.open(f).convert('RGB') for f in sys.argv[3:]], sys.argv[2].split()
+w, h = fs[0].size; px = max(18, w // 50); sheet = Image.new('RGB', (len(fs) * (w + 16) - 16, h + px + 18), (128, 128, 128)); d = ImageDraw.Draw(sheet)
+for i, (f, t) in enumerate(zip(fs, ts)): sheet.paste(f, (i * (w + 16), 0)); d.text((i * (w + 16) + 8, h + 8), t + ' ms', fill='white', font_size=px)
+sheet.save(sys.argv[1])" "$out" "$times" $prof/f*.png
+    echo "$out ${#times} frames at $times ms"
+    if [[ -n $MP4 ]]; then
+      for i in {1..$#times}; do print -r -- "file '$prof/f$(printf %03d $i).png'"; print -r -- "duration $(( (${times[i+1]:-$(( times[i] + 500 ))} - times[i]) / 1000.0 ))"; done > "$prof/list.txt"
+      /opt/homebrew/bin/ffmpeg -y -loglevel error -f concat -safe 0 -i "$prof/list.txt" -vf "fps=30,scale=trunc(iw/2)*2:trunc(ih/2)*2,format=yuv420p" -movflags +faststart "${out:r}.mp4"
+      echo "${out:r}.mp4"
+    fi;;
+  pdf)
+    "$CH" $flags --no-pdf-header-footer --print-to-pdf="$out" "$url" >/dev/null 2>&1
+    echo "$out";;
+  *) echo "usage: shoot.sh view|full|mobile|strip|pdf page.html out.png ..." >&2; exit 2;;
 esac

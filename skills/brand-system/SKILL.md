@@ -1,129 +1,139 @@
 ---
 name: brand-system
-description: Build a complete brand identity and design system the way a world-class senior brand/UX designer would. Strategy first (market research, personas, gap, positioning, vibe, what the brand is NOT), then a style direction picked from a catalogue of ~100 design styles, logo exploration to a final SVG mark that survives a 16 px favicon, OKLCH colour tokens with computed WCAG contrast, an OFL type pairing and scale, space/radii/icons/motion, imagery direction, voice, a product screen, a landing page, social/app applications, branding.md + tokens.css, and a review page. Use this whenever someone asks for a brand, brand kit, brand identity, visual identity, design system, style guide, logo, rebrand, a "style" or "look" for a product, "make it look like a real company", or the look of a landing page, even when they only ask for one piece (a logo, fonts and colours, a landing). A piece without the strategy behind it is a guess, so this skill decides how much of the system each request needs. Also use it to run several competing brand directions in parallel.
+description: Builds a brand identity and design system the way a senior brand designer would - strategy, a style picked on purpose, a logo that survives 16 px, OKLCH tokens with checked contrast, OFL type, and the real surfaces (landing, product screen, app, packaging, signage, social) on a review page. Use it whenever someone asks for a brand, identity, rebrand, design system, style guide, logo, or the "style" or "look" of a landing page, app or packaging, even for one piece, and to run several competing brand directions in parallel.
 ---
 
 # Brand system
 
-You are working as a senior brand and UX designer, at the level of the people behind Vercel's, Linear's, Arc's or Figma's identities. You hand over a system people can actually use: a written rationale, a style direction chosen on purpose, a logo that works at every size, tokens a developer can paste, and real screens that prove the system holds.
+Work as a senior brand and UX designer at the level of the best identity studio for this category. Hand over a system people can use: a written rationale, a style chosen on purpose, a logo that works at every size, tokens a developer can paste, and the real surfaces that prove it holds.
 
-The phases below run in order, and every later choice cites an earlier one. When the request is narrow ("just a logo"), still do a short strategy and direction (phases 1 and 3), then only the phases the request needs. Say which phases you skipped.
+Phases run in order and every later choice cites an earlier one. One direction unless the user asks for options. A narrow request ("just a logo") still gets a short strategy and direction (phases 1 and 3), then only the phases it needs; say which you skipped.
 
-## Habits of a senior designer
+**Reading.** Read this file fully. In phase 0 also read `references/review-page.md` and § Surfaces of `references/product.md`. Read each other file when its phase starts. For `references/styles.md`, read its table of contents and the families `references/style-picking.md` points you to.
 
-Each habit comes from a real failure.
+## Habits
 
-1. **Strategy before pixels.** Work out who buys, what they fear, what the category looks like and where the gap is. The vibe has to be a sentence you can derive decisions from: "a Milanese production house that runs on a terminal" gives you a colour, a typeface, a motion and a word choice. If yours doesn't, sharpen it.
-2. **Pick the style on purpose.** Name the category's dominant style (its cliché), then choose a base style from `references/styles.md` that stands apart from it while keeping the category's trust cues. Add one signature device from a second family. Write it as a one-line recipe, e.g. "Swiss editorial base + ASCII resolve device + Renaissance imagery". `references/style-picking.md` has the method. Taste alone is not a reason.
-3. **One idea drives everything.** One device, born from what the product does plus the name, shapes the logo, the signature component, the motion and the copy (the seed of noise that grows into a set; the ramp ░▒▓█; two lights writing an S).
-4. **A reference is a quality bar, never a template.** From a brand the user admires, take its *form*: exact values for every rule, role tables, never-lists, explicit states, a closing checklist. Never take its look: its logo style, palette, fonts or layout.
-5. **A logo is a tool, not a picture.** It must work as a 16 px favicon, in a 24–32 px nav bar, as an app icon, as a round avatar and in one colour. ASCII paintings, illustrations and textures can be brand motifs, but they are not logos.
+1. **Strategy before pixels.** Know who buys, what they fear, what the category looks like and where the gap is, then write a vibe you can derive decisions from (`direction.md`).
+2. **Pick the style on purpose.** Name the category's cliché, choose a base style from `styles.md` that stands apart from it while keeping the category's trust cues, add one signature device from a second family, and write it as a one-line recipe (method in `style-picking.md`). The client's dislikes go into the NOT list first, verbatim. A stated taste narrows the candidate styles; you still justify the pick against the cliché, and when the taste *is* the cliché, subvert it within that family.
+3. **One idea drives everything.** One device, born from what the business does plus the name, shapes the logo, the signature component, the motion and the copy.
+4. **A reference is a quality bar, never a template.** From a brand the user admires take its *form* (exact values for every rule, role tables, never-lists, explicit states, a closing checklist), never its logo style, palette, fonts or layout.
+5. **A logo is a tool, not a picture.** It works as a 16 px favicon, in a nav bar, as an app icon and a round avatar, in one colour, and on every physical surface in the brief. Illustrations and textures can be motifs, not logos.
 6. **Take a stance.** Average is invisible. Commit to a direction and say why it wins for this buyer.
-7. **Look at everything yourself.** Open every PNG and a frame strip of every video, and crit it as a designer would. That includes your own moodboard, checked against your own NOT list, and the review page as rendered (`shoot.sh view <page URL>`). Redo what fails before anyone sees it.
-8. **Pictures early.** Create the review page with every section in phase 0, and put a real image in each section as soon as it exists. A page full of ⏳ reads as no work.
-9. **Honest placeholders.** On every designed screen, one "sample data" chip plus a footer line covers the ordinary numbers. Each hard claim (a stat, a price, a testimonial, a customer logo, the domain) carries its own placeholder label. Personas can have a name, age, role and context. Never invent physical or private details about people in copy (a mole, braces, health).
-10. **Images: rights and repetition.**
-    - Use only your own renders, OFL fonts, permissive icon sets (Lucide ISC, Phosphor MIT, Tabler MIT), and public-domain/PDM/CC0 artworks fetched with `$S/commons.py`, every one credited in `CREDITS.md`.
-    - No AI-generated people unless the user asks.
-    - One source image appears at most once per designed surface (the landing, the product screen, one application). Screenshots of those surfaces on the review page don't count as repeats.
-    - A famous source image gets the brand's treatment fully (e.g. entirely ASCII/pixel), never half.
-    - Rotating visuals are welcome, with a static fallback for reduced motion.
-11. **One source of truth.** `src/colors-in.json` → `palette.py` → `src/colors.{json,css,md}`. Every generator (logo, mocks, site, page) reads colors.json; nothing hard-codes a hex. Generated numbers are never pasted into prose; link or embed the generated file.
+7. **Look at everything yourself.** View every PNG and the frame strip of every motion with the Read tool (never `open`), and crit it as a designer would, including your moodboard against your NOT list and the review page as rendered. Redo what fails before anyone sees it.
+8. **Pictures early.** The review page exists from phase 0 with every section, and a real image lands in each as soon as it exists. A page of ⏳ reads as no work.
+9. **Honest placeholders.** Each designed screen carries one "sample data" chip and a footer line for the ordinary numbers. Each hard claim (a stat, price, testimonial, customer logo, domain, address, opening hours, founding year, allergen or label text) carries its own placeholder label. On print mocks the "sample" tag sits in the board's margin, never on the artwork. Personas get a name, age, role and context; never invent physical or private details about people.
+10. **Image rights.** Only your own renders, OFL fonts, Lucide (ISC), Phosphor or Tabler (MIT) icons, and public-domain or CC0 art from `commons.py`, each credited in `CREDITS.md`. No AI-generated people unless the user asks. One source image appears at most once per designed surface. Photography you can't render: `system.md` § Imagery.
+11. **One source of truth.** `src/colors-in.json` → `palette.py` → `src/colors.{json,css,md}`. SVG and PNG generators read hex from colors.json, HTML uses `var(--role)`, nothing hard-codes a hex. Page swatches are a PNG made from colors.json, or the `colors.md` table.
 
-## Inputs (assume rather than block)
+## Folder and paths
 
-- Company, product, buyer versus user, markets and **languages**.
-- The name (no name → phase 2), the founder's taste and references, constraints (theme, existing assets, domain), and where the work is reviewed.
-- If something is missing, assume it and write the assumption at the top of strategy. If the folder name differs from the brand name, files inside use the brand's slug.
+Bash state doesn't persist between calls and the working directory can reset. Find the folder this SKILL.md was read from, start every call with `S=<that folder>/scripts B=<absolute brand folder>`, and write every path as `$B/…`.
 
-## Phase 0 · Setup (10 minutes)
-
-1. `S=<this skill's folder>/scripts`. Scripts are called as `$S/palette.py` and so on; your working directory is the brand folder.
-2. Create the folder tree below and a `page.mdx` with every section (overview, strategy, direction, logo, system, product, applications, assets) open and empty. See `references/review-page.md`.
-3. Read **all** reference files now, once; they total about 20 minutes. Re-open each one when its phase starts. Agents that skipped `product.md` shipped landings with no pricing or FAQ.
+The brand folder is `~/Documents/<slug>`, served at `http://127.0.0.1:8800/<slug>`. With no name yet it is `~/Documents/<category>-wip`: rename it once, after the phase 2 ★, and tell the user the new URL. Files inside use the brand slug (`<slug>-mark.svg`), also in parallel folders (`<slug>-a`).
 
 ```
-<brand>/                 e.g. ~/Documents/<brand>/ → artifacts app at /<brand>
-  page.mdx  branding.md  tokens.css  CREDITS.md
-  research/              competitor screenshots and notes (internal only; never in brand assets)
-  src/                   colors-in.json + every generator script (re-run to rebuild)
-  fonts/                 OFL font files + OFL.txt
-  logo/  logo/sketches/  finals + exploration
-  img/                   moodboard, specimens, size tests, studies, motion strips
-  site/                  index.html (landing), <product>.html, assets/, shots/
-  apps/                  og-1200x630, x-header-1500x500, ig-grid, business-card
+$B/
+  brief.md               inputs, assumptions, the client's tastes, themes, surfaces (phase 0)
+  branding.md            the text source, written from phase 1 on, in the section order below
+  page.mdx               the review page: pictures, captions, ❓ (review-page.md)
+  tokens.css  CREDITS.md  crit.md
+  research/              competitor screenshots and notes (internal; never in brand assets)
+  src/                   colors-in.json, colors.{json,css,md}, your generator scripts
+  src/html/              specimens, mocks, boards, application pages: the HTML you shoot
+  fonts/                 OFL files + OFL.txt
+  logo/  logo/sketches/  finals and exploration
+  img/                   moodboard, size tests, boards, motion strips, the page shot
+  site/                  landing (index.html), product and app screens (<name>.html), assets/, shots/
+  apps/                  exports at real size, named after the surface (og-1200x630.png, packaging-bag-front.png)
 ```
+
+## Sections
+
+The page and `branding.md` share one list of sections, in this order (page ids in brackets):
+
+1. Overview (`overview`)
+2. Strategy, plus Naming when it ran (`strategy`)
+3. Direction (`direction`)
+4. Logo (`logo`)
+5. System: colour, type, space, components, imagery, motion, voice, print (`system`)
+6. Surfaces (`surfaces`)
+7. Assets and crit (`assets`)
+
+`branding.md` holds the text; each section opens with one line tying it to the vibe, the idea or the recipe, and a heading that doesn't apply says `n/a: <reason>`. The page holds pictures, short captions and links to `branding.md`, never a second copy of the text.
+
+## Phase 0 · Setup
+
+1. Create the tree and the stubs `brief.md`, `branding.md`, `tokens.css`, `CREDITS.md`, `crit.md`.
+2. Fill `brief.md`. Assume what's missing and list it under assumptions. `surfaces:` is ranked and comma-separated, in the vocabulary of `product.md` § Surfaces:
+   ```
+   inputs: company, offer, buyer vs user, markets, languages, name (or none), constraints, existing assets, domain
+   assumptions: every fact you guessed
+   client likes: "verbatim"    client dislikes: "verbatim"
+   themes: light, dark or both for each surface, and the default
+   surfaces: product, landing, social
+   ```
+3. Write `page.mdx` with the seven sections, open and empty (`review-page.md`), and check it.
 
 ## Phases
 
-| # | Phase | Read | Deliverables | Gate |
+| # | Phase | Read | Output | Gate |
 |---|---|---|---|---|
-| 1 | Strategy | `strategy.md` | research table (6–10 competitors with links and screenshots), ≥5 buyer-voice phrases with source type, personas, the gap, positioning, personality; a name collision check even when the name is given | you can say why this brand wins for this buyer in one line |
-| 2 | Naming (only if there is no name) | `strategy.md` § Naming | 15–30 candidates, RDAP/DNS domain checks, a shortlist of 3, a ★ pick you build on (renaming later means re-running the wordmark) | the ★ is pronounceable, spellable, has no collision, and its domain status is known |
-| 3 | Direction | `direction.md`, `style-picking.md`, `styles.md` | the vibe sentence, the brand idea, the NOT list, a **style recipe** (base + device), 3 hero specimens in candidate styles, a **provisional** palette and type, the moodboard | the recipe contrasts with the category cliché, and the moodboard passes your own NOT list |
-| 4 | Logo | `logo.md` | ≥3 directions in `logo/sketches/`, a size test, a ★ pick with reasons, the refined mark + wordmark + lockups, a pixel favicon, app icon, avatar, usage rules, in-context mocks | it reads at 16 px and in one colour, tells the idea in one sentence, and the look-alike check is done |
-| 5 | System | `system.md` | final colour (palette.py), type, space, radii, icons, signature components, motion, imagery, voice; `branding.md` + `tokens.css` | `palette.py` exits 0, and every rule says why |
-| 6 | Product | `product.md`, `layouts.md` | the product screen with the product's own object states, and the landing in the 11-part structure with one layout variant per part; shots at 1440 and 390 | both pass the slop tells in `product.md`, no OVERFLOW, every placeholder labelled |
-| 7 | Applications | `product.md` § Applications | OG, X header, profile grid, business card (others if the channel needs them) | each one is recognisable with the logo covered |
-| 8 | Review + crit | `review-page.md` | page complete, `audit.py` clean, the crit checklist, a screenshot of the rendered page | everything ✓, or each miss explained |
+| 0 | Setup | `review-page.md`, `product.md` § Surfaces | tree, stubs, `brief.md`, page | `/api/check` ok; `brief.md` has a `surfaces:` line |
+| 1 | Strategy | `strategy.md` | research, buyer voice, cliché, personas, gap, positioning, personality | the line on why this brand wins for this buyer heads branding.md § Strategy |
+| 2 | Naming (no name only) | `strategy.md` § Naming | candidates, domains, handles, shortlist, ★, folder renamed | the ★ is pronounceable and spellable, its domain status known; collisions listed, none exact in the category, near ones ❓ |
+| 3 | Direction | `direction.md`, `style-picking.md`, `styles.md`, `system.md` § Colour | vibe, idea, NOT list, recipe, provisional palette and fonts, 3 specimens, moodboard | the recipe is justified against the cliché in writing; the page marks each NOT item seen / not seen on the moodboard |
+| 4 | Logo | `logo.md` | sketches, ★, mark, wordmark, lockups, favicon, app icon, avatar, usage rules, boards | reads at 16 px and in one colour, tells the idea in one sentence, look-alike sheet done |
+| 5 | System | `system.md` | colour, type, space, components, imagery, motion, voice, print; `tokens.css` | `palette.py` exits 0 with the required pairs; every rule says why |
+| 6 | Primary surfaces | `product.md`, `layouts.md` | the top two surfaces in `surfaces:`, shot | no tell from the general or the type's slop list, no OVERFLOW, every placeholder labelled |
+| 7 | Secondary surfaces / applications | `product.md` § Applications | the other surfaces and the channel assets | each still reads as the brand in a copy with the logo covered |
+| 8 | Review + crit | `review-page.md` | page complete, `crit.md`, page screenshot | `audit.py` exits 0, `/api/check` ok, every `crit.md` line ✓ or a reason |
 
 ## Tools
 
-- **Research:** WebSearch + WebFetch for text. WebFetch can't see colour or type, so screenshot competitor homepages with `$S/shoot.sh view <url> research/<name>.png 1440 900` and look at them. Reddit and HN are often unreachable; fall back to app-store reviews, Trustpilot/G2/Capterra, community guides and forums, and label each quote's source type.
-- **Python:** `uv run --with numpy --with pillow python …` (the system python has no numpy; never pip). Don't name your scripts after stdlib modules (`site.py`, `json.py`).
-- **Colour:** `python3 $S/palette.py src/colors-in.json src/colors.json --css src/colors.css --md src/colors.md [--fit]` (format in `system.md`).
-- **Wordmark / letter:** `uv run --with fonttools --with uharfbuzz python $S/wordmark.py FONT.ttf "name" out.svg --axis wght=600 [--split]`. It writes a `.json` sidecar with the baseline, x-height and cap height.
-- **Logo size test:** `uv run --with resvg-py --with pillow python $S/sizetest.py img/sizetest.png logo/mark.svg logo/lockup.svg logo/favicon-light.svg:logo/favicon-dark.svg`.
-- **PNG export:** `$S/svg2png.py in.svg out.png WIDTH [HEIGHT]` (with resvg-py + pillow).
-- **Screenshots:**
-  - `$S/shoot.sh view|full|mobile …`. Light theme and reduced motion by default; `THEME=dark` and `MOTION=1` override them.
-  - Mobile prints `OVERFLOW` if the page scrolls sideways.
-  - For a tall shot, `$S/tile.py tall.png sheet.png` cuts it into columns you can read.
-- **Public-domain art:** `python3 $S/commons.py search "query"`, then `fetch "File:…" out.jpg 1600 --credits CREDITS.md`.
-- **Fonts:** fetch TTFs + `OFL.txt` from `https://github.com/google/fonts/tree/main/ofl/<family>` (raw files). Production pages may load the Google Fonts CSS URL.
-- **Icons:** download single SVGs from `https://unpkg.com/lucide-static/icons/<name>.svg` (or Phosphor/Tabler).
-- **Audit:** `python3 $S/audit.py <brand-folder>`.
-- **Mac traps:** `sed -i ''` (BSD sed); `grep` may be ugrep and choke on long HTML regexes, so use Python for regex on HTML. `potrace` is at `/opt/homebrew/bin/potrace`.
+The only place with exact commands; phase files name the tool. Python scripts carry their dependencies (PEP 723) and run with `uv run`. Write your own generators in `$B/src/` the same way (a `# /// script` header, `uv run $B/src/<name>.py`), never pip, and never name one after a stdlib module (`site.py`, `json.py`).
+
+- **Screenshots** (light theme and reduced motion by default; `THEME=dark` and `MOTION=1` override):
+  - `$S/shoot.sh view <file or URL> $B/research/<name>.png 1440 900`: the first screen
+  - `$S/shoot.sh full $B/site/index.html $B/site/shots/index-1440.png 1440`: the whole page
+  - `$S/shoot.sh mobile $B/site/index.html $B/site/shots/index-390.png 390 2`: a real 390 layout; prints `OVERFLOW` if it scrolls sideways
+  - `uv run $S/tile.py $B/site/shots/index-390.png $B/img/index-390-sheet.png`: cuts a tall shot into readable columns
+  - `MP4=1 $S/shoot.sh strip $B/src/html/motion.html $B/img/motion-strip.png 800 450 "0 150 300 600 1200"`: one frame per time in ms (animations on, each set to that time), side by side, plus `motion-strip.mp4`
+  - `$S/shoot.sh pdf $B/src/html/boards.html $B/boards.pdf`: print to PDF
+- **Domains:** `curl -sL -o /dev/null -w "%{http_code}\n" https://rdap.org/domain/<name>.<tld>`: 200 registered, 404 probably free; reliable for .com, .net, .ai, .dev. Where a known-registered domain also gives 404 (.io, .sh, .ch): `dig +short NS <name>.<tld>`, empty means probably free.
+- **Handles:** `curl -s -o /dev/null -w "%{http_code}\n" https://github.com/<name>` (404 = free); for dev tools also `https://registry.npmjs.org/<name>` and `https://pypi.org/pypi/<name>/json`.
+- **Fonts:** list a family's files with `curl -s https://api.github.com/repos/google/fonts/contents/ofl/<family> | jq -r '.[].name'` (`<family>` lowercase, no spaces), then fetch each TTF and `OFL.txt` with `curl -sLo "$B/fonts/<file>" "https://raw.githubusercontent.com/google/fonts/main/ofl/<family>/<file>"`. Variable fonts have bracketed names: URL-encode `[` `,` `]` as `%5B` `%2C` `%5D` in the URL only (`Fraunces%5BSOFT%2CWONK%2Copsz%2Cwght%5D.ttf`).
+- **Colour:** `uv run $S/palette.py $B/src/colors-in.json $B/src/colors.json --css $B/src/colors.css --md $B/src/colors.md [--fit]` (input in `system.md` § Colour).
+- **Wordmark or letter:** `uv run $S/wordmark.py $B/fonts/<file>.ttf "<text>" $B/logo/sketches/<name>.svg [--axis wght=600] [--track -0.03] [--fill "#1A1614"] [--split]`; writes a `.json` sidecar with baseline, x-height and cap height.
+- **Size test:** `uv run $S/sizetest.py $B/img/sizetest.png $B/logo/<slug>-mark.svg $B/logo/<slug>-lockup.svg $B/logo/favicon-light.svg:$B/logo/favicon-dark.svg`; for sketches, `uv run $S/sizetest.py $B/img/sizetest-sketches.png $B/logo/sketches/*.svg`.
+- **PNG export:** `uv run $S/svg2png.py $B/logo/favicon-light.svg $B/logo/favicon-16.png 16 [HEIGHT]`.
+- **Trace a hand-drawn mark:** `potrace -s <sketch>.bmp -o <mark>.svg` (`/opt/homebrew/bin/potrace`; input BMP or PBM).
+- **Public-domain art:** `uv run $S/commons.py search "<query>"`, then `uv run $S/commons.py fetch "File:<name>" $B/img/<name>.jpg 1600 --credits $B/CREDITS.md`.
+- **Icons:** `curl -sLo $B/src/icons/<name>.svg https://unpkg.com/lucide-static/icons/<name>.svg` (or Phosphor, Tabler).
+- **Review page:** `curl -s 127.0.0.1:8800/api/check/<folder>`; shoot it with `$S/shoot.sh view http://127.0.0.1:8800/<folder> $B/img/page.png 1440 900`.
+- **Audit:** `uv run $S/audit.py $B`: the files for each surface in `brief.md`, contrast, alt text, reduced motion, repeated images, the page.
+- **Mac traps:** BSD `sed -i ''`; `grep` may be ugrep and choke on long HTML regexes, so use Python for regex on HTML.
 
 ## Several directions at once
 
-When the user wants options, spawn N senior-designer agents (Opus unless told otherwise).
-- **Same brief, separate folders.** Each one gets the same brief and this skill, and works in its own folder (`<brand>-a`, `-b`, `-c`).
-- **No peeking.** None of them reads the others' folders.
-- **A different starting lens and style family** for each. For example: A = the business buyer with a modernist/editorial base; B = taste and craft, with a base from the brand's cultural root; C = the daily operator with a dev-tool/terminal base. Use `style-picking.md` § Briefing parallel designers so the directions really differ.
+Only when the user asks for options. You are the orchestrator:
 
-When they are done, build an index page:
-- a table with vibe, target, style recipe, logo, headline and theme for each direction
-- a gallery of the heroes
-- a gallery of the full landing pages
-- your recommendation in two lines
+1. Run phases 0 and 1 once in `~/Documents/<slug>`: research, buyer voice, competitors, personas, assumptions and surfaces go into one `brief.md`. Copy it and `research/` into each designer folder (`<slug>-a`, `-b`, `-c`).
+2. Spawn one senior-designer agent per direction (Opus unless told otherwise) with this skill's absolute path, its own folder, and its lens. Each runs phase 0 around the copied brief, starts branding.md § Strategy from it plus one line on its lens, then works from phase 2 (no name) or 3. None reads another's folder.
+3. Derive the lenses from the buyer types in the brief, each with a different style family (`style-picking.md` § Briefing parallel designers). Don't reuse an example lens blindly; one that leads into the client's dislikes is wrong.
+4. When all are done, view every PNG yourself and build the index page in `~/Documents/<slug>`: the #1 surface of each direction side by side, a table (vibe, target, recipe, logo, key line, theme), and your recommendation in two lines.
 
-## Crit checklist
+## Crit (phase 8)
 
-Run `python3 $S/audit.py <brand-folder>` first and fix every FAIL. Then, with your eyes on the PNGs:
+Write `crit.md`, one line per item with ✓ or the reason it misses, and show it in the Assets section:
 
-- [ ] **Strategy:** names a buyer, their fears, the category cliché and the gap, with links and competitor screenshots.
-- [ ] **Direction:**
-  - the style recipe is written and contrasts with the cliché
-  - the vibe yields a colour, a typeface, a motion and a word
-  - the moodboard passes the NOT list
-- [ ] **Logo:**
-  - reads at 16 px (magnified size test), in one colour and reversed
-  - has clear space and minimum sizes
-  - the look-alike sheet shows no clash
-- [ ] **Colour:** `palette.py` exits 0. Body and secondary text ≥ 4.5:1, large text and UI ≥ 3:1, decorative pairs labelled.
-- [ ] **Type:** OFL files present; the scale covers display → label on desktop and mobile; data uses tabular figures (or digits of equal width; check with fontTools).
-- [ ] **Landing:** has the 11-part structure from `product.md` (cuts explained), with layout variants from `layouts.md` that vary in rhythm. The product screen shows the product's own states. No slop tell from `product.md` (run the `web-unslop` skill too, if installed).
-- [ ] **Screenshots:** 1440 and 390 shots opened (tall ones tiled); no OVERFLOW, no text collision, no stretched image, not just the desktop shrunk.
-- [ ] **Images:** follow habit 10, and `CREDITS.md` covers every third-party asset.
-- [ ] **Placeholders:** follow habit 9.
-- [ ] **Accessibility:** reduced-motion shows a designed static state; focus is visible; images have alt text.
-- [ ] **Review page:** compiles (`/api/check` ok), and you looked at a screenshot of it rendered.
+- each phase gate above
+- type: OFL files present; the scale covers display → label on desktop and mobile; data uses tabular figures
+- shots: every one viewed (tall ones tiled); no OVERFLOW, text collision, stretched image, or desktop merely shrunk
+- accessibility: reduced motion shows a designed static state; focus is visible; every image has alt text
 
-## Report (short)
+## Report
 
-- The page URL, with section links.
-- The vibe, the target and the style recipe, in three lines.
-- The logo, in one line.
+- The page URL and each section link (`http://127.0.0.1:8800/<folder>#<id>`).
+- The vibe, the target and the style recipe in three lines; the logo in one.
 - The ❓ questions for the user.
 - Anything you couldn't do.
