@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"black": [0.17, 0.01, 260, "lacquer black"],
+		"gold": [0.78, 0.12, 85, "gold leaf"],
+		"gold-deep": [0.58, 0.1, 75, "the sunburst rays"],
+		"cream": [0.94, 0.03, 90, "cream"],
+		"emerald": [0.42, 0.088, 165, "emerald"],
+		"lacquer": [0.23, 0.01, 260, "raised panels"],
+		"champagne": [0.8, 0.04, 85, "quiet text"],
+		"navy": [0.45, 0.1, 260, "chart navy"]
+	},
+	"roles": {
+		"dark": {"background": "black", "foreground": "cream", "card": "lacquer", "card-foreground": "cream", "popover": "lacquer", "popover-foreground": "cream", "primary": "gold", "primary-foreground": "black", "secondary": "emerald", "secondary-foreground": "cream", "muted": "lacquer", "muted-foreground": "champagne", "accent": "emerald", "accent-foreground": "cream", "destructive": "gold-deep", "border": "gold-deep", "input": "gold-deep", "ring": "gold", "chart-1": "gold", "chart-2": "emerald", "chart-3": "cream", "chart-4": "gold-deep", "chart-5": "navy"}
+	},
+	"default": "dark",
+	"pairs": [
+		["cream", "black", "body text"],
+		["champagne", "black", "muted text"],
+		["cream", "lacquer", "card text on card"],
+		["black", "gold", "primary text on primary"],
+		["cream", "emerald", "secondary text on secondary"],
+		["champagne", "lacquer", "muted text on muted"],
+		["gold", "black", "focus ring", "ui"],
+		["gold-deep", "black", "hairline", "decorative"]
+	]
+}

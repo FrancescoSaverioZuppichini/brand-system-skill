@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"linen": [0.93, 0.025, 85, "linen paper"],
+		"indigo": [0.33, 0.09, 265, "indigo dye"],
+		"madder": [0.48, 0.14, 28, "madder red"],
+		"willow": [0.55, 0.08, 135, "willow green"],
+		"weld": [0.8, 0.12, 95, "weld yellow"],
+		"ink": [0.2, 0.02, 60, "black ink"],
+		"moss": [0.42, 0.07, 135, "dark willow labels"],
+		"flax": [0.89, 0.025, 85, "quiet surfaces"],
+		"walnut": [0.45, 0.03, 60, "small print"]
+	},
+	"roles": {
+		"light": {"background": "linen", "foreground": "ink", "card": "linen", "card-foreground": "ink", "popover": "linen", "popover-foreground": "ink", "primary": "madder", "primary-foreground": "linen", "secondary": "indigo", "secondary-foreground": "linen", "muted": "flax", "muted-foreground": "walnut", "accent": "weld", "accent-foreground": "ink", "destructive": "madder", "border": "ink", "input": "ink", "ring": "indigo", "chart-1": "madder", "chart-2": "indigo", "chart-3": "willow", "chart-4": "weld", "chart-5": "ink"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "linen", "body text"],
+		["walnut", "linen", "muted text"],
+		["linen", "madder", "primary text on primary"],
+		["linen", "indigo", "secondary text on secondary"],
+		["ink", "weld", "accent text on accent"],
+		["walnut", "flax", "muted text on muted"],
+		["indigo", "linen", "focus ring", "ui"]
+	]
+}

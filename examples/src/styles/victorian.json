@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"paper": [0.91, 0.04, 80, "toned playbill stock"],
+		"ink": [0.2, 0.02, 40, "black ink"],
+		"red": [0.42, 0.15, 25, "deep red ink"],
+		"green": [0.33, 0.06, 155, "dark green ink"],
+		"gold": [0.7, 0.12, 80, "gold"],
+		"foxed": [0.87, 0.04, 80, "quiet surfaces"],
+		"sepia": [0.45, 0.03, 50, "small print"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "green", "primary-foreground": "paper", "secondary": "red", "secondary-foreground": "paper", "muted": "foxed", "muted-foreground": "sepia", "accent": "gold", "accent-foreground": "ink", "destructive": "red", "border": "ink", "input": "ink", "ring": "red", "chart-1": "red", "chart-2": "green", "chart-3": "gold", "chart-4": "ink", "chart-5": "sepia"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["sepia", "paper", "muted text"],
+		["paper", "green", "primary text on primary"],
+		["paper", "red", "secondary text on secondary"],
+		["ink", "gold", "accent text on accent"],
+		["sepia", "foxed", "muted text on muted"],
+		["red", "paper", "focus ring", "ui"]
+	]
+}

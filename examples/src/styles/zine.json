@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"photocopy": [0.96, 0.003, 90, "photocopy paper"],
+		"toner": [0.15, 0, 0, "toner black"],
+		"grey": [0.7, 0, 0, "photocopy grey"],
+		"highlighter": [0.93, 0.19, 110, "the one highlighter"],
+		"scrap": [0.995, 0, 0, "white scrap paper"],
+		"smear": [0.9, 0, 0, "grey scrap"],
+		"smudge": [0.45, 0, 0, "small print"],
+		"marker": [0.55, 0.2, 27, "red marker"]
+	},
+	"roles": {
+		"light": {"background": "photocopy", "foreground": "toner", "card": "scrap", "card-foreground": "toner", "popover": "scrap", "popover-foreground": "toner", "primary": "toner", "primary-foreground": "photocopy", "secondary": "highlighter", "secondary-foreground": "toner", "muted": "smear", "muted-foreground": "smudge", "accent": "highlighter", "accent-foreground": "toner", "destructive": "marker", "border": "toner", "input": "toner", "ring": "toner", "chart-1": "toner", "chart-2": "highlighter", "chart-3": "grey", "chart-4": "marker", "chart-5": "smudge"}
+	},
+	"default": "light",
+	"pairs": [
+		["toner", "photocopy", "body text"],
+		["smudge", "photocopy", "muted text"],
+		["toner", "scrap", "card text on card"],
+		["photocopy", "toner", "primary text on primary"],
+		["toner", "highlighter", "secondary text on secondary"],
+		["smudge", "smear", "muted text on muted"],
+		["smudge", "scrap", "muted text on cards"]
+	]
+}

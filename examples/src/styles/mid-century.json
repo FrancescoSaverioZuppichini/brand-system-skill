@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"paper": [0.94, 0.03, 85, "warm paper"],
+		"ink": [0.25, 0.02, 50, "brown-black ink"],
+		"mustard": [0.76, 0.15, 80, "cut-paper mustard"],
+		"orange": [0.64, 0.17, 45, "burnt orange"],
+		"teal": [0.51, 0.08, 200, "teal"],
+		"olive": [0.55, 0.09, 115, "olive"],
+		"kraft": [0.89, 0.035, 80, "quiet surfaces"],
+		"walnut": [0.45, 0.03, 55, "small print"],
+		"pencil": [0.82, 0.03, 80, "hairlines"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "paper", "secondary": "teal", "secondary-foreground": "paper", "muted": "kraft", "muted-foreground": "walnut", "accent": "mustard", "accent-foreground": "ink", "destructive": "orange", "border": "pencil", "input": "pencil", "ring": "teal", "chart-1": "orange", "chart-2": "teal", "chart-3": "mustard", "chart-4": "olive", "chart-5": "ink"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["walnut", "paper", "muted text"],
+		["paper", "ink", "primary text on primary"],
+		["paper", "teal", "secondary text on secondary"],
+		["ink", "mustard", "accent text on accent"],
+		["walnut", "kraft", "muted text on muted"],
+		["teal", "paper", "focus ring", "ui"],
+		["pencil", "paper", "hairline", "decorative"]
+	]
+}

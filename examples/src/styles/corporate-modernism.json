@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "manual-page white"],
+		"ink": [0.2, 0.01, 260, "type"],
+		"blue": [0.47, 0.19, 262, "the corporate blue"],
+		"grey": [0.93, 0.005, 260, "light grey panels"],
+		"steel": [0.5, 0.01, 260, "captions"],
+		"rule": [0.86, 0.005, 260, "hairlines"],
+		"navy": [0.32, 0.12, 262, "chart navy"],
+		"sky": [0.72, 0.09, 250, "chart sky"],
+		"signal": [0.55, 0.2, 27, "warning red"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "ink", "card": "white", "card-foreground": "ink", "popover": "white", "popover-foreground": "ink", "primary": "blue", "primary-foreground": "white", "secondary": "grey", "secondary-foreground": "ink", "muted": "grey", "muted-foreground": "steel", "accent": "grey", "accent-foreground": "ink", "destructive": "signal", "border": "rule", "input": "rule", "ring": "blue", "chart-1": "blue", "chart-2": "navy", "chart-3": "sky", "chart-4": "steel", "chart-5": "ink"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "white", "body text"],
+		["steel", "white", "muted text"],
+		["white", "blue", "primary text on primary"],
+		["ink", "grey", "secondary text on secondary"],
+		["steel", "grey", "muted text on muted"],
+		["blue", "white", "focus ring", "ui"],
+		["rule", "white", "hairline", "decorative"]
+	]
+}

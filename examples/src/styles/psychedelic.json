@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"orange": [0.7, 0.19, 45, "melting orange"],
+		"blue": [0.5, 0.22, 265, "electric blue"],
+		"magenta": [0.6, 0.25, 345, "magenta"],
+		"green": [0.85, 0.2, 130, "acid green"],
+		"ink": [0.25, 0.06, 300, "outline ink"],
+		"lemon": [0.97, 0.06, 110, "light text on colour"],
+		"lime": [0.92, 0.12, 130, "quiet surfaces"],
+		"plum": [0.4, 0.1, 320, "small print"]
+	},
+	"roles": {
+		"light": {"background": "green", "foreground": "ink", "card": "lime", "card-foreground": "ink", "popover": "lime", "popover-foreground": "ink", "primary": "blue", "primary-foreground": "lemon", "secondary": "orange", "secondary-foreground": "ink", "muted": "lime", "muted-foreground": "plum", "accent": "lime", "accent-foreground": "ink", "destructive": "magenta", "border": "ink", "input": "ink", "ring": "blue", "chart-1": "magenta", "chart-2": "blue", "chart-3": "orange", "chart-4": "ink", "chart-5": "plum"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "green", "body text"],
+		["plum", "green", "muted text"],
+		["ink", "lime", "card text on card"],
+		["lemon", "blue", "primary text on primary"],
+		["ink", "orange", "secondary text on secondary"],
+		["plum", "lime", "muted text on muted"],
+		["blue", "green", "focus ring", "ui"]
+	]
+}

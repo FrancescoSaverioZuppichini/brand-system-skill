@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"paper": [0.95, 0.02, 85, "cotton paper"],
+		"ink": [0.22, 0.01, 60, "black ink"],
+		"red": [0.5, 0.17, 28, "red ink"],
+		"faded": [0.45, 0.01, 60, "faded ink"],
+		"cotton": [0.91, 0.02, 85, "quiet surfaces"],
+		"blue": [0.42, 0.1, 255, "blue ink"],
+		"ochre": [0.65, 0.1, 75, "chart ochre"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "red", "primary-foreground": "paper", "secondary": "ink", "secondary-foreground": "paper", "muted": "cotton", "muted-foreground": "faded", "accent": "cotton", "accent-foreground": "ink", "destructive": "red", "border": "ink", "input": "ink", "ring": "red", "chart-1": "red", "chart-2": "ink", "chart-3": "blue", "chart-4": "ochre", "chart-5": "faded"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["faded", "paper", "muted text"],
+		["paper", "red", "primary text on primary"],
+		["paper", "ink", "secondary text on secondary"],
+		["ink", "cotton", "accent text on accent"],
+		["faded", "cotton", "muted text on muted"],
+		["red", "paper", "focus ring", "ui"]
+	]
+}

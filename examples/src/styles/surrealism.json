@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"sky": [0.8, 0.07, 230, "clear sky"],
+		"sky-high": [0.66, 0.09, 240, "the sky overhead"],
+		"sand": [0.88, 0.04, 75, "sand"],
+		"sand-far": [0.8, 0.05, 70, "sand at the horizon"],
+		"dusk": [0.3, 0.03, 260, "deep shadow: type"],
+		"cloud": [0.97, 0.01, 240, "cloud white"],
+		"terracotta": [0.62, 0.17, 30, "the one strange object"],
+		"haze": [0.93, 0.02, 230, "quiet surfaces"],
+		"slate": [0.48, 0.03, 260, "small print"],
+		"horizon": [0.82, 0.03, 240, "hairlines"]
+	},
+	"roles": {
+		"light": {"background": "cloud", "foreground": "dusk", "card": "cloud", "card-foreground": "dusk", "popover": "cloud", "popover-foreground": "dusk", "primary": "dusk", "primary-foreground": "cloud", "secondary": "sky", "secondary-foreground": "dusk", "muted": "haze", "muted-foreground": "slate", "accent": "sand", "accent-foreground": "dusk", "destructive": "terracotta", "border": "horizon", "input": "horizon", "ring": "terracotta", "chart-1": "terracotta", "chart-2": "sky-high", "chart-3": "sand-far", "chart-4": "dusk", "chart-5": "sky"}
+	},
+	"default": "light",
+	"pairs": [
+		["dusk", "cloud", "body text"],
+		["slate", "cloud", "muted text"],
+		["cloud", "dusk", "primary text on primary"],
+		["dusk", "sky", "secondary text on secondary"],
+		["dusk", "sand", "accent text on accent"],
+		["slate", "haze", "muted text on muted"],
+		["terracotta", "cloud", "focus ring", "ui"],
+		["horizon", "cloud", "hairline", "decorative"]
+	]
+}

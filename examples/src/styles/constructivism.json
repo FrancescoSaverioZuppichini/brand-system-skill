@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"cream": [0.93, 0.03, 85, "poster stock"],
+		"soot": [0.17, 0.01, 40, "black ink: type and bands"],
+		"red": [0.54, 0.21, 29, "agitprop red: the wedge"],
+		"concrete": [0.6, 0.01, 60, "grey rules and quiet marks"],
+		"graphite": [0.45, 0.01, 60, "small print"],
+		"newsprint": [0.88, 0.03, 85, "quiet surfaces"],
+		"brick": [0.4, 0.14, 29, "dark red second ink"]
+	},
+	"roles": {
+		"light": {"background": "cream", "foreground": "soot", "card": "cream", "card-foreground": "soot", "popover": "cream", "popover-foreground": "soot", "primary": "red", "primary-foreground": "cream", "secondary": "soot", "secondary-foreground": "cream", "muted": "newsprint", "muted-foreground": "graphite", "accent": "newsprint", "accent-foreground": "soot", "destructive": "red", "border": "soot", "input": "soot", "ring": "red", "chart-1": "red", "chart-2": "soot", "chart-3": "concrete", "chart-4": "brick", "chart-5": "graphite"}
+	},
+	"default": "light",
+	"pairs": [
+		["soot", "cream", "body text"],
+		["graphite", "cream", "muted text"],
+		["cream", "red", "primary text on primary"],
+		["cream", "soot", "secondary text on secondary"],
+		["soot", "newsprint", "accent text on accent"],
+		["graphite", "newsprint", "muted text on muted"],
+		["red", "cream", "focus ring", "ui"]
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"tokens": {
+		"gesso": [0.94, 0.025, 80, "prepared panel ground"],
+		"umber": [0.28, 0.03, 55, "umber: type and the button"],
+		"sanguine": [0.55, 0.12, 40, "red chalk"],
+		"ochre": [0.7, 0.11, 75, "yellow ochre"],
+		"verdigris": [0.55, 0.06, 170, "verdigris"],
+		"lead-white": [0.97, 0.015, 85, "lead white"],
+		"plaster": [0.9, 0.025, 80, "quiet surfaces"],
+		"sepia": [0.45, 0.03, 55, "small print"],
+		"silverpoint": [0.8, 0.03, 75, "hairlines"],
+		"lapis": [0.45, 0.12, 260, "lapis, used rarely"]
+	},
+	"roles": {
+		"light": {"background": "gesso", "foreground": "umber", "card": "lead-white", "card-foreground": "umber", "popover": "lead-white", "popover-foreground": "umber", "primary": "umber", "primary-foreground": "lead-white", "secondary": "ochre", "secondary-foreground": "umber", "muted": "plaster", "muted-foreground": "sepia", "accent": "plaster", "accent-foreground": "umber", "destructive": "sanguine", "border": "silverpoint", "input": "silverpoint", "ring": "sanguine", "chart-1": "sanguine", "chart-2": "verdigris", "chart-3": "ochre", "chart-4": "umber", "chart-5": "lapis"}
+	},
+	"default": "light",
+	"pairs": [
+		["umber", "gesso", "body text"],
+		["sepia", "gesso", "muted text"],
+		["umber", "lead-white", "card text on card"],
+		["lead-white", "umber", "primary text on primary"],
+		["umber", "ochre", "secondary text on secondary"],
+		["umber", "plaster", "accent text on accent"],
+		["sepia", "plaster", "muted text on muted"],
+		["sepia", "lead-white", "muted text on cards"],
+		["sanguine", "gesso", "focus ring", "ui"],
+		["silverpoint", "gesso", "hairline", "decorative"]
+	]
+}

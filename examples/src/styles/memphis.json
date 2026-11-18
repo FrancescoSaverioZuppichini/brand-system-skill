@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"white": [0.98, 0.005, 90, "laminate white"],
+		"pink": [0.8, 0.1, 355, "pastel pink"],
+		"mint": [0.87, 0.09, 165, "mint"],
+		"yellow": [0.9, 0.15, 100, "yellow"],
+		"cobalt": [0.5, 0.2, 262, "cobalt"],
+		"black": [0.18, 0, 0, "outlines and type"],
+		"chalk": [0.94, 0.005, 90, "quiet surfaces"],
+		"graphite": [0.45, 0, 0, "small print"],
+		"red": [0.58, 0.2, 27, "warning red"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "black", "card": "white", "card-foreground": "black", "popover": "white", "popover-foreground": "black", "primary": "cobalt", "primary-foreground": "white", "secondary": "pink", "secondary-foreground": "black", "muted": "chalk", "muted-foreground": "graphite", "accent": "mint", "accent-foreground": "black", "destructive": "red", "border": "black", "input": "black", "ring": "cobalt", "chart-1": "pink", "chart-2": "mint", "chart-3": "yellow", "chart-4": "cobalt", "chart-5": "black"}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "white", "body text"],
+		["graphite", "white", "muted text"],
+		["white", "cobalt", "primary text on primary"],
+		["black", "pink", "secondary text on secondary"],
+		["black", "mint", "accent text on accent"],
+		["graphite", "chalk", "muted text on muted"],
+		["cobalt", "white", "focus ring", "ui"]
+	]
+}

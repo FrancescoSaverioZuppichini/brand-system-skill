@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"white": [0.97, 0.005, 90, "white planes"],
+		"black": [0.15, 0, 0, "the bars and the type"],
+		"red": [0.55, 0.21, 27, "red plane"],
+		"blue": [0.4, 0.17, 263, "blue plane"],
+		"yellow": [0.86, 0.17, 95, "yellow plane"],
+		"grey": [0.91, 0.005, 90, "grey plane"],
+		"slate": [0.45, 0, 0, "small print"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "black", "card": "white", "card-foreground": "black", "popover": "white", "popover-foreground": "black", "primary": "red", "primary-foreground": "white", "secondary": "blue", "secondary-foreground": "white", "muted": "grey", "muted-foreground": "slate", "accent": "yellow", "accent-foreground": "black", "destructive": "red", "border": "black", "input": "black", "ring": "blue", "chart-1": "red", "chart-2": "blue", "chart-3": "yellow", "chart-4": "black", "chart-5": "slate"}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "white", "body text"],
+		["slate", "white", "muted text"],
+		["white", "red", "primary text on primary"],
+		["white", "blue", "secondary text on secondary"],
+		["black", "yellow", "accent text on accent"],
+		["slate", "grey", "muted text on muted"],
+		["blue", "white", "focus ring", "ui"]
+	]
+}

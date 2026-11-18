@@ -1,0 +1,31 @@
+{
+	"tokens": {
+		"panel": [0.27, 0.04, 255, "deep blue sign panel"],
+		"head": [0.19, 0.02, 255, "header panel"],
+		"white": [0.99, 0, 0, "sign white"],
+		"yellow": [0.87, 0.17, 95, "line yellow"],
+		"green": [0.5, 0.135, 150, "line green"],
+		"wall": [0.44, 0.005, 255, "the wall the panels are bolted to"],
+		"slate": [0.34, 0.04, 255, "quiet panels"],
+		"fog": [0.82, 0.02, 255, "secondary sign text"],
+		"bolt": [0.42, 0.03, 255, "panel edges"],
+		"red": [0.6, 0.2, 27, "line red"],
+		"sky": [0.7, 0.12, 235, "line blue"]
+	},
+	"roles": {
+		"dark": {"background": "panel", "foreground": "white", "card": "head", "card-foreground": "white", "popover": "head", "popover-foreground": "white", "primary": "yellow", "primary-foreground": "head", "secondary": "green", "secondary-foreground": "white", "muted": "slate", "muted-foreground": "fog", "accent": "slate", "accent-foreground": "white", "destructive": "red", "border": "bolt", "input": "bolt", "ring": "yellow", "chart-1": "yellow", "chart-2": "green", "chart-3": "sky", "chart-4": "red", "chart-5": "white"}
+	},
+	"default": "dark",
+	"pairs": [
+		["white", "panel", "body text"],
+		["fog", "panel", "muted text"],
+		["white", "head", "card text on card"],
+		["head", "yellow", "primary text on primary"],
+		["white", "green", "secondary text on secondary"],
+		["white", "slate", "accent text on accent"],
+		["fog", "slate", "muted text on muted"],
+		["fog", "head", "muted text on cards"],
+		["yellow", "panel", "focus ring", "ui"],
+		["bolt", "panel", "hairline", "decorative"]
+	]
+}

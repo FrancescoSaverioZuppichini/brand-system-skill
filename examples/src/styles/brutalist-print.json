@@ -1,0 +1,21 @@
+{
+	"tokens": {
+		"white": [0.98, 0, 0, "paper"],
+		"black": [0.13, 0, 0, "type, rules"],
+		"orange": [0.66, 0.2, 40, "the loud field"],
+		"concrete": [0.92, 0, 0, "quiet surfaces"],
+		"ash": [0.45, 0, 0, "small print"],
+		"rust": [0.45, 0.14, 40, "chart rust"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "black", "card": "white", "card-foreground": "black", "popover": "white", "popover-foreground": "black", "primary": "black", "primary-foreground": "white", "secondary": "orange", "secondary-foreground": "black", "muted": "concrete", "muted-foreground": "ash", "accent": "orange", "accent-foreground": "black", "destructive": "rust", "border": "black", "input": "black", "ring": "black", "chart-1": "black", "chart-2": "orange", "chart-3": "ash", "chart-4": "rust", "chart-5": "concrete"}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "white", "body text"],
+		["ash", "white", "muted text"],
+		["white", "black", "primary text on primary"],
+		["black", "orange", "secondary text on secondary"],
+		["ash", "concrete", "muted text on muted"]
+	]
+}

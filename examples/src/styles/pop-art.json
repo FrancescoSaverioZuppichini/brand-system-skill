@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "comic paper"],
+		"black": [0.14, 0, 0, "key line ink"],
+		"red": [0.6, 0.23, 28, "process red"],
+		"yellow": [0.9, 0.18, 100, "process yellow"],
+		"blue": [0.55, 0.18, 255, "process blue"],
+		"pink": [0.7, 0.2, 355, "hot pink"],
+		"newsprint": [0.94, 0.01, 90, "quiet surfaces"],
+		"grey": [0.45, 0, 0, "small print"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "black", "card": "white", "card-foreground": "black", "popover": "white", "popover-foreground": "black", "primary": "yellow", "primary-foreground": "black", "secondary": "red", "secondary-foreground": "black", "muted": "newsprint", "muted-foreground": "grey", "accent": "pink", "accent-foreground": "black", "destructive": "red", "border": "black", "input": "black", "ring": "blue", "chart-1": "red", "chart-2": "blue", "chart-3": "yellow", "chart-4": "pink", "chart-5": "black"}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "white", "body text"],
+		["grey", "white", "muted text"],
+		["black", "yellow", "primary text on primary"],
+		["black", "red", "secondary text on secondary"],
+		["black", "pink", "accent text on accent"],
+		["grey", "newsprint", "muted text on muted"],
+		["blue", "white", "focus ring", "ui"]
+	]
+}

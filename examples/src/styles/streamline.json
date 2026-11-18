@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"cream": [0.94, 0.03, 90, "cream enamel"],
+		"mint": [0.88, 0.05, 165, "pale mint"],
+		"chrome": [0.8, 0.01, 250, "chrome"],
+		"red": [0.53, 0.2, 27, "signal red"],
+		"navy": [0.3, 0.07, 260, "navy enamel"],
+		"porcelain": [0.9, 0.03, 90, "quiet surfaces"],
+		"steel": [0.45, 0.03, 260, "small print"],
+		"teal": [0.55, 0.08, 190, "chart teal"]
+	},
+	"roles": {
+		"light": {"background": "cream", "foreground": "navy", "card": "mint", "card-foreground": "navy", "popover": "cream", "popover-foreground": "navy", "primary": "red", "primary-foreground": "cream", "secondary": "navy", "secondary-foreground": "cream", "muted": "porcelain", "muted-foreground": "steel", "accent": "mint", "accent-foreground": "navy", "destructive": "red", "border": "chrome", "input": "chrome", "ring": "navy", "chart-1": "red", "chart-2": "navy", "chart-3": "teal", "chart-4": "chrome", "chart-5": "steel"}
+	},
+	"default": "light",
+	"pairs": [
+		["navy", "cream", "body text"],
+		["steel", "cream", "muted text"],
+		["navy", "mint", "card text on card"],
+		["cream", "red", "primary text on primary"],
+		["cream", "navy", "secondary text on secondary"],
+		["steel", "porcelain", "muted text on muted"],
+		["steel", "mint", "muted text on cards"],
+		["chrome", "cream", "hairline", "decorative"]
+	]
+}

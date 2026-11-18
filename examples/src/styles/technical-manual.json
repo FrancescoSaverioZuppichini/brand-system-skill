@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"housing": [0.92, 0.003, 250, "grey body of the device"],
+		"white": [0.98, 0, 0, "panel white"],
+		"black": [0.18, 0, 0, "type, lines, the display"],
+		"orange": [0.68, 0.2, 42, "the one signal"],
+		"graphite": [0.46, 0, 0, "small print"],
+		"well": [0.88, 0.003, 250, "recessed surfaces"],
+		"amber": [0.8, 0.14, 75, "chart amber"],
+		"steel": [0.62, 0.01, 250, "chart steel"]
+	},
+	"roles": {
+		"light": {"background": "housing", "foreground": "black", "card": "white", "card-foreground": "black", "popover": "white", "popover-foreground": "black", "primary": "orange", "primary-foreground": "black", "secondary": "white", "secondary-foreground": "black", "muted": "well", "muted-foreground": "graphite", "accent": "well", "accent-foreground": "black", "destructive": "orange", "border": "black", "input": "black", "ring": "black", "chart-1": "orange", "chart-2": "black", "chart-3": "steel", "chart-4": "amber", "chart-5": "graphite"}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "housing", "body text"],
+		["graphite", "housing", "muted text"],
+		["black", "white", "card text on card"],
+		["black", "orange", "primary text on primary"],
+		["black", "well", "accent text on accent"],
+		["graphite", "well", "muted text on muted"],
+		["graphite", "white", "muted text on cards"]
+	]
+}

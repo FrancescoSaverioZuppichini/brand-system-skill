@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"vellum": [0.92, 0.04, 85, "calfskin vellum"],
+		"ink": [0.22, 0.02, 40, "iron-gall ink"],
+		"vermilion": [0.58, 0.19, 35, "vermilion: rubrics"],
+		"ultramarine": [0.42, 0.17, 268, "ultramarine"],
+		"gold": [0.74, 0.12, 85, "gold leaf"],
+		"malachite": [0.55, 0.1, 160, "malachite green"],
+		"parchment": [0.88, 0.04, 85, "quiet surfaces"],
+		"sepia": [0.45, 0.03, 50, "small print"],
+		"drypoint": [0.8, 0.05, 60, "ruling and hairlines"]
+	},
+	"roles": {
+		"light": {"background": "vellum", "foreground": "ink", "card": "vellum", "card-foreground": "ink", "popover": "vellum", "popover-foreground": "ink", "primary": "ultramarine", "primary-foreground": "vellum", "secondary": "gold", "secondary-foreground": "ink", "muted": "parchment", "muted-foreground": "sepia", "accent": "parchment", "accent-foreground": "ink", "destructive": "vermilion", "border": "drypoint", "input": "drypoint", "ring": "ultramarine", "chart-1": "ultramarine", "chart-2": "vermilion", "chart-3": "gold", "chart-4": "malachite", "chart-5": "ink"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "vellum", "body text"],
+		["sepia", "vellum", "muted text"],
+		["vellum", "ultramarine", "primary text on primary"],
+		["ink", "gold", "secondary text on secondary"],
+		["ink", "parchment", "accent text on accent"],
+		["sepia", "parchment", "muted text on muted"],
+		["ultramarine", "vellum", "focus ring", "ui"],
+		["drypoint", "vellum", "hairline", "decorative"]
+	]
+}

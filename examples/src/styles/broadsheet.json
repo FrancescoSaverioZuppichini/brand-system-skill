@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"newsprint": [0.94, 0.012, 90, "the page"],
+		"ink": [0.17, 0.005, 80, "type and rules"],
+		"grey": [0.45, 0.005, 80, "datelines and captions"],
+		"salmon": [0.95, 0.03, 65, "the pink data box"],
+		"pulp": [0.9, 0.012, 90, "quiet surfaces"],
+		"greek": [0.55, 0.005, 80, "greeked body copy"],
+		"rust": [0.55, 0.12, 40, "chart rust"],
+		"slate": [0.5, 0.04, 250, "chart slate"]
+	},
+	"roles": {
+		"light": {"background": "newsprint", "foreground": "ink", "card": "salmon", "card-foreground": "ink", "popover": "newsprint", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "newsprint", "secondary": "salmon", "secondary-foreground": "ink", "muted": "pulp", "muted-foreground": "grey", "accent": "salmon", "accent-foreground": "ink", "destructive": "rust", "border": "ink", "input": "ink", "ring": "ink", "chart-1": "ink", "chart-2": "rust", "chart-3": "slate", "chart-4": "greek", "chart-5": "grey"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "newsprint", "body text"],
+		["grey", "newsprint", "muted text"],
+		["ink", "salmon", "card text on card"],
+		["newsprint", "ink", "primary text on primary"],
+		["grey", "pulp", "muted text on muted"],
+		["grey", "salmon", "muted text on cards"]
+	]
+}

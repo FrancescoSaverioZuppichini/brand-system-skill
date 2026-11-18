@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"cream": [0.95, 0.03, 90, "diner cream"],
+		"turquoise": [0.72, 0.11, 195, "turquoise"],
+		"coral": [0.7, 0.15, 35, "coral"],
+		"mustard": [0.8, 0.14, 85, "mustard"],
+		"ink": [0.25, 0.03, 250, "outline ink"],
+		"atomic": [0.87, 0.06, 195, "pale turquoise slab"],
+		"formica": [0.91, 0.03, 90, "quiet surfaces"],
+		"slate": [0.45, 0.03, 250, "small print"],
+		"pink": [0.78, 0.1, 0, "chart pink"]
+	},
+	"roles": {
+		"light": {"background": "cream", "foreground": "ink", "card": "cream", "card-foreground": "ink", "popover": "cream", "popover-foreground": "ink", "primary": "mustard", "primary-foreground": "ink", "secondary": "turquoise", "secondary-foreground": "ink", "muted": "formica", "muted-foreground": "slate", "accent": "coral", "accent-foreground": "ink", "destructive": "coral", "border": "ink", "input": "ink", "ring": "ink", "chart-1": "turquoise", "chart-2": "coral", "chart-3": "mustard", "chart-4": "ink", "chart-5": "pink"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "cream", "body text"],
+		["slate", "cream", "muted text"],
+		["ink", "mustard", "primary text on primary"],
+		["ink", "turquoise", "secondary text on secondary"],
+		["ink", "coral", "accent text on accent"],
+		["slate", "formica", "muted text on muted"]
+	]
+}
