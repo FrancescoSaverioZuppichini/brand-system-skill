@@ -6,7 +6,7 @@ The brand book on screen is where the user judges the work, so it is part of the
 
 [artifacts](https://github.com/FrancescoSaverioZuppichini/artifacts) serves any folder up to 3 levels under `~/Documents` that holds a `page.mdx`, at `http://127.0.0.1:8800/<folder>`, and saves 👍/👎, notes and comments to `feedback.json`. Folder names must be unique. If the `local-artifacts` skill is installed, use it; otherwise this is enough.
 
-- **Is it up?** Run the page check (Tools § Review page). No answer means the app is down: keep writing `page.mdx` and tell the orchestrator or the user.
+- **Is it up?** Run the page check (Tools § Review page). No answer: if the app is installed but down, keep writing `page.mdx` and tell the orchestrator or the user; if it isn't installed at all, write the same seven sections as a static `$B/review.html` (images, captions, the ❓ questions as a list) and give the user its file path or the PDF from shoot.sh pdf.
 - **Write it by hand.** The app re-renders when the file changes; no generator scripts or watchers. A section looks like:
 
   ```mdx

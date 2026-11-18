@@ -10,8 +10,10 @@ from pathlib import Path
 from typing import NamedTuple, TypedDict
 
 NEED = {"text": 4.5, "large": 3.0, "ui": 3.0, "decorative": 0.0}
-ROLES = ["bg", "surface", "border", "text", "text-2", "primary", "on-primary", "accent",
-         "on-accent", "focus"]
+# [Agent] Roles are shadcn/ui's variable names, so colors.css pastes into a Tailwind 4 + shadcn app.
+ROLES = ["background", "foreground", "card", "card-foreground", "popover", "popover-foreground",
+         "primary", "primary-foreground", "secondary", "secondary-foreground", "muted",
+         "muted-foreground", "accent", "accent-foreground", "destructive", "border", "input", "ring"]
 RGB = tuple[int, int, int]
 Pair = tuple[str, str, str, str]  # fg, bg, use, kind
 Roles = dict[str, dict[str, str]]  # theme → role → pigment
@@ -72,7 +74,8 @@ def explain_fail(row: Row, fg: Token, bg: RGB) -> str:
     return f"{row['fg']} on {row['bg']} = {row['ratio']} < {need} ({row['use']}){hint}"
 
 def check_roles(roles: Roles, tokens: dict[str, Token], pairs: list[Pair]) -> list[str]:
-    # [Agent] Each text role needs a declared pair on its theme's bg, or an empty pair list passes.
+    # [Agent] Each text role needs a declared pair on the surface it sits on ("x-foreground" on "x",
+    # foreground and muted-foreground on background), or an empty pair list would pass.
     declared = {(fg, bg) for fg, bg, _, kind in pairs if kind != "decorative"}
     problems = []
     for theme, mapping in roles.items():
@@ -82,9 +85,10 @@ def check_roles(roles: Roles, tokens: dict[str, Token], pairs: list[Pair]) -> li
                 problems.append(f"{where} a pigment with the same name: rename the pigment")
             elif pigment not in tokens:
                 problems.append(f"{where} unknown pigment {pigment}")
-        for role in ("text", "text-2", "text-3"):
-            if role in mapping and (mapping[role], mapping.get("bg")) not in declared:
-                problems.append(f"{theme}: no pair for --{role} on --bg")
+        for role in [r for r in mapping if r.endswith("foreground")]:
+            base = "background" if role in ("foreground", "muted-foreground") else role[:-11]
+            if base in mapping and (mapping[role], mapping[base]) not in declared:
+                problems.append(f"{theme}: no pair for --{role} on --{base}")
     return problems
 
 def role_vars(mapping: dict[str, str]) -> str:
@@ -102,6 +106,9 @@ def render_css(table: Table, roles: Roles, default: str) -> str:
         css.append(f"@media (prefers-color-scheme: {theme}) {{ {unpinned} }}")
     if default in roles and len(roles) > 1:
         css.append(f'[data-theme="{default}"] {{\n{role_vars(roles[default])}\n}}')
+    # [Agent] Tailwind 4 makes utilities (bg-background, text-primary) from @theme; browsers skip it.
+    names = sorted({role for mapping in roles.values() for role in mapping})
+    css.append("@theme inline {\n" + "\n".join(f"  --color-{r}: var(--{r});" for r in names) + "\n}")
     return "\n".join(css) + "\n"
 
 def render_md(table: Table, rows: list[Row]) -> str:

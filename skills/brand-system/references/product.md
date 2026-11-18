@@ -22,7 +22,7 @@ Extras by type, on the landing or whichever surface carries them:
 
 ## Product and app screens
 
-A brand is proven inside the product, not on a poster. Design the screen where the buyer's core loop happens as static HTML with `tokens.css`.
+A brand is proven inside the product, not on a poster. Design the screen where the buyer's core loop happens. Software surfaces are built with **Tailwind 4 + shadcn/ui** by default: `colors.css` already uses shadcn's variable names and Tailwind's `@theme`, and the 193 layouts exist as shadcn blocks in the repo's [`examples/`](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/tree/main/examples) (clone it when you need them). Everything else (packaging, signage, print boards) is plain HTML with `tokens.css`.
 
 - Real data shapes (names, ids, counts, dates) and one "sample data" chip.
 - The main object's lifecycle, every state shown; the signature components live here. E.g. an order: placed · baking · on its way · delivered · failed (with the reason).
@@ -45,7 +45,7 @@ Eleven parts, each with a layout variant from `layouts.md` ("Composing a landing
 10. **Closing CTA:** a line that echoes the brand idea.
 11. **Footer:** links, the placeholder-domain note, the credits line.
 
-Copy comes from the voice table, never lorem ipsum. Plain HTML + `tokens.css`; Tailwind from a CDN only if its config maps to the tokens; no other third-party scripts. Designed at 1440 and at 390 (16 px side gutter), not the desktop shrunk. Semantic landmarks, a visible `:focus-visible`, alt text on every image.
+Copy comes from the voice table, never lorem ipsum. Software: Tailwind 4 + shadcn/ui themed by `colors.css` (a Vite + React page, or the Tailwind CDN for a single static mock); otherwise plain HTML + `tokens.css`; no other third-party scripts. Designed at 1440 and at 390 (16 px side gutter), not the desktop shrunk. Semantic landmarks, a visible `:focus-visible`, alt text on every image.
 
 ## Physical surfaces
 

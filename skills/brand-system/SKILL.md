@@ -1,6 +1,6 @@
 ---
 name: brand-system
-description: Builds a brand identity and design system the way a senior brand designer would - strategy, a style picked on purpose, a logo that survives 16 px, OKLCH tokens with checked contrast, OFL type, and the real surfaces (landing, product screen, app, packaging, signage, social) on a review page. Use it whenever someone asks for a brand, identity, rebrand, design system, style guide, logo, or the "style" or "look" of a landing page, app or packaging, even for one piece, and to run several competing brand directions in parallel.
+description: Builds a brand identity and design system the way a senior brand designer would. It proposes three cheap directions from three angles (from 141 styles and 193 layouts), lets the user pick, then builds the chosen one - a logo that survives 16 px, OKLCH tokens with checked contrast that paste into Tailwind + shadcn/ui, OFL type, and the real surfaces (landing, product screen, app, packaging, signage, social). Use it whenever someone asks for a brand, identity, rebrand, design system, style guide, logo, or the "style" or "look" of a landing page, app or packaging, even for one piece.
 ---
 
 # Brand system
@@ -29,7 +29,7 @@ Phases run in order and every later choice cites an earlier one. By default you 
 
 Bash state doesn't persist between calls and the working directory can reset. Find the folder this SKILL.md was read from, start every call with `S=<that folder>/scripts B=<absolute brand folder>`, and write every path as `$B/…`.
 
-The brand folder is `~/Documents/<slug>`, served at `http://127.0.0.1:8800/<slug>`. With no name yet it is `~/Documents/<category>-wip`: rename it once, after the phase 2 ★, and tell the user the new URL. Files inside use the brand slug (`<slug>-mark.svg`), also in parallel folders (`<slug>-a`).
+The brand folder is `~/Documents/<slug>` unless the user names another place (with the artifacts app it is served at `http://127.0.0.1:8800/<slug>`). With no name yet it is `~/Documents/<category>-wip`: rename it once, after the phase 2 ★, and tell the user the new URL. Files inside use the brand slug (`<slug>-mark.svg`), also in parallel folders (`<slug>-a`).
 
 ```
 $B/
@@ -79,7 +79,7 @@ The page and `branding.md` share one list of sections, in this order (page ids i
 | # | Phase | Read | Output | Gate |
 |---|---|---|---|---|
 | 0 | Setup | `review-page.md`, `product.md` § Surfaces | tree, stubs, `brief.md`, page | `/api/check` ok; `brief.md` has a `surfaces:` line |
-| 1 | Strategy | `strategy.md` | research, buyer voice, cliché, personas, gap, positioning, personality | the line on why this brand wins for this buyer heads branding.md § Strategy |
+| 1 | Strategy | `strategy.md` | before the pick, lean: the cliché, 2–3 buyer types, the gap, 4–6 competitors. After it: personas, buyer voice, positioning, personality | the line on why this brand wins for this buyer heads branding.md § Strategy |
 | 2 | Naming (no name only) | `strategy.md` § Naming | candidates, domains, handles, shortlist, ★, folder renamed | the ★ is pronounceable and spellable, its domain status known; collisions listed, none exact in the category, near ones ❓ |
 | 3 | Direction | `direction.md`, `style-picking.md`, `styles.md`, `system.md` § Colour | three directions (vibe, recipe, the same piece of the #1 surface each), then **stop for the user's pick** (§ The pick); after it: NOT list, palette and fonts, moodboard | the user picked (or said "you decide"); the recipe is justified against the cliché in writing; the page marks each NOT item seen / not seen on the moodboard |
 | 4 | Logo | `logo.md` | sketches, ★, mark, wordmark, lockups, favicon, app icon, avatar, usage rules, boards | reads at 16 px and in one colour, tells the idea in one sentence, look-alike sheet done |
@@ -107,10 +107,10 @@ The only place with exact commands; phase files name the tool. Python scripts ca
   - `$S/shoot.sh mobile $B/site/index.html $B/site/shots/index-390.png 390 2`: a real 390 layout; prints `OVERFLOW` if it scrolls sideways
   - `uv run $S/tile.py $B/site/shots/index-390.png $B/img/index-390-sheet.png`: cuts a tall shot into readable columns
   - `MP4=1 $S/shoot.sh strip $B/src/html/motion.html $B/img/motion-strip.png 800 450 "0 150 300 600 1200"`: one frame per time in ms (animations on, each set to that time), side by side, plus `motion-strip.mp4`
-  - `$S/shoot.sh pdf $B/src/html/boards.html $B/boards.pdf`: print to PDF
+  - `$S/shoot.sh pdf $B/src/html/boards.html $B/boards.pdf`: print to PDF (also the review page's fallback: `$B/review.html`)
 - **Domains:** `curl -sL -o /dev/null -w "%{http_code}\n" https://rdap.org/domain/<name>.<tld>`: 200 registered, 404 probably free; reliable for .com, .net, .ai, .dev. Where a known-registered domain also gives 404 (.io, .sh, .ch): `dig +short NS <name>.<tld>`, empty means probably free.
 - **Handles:** `curl -s -o /dev/null -w "%{http_code}\n" https://github.com/<name>` (404 = free); for dev tools also `https://registry.npmjs.org/<name>` and `https://pypi.org/pypi/<name>/json`.
-- **Fonts:** list a family's files with `curl -s https://api.github.com/repos/google/fonts/contents/ofl/<family> | jq -r '.[].name'` (`<family>` lowercase, no spaces), then fetch each TTF and `OFL.txt` with `curl -sLo "$B/fonts/<file>" "https://raw.githubusercontent.com/google/fonts/main/ofl/<family>/<file>"`. Variable fonts have bracketed names: URL-encode `[` `,` `]` as `%5B` `%2C` `%5D` in the URL only (`Fraunces%5BSOFT%2CWONK%2Copsz%2Cwght%5D.ttf`).
+- **Fonts:** list a family's files with `curl -s https://api.github.com/repos/google/fonts/contents/ofl/<family> | python3 -c "import json,sys; print(*[f['name'] for f in json.load(sys.stdin)], sep='\n')"` (`<family>` lowercase, no spaces), then fetch each TTF and `OFL.txt` with `curl -sLo "$B/fonts/<file>" "https://raw.githubusercontent.com/google/fonts/main/ofl/<family>/<file>"`. Variable fonts have bracketed names: URL-encode `[` `,` `]` as `%5B` `%2C` `%5D` in the URL only (`Fraunces%5BSOFT%2CWONK%2Copsz%2Cwght%5D.ttf`).
 - **Colour:** `uv run $S/palette.py $B/src/colors-in.json $B/src/colors.json --css $B/src/colors.css --md $B/src/colors.md [--fit]` (input in `system.md` § Colour).
 - **Wordmark or letter:** `uv run $S/wordmark.py $B/fonts/<file>.ttf "<text>" $B/logo/sketches/<name>.svg [--axis wght=600] [--track -0.03] [--fill "#1A1614"] [--split]`; writes a `.json` sidecar with baseline, x-height and cap height.
 - **Size test:** `uv run $S/sizetest.py $B/img/sizetest.png $B/logo/<slug>-mark.svg $B/logo/<slug>-lockup.svg $B/logo/favicon-light.svg:$B/logo/favicon-dark.svg`; for sketches, `uv run $S/sizetest.py $B/img/sizetest-sketches.png $B/logo/sketches/*.svg`.

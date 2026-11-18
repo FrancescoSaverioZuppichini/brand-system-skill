@@ -9,33 +9,42 @@ This phase finalises what phase 3 made provisional. Each block below is a headin
 ```json
 {
   "tokens": {"flour": [0.975, 0.008, 85, "page background"],
-             "crumb": [0.995, 0.004, 85, "cards and panels"],
-             "rye":   [0.860, 0.012, 75, "hairlines"],
-             "crust": [0.220, 0.012, 55, "text, logo, primary buttons"],
-             "malt":  [0.460, 0.015, 60, "secondary text"],
-             "ember": [0.520, 0.160, 38, "the one accent"],
+             "crumb": [0.995, 0.004, 85, "cards and popovers"],
+             "rye":   [0.860, 0.012, 75, "hairlines, inputs"],
+             "proof": [0.940, 0.010, 80, "secondary and muted surfaces"],
+             "crust": [0.220, 0.012, 55, "text, logo"],
+             "malt":  [0.460, 0.015, 60, "muted text"],
+             "ember": [0.520, 0.160, 38, "the one accent: primary actions, focus"],
+             "char":  [0.500, 0.180, 25, "destructive"],
              "oven":  [0.170, 0.008, 55, "dark background"],
              "hearth":[0.215, 0.010, 55, "dark cards"],
-             "ash":   [0.330, 0.010, 60, "dark hairlines"],
-             "oat":   [0.780, 0.015, 80, "secondary text on dark"],
+             "ash":   [0.330, 0.010, 60, "dark hairlines and surfaces"],
+             "oat":   [0.780, 0.015, 80, "muted text on dark"],
              "glow":  [0.680, 0.150, 45, "the accent on dark"]},
-  "roles": {"light": {"bg": "flour", "surface": "crumb", "border": "rye", "text": "crust", "text-2": "malt",
-                      "primary": "crust", "on-primary": "flour", "accent": "ember", "on-accent": "flour", "focus": "ember"},
-            "dark":  {"bg": "oven", "surface": "hearth", "border": "ash", "text": "flour", "text-2": "oat",
-                      "primary": "flour", "on-primary": "crust", "accent": "glow", "on-accent": "crust", "focus": "glow"}},
+  "roles": {"light": {"background": "flour", "foreground": "crust", "card": "crumb", "card-foreground": "crust",
+                      "popover": "crumb", "popover-foreground": "crust", "primary": "ember", "primary-foreground": "flour",
+                      "secondary": "proof", "secondary-foreground": "crust", "muted": "proof", "muted-foreground": "malt",
+                      "accent": "proof", "accent-foreground": "crust", "destructive": "char", "border": "rye",
+                      "input": "rye", "ring": "ember"},
+            "dark":  {"background": "oven", "foreground": "flour", "card": "hearth", "card-foreground": "flour",
+                      "popover": "hearth", "popover-foreground": "flour", "primary": "glow", "primary-foreground": "oven",
+                      "secondary": "ash", "secondary-foreground": "flour", "muted": "ash", "muted-foreground": "oat",
+                      "accent": "ash", "accent-foreground": "flour", "destructive": "char", "border": "ash",
+                      "input": "ash", "ring": "glow"}},
   "default": "light",
-  "pairs": [["crust", "flour", "body text"], ["malt", "flour", "secondary text"],
-            ["flour", "crust", "label on primary"], ["flour", "ember", "label on accent"],
+  "pairs": [["crust", "flour", "body text"], ["malt", "flour", "muted text"], ["crust", "crumb", "text on cards"],
+            ["flour", "ember", "label on primary"], ["crust", "proof", "text on secondary"],
             ["ember", "flour", "focus ring", "ui"], ["rye", "flour", "hairline", "decorative"],
-            ["flour", "oven", "body text, dark"], ["oat", "oven", "secondary text, dark"],
-            ["crust", "glow", "label on accent, dark"], ["glow", "oven", "focus ring, dark", "ui"]]
+            ["flour", "oven", "body text, dark"], ["oat", "oven", "muted text, dark"], ["flour", "hearth", "text on cards, dark"],
+            ["oven", "glow", "label on primary, dark"], ["flour", "ash", "text on secondary, dark"],
+            ["glow", "oven", "focus ring, dark", "ui"]]
 }
 ```
 
-- **Roles:** every theme maps `bg`, `surface`, `border`, `text`, `text-2`, `primary`, `on-primary`, `accent`, `on-accent`, `focus`, plus `ok`, `warn`, `error` when the product shows status. palette.py warns on a missing role. Product code uses roles only.
-- **Required pairs:** every text role on its theme's `bg` (palette.py fails without them), the labels on `primary` and on `accent`, `focus` on `bg` as `ui`, and status colours on `surface` when they exist.
+- **Roles are shadcn/ui's variables**, so the tokens paste straight into a Tailwind 4 + shadcn app: `background`, `foreground`, `card`, `card-foreground`, `popover`, `popover-foreground`, `primary`, `primary-foreground`, `secondary`, `secondary-foreground`, `muted`, `muted-foreground`, `accent`, `accent-foreground`, `destructive`, `border`, `input`, `ring`; add `chart-1`…`chart-5` when data is shown and `sidebar-*` for app shells. In shadcn `accent` is the quiet hover surface, not the brand accent: the brand's one accent is usually `primary`. palette.py warns on a missing role. Product code uses roles only (`bg-background`, `text-muted-foreground`, `var(--primary)`).
+- **Required pairs:** every `*-foreground` on its surface, plus `foreground` and `muted-foreground` on `background` (palette.py fails without them); `ring` on `background` as `ui`; status colours on `card` when they exist.
 - **Pair kinds:** `text` (the default) needs 4.5:1, `large` and `ui` need 3:1, `decorative` never fails. A failing pair prints the lightness at which it would pass; a colour outside sRGB prints its maximum chroma, and `--fit` clamps it.
-- **Outputs:** `colors.css` is the colour block of tokens.css (pigments, the default theme's roles, the other theme under `[data-theme=…]` on any element, a media query for unpinned pages). `colors.md` is the table for branding.md and the page.
+- **Outputs:** `colors.css` is the colour block of tokens.css (pigments, the default theme's roles, the other theme under `[data-theme=…]` on any element, a media query for unpinned pages, and a Tailwind 4 `@theme inline` block so `bg-background`, `text-primary` and the rest exist as utilities). `colors.md` is the table for branding.md and the page.
 
 How to choose:
 - **Pigments, then roles.** Name pigments after the brand's world, never after a role: a pigment called `ok` makes `--ok: var(--ok)`, and palette.py rejects it.
