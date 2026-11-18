@@ -1,0 +1,49 @@
+{
+	"tokens": {
+		"stock": [0.95, 0.02, 90, "paper"],
+		"pink": [0.66, 0.22, 355, "fluorescent pink"],
+		"blue": [0.5, 0.141, 250, "medium blue, primary"],
+		"yellow": [0.9, 0.17, 100, "yellow"],
+		"ink": [0.25, 0.05, 260, "text"],
+		"smudge": [0.45, 0.05, 260, "muted text"],
+		"pulp": [0.91, 0.03, 90, "quiet surfaces"],
+		"teal": [0.6, 0.1, 190, "chart teal"]
+	},
+	"roles": {
+		"light": {
+			"background": "stock",
+			"foreground": "ink",
+			"card": "stock",
+			"card-foreground": "ink",
+			"popover": "stock",
+			"popover-foreground": "ink",
+			"primary": "blue",
+			"primary-foreground": "stock",
+			"secondary": "yellow",
+			"secondary-foreground": "ink",
+			"muted": "pulp",
+			"muted-foreground": "smudge",
+			"accent": "pink",
+			"accent-foreground": "ink",
+			"destructive": "pink",
+			"border": "ink",
+			"input": "ink",
+			"ring": "blue",
+			"chart-1": "pink",
+			"chart-2": "blue",
+			"chart-3": "yellow",
+			"chart-4": "ink",
+			"chart-5": "teal"
+		}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "stock", "body text"],
+		["smudge", "stock", "muted text"],
+		["stock", "blue", "primary text on primary"],
+		["ink", "yellow", "secondary text on secondary"],
+		["ink", "pink", "accent text on accent"],
+		["smudge", "pulp", "muted text on muted"],
+		["blue", "stock", "focus ring", "ui"]
+	]
+}

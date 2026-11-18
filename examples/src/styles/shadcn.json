@@ -1,0 +1,54 @@
+{
+	"tokens": {
+		"paper": [1, 0, 0, "page, cards and popovers"],
+		"ink": [0.145, 0, 0, "text"],
+		"graphite": [0.205, 0, 0, "primary actions"],
+		"mist": [0.97, 0, 0, "secondary, muted and hover surfaces"],
+		"slate": [0.54, 0, 0, "muted text"],
+		"line": [0.922, 0, 0, "borders and inputs"],
+		"haze": [0.66, 0, 0, "focus ring"],
+		"flare": [0.577, 0.234, 27.3, "destructive"],
+		"ember": [0.646, 0.197, 41.1, "chart 1"],
+		"teal": [0.6, 0.105, 184.7, "chart 2"],
+		"navy": [0.398, 0.07, 227.4, "chart 3"],
+		"gold": [0.828, 0.169, 84.4, "chart 4"],
+		"amber": [0.769, 0.166, 70.1, "chart 5"]
+	},
+	"roles": {
+		"light": {
+			"background": "paper",
+			"foreground": "ink",
+			"card": "paper",
+			"card-foreground": "ink",
+			"popover": "paper",
+			"popover-foreground": "ink",
+			"primary": "graphite",
+			"primary-foreground": "mist",
+			"secondary": "mist",
+			"secondary-foreground": "graphite",
+			"muted": "mist",
+			"muted-foreground": "slate",
+			"accent": "mist",
+			"accent-foreground": "graphite",
+			"destructive": "flare",
+			"border": "line",
+			"input": "line",
+			"ring": "haze",
+			"chart-1": "ember",
+			"chart-2": "teal",
+			"chart-3": "navy",
+			"chart-4": "gold",
+			"chart-5": "amber"
+		}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["slate", "paper", "muted text"],
+		["mist", "graphite", "primary text on primary"],
+		["graphite", "mist", "secondary text on secondary"],
+		["slate", "mist", "muted text on muted"],
+		["haze", "paper", "focus ring", "ui"],
+		["line", "paper", "hairline", "decorative"]
+	]
+}

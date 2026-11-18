@@ -1,0 +1,51 @@
+{
+	"tokens": {
+		"void": [0.14, 0.005, 270, "page"],
+		"surface": [0.19, 0.006, 270, "cards"],
+		"seam": [0.28, 0.008, 270, "borders"],
+		"frost": [0.96, 0.003, 270, "text, primary button"],
+		"dim": [0.68, 0.01, 270, "muted text"],
+		"iris": [0.7, 0.15, 265, "accent, focus"],
+		"mint": [0.75, 0.14, 160, "chart green"],
+		"honey": [0.78, 0.13, 75, "chart amber"],
+		"flare": [0.66, 0.18, 22, "destructive"]
+	},
+	"roles": {
+		"light": {
+			"background": "void",
+			"foreground": "frost",
+			"card": "surface",
+			"card-foreground": "frost",
+			"popover": "surface",
+			"popover-foreground": "frost",
+			"primary": "frost",
+			"primary-foreground": "void",
+			"secondary": "seam",
+			"secondary-foreground": "frost",
+			"muted": "surface",
+			"muted-foreground": "dim",
+			"accent": "seam",
+			"accent-foreground": "frost",
+			"destructive": "flare",
+			"border": "seam",
+			"input": "seam",
+			"ring": "iris",
+			"chart-1": "iris",
+			"chart-2": "mint",
+			"chart-3": "honey",
+			"chart-4": "flare",
+			"chart-5": "dim"
+		}
+	},
+	"default": "light",
+	"pairs": [
+		["frost", "void", "body text"],
+		["dim", "void", "muted text"],
+		["frost", "surface", "card text on card"],
+		["void", "frost", "primary text on primary"],
+		["frost", "seam", "secondary text on secondary"],
+		["dim", "surface", "muted text on muted"],
+		["iris", "void", "focus ring", "ui"],
+		["seam", "void", "hairline", "decorative"]
+	]
+}

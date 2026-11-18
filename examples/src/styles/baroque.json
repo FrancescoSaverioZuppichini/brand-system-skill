@@ -1,0 +1,51 @@
+{
+	"tokens": {
+		"umber": [0.16, 0.01, 40, "the dark stage"],
+		"oxblood": [0.35, 0.11, 20, "velvet, primary"],
+		"green": [0.32, 0.06, 160, "the painted field"],
+		"gold": [0.75, 0.12, 85, "gilt frames, accents"],
+		"ivory": [0.93, 0.03, 85, "text"],
+		"velvet": [0.24, 0.07, 20, "cards, cartouches"],
+		"parchment": [0.8, 0.04, 85, "muted text"],
+		"brass": [0.5, 0.07, 75, "borders"],
+		"verdigris": [0.6, 0.08, 160, "chart green"]
+	},
+	"roles": {
+		"light": {
+			"background": "umber",
+			"foreground": "ivory",
+			"card": "velvet",
+			"card-foreground": "ivory",
+			"popover": "velvet",
+			"popover-foreground": "ivory",
+			"primary": "oxblood",
+			"primary-foreground": "ivory",
+			"secondary": "green",
+			"secondary-foreground": "ivory",
+			"muted": "velvet",
+			"muted-foreground": "parchment",
+			"accent": "green",
+			"accent-foreground": "ivory",
+			"destructive": "oxblood",
+			"border": "brass",
+			"input": "brass",
+			"ring": "gold",
+			"chart-1": "gold",
+			"chart-2": "oxblood",
+			"chart-3": "verdigris",
+			"chart-4": "ivory",
+			"chart-5": "brass"
+		}
+	},
+	"default": "light",
+	"pairs": [
+		["ivory", "umber", "body text"],
+		["parchment", "umber", "muted text"],
+		["ivory", "velvet", "card text on card"],
+		["ivory", "oxblood", "primary text on primary"],
+		["ivory", "green", "secondary text on secondary"],
+		["parchment", "velvet", "muted text on muted"],
+		["gold", "umber", "focus ring", "ui"],
+		["brass", "umber", "hairline", "decorative"]
+	]
+}

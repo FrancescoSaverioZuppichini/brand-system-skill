@@ -1,0 +1,51 @@
+{
+	"tokens": {
+		"crt": [0.16, 0.01, 150, "screen"],
+		"phosphor": [0.85, 0.17, 145, "prompt, primary"],
+		"glow": [0.93, 0.04, 145, "text"],
+		"dim": [0.62, 0.06, 145, "muted text"],
+		"amber": [0.8, 0.15, 75, "warnings, chart"],
+		"alarm": [0.68, 0.19, 25, "errors"],
+		"panel": [0.2, 0.015, 150, "panels"],
+		"trace": [0.38, 0.05, 145, "box rules"],
+		"sky": [0.8, 0.1, 210, "chart cyan"]
+	},
+	"roles": {
+		"light": {
+			"background": "crt",
+			"foreground": "glow",
+			"card": "panel",
+			"card-foreground": "glow",
+			"popover": "panel",
+			"popover-foreground": "glow",
+			"primary": "phosphor",
+			"primary-foreground": "crt",
+			"secondary": "trace",
+			"secondary-foreground": "glow",
+			"muted": "panel",
+			"muted-foreground": "dim",
+			"accent": "trace",
+			"accent-foreground": "glow",
+			"destructive": "alarm",
+			"border": "trace",
+			"input": "trace",
+			"ring": "phosphor",
+			"chart-1": "phosphor",
+			"chart-2": "amber",
+			"chart-3": "sky",
+			"chart-4": "alarm",
+			"chart-5": "dim"
+		}
+	},
+	"default": "light",
+	"pairs": [
+		["glow", "crt", "body text"],
+		["dim", "crt", "muted text"],
+		["glow", "panel", "card text on card"],
+		["crt", "phosphor", "primary text on primary"],
+		["glow", "trace", "secondary text on secondary"],
+		["dim", "panel", "muted text on muted"],
+		["phosphor", "crt", "focus ring", "ui"],
+		["trace", "crt", "hairline", "decorative"]
+	]
+}

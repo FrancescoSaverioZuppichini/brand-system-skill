@@ -1,0 +1,52 @@
+{
+	"tokens": {
+		"night": [0.18, 0.08, 295, "sky and page"],
+		"magenta": [0.65, 0.26, 340, "neon, grid"],
+		"cyan": [0.85, 0.14, 205, "neon text, primary"],
+		"sun": [0.78, 0.15, 60, "the sun"],
+		"violet": [0.45, 0.2, 300, "horizon haze"],
+		"yellow": [0.92, 0.126, 95, "score digits"],
+		"frost": [0.95, 0.03, 220, "chrome white text"],
+		"dusk": [0.24, 0.1, 295, "panels"],
+		"orchid": [0.78, 0.08, 320, "muted text"]
+	},
+	"roles": {
+		"light": {
+			"background": "night",
+			"foreground": "frost",
+			"card": "dusk",
+			"card-foreground": "frost",
+			"popover": "dusk",
+			"popover-foreground": "frost",
+			"primary": "cyan",
+			"primary-foreground": "night",
+			"secondary": "magenta",
+			"secondary-foreground": "night",
+			"muted": "dusk",
+			"muted-foreground": "orchid",
+			"accent": "violet",
+			"accent-foreground": "frost",
+			"destructive": "magenta",
+			"border": "magenta",
+			"input": "magenta",
+			"ring": "cyan",
+			"chart-1": "magenta",
+			"chart-2": "cyan",
+			"chart-3": "sun",
+			"chart-4": "yellow",
+			"chart-5": "violet"
+		}
+	},
+	"default": "light",
+	"pairs": [
+		["frost", "night", "body text"],
+		["orchid", "night", "muted text"],
+		["frost", "dusk", "card text on card"],
+		["night", "cyan", "primary text on primary"],
+		["night", "magenta", "secondary text on secondary"],
+		["frost", "violet", "accent text on accent"],
+		["orchid", "dusk", "muted text on muted"],
+		["cyan", "night", "focus ring", "ui"],
+		["magenta", "night", "hairline", "decorative"]
+	]
+}

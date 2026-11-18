@@ -1,0 +1,48 @@
+{
+	"tokens": {
+		"paper": [0.95, 0.015, 85, "off-white page"],
+		"black": [0.18, 0, 0, "text, bars"],
+		"red": [0.57, 0.2, 30, "primary red"],
+		"yellow": [0.84, 0.16, 88, "primary yellow"],
+		"blue": [0.45, 0.15, 258, "primary blue, actions"],
+		"grey": [0.45, 0.01, 85, "captions"],
+		"sand": [0.9, 0.02, 85, "quiet surfaces"]
+	},
+	"roles": {
+		"light": {
+			"background": "paper",
+			"foreground": "black",
+			"card": "paper",
+			"card-foreground": "black",
+			"popover": "paper",
+			"popover-foreground": "black",
+			"primary": "blue",
+			"primary-foreground": "paper",
+			"secondary": "yellow",
+			"secondary-foreground": "black",
+			"muted": "sand",
+			"muted-foreground": "grey",
+			"accent": "sand",
+			"accent-foreground": "black",
+			"destructive": "red",
+			"border": "black",
+			"input": "black",
+			"ring": "blue",
+			"chart-1": "red",
+			"chart-2": "yellow",
+			"chart-3": "blue",
+			"chart-4": "black",
+			"chart-5": "grey"
+		}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["paper", "blue", "primary text on primary"],
+		["black", "yellow", "secondary text on secondary"],
+		["black", "sand", "accent text on accent"],
+		["grey", "sand", "muted text on muted"],
+		["blue", "paper", "focus ring", "ui"]
+	]
+}

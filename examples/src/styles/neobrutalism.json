@@ -1,0 +1,52 @@
+{
+	"tokens": {
+		"cream": [0.96, 0.03, 90, "page"],
+		"black": [0.15, 0, 0, "text, borders, shadows"],
+		"yellow": [0.88, 0.17, 95, "primary"],
+		"pink": [0.78, 0.14, 350, "secondary"],
+		"lime": [0.88, 0.18, 130, "accent"],
+		"lilac": [0.8, 0.1, 300, "tags"],
+		"white": [1, 0, 0, "cards"],
+		"grey": [0.42, 0.01, 90, "muted text"],
+		"oat": [0.92, 0.03, 90, "muted surfaces"],
+		"tomato": [0.6, 0.2, 30, "destructive"]
+	},
+	"roles": {
+		"light": {
+			"background": "cream",
+			"foreground": "black",
+			"card": "white",
+			"card-foreground": "black",
+			"popover": "white",
+			"popover-foreground": "black",
+			"primary": "yellow",
+			"primary-foreground": "black",
+			"secondary": "pink",
+			"secondary-foreground": "black",
+			"muted": "oat",
+			"muted-foreground": "grey",
+			"accent": "lime",
+			"accent-foreground": "black",
+			"destructive": "tomato",
+			"border": "black",
+			"input": "black",
+			"ring": "black",
+			"chart-1": "pink",
+			"chart-2": "yellow",
+			"chart-3": "lime",
+			"chart-4": "lilac",
+			"chart-5": "black"
+		}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "cream", "body text"],
+		["grey", "cream", "muted text"],
+		["black", "white", "card text on card"],
+		["black", "yellow", "primary text on primary"],
+		["black", "pink", "secondary text on secondary"],
+		["black", "lime", "accent text on accent"],
+		["grey", "oat", "muted text on muted"],
+		["grey", "white", "muted text on cards"]
+	]
+}
