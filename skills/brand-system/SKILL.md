@@ -110,7 +110,7 @@ The only place with exact commands; phase files name the tool. Python scripts ca
 - **Public-domain art:** `uv run $S/commons.py search "<query>"`, then `uv run $S/commons.py fetch "File:<name>" $B/img/<name>.jpg 1600 --credits $B/CREDITS.md`.
 - **Icons:** `curl -sLo $B/src/icons/<name>.svg https://unpkg.com/lucide-static/icons/<name>.svg` (or Phosphor, Tabler).
 - **Review page:** `curl -s 127.0.0.1:8800/api/check/<folder>`; shoot it with `$S/shoot.sh view http://127.0.0.1:8800/<folder> $B/img/page.png 1440 900`.
-- **Audit:** `uv run $S/audit.py $B`: the files for each surface in `brief.md`, contrast, alt text, reduced motion, repeated images, the page.
+- **Audit:** `uv run $S/audit.py $B`: the files for each surface in `brief.md`, contrast pairs, lorem, alt text, reduced motion, the page check.
 - **Mac traps:** BSD `sed -i ''`; `grep` may be ugrep and choke on long HTML regexes, so use Python for regex on HTML.
 
 ## Several directions at once
