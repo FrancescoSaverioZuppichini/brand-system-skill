@@ -11,6 +11,8 @@
 #      MOTION=1 keeps animations; by default Chrome reports prefers-reduced-motion, so shots show the designed static
 #      state (and prove the fallback exists). strip always keeps them.
 # Mobile also prints OVERFLOW when the page is wider than WIDTH (horizontal scroll on phones).
+# Local files get a font check first: a web font that didn't load (a dropped Google Fonts request) is retried once,
+# then the shot fails with FONTS MISSING instead of silently saving a Helvetica fallback.
 set -e
 CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 mode=$1 page=$2 out=${3:A}
@@ -22,8 +24,19 @@ if [[ $page == http* ]]; then url=$page; [[ $mode == (view|pdf) ]] || { echo "fu
 else page=${page:A}; [[ -f $page ]] || { echo "no such file: $page" >&2; exit 2; }; url="file://$page"; d=${page:h}; fi
 trap 'rm -rf "$prof" "$d/.shoot-m.html" "$d/.shoot-w.html"' EXIT
 # [Agent] Inject a probe script before </body>, or at the end when the file has none (a silent failure otherwise).
-probe() { if grep -q '</body>' "$page"; then sed "s#</body>#<script>$1</script></body>#" "$page"; else cat "$page"; print -r -- "<script>$1</script>"; fi > "$d/.shoot-m.html"; }
+# [Agent] Python, not sed: sed reads "&" in the script as "the matched text", and zsh's ${x/a/b} splits on the "/" of
+# </body>. The probe goes before </body>, or at the end when the file has none.
+probe() { python3 -c 'import sys; p, js, o = sys.argv[1:]; h = open(p).read(); t = f"<script>{js}</script>"
+open(o, "w").write(h.replace("</body>", t + "</body>", 1) if "</body>" in h else h + t)' "$page" "$1" "$d/.shoot-m.html"; }
 title_of() { "$CH" $flags --window-size=$2,900 --dump-dom "file://$1" 2>/dev/null | grep -o '<title>[A-Z]=[0-9x]*' | head -1 | sed 's/<title>[A-Z]=//'; }
+# [Agent] A family counts as missing when text set in it measures exactly like both generic fallbacks, which catches a
+# failed @font-face and a Google Fonts stylesheet that never arrived (document.fonts.check can't see the latter).
+fonts_js='addEventListener("load",()=>document.fonts.ready.then(()=>{const c=document.createElement("canvas").getContext("2d");const w=f=>{c.font="40px "+f;return c.measureText("mmmmlli 0123 Wg").width};const fams=new Set([...document.querySelectorAll("body *")].map(e=>getComputedStyle(e).fontFamily.split(",")[0].trim().replace(/["\x27]/g,"")));const bad=[...fams].filter(f=>!/^(serif|sans-serif|monospace|system-ui|ui-.*|-apple-system|BlinkMacSystemFont|Helvetica|Arial|Times|Georgia|Menlo|Courier)/i.test(f)&&["monospace","serif"].every(g=>w(JSON.stringify(f)+","+g)===w(g)));document.title="F="+(bad.join("|")||"ok")}))'
+missing_fonts() { probe "$fonts_js"; "$CH" $flags --window-size=1200,900 --dump-dom "file://$d/.shoot-m.html" 2>/dev/null | grep -o '<title>F=[^<]*' | head -1 | sed 's/<title>F=//'; }
+if [[ -n $d ]]; then
+  m=$(missing_fonts); [[ $m == ok || -z $m ]] || { sleep 2; m=$(missing_fonts); }
+  [[ $m == ok || -z $m ]] || { echo "FONTS MISSING: ${m//|/, } (not loaded; check the @font-face/Google Fonts URL)" >&2; exit 3; }
+fi
 case $mode in
   view)
     "$CH" $flags --force-device-scale-factor=${6:-1} --window-size=$4,$5 --screenshot="$out" "$url" >/dev/null 2>&1

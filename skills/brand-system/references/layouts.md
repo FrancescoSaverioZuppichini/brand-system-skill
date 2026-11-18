@@ -1,6 +1,6 @@
 # Layouts · how sections are arranged
 
-This file is about layout: where the blocks go in a section, independent of style. A layout can be drawn in any style, but some styles suit it better, so every entry names the style families it pairs with (families as in `styles.md`; if a name differs there, use the closest family).
+This file is about layout: where the blocks go in a section, independent of style. A layout can be drawn in any style, but some styles suit it better, so every entry names the styles it pairs with, linked into `styles.md`.
 
 Each variant has a wireframe at 1440 with its 390 mobile frame next to it. The wireframes live in the repo, not in the installed skill: `atlas/layouts/<section>/<id>.svg` (and `.png`) at github.com/FrancescoSaverioZuppichini/brand-system-skill. `atlas/layouts/make.py` draws all of them from one script; `atlas/layouts/sheets/<section>.png` shows every variant of a section on one sheet.
 
