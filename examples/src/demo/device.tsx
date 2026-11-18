@@ -44,6 +44,6 @@ export const session: Line[] = [
 	{ text: "keep init billing-rewrite", tone: "prompt" },
 	{ text: "✓ Created plan.md, owners and a first release", tone: "output" },
 	{ text: "keep ship --release 1.4", tone: "prompt" },
-	{ text: "✓ 12 of 12 checks passed · released 1.4", tone: "output" },
+	{ text: "✓ 5 of 5 checks passed · released 1.4", tone: "output" },
 	{ text: "✓ Moved to care: next review 18 Nov 2027", tone: "output" },
 ]

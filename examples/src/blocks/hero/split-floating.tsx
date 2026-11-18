@@ -15,7 +15,7 @@ function Moment({ className, release }: { className?: string; release?: boolean 
 			<div className="text-sm">
 				<div className="font-medium">{release ? "Release 1.4 shipped" : "Customer portal moved to care"}</div>
 				<div className="text-xs text-muted-foreground">
-					{release ? "12 of 12 checks passed · 2 min ago" : "Next review 18 Nov 2027 · Tomás"}
+					{release ? "5 of 5 checks passed · 2 min ago" : "Next review 18 Nov 2027 · Tomás"}
 				</div>
 			</div>
 		</Card>

@@ -15,7 +15,7 @@ export const product = {
 export const stat = { label: "Still in use", value: "1,284", caption: "projects made since 2019" }
 
 export const stats = [
-	{ label: "Projects in care", value: "1,284", delta: "+96 this quarter" },
+	{ label: "Projects in care", value: "1,284", delta: "+97 this quarter" },
 	{ label: "Releases on time", value: "94%", delta: "+3 pts vs last year" },
 	{ label: "Median project age", value: "3.2 yrs", delta: "oldest: 2019" },
 	{ label: "Teams", value: "312", delta: "across 28 countries" },
