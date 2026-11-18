@@ -1,6 +1,6 @@
 # Picking a style
 
-How to choose a style direction in phase 3 (Direction). The catalogue is `styles.md` (141 styles in 8 families, each with a specimen); this file is the method. The output is one line, the **style recipe**, plus three hero specimens that prove it. The rule behind everything here: **the strategy picks the style, not taste.** A style you like that the strategy can't defend is a guess.
+How to choose a style direction in phase 3 (Direction). The catalogue is `styles.md` (141 styles in 8 families, each with a specimen); this file is the method. The output is one line, the **style recipe**, plus three specimens that prove it: the same small piece of the #1 surface in `brief.md`'s `surfaces:` line, in three candidate recipes. The rule behind everything here: **the strategy picks the style, not taste.** A style you like that the strategy can't defend is a guess.
 
 ## Contents
 
@@ -69,7 +69,7 @@ Now search `styles.md` for styles whose profile is close to the brand column. Th
 
 ### Step 1 · Map the category's dominant style (the cliché)
 
-Look at the 6–10 competitors from the strategy research and name the style most of them share, using the catalogue's names: "category = `aurora` + `glassmorphism` + `alegria` people". Most categories are a family-4 block (fintech, beauty, wellness, b2b-saas) plus one or two UI trends. Write it into the NOT list with concrete items (purple gradients, floating phone mocks, sparkles).
+Look at the 6–10 competitors from the strategy research and name the style most of them share, using the catalogue's names: "category = `aurora` + `glassmorphism` + `alegria` people". Most categories are a family-4 block (fintech, beauty, wellness, b2b-saas) plus one or two UI trends. Write it into the NOT list with concrete items (purple gradients, floating phone mocks, sparkles), after the client's own dislikes from `brief.md`, which go first and verbatim. A stated taste narrows the candidate styles; when the taste *is* the cliché, subvert it within that family instead of leaving it.
 
 Also list the category's **trust cues**: what a buyer must see to believe you're a real player. Fintech: numbers, security language, calm. Health: clinicians, plain language, accessibility. Dev tools: real code, docs, speed. Cues are not the style; you can keep them while changing the style.
 
@@ -214,8 +214,8 @@ Every style has a price. Note it in the recipe's rationale and plan the mitigati
 Never pick from the catalogue alone. Render, then decide.
 
 1. **Pick three candidates.** Three recipes that differ on at least two axes each (not three shades of one idea). Usually: one close to the category (keeps every trust cue), one in the middle, one far from it.
-2. **Render the same two things in each:** the hero (eyebrow, headline, subline, button) and one real product card (the core object with a number and a state). Start from the atlas specimens (`atlas/specimens/<slug>.html`) of your bases and add the device. Same copy, same content, same size (1440 × 900 hero, 390 px mobile card).
-3. **Put them next to the cliché.** One row: three competitor screenshots (as links or your own redraws, never their files), then your three candidates.
+2. **Render the same small piece of the #1 surface in each.** The surface comes from the `surfaces:` line in `brief.md`; pick the showpiece plus the hardest part of it. For software (`landing`, `product`) that is the hero (eyebrow, headline, subline, button) plus one real product card (the core object with a number and a state), and the atlas specimens (`atlas/specimens/<slug>.html`) of your bases are the starting HTML. For a bakery (`packaging`, `signage`) it is the bag front plus the shop sign band; for `social`, one post tile plus the profile avatar; for `print`, the cover plus a dense inside spread. Same copy, same content, same real size in all three. Save them as `src/html/specimen-{a,b,c}.html` and shoot them into `img/`.
+3. **Put them next to the cliché.** One row: three competitors' versions of the same surface (as links or your own redraws, never their files), then your three candidates.
 4. **Score with the strategy, not with taste.** For each candidate, 0–2 points per line:
 
 | Question | Evidence |
@@ -224,7 +224,7 @@ Never pick from the catalogue alone. Render, then decide.
 | Does it keep every trust cue from step 1? | list the cues, tick them |
 | Can you derive it from the vibe sentence? | colour, type, motion and word each trace back to it |
 | Does it carry the brand idea? | the device expresses the one idea |
-| Does it survive the product card, not just the hero? | the card, at 390 px |
+| Does it survive the hardest part of the surface, not just the showpiece? | that part at real size: the product card at 390 px, a bag's side panel at print size, a sign read from across the street |
 | Is the accessibility and performance cost acceptable? | section 7 |
 | Will it still look right in 3–5 years? | section 6 |
 | Can this team produce it every week? | ornament budget |
@@ -233,27 +233,26 @@ Never pick from the catalogue alone. Render, then decide.
 
 ## Briefing parallel designers
 
-When you run N designers in parallel (`SKILL.md` § Several directions at once), the most common failure is N versions of the same direction: everyone reads the same strategy and lands on the same "safe modern" look. Force the spread with the brief.
+When the user asks for options, `SKILL.md` § Several directions at once runs phase 1 once into a shared `brief.md` and spawns one designer per direction. The common failure is N versions of the same direction: everyone reads the same brief and lands on the same "safe modern" look. Force the spread when you write each designer's lens.
 
-1. **Assign each designer a different base family before they start.** Not a style, a family, so each still chooses: A = family 1 (modernist and print), B = family 2 (an art movement from the brand's cultural root), C = family 3 (a digital-native language) or family 6 (a type-led direction). No two designers share a family.
-2. **Assign a distance from the cliché.** A = near (keeps every trust cue, differs on 2 axes), B = mid, C = far (differs on 4+ axes; must still name which trust cues it keeps).
-3. **Assign a lens** (who the direction serves first): the buyer, the daily user, the culture behind the name.
-4. **Give every designer the same NOT list and cliché map.** They avoid the same clichés, so their differences are real choices.
-5. **Ask for the recipe as line one** of their direction section, plus their axis scores. Before they build anything, check the recipes: if two share a base family, an era setting or a temperature setting within one point, re-brief one of them.
-6. **Same test, same content.** Each one renders the hero and the product card from section 8, with the same copy, so you can compare them side by side.
+1. **Derive the lenses from the buyer types in `brief.md`.** One lens per buyer type the brief names (the owner who signs, the operator who uses it daily, the end customer who sees the output), not a stock list. Drop any lens that leads into the client's dislikes.
+2. **Give each lens a different base family.** A family, not a style, so each designer still chooses: e.g. family 1 (modernist and print), family 2 (an art movement from the brand's cultural root), family 3 (a digital-native language) or family 6 (a type-led direction). No two designers share a family; pair each family with the lens it serves best (an operator lens suits families 1 or 3; a culture lens, family 2).
+3. **Assign a distance from the cliché.** Near (keeps every trust cue, differs on 2 axes), mid, and far (differs on 4+ axes and names which trust cues it keeps).
+4. **Share the brief's NOT list and cliché map.** Everyone avoids the same clichés, with the client's dislikes first, so their differences are real choices.
+5. **Ask for the recipe as line one** of each designer's Direction section, plus their axis scores. Before they build, compare the recipes: if two share a base family, or sit within one point on era or temperature, re-brief one of them.
+6. **Same test, same content.** Each one renders the same small piece of the #1 surface (section 8), with the same copy, so the index page can show them side by side.
 
-Brief template, one per designer:
+Lens line, one per designer (it goes into the spawn prompt next to the skill path and the folder):
 
 ```
-Direction <A|B|C> · base family: <family> · distance from cliché: <near|mid|far> · lens: <buyer|user|culture>
-Cliché to avoid (shared): <one line> · NOT list (shared): <link>
-Trust cues you must keep: <list>
-Deliver first: your style recipe in one line + axis scores (section 2) + why it wins for <persona>.
-Then: the 3-candidate test inside your family (section 8), the ★ pick, and continue the phases in your own folder.
-You will be compared against two other directions; commit to a clear stance.
+Direction <A|B|C> · lens: <buyer type from brief.md> · base family: <family> · distance from cliché: <near|mid|far>
+Cliché and NOT list: as in brief.md (client's dislikes first) · Trust cues you must keep: <list>
+Deliver first: your style recipe in one line + axis scores (section 2) + why it wins for <that buyer type>.
+Then: the 3-candidate test inside your family (section 8), the ★ pick, and the remaining phases in your own folder.
+You will be compared against the other directions; commit to a clear stance.
 ```
 
-Example spreads that work:
+Example spreads (the lens is the brief's buyer type; the families differ):
 
 | Category | A (near) | B (mid) | C (far) |
 |---|---|---|---|
