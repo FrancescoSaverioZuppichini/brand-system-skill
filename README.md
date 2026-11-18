@@ -36,7 +36,7 @@ It can also run several directions in parallel: one shared brief and research, N
 
 | Reference | What | See it |
 |---|---|---|
-| `styles.md` + `style-picking.md` | 141 design styles in 8 families (modernist and print, art movements, digital UI eras, industry languages, illustration, type voices, layouts, motion), each with traits, OFL fonts, an OKLCH palette, when to pick it and when not; plus the method to pick one against the category cliché. All 67 TypeUI entries mapped | [`atlas/`](atlas): one specimen per style, the same mini page in each |
+| `styles.md` + `style-picking.md` | 141 design styles in 8 families (modernist and print, art movements, digital UI eras, industry languages, illustration, type voices, layouts, motion), each with traits, OFL fonts, an OKLCH palette, when to pick it and when not; plus the method to pick one against the category cliché. | [`atlas/`](atlas): one specimen per style, the same mini page in each |
 | `layouts.md` | 42 section and screen types, 193 layout variants (hero, features, pricing, FAQ, footer, docs, changelog, login, dashboard, table, settings, billing…), each with when to use, the slop tell to avoid, mobile reflow and the styles it pairs with; plus composed landings for five kinds of business | [`atlas/layouts/sheets/`](atlas/layouts/sheets): one wireframe sheet per section |
 
 ## Scripts

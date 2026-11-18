@@ -81,12 +81,21 @@ The page and `branding.md` share one list of sections, in this order (page ids i
 | 0 | Setup | `review-page.md`, `product.md` § Surfaces | tree, stubs, `brief.md`, page | `/api/check` ok; `brief.md` has a `surfaces:` line |
 | 1 | Strategy | `strategy.md` | research, buyer voice, cliché, personas, gap, positioning, personality | the line on why this brand wins for this buyer heads branding.md § Strategy |
 | 2 | Naming (no name only) | `strategy.md` § Naming | candidates, domains, handles, shortlist, ★, folder renamed | the ★ is pronounceable and spellable, its domain status known; collisions listed, none exact in the category, near ones ❓ |
-| 3 | Direction | `direction.md`, `style-picking.md`, `styles.md`, `system.md` § Colour | vibe, idea, NOT list, recipe, provisional palette and fonts, 3 specimens, moodboard | the recipe is justified against the cliché in writing; the page marks each NOT item seen / not seen on the moodboard |
+| 3 | Direction | `direction.md`, `style-picking.md`, `styles.md`, `system.md` § Colour | vibe, idea, NOT list, provisional palette and fonts, 3 specimens, **the user's pick** (§ Style checkpoint), recipe, moodboard | the user picked (or the ★ after the wait); the recipe is justified against the cliché in writing; the page marks each NOT item seen / not seen on the moodboard |
 | 4 | Logo | `logo.md` | sketches, ★, mark, wordmark, lockups, favicon, app icon, avatar, usage rules, boards | reads at 16 px and in one colour, tells the idea in one sentence, look-alike sheet done |
 | 5 | System | `system.md` | colour, type, space, components, imagery, motion, voice, print; `tokens.css` | `palette.py` exits 0 with the required pairs; every rule says why |
 | 6 | Primary surfaces | `product.md`, `layouts.md` | the top two surfaces in `surfaces:`, shot | no tell from the general or the type's slop list, no OVERFLOW, every placeholder labelled |
 | 7 | Secondary surfaces / applications | `product.md` § Applications | the other surfaces and the channel assets | each still reads as the brand in a copy with the logo covered |
 | 8 | Review + crit | `review-page.md` | page complete, `crit.md`, page screenshot | `audit.py` exits 0, `/api/check` ok, every `crit.md` line ✓ or a reason |
+
+## Style checkpoint (phase 3)
+
+Taste is the user's call, so the style is the one decision you never take alone. Render the same small piece of the #1 surface in 3 candidate recipes, each a real contrast (different families, not three shades of one). For developer tools, AI and other tech products, one of the three is `styles.md#devtool-dark` (Vercel / Linear-like), the quality bar of that category. Then ask:
+
+- **You can ask the user directly** (an ask-user tool): one question, the three recipes as options with your ★ first and labelled "(recommended)", each with its one-line recipe and the image path; then A/B the top two on a second piece of the surface if the answer is "between A and B".
+- **You are a subagent:** put the three in a `<Gallery id="pick-style">` in the Direction section, each `<Media>` with its own id, plus `<Note id="pick-style-note" placeholder="Which style? 👍 one card, or write why">`. Tell the orchestrator the link, then read `$B/feedback.json` every 60 s for up to 10 minutes: a 👍 (`vote: "up"`) on one of the three ids, or a note, is the pick. With no answer, go on with your ★ and mark it ❓ on the page.
+
+Write the pick and why in branding.md § Direction; the runner-up stays on the page, small.
 
 ## Tools
 

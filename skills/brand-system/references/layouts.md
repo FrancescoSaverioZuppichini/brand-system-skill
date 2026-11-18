@@ -1790,7 +1790,3 @@ For a marketplace or a brand shop, next to the landing.
 - **Avoid when:** —
 - **Mobile (390):** progress, map, timeline, items.
 - **Pairs with:** [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
-
----
-
-Starting list: the section categories of TypeUI (typeui.sh, 52 categories, 449 named layouts; its repo ships one wireframe per section). This file adds the use / avoid / mobile / style rules, the web-unslop tells, the trust, showcase, how-it-works, changelog, docs, waitlist, vs and application screens, and the compositions.
