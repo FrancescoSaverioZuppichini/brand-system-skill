@@ -5,7 +5,7 @@
 # [Agent] Public-domain art from Wikimedia Commons, licence checked and credit written. Only public
 # domain, PDM and CC0 pass: a brand kit can't carry share-alike or attribution strings everywhere.
 # usage: uv run commons.py search "query" [n]  |  fetch "File:…" out.jpg [width] [--credits FILE]
-import argparse, json, re, subprocess, sys, time, urllib.parse
+import argparse, json, os, re, subprocess, sys, time, urllib.parse
 from pathlib import Path
 
 API = "https://commons.wikimedia.org/w/api.php?format=json&action=query&"
@@ -69,7 +69,9 @@ def main() -> None:
     Path(a.out).write_bytes(data)
     work = info["ObjectName"][:160] or a.title[5:]
     by = f"{info['Artist'][:120]}, {info['DateTimeOriginal'][:60]}"
-    line = f"- {work}, {by}. {licence}. {page} → `{a.out}`"
+    # [Agent] Credit the file relative to CREDITS.md, so the line stays true when the folder moves.
+    where = Path(os.path.relpath(a.out, Path(a.credits).parent)) if a.credits else Path(a.out).name
+    line = f"- {work}, {by}. {licence}. {page} → `{where}`"
     if a.credits:
         with open(a.credits, "a") as f:
             f.write(line + "\n")
