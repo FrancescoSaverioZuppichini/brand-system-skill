@@ -1,0 +1,29 @@
+{
+	"tokens": {
+		"paper": [0.99, 0, 0, "the specimen sheet"],
+		"ink": [0.2, 0.02, 265, "text"],
+		"grey": [0.5, 0.02, 265, "captions"],
+		"ultramarine": [0.56, 0.19, 265, "the one accent"],
+		"apricot": [0.8, 0.13, 70, "the warm second colour"],
+		"cream": [0.95, 0.035, 75, "warm cards"],
+		"ochre": [0.5, 0.11, 60, "labels on cream"],
+		"rule": [0.91, 0.01, 265, "hairlines"],
+		"mist": [0.96, 0.01, 265, "quiet surfaces"],
+		"alarm": [0.55, 0.2, 27, "errors"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "cream", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "ultramarine", "primary-foreground": "paper", "secondary": "mist", "secondary-foreground": "ink", "muted": "mist", "muted-foreground": "grey", "accent": "mist", "accent-foreground": "ink", "destructive": "alarm", "border": "rule", "input": "rule", "ring": "ultramarine", "chart-1": "ultramarine", "chart-2": "apricot", "chart-3": "ink", "chart-4": "ochre", "chart-5": "rule"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["ink", "cream", "card text on card"],
+		["paper", "ultramarine", "primary text on primary"],
+		["ink", "mist", "secondary text on secondary"],
+		["grey", "mist", "muted text on muted"],
+		["grey", "cream", "muted text on cards"],
+		["ultramarine", "paper", "focus ring", "ui"],
+		["rule", "paper", "hairline", "decorative"]
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"canvas": [0.94, 0.02, 80, "primed linen, the page"],
+		"varnish": [0.35, 0.05, 60, "old varnish, the italic accent"],
+		"ochre": [0.68, 0.11, 75, "yellow ochre"],
+		"verdigris": [0.35, 0.05, 150, "the green bottle"],
+		"ink": [0.18, 0.01, 60, "text, lamp black"],
+		"umber": [0.45, 0.02, 60, "raw umber, captions"],
+		"rule": [0.82, 0.02, 75, "hairlines"],
+		"linen": [0.9, 0.02, 80, "quiet surfaces"],
+		"vermilion": [0.5, 0.17, 35, "errors"]
+	},
+	"roles": {
+		"light": {"background": "canvas", "foreground": "ink", "card": "canvas", "card-foreground": "ink", "popover": "canvas", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "canvas", "secondary": "linen", "secondary-foreground": "ink", "muted": "linen", "muted-foreground": "umber", "accent": "linen", "accent-foreground": "ink", "destructive": "vermilion", "border": "rule", "input": "rule", "ring": "varnish", "chart-1": "ochre", "chart-2": "varnish", "chart-3": "verdigris", "chart-4": "ink", "chart-5": "umber"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "canvas", "body text"],
+		["umber", "canvas", "muted text"],
+		["canvas", "ink", "primary text on primary"],
+		["ink", "linen", "secondary text on secondary"],
+		["umber", "linen", "muted text on muted"],
+		["varnish", "canvas", "focus ring", "ui"],
+		["rule", "canvas", "hairline", "decorative"]
+	]
+}

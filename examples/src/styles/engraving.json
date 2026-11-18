@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"cream": [0.94, 0.025, 85, "the plate paper"],
+		"ink": [0.22, 0.02, 260, "the engraved line, text"],
+		"sage": [0.65, 0.06, 140, "hand-tinted green wash"],
+		"rose": [0.6, 0.1, 30, "hand-tinted red wash"],
+		"slate": [0.4, 0.02, 260, "captions"],
+		"vellum": [0.9, 0.025, 85, "quiet surfaces"],
+		"cut": [0.75, 0.02, 85, "a shallow cut, hairlines"],
+		"chalk": [0.48, 0.15, 28, "red chalk, errors"]
+	},
+	"roles": {
+		"light": {"background": "cream", "foreground": "ink", "card": "cream", "card-foreground": "ink", "popover": "cream", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "cream", "secondary": "vellum", "secondary-foreground": "ink", "muted": "vellum", "muted-foreground": "slate", "accent": "vellum", "accent-foreground": "ink", "destructive": "chalk", "border": "cut", "input": "cut", "ring": "ink", "chart-1": "ink", "chart-2": "sage", "chart-3": "rose", "chart-4": "slate", "chart-5": "cut"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "cream", "body text"],
+		["slate", "cream", "muted text"],
+		["cream", "ink", "primary text on primary"],
+		["ink", "vellum", "secondary text on secondary"],
+		["slate", "vellum", "muted text on muted"],
+		["cut", "cream", "hairline", "decorative"]
+	]
+}

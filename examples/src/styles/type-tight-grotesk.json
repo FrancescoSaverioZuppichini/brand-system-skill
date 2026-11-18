@@ -1,0 +1,23 @@
+{
+	"tokens": {
+		"paper": [0.99, 0, 0, "the specimen sheet"],
+		"ink": [0.13, 0, 0, "text, rules, the button"],
+		"grey": [0.53, 0, 0, "captions"],
+		"vermilion": [0.62, 0.21, 35, "the one accent"],
+		"mist": [0.95, 0, 0, "quiet surfaces"],
+		"silver": [0.8, 0, 0, "chart grey"],
+		"alarm": [0.52, 0.2, 30, "errors"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "paper", "secondary": "mist", "secondary-foreground": "ink", "muted": "mist", "muted-foreground": "grey", "accent": "mist", "accent-foreground": "ink", "destructive": "alarm", "border": "ink", "input": "ink", "ring": "vermilion", "chart-1": "vermilion", "chart-2": "ink", "chart-3": "grey", "chart-4": "silver", "chart-5": "mist"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["paper", "ink", "primary text on primary"],
+		["ink", "mist", "secondary text on secondary"],
+		["grey", "mist", "muted text on muted"],
+		["vermilion", "paper", "focus ring", "ui"]
+	]
+}

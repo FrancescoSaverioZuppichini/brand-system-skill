@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"violet": [0.25, 0.12, 290, "the shadow ink"],
+		"lime": [0.88, 0.19, 125, "the highlight ink"],
+		"navy": [0.35, 0.114, 255, "the second pair's shadow"],
+		"bubblegum": [0.8, 0.13, 350, "the second pair's highlight"],
+		"haze": [0.33, 0.12, 290, "stage haze, quiet surfaces"],
+		"moss": [0.8, 0.13, 125, "dimmed lime, captions"],
+		"rig": [0.45, 0.12, 290, "the lighting rig, hairlines"],
+		"gel": [0.68, 0.19, 25, "a red gel"]
+	},
+	"roles": {
+		"dark": {"background": "violet", "foreground": "lime", "card": "haze", "card-foreground": "lime", "popover": "haze", "popover-foreground": "lime", "primary": "lime", "primary-foreground": "violet", "secondary": "bubblegum", "secondary-foreground": "navy", "muted": "haze", "muted-foreground": "moss", "accent": "haze", "accent-foreground": "lime", "destructive": "gel", "border": "rig", "input": "rig", "ring": "lime", "chart-1": "lime", "chart-2": "bubblegum", "chart-3": "moss", "chart-4": "rig", "chart-5": "navy"}
+	},
+	"default": "dark",
+	"pairs": [
+		["lime", "violet", "body text"],
+		["moss", "violet", "muted text"],
+		["lime", "haze", "card text on card"],
+		["violet", "lime", "primary text on primary"],
+		["navy", "bubblegum", "secondary text on secondary"],
+		["moss", "haze", "muted text on muted"],
+		["rig", "violet", "hairline", "decorative"]
+	]
+}

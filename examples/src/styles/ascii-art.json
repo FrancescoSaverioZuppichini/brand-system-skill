@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"paper": [0.96, 0.01, 85, "the page the characters sit on"],
+		"ink": [0.18, 0.01, 60, "text, the dense glyphs"],
+		"dim": [0.6, 0.01, 60, "the sparse glyphs, shadows"],
+		"rust": [0.62, 0.17, 40, "the one accent: highlights, brackets"],
+		"pencil": [0.4, 0.01, 60, "captions"],
+		"rule": [0.86, 0.01, 85, "hairlines"],
+		"pulp": [0.92, 0.01, 85, "quiet surfaces"],
+		"red": [0.52, 0.19, 30, "errors"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "paper", "secondary": "pulp", "secondary-foreground": "ink", "muted": "pulp", "muted-foreground": "pencil", "accent": "pulp", "accent-foreground": "ink", "destructive": "red", "border": "rule", "input": "rule", "ring": "rust", "chart-1": "rust", "chart-2": "ink", "chart-3": "dim", "chart-4": "pencil", "chart-5": "rule"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["pencil", "paper", "muted text"],
+		["paper", "ink", "primary text on primary"],
+		["ink", "pulp", "secondary text on secondary"],
+		["pencil", "pulp", "muted text on muted"],
+		["rust", "paper", "focus ring", "ui"],
+		["rule", "paper", "hairline", "decorative"]
+	]
+}

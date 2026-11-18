@@ -1,0 +1,30 @@
+{
+	"tokens": {
+		"paper": [0.99, 0, 0, "the specimen sheet"],
+		"ink": [0.3, 0.03, 270, "text, soft navy"],
+		"grey": [0.52, 0.03, 270, "captions"],
+		"sky": [0.54, 0.15, 250, "the one accent"],
+		"deep-sky": [0.48, 0.15, 255, "the button's pressed edge"],
+		"apricot": [0.8, 0.12, 60, "the warm second colour"],
+		"cream": [0.96, 0.029, 70, "warm cards"],
+		"tan": [0.52, 0.12, 55, "labels on cream"],
+		"rule": [0.92, 0.02, 250, "hairlines"],
+		"mist": [0.96, 0.015, 250, "quiet surfaces"],
+		"alarm": [0.55, 0.2, 27, "errors"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "cream", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "sky", "primary-foreground": "paper", "secondary": "mist", "secondary-foreground": "ink", "muted": "mist", "muted-foreground": "grey", "accent": "mist", "accent-foreground": "ink", "destructive": "alarm", "border": "rule", "input": "rule", "ring": "sky", "chart-1": "sky", "chart-2": "apricot", "chart-3": "ink", "chart-4": "tan", "chart-5": "rule"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["ink", "cream", "card text on card"],
+		["paper", "sky", "primary text on primary"],
+		["ink", "mist", "secondary text on secondary"],
+		["grey", "mist", "muted text on muted"],
+		["grey", "cream", "muted text on cards"],
+		["sky", "paper", "focus ring", "ui"],
+		["rule", "paper", "hairline", "decorative"]
+	]
+}

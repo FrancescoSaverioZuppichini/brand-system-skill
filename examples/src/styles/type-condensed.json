@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"paper": [0.99, 0, 0, "the poster stock"],
+		"ink": [0.14, 0, 0, "text, rules"],
+		"grey": [0.42, 0, 0, "captions"],
+		"red": [0.58, 0.22, 27, "the poster red, the button"],
+		"yellow": [0.88, 0.17, 95, "the yellow block, cards"],
+		"mist": [0.95, 0, 0, "quiet surfaces"],
+		"silver": [0.75, 0, 0, "chart grey"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "yellow", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "red", "primary-foreground": "paper", "secondary": "mist", "secondary-foreground": "ink", "muted": "mist", "muted-foreground": "grey", "accent": "mist", "accent-foreground": "ink", "destructive": "red", "border": "ink", "input": "ink", "ring": "red", "chart-1": "red", "chart-2": "ink", "chart-3": "yellow", "chart-4": "grey", "chart-5": "silver"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["ink", "yellow", "card text on card"],
+		["paper", "red", "primary text on primary"],
+		["ink", "mist", "secondary text on secondary"],
+		["grey", "mist", "muted text on muted"],
+		["grey", "yellow", "muted text on cards"],
+		["red", "paper", "focus ring", "ui"]
+	]
+}

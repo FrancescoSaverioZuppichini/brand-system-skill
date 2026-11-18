@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"paper": [0.98, 0.005, 85, "the specimen sheet, warm"],
+		"sheet": [0.995, 0.002, 85, "cards"],
+		"ink": [0.22, 0.01, 60, "text"],
+		"grey": [0.52, 0.01, 60, "captions"],
+		"jade": [0.52, 0.115, 160, "the one accent"],
+		"rule": [0.9, 0.008, 85, "hairlines"],
+		"oat": [0.95, 0.008, 85, "quiet surfaces"],
+		"clay": [0.55, 0.16, 35, "errors"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "sheet", "card-foreground": "ink", "popover": "sheet", "popover-foreground": "ink", "primary": "jade", "primary-foreground": "paper", "secondary": "oat", "secondary-foreground": "ink", "muted": "oat", "muted-foreground": "grey", "accent": "oat", "accent-foreground": "ink", "destructive": "clay", "border": "rule", "input": "rule", "ring": "jade", "chart-1": "jade", "chart-2": "ink", "chart-3": "grey", "chart-4": "clay", "chart-5": "rule"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["ink", "sheet", "card text on card"],
+		["paper", "jade", "primary text on primary"],
+		["ink", "oat", "secondary text on secondary"],
+		["grey", "oat", "muted text on muted"],
+		["grey", "sheet", "muted text on cards"],
+		["jade", "paper", "focus ring", "ui"],
+		["rule", "paper", "hairline", "decorative"]
+	]
+}

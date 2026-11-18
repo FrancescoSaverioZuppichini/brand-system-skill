@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"paper": [0.97, 0.005, 90, "the plotter paper"],
+		"ink": [0.2, 0.01, 260, "text, the black pen"],
+		"cobalt": [0.6, 0.18, 260, "the blue pen, the seed colour"],
+		"ember": [0.72, 0.16, 50, "the orange pen"],
+		"jade": [0.7, 0.12, 170, "the green pen"],
+		"graphite": [0.48, 0.01, 260, "captions"],
+		"rule": [0.88, 0.005, 260, "hairlines"],
+		"mist": [0.94, 0.005, 90, "quiet surfaces"],
+		"signal": [0.55, 0.19, 28, "errors"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "paper", "secondary": "mist", "secondary-foreground": "ink", "muted": "mist", "muted-foreground": "graphite", "accent": "mist", "accent-foreground": "ink", "destructive": "signal", "border": "rule", "input": "rule", "ring": "cobalt", "chart-1": "cobalt", "chart-2": "ember", "chart-3": "jade", "chart-4": "ink", "chart-5": "graphite"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["graphite", "paper", "muted text"],
+		["paper", "ink", "primary text on primary"],
+		["ink", "mist", "secondary text on secondary"],
+		["graphite", "mist", "muted text on muted"],
+		["cobalt", "paper", "focus ring", "ui"],
+		["rule", "paper", "hairline", "decorative"]
+	]
+}

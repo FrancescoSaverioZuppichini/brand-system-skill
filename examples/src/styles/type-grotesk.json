@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"paper": [0.99, 0, 0, "the specimen sheet"],
+		"ink": [0.18, 0, 0, "text"],
+		"grey": [0.5, 0, 0, "captions"],
+		"cobalt": [0.55, 0.18, 255, "the one accent"],
+		"rule": [0.9, 0, 0, "hairlines"],
+		"mist": [0.96, 0, 0, "quiet surfaces"],
+		"silver": [0.75, 0, 0, "chart grey"],
+		"alarm": [0.55, 0.2, 27, "errors"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "cobalt", "primary-foreground": "paper", "secondary": "mist", "secondary-foreground": "ink", "muted": "mist", "muted-foreground": "grey", "accent": "mist", "accent-foreground": "ink", "destructive": "alarm", "border": "rule", "input": "rule", "ring": "cobalt", "chart-1": "cobalt", "chart-2": "ink", "chart-3": "grey", "chart-4": "silver", "chart-5": "rule"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["paper", "cobalt", "primary text on primary"],
+		["ink", "mist", "secondary text on secondary"],
+		["grey", "mist", "muted text on muted"],
+		["cobalt", "paper", "focus ring", "ui"],
+		["rule", "paper", "hairline", "decorative"]
+	]
+}

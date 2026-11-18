@@ -1,0 +1,22 @@
+{
+	"tokens": {
+		"paper": [0.95, 0.02, 85, "laid paper"],
+		"ink": [0.22, 0.02, 50, "text, rules, the button"],
+		"grey": [0.45, 0.02, 60, "captions"],
+		"rubric": [0.48, 0.15, 28, "the rubricator's red: small-caps labels"],
+		"vellum": [0.91, 0.02, 85, "quiet surfaces"],
+		"sepia": [0.62, 0.06, 60, "chart sepia"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "paper", "secondary": "vellum", "secondary-foreground": "ink", "muted": "vellum", "muted-foreground": "grey", "accent": "vellum", "accent-foreground": "ink", "destructive": "rubric", "border": "ink", "input": "ink", "ring": "rubric", "chart-1": "rubric", "chart-2": "ink", "chart-3": "sepia", "chart-4": "grey", "chart-5": "vellum"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["paper", "ink", "primary text on primary"],
+		["ink", "vellum", "secondary text on secondary"],
+		["grey", "vellum", "muted text on muted"],
+		["rubric", "paper", "focus ring", "ui"]
+	]
+}

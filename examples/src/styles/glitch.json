@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"black": [0.12, 0, 0, "the dead screen"],
+		"white": [0.98, 0, 0, "the signal"],
+		"red": [0.63, 0.25, 29, "the red channel, torn off"],
+		"cyan": [0.9, 0.15, 195, "the green and blue channels, torn off"],
+		"grey": [0.65, 0, 0, "captions"],
+		"static": [0.2, 0, 0, "quiet surfaces"],
+		"scan": [0.35, 0, 0, "hairlines"]
+	},
+	"roles": {
+		"dark": {"background": "black", "foreground": "white", "card": "black", "card-foreground": "white", "popover": "static", "popover-foreground": "white", "primary": "white", "primary-foreground": "black", "secondary": "static", "secondary-foreground": "white", "muted": "static", "muted-foreground": "grey", "accent": "static", "accent-foreground": "white", "destructive": "red", "border": "scan", "input": "scan", "ring": "cyan", "chart-1": "red", "chart-2": "cyan", "chart-3": "white", "chart-4": "grey", "chart-5": "scan"}
+	},
+	"default": "dark",
+	"pairs": [
+		["white", "black", "body text"],
+		["grey", "black", "muted text"],
+		["white", "static", "popover text on popover"],
+		["black", "white", "primary text on primary"],
+		["grey", "static", "muted text on muted"],
+		["cyan", "black", "focus ring", "ui"],
+		["scan", "black", "hairline", "decorative"]
+	]
+}

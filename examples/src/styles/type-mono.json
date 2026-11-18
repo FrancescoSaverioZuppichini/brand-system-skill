@@ -1,0 +1,23 @@
+{
+	"tokens": {
+		"paper": [0.97, 0.005, 90, "the page"],
+		"ink": [0.17, 0, 0, "text, rules, the button"],
+		"grey": [0.48, 0, 0, "comments, captions"],
+		"orange": [0.65, 0.2, 40, "the one accent: prompts, bullets"],
+		"mist": [0.93, 0.005, 90, "quiet surfaces"],
+		"silver": [0.75, 0, 0, "chart grey"],
+		"alarm": [0.52, 0.2, 30, "errors"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "paper", "secondary": "mist", "secondary-foreground": "ink", "muted": "mist", "muted-foreground": "grey", "accent": "mist", "accent-foreground": "ink", "destructive": "alarm", "border": "ink", "input": "ink", "ring": "orange", "chart-1": "orange", "chart-2": "ink", "chart-3": "grey", "chart-4": "silver", "chart-5": "mist"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["paper", "ink", "primary text on primary"],
+		["ink", "mist", "secondary text on secondary"],
+		["grey", "mist", "muted text on muted"],
+		["orange", "paper", "focus ring", "ui"]
+	]
+}

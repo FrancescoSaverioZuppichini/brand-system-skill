@@ -1,0 +1,22 @@
+{
+	"tokens": {
+		"paper": [0.95, 0.03, 90, "warm poster stock"],
+		"ink": [0.18, 0.02, 30, "text, the button"],
+		"grey": [0.4, 0.02, 30, "captions"],
+		"tangerine": [0.68, 0.2, 40, "the display colour"],
+		"bubblegum": [0.75, 0.15, 350, "the card"],
+		"oat": [0.91, 0.03, 90, "quiet surfaces"],
+		"cherry": [0.5, 0.2, 25, "errors"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "paper", "secondary": "oat", "secondary-foreground": "ink", "muted": "oat", "muted-foreground": "grey", "accent": "oat", "accent-foreground": "ink", "destructive": "cherry", "border": "ink", "input": "ink", "ring": "ink", "chart-1": "tangerine", "chart-2": "bubblegum", "chart-3": "ink", "chart-4": "grey", "chart-5": "oat"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["paper", "ink", "primary text on primary"],
+		["ink", "oat", "secondary text on secondary"],
+		["grey", "oat", "muted text on muted"]
+	]
+}

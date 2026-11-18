@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "the page"],
+		"sprout": [0.75, 0.19, 140, "the mascot's body"],
+		"leaf": [0.88, 0.12, 140, "the mascot's belly, leaves"],
+		"mint": [0.95, 0.05, 140, "the halo behind it, pills, hairlines"],
+		"forest": [0.35, 0.08, 150, "its lid and feet, the button"],
+		"cheek": [0.8, 0.1, 15, "blush"],
+		"ink": [0.28, 0.02, 260, "text, eyes"],
+		"slate": [0.45, 0.02, 260, "captions"],
+		"tomato": [0.55, 0.2, 25, "errors"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "ink", "card": "white", "card-foreground": "ink", "popover": "white", "popover-foreground": "ink", "primary": "forest", "primary-foreground": "white", "secondary": "mint", "secondary-foreground": "forest", "muted": "mint", "muted-foreground": "slate", "accent": "mint", "accent-foreground": "forest", "destructive": "tomato", "border": "mint", "input": "leaf", "ring": "forest", "chart-1": "sprout", "chart-2": "forest", "chart-3": "leaf", "chart-4": "cheek", "chart-5": "ink"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "white", "body text"],
+		["slate", "white", "muted text"],
+		["white", "forest", "primary text on primary"],
+		["forest", "mint", "secondary text on secondary"],
+		["slate", "mint", "muted text on muted"],
+		["forest", "white", "focus ring", "ui"],
+		["mint", "white", "hairline", "decorative"]
+	]
+}

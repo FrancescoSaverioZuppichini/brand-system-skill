@@ -1,0 +1,23 @@
+{
+	"tokens": {
+		"cyanotype": [0.38, 0.11, 255, "the blueprint paper"],
+		"line": [0.95, 0.02, 240, "the drawn line, text"],
+		"grid": [0.48, 0.09, 255, "graph-paper rules"],
+		"wash": [0.43, 0.1, 255, "a lighter wash, quiet surfaces"],
+		"pencil": [0.85, 0.14, 90, "the checker's yellow pencil, highlights"],
+		"faded": [0.82, 0.05, 245, "faded line, captions"],
+		"redline": [0.72, 0.16, 30, "redline corrections, errors"]
+	},
+	"roles": {
+		"dark": {"background": "cyanotype", "foreground": "line", "card": "cyanotype", "card-foreground": "line", "popover": "cyanotype", "popover-foreground": "line", "primary": "line", "primary-foreground": "cyanotype", "secondary": "wash", "secondary-foreground": "line", "muted": "wash", "muted-foreground": "faded", "accent": "wash", "accent-foreground": "line", "destructive": "redline", "border": "line", "input": "line", "ring": "pencil", "chart-1": "pencil", "chart-2": "line", "chart-3": "faded", "chart-4": "grid", "chart-5": "redline"}
+	},
+	"default": "dark",
+	"pairs": [
+		["line", "cyanotype", "body text"],
+		["faded", "cyanotype", "muted text"],
+		["cyanotype", "line", "primary text on primary"],
+		["line", "wash", "secondary text on secondary"],
+		["faded", "wash", "muted text on muted"],
+		["pencil", "cyanotype", "focus ring", "ui"]
+	]
+}

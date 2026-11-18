@@ -1,0 +1,29 @@
+{
+	"tokens": {
+		"sweep": [0.93, 0.01, 250, "the seamless paper backdrop"],
+		"softbox": [0.98, 0.003, 250, "where the softbox lands, cards"],
+		"falloff": [0.8, 0.01, 250, "the sweep falling into shade, hairlines"],
+		"bend": [0.9, 0.01, 250, "the band where wall bends into floor"],
+		"ink": [0.18, 0.004, 250, "text, the black pill"],
+		"graphite": [0.45, 0.01, 250, "captions"],
+		"tin": [0.35, 0.08, 30, "the lacquered tin, the product"],
+		"tin-lit": [0.62, 0.07, 35, "softbox reflection on the tin"],
+		"tin-shade": [0.2, 0.05, 30, "the tin's terminator"],
+		"label": [0.5, 0.18, 27, "a warning label"]
+	},
+	"roles": {
+		"light": {"background": "sweep", "foreground": "ink", "card": "softbox", "card-foreground": "ink", "popover": "softbox", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "softbox", "secondary": "bend", "secondary-foreground": "ink", "muted": "bend", "muted-foreground": "graphite", "accent": "bend", "accent-foreground": "ink", "destructive": "label", "border": "falloff", "input": "falloff", "ring": "tin", "chart-1": "tin", "chart-2": "ink", "chart-3": "tin-lit", "chart-4": "graphite", "chart-5": "falloff"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "sweep", "body text"],
+		["graphite", "sweep", "muted text"],
+		["ink", "softbox", "card text on card"],
+		["softbox", "ink", "primary text on primary"],
+		["ink", "bend", "secondary text on secondary"],
+		["graphite", "bend", "muted text on muted"],
+		["graphite", "softbox", "muted text on cards"],
+		["tin", "sweep", "focus ring", "ui"],
+		["falloff", "sweep", "hairline", "decorative"]
+	]
+}
