@@ -20,13 +20,14 @@ npx skills add FrancescoSaverioZuppichini/brand-system-skill --skill brand-syste
 
 | # | Phase | Output |
 |---|---|---|
-| 1 | Strategy | research with links, personas (needs, fears), the gap, positioning, personality, the vibe sentence, a NOT list, the brand idea, a moodboard of its own renders |
-| 2 | Naming (only if there is no name) | candidates by territory, domain and handle checks, a shortlist of 3 |
-| 3 | Logo | ≥3 directions, a size-test sheet, the refined mark + wordmark + lockups, favicon, app icon, avatar, usage rules |
-| 4 | System | OKLCH colour with roles and a WCAG table, OFL type and scale, space, radii, icons, signature components, motion, imagery, voice; `branding.md` + `tokens.css` |
-| 5 | Product | one product screen with real states, the landing page, screenshots at 1440 and 390 |
-| 6 | Applications | OG image, X header, profile grid, business card |
-| 7 | Review + crit | a review page, an automated audit, and a crit checklist |
+| 1 | Strategy | competitor research with screenshots, buyer voice, personas (needs, fears), the gap, positioning, personality, a name collision check |
+| 2 | Naming (only if there is no name) | candidates by territory, RDAP/DNS domain checks, a shortlist of 3 and a ★ to build on |
+| 3 | Direction | the vibe sentence, the brand idea, the NOT list, a **style recipe** picked from a catalogue of ~100 design styles, 3 specimens, a moodboard |
+| 4 | Logo | ≥3 directions, a size test, a look-alike check, the refined mark + wordmark + lockups, a pixel favicon, app icon, avatar, usage rules |
+| 5 | System | OKLCH colour with roles, themes and a WCAG table, OFL type and scale, space, radii, icons, signature components, motion, imagery, voice; `branding.md` + `tokens.css` |
+| 6 | Product | one product screen with the product's own states, an 11-part landing page, screenshots at 1440 and 390 |
+| 7 | Applications | OG image, X header, profile grid, business card, packaging if any |
+| 8 | Review + crit | a review page, an automated audit, and a crit checklist |
 
 It can also run several directions in parallel: N designer agents with different starting lenses, then a comparison page.
 
@@ -34,11 +35,13 @@ It can also run several directions in parallel: N designer agents with different
 
 | Script | Does |
 |---|---|
-| `palette.py` | OKLCH → hex, WCAG contrast per pair, sRGB gamut check, pigment CSS; exits 1 on a failing pair |
-| `sizetest.py` | logo sheet at 16–128 px on light and dark, plus 16/32 px magnified pixel by pixel |
-| `wordmark.py` | outlined wordmark from any OFL font, with HarfBuzz kerning and tracking |
+| `palette.py` | OKLCH → hex, WCAG contrast per pair (with the lightness that would pass), sRGB fitting, roles + light/dark CSS, a markdown table; exits 1 on a failing pair |
+| `sizetest.py` | logo sheet at 16–128 px on light and dark (non-square lockups too), plus 16/32 px magnified pixel by pixel |
+| `wordmark.py` | outlined wordmark from any OFL font: HarfBuzz kerning, any variable axis, per-glyph paths, a baseline sidecar |
 | `svg2png.py` | exact-size PNG exports with resvg |
-| `shoot.sh` | headless-Chrome screenshots: first screen, full page, and a real 390 px mobile layout |
+| `shoot.sh` | headless-Chrome screenshots: first screen (file or URL), full page, a real 390 px mobile layout with an overflow check; light theme and reduced motion by default |
+| `tile.py` | cuts a tall screenshot into readable columns |
+| `commons.py` | public-domain art from Wikimedia Commons, with a licence check and a credit line |
 | `audit.py` | checks a brand folder for missing deliverables, failed contrast, alt text, reduced motion, repeated images |
 
 ## Requirements
