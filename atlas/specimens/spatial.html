@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spatial 3D</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --env: oklch(0.35 0.03 250);
+  --sky: oklch(0.46 0.04 245);
+  --floor: oklch(0.20 0.02 250);
+  --panel: oklch(0.97 0.005 250 / 0.6);
+  --text: oklch(0.18 0.01 250);
+  --muted: oklch(0.18 0.01 250 / .62);
+  --accent: oklch(0.66 0.16 250);
+  --edge: oklch(1 0 0 / .75);
+  --sans: "Inter Tight", sans-serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden;
+  background: radial-gradient(50% 40% at 22% 18%, oklch(0.62 0.05 70 / .55), transparent 70%),
+    linear-gradient(var(--sky), var(--env) 58%, oklch(0.27 0.02 250) 61%, var(--floor)); }
+body { position: relative; font-family: var(--sans); color: var(--text); -webkit-font-smoothing: antialiased; }
+
+/* [Agent] The floor is a flat grid tipped back around its top edge, so the top edge becomes the horizon line. */
+.floor { position: absolute; left: -400px; right: -400px; top: 302px; height: 640px; transform: perspective(420px) rotateX(74deg); transform-origin: 50% 0;
+  background: linear-gradient(90deg, oklch(1 0 0 / .1) 1px, transparent 1px) 0 0 / 64px 64px, linear-gradient(oklch(1 0 0 / .1) 1px, transparent 1px) 0 0 / 64px 64px;
+  -webkit-mask: linear-gradient(transparent, #000 40%); mask: linear-gradient(transparent, #000 40%); }
+.orb { position: absolute; border-radius: 50%; background: radial-gradient(circle at 34% 30%, oklch(0.92 0.06 250), var(--accent) 45%, oklch(0.30 0.10 255) 100%); }
+.orb.near { left: 650px; top: 330px; width: 104px; height: 104px; box-shadow: 0 52px 30px -36px oklch(0 0 0 / .7); }
+.orb.far { left: 96px; top: 318px; width: 30px; height: 30px; box-shadow: 0 16px 8px -12px oklch(0 0 0 / .5); }
+
+.scene { position: absolute; inset: 0; perspective: 900px; perspective-origin: 50% 40%; transform-style: preserve-3d; }
+.panel { position: absolute; box-sizing: border-box; border-radius: 28px; background: var(--panel); backdrop-filter: blur(22px) saturate(1.3);
+  /* [Agent] The 3px lighter step under the face reads as slab thickness; the two soft shadows grow with the panel's distance from the floor. */
+  box-shadow: inset 0 1px 0 var(--edge), 0 3px 0 oklch(0.85 0.01 250 / .55), 0 28px 50px -12px oklch(0.08 0.02 250 / .6), 0 8px 16px oklch(0.08 0.02 250 / .25); }
+
+.main { left: 186px; top: 58px; width: 428px; height: 292px; padding: 34px 38px; transform: translateZ(0); }
+.eyebrow { display: inline-block; margin: 0; padding: 5px 12px; border-radius: 999px; background: oklch(0.66 0.16 250 / .16); color: oklch(0.45 0.16 252); font-size: 12px; font-weight: 600; }
+h1 { margin: 16px 0 0; font-size: 40px; font-weight: 600; line-height: 1.04; letter-spacing: -0.035em; }
+.sub { margin: 14px 0 0; font-size: 13.5px; line-height: 1.55; color: var(--muted); }
+.cta { display: inline-block; margin-top: 22px; padding: 11px 22px; border-radius: 999px; background: var(--accent); color: oklch(0.99 0 0);
+  font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 6px 16px -4px oklch(0.66 0.16 250 / .7); }
+
+.card { left: 34px; top: 124px; width: 168px; height: 176px; padding: 22px; transform: rotateY(30deg) translateZ(-90px); transform-origin: 100% 50%; }
+.card .label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); }
+.card .num { display: block; margin: 10px 0 6px; font-size: 42px; font-weight: 600; letter-spacing: -0.04em; }
+.card .cap { font-size: 12.5px; line-height: 1.35; color: var(--muted); }
+
+.back { left: 640px; top: 60px; width: 210px; height: 230px; padding: 24px; transform: rotateY(-30deg) translateZ(-260px); transform-origin: 0 50%; filter: blur(1.6px); opacity: .85; }
+.back i { display: block; height: 10px; margin-bottom: 12px; border-radius: 6px; background: oklch(0.18 0.01 250 / .14); }
+.back i:first-child { width: 60%; height: 64px; border-radius: 14px; background: oklch(0.66 0.16 250 / .35); }
+
+.dock { left: 316px; top: 372px; width: 168px; height: 50px; display: flex; align-items: center; justify-content: space-evenly; border-radius: 999px; transform: translateZ(70px); }
+.dock b { width: 22px; height: 22px; border-radius: 50%; background: oklch(0.18 0.01 250 / .2); }
+.dock b:first-child { background: var(--accent); }
+</style>
+</head>
+<body>
+<div class="floor"></div>
+<div class="orb far"></div>
+
+<div class="scene">
+  <div class="panel back"><i></i><i></i><i style="width:80%"></i><i style="width:55%"></i></div>
+  <aside class="panel card">
+    <span class="label">Still in use</span>
+    <span class="num">1,284</span>
+    <span class="cap">projects made since 2019</span>
+  </aside>
+  <main class="panel main">
+    <p class="eyebrow">Introducing Keep</p>
+    <h1>Make something<br>people keep</h1>
+    <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <a class="cta" href="#">Start a project</a>
+  </main>
+  <nav class="panel dock"><b></b><b></b><b></b><b></b></nav>
+</div>
+
+<div class="orb near"></div>
+</body>
+</html>

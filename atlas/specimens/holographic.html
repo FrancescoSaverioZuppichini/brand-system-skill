@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Holographic</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Manrope:wght@500;600;700&family=DM+Mono:wght@500&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --pearl: oklch(0.96 0.01 300);
+  --lilac: oklch(0.85 0.07 300);
+  --mint: oklch(0.90 0.07 170);
+  --peach: oklch(0.89 0.06 55);
+  --sky: oklch(0.87 0.07 230);
+  --ink: oklch(0.25 0.03 290);
+  --white: oklch(1 0 0);
+  --foil: conic-gradient(from 200deg, var(--lilac), var(--mint), var(--sky), var(--peach), var(--lilac), var(--mint), var(--peach), var(--sky), var(--lilac), var(--mint), var(--peach), var(--lilac));
+  --display: "Unbounded", sans-serif;
+  --sans: "Manrope", sans-serif;
+  --mono: "DM Mono", monospace;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden;
+  background: radial-gradient(60% 50% at 50% 40%, oklch(0.98 0.01 300), var(--pearl) 70%), var(--pearl); }
+body { position: relative; font-family: var(--sans); color: var(--ink); -webkit-font-smoothing: antialiased; }
+
+/* [Agent] Foil objects: a blurred conic sheen clipped to the shape, then a white specular spot and a lilac core shadow on top. */
+.foil { position: absolute; overflow: hidden; isolation: isolate;
+  box-shadow: inset -18px -26px 50px oklch(0.62 0.12 300 / .45), inset 14px 18px 36px oklch(1 0 0 / .9), 0 36px 60px -24px oklch(0.55 0.12 300 / .45); }
+.foil::before { content: ""; position: absolute; inset: -30%; z-index: -1; background: var(--foil); filter: blur(14px); }
+.foil::after { content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: radial-gradient(28% 22% at 30% 24%, oklch(1 0 0 / .95), transparent 70%), radial-gradient(60% 40% at 70% 92%, oklch(0.97 0.03 200 / .7), transparent 70%); }
+.orb { left: 250px; top: 46px; width: 300px; height: 300px; border-radius: 50%; }
+.pill { left: 56px; top: 74px; width: 150px; height: 64px; border-radius: 999px; rotate: -24deg; }
+.bead { left: 640px; top: 90px; width: 74px; height: 74px; border-radius: 50%; }
+.ring { position: absolute; left: 70px; top: 330px; width: 120px; height: 120px; border-radius: 50%; background: var(--foil); rotate: 20deg;
+  -webkit-mask: radial-gradient(closest-side, transparent 52%, #000 55%); mask: radial-gradient(closest-side, transparent 52%, #000 55%);
+  filter: drop-shadow(0 12px 18px oklch(0.55 0.12 300 / .35)); transform: rotateX(58deg); }
+
+.eyebrow { position: absolute; left: 50%; top: 22px; translate: -50% 0; margin: 0; padding: 7px 16px; border-radius: 999px;
+  background: linear-gradient(var(--white), var(--white)) padding-box, var(--foil) border-box; border: 2px solid transparent;
+  font: 500 11px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; }
+h1 { position: absolute; left: 0; right: 0; top: 214px; margin: 0; text-align: center; font: 600 50px/1.04 var(--display); letter-spacing: -0.03em; }
+.sub { position: absolute; left: 0; right: 0; top: 346px; margin: 0; text-align: center; font-size: 14px; font-weight: 500; line-height: 1.6; }
+.cta { position: absolute; left: 50%; top: 410px; translate: -50% 0; padding: 13px 26px; border-radius: 999px; background: var(--ink); color: var(--pearl);
+  font-size: 14px; font-weight: 700; text-decoration: none; box-shadow: 0 0 0 4px oklch(1 0 0 / .7), 0 0 0 6px var(--lilac); }
+
+.card { position: absolute; left: 588px; top: 380px; width: 160px; padding: 14px 20px; border-radius: 28px; text-align: center;
+  background: linear-gradient(oklch(1 0 0 / .86), oklch(1 0 0 / .86)) padding-box, var(--foil) border-box; border: 2px solid transparent;
+  box-shadow: 0 18px 30px -16px oklch(0.55 0.12 300 / .45); }
+.card .label { display: block; font: 500 10px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.card .num { display: block; margin: 6px 0 2px; font: 600 26px/1.1 var(--display); letter-spacing: -0.03em; }
+.card .cap { font-size: 12px; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="foil orb"></div>
+<div class="foil pill"></div>
+<div class="foil bead"></div>
+<div class="ring"></div>
+
+<p class="eyebrow">Introducing Keep</p>
+<h1>Make something<br>people keep</h1>
+<p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+<a class="cta" href="#">Start a project</a>
+
+<aside class="card">
+  <span class="label">Still in use</span>
+  <span class="num">1,284</span>
+  <span class="cap">projects made since 2019</span>
+</aside>
+</body>
+</html>

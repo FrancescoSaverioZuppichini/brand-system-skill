@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aurora gradients</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --night: oklch(0.15 0.03 280);
+  --violet: oklch(0.55 0.25 295);
+  --cyan: oklch(0.75 0.13 210);
+  --pink: oklch(0.68 0.21 350);
+  --text: oklch(0.97 0.01 280);
+  --muted: oklch(0.97 0.01 280 / .62);
+  --hair: oklch(0.97 0.01 280 / .14);
+  --sans: "Inter Tight", sans-serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--night); }
+body { position: relative; font-family: var(--sans); color: var(--text); -webkit-font-smoothing: antialiased; }
+
+.bloom { position: absolute; border-radius: 50%; filter: blur(80px); }
+.b1 { left: 150px; top: 300px; width: 500px; height: 260px; background: var(--violet); }
+.b2 { left: 470px; top: 330px; width: 330px; height: 200px; background: var(--cyan); opacity: .8; }
+.b3 { left: 20px; top: 340px; width: 300px; height: 200px; background: var(--pink); opacity: .75; }
+.b4 { left: 560px; top: -120px; width: 320px; height: 240px; background: var(--violet); opacity: .35; }
+/* [Agent] A huge dark ellipse with a lit rim sits over the blooms, so the light seems to rise from behind a planet edge. */
+.horizon { position: absolute; left: -260px; top: 404px; width: 1320px; height: 700px; border-radius: 50%; background: var(--night);
+  box-shadow: 0 -1px 0 oklch(0.97 0.01 280 / .55), 0 -18px 60px -10px oklch(0.75 0.13 210 / .5), inset 0 24px 60px -30px oklch(0.55 0.25 295 / .9); }
+
+main { position: absolute; top: 52px; left: 0; right: 0; text-align: center; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 6px 14px 6px 10px; border: 1px solid var(--hair); border-radius: 999px;
+  background: oklch(0.97 0.01 280 / .04); font-size: 13px; color: var(--muted); }
+.eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+h1 { margin: 22px 0 0; font-size: 62px; font-weight: 600; line-height: 1.02; letter-spacing: -0.04em; }
+h1 span { background: linear-gradient(100deg, var(--cyan), var(--violet) 55%, var(--pink)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sub { margin: 20px 0 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
+.cta { display: inline-block; margin-top: 26px; padding: 11px 20px; border-radius: 999px; background: var(--text); color: var(--night);
+  font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 0 32px oklch(0.55 0.25 295 / .55); }
+
+.stat { position: absolute; left: 50%; top: 426px; translate: -50% 0; display: flex; align-items: baseline; gap: 14px; padding: 12px 20px; white-space: nowrap;
+  border: 1px solid var(--hair); border-radius: 16px; background: oklch(0.15 0.03 280 / .55); backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 oklch(0.97 0.01 280 / .12); font-size: 13px; color: var(--muted); }
+.stat .label { font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+.stat .num { font-size: 22px; font-weight: 600; color: var(--text); letter-spacing: -0.02em; }
+</style>
+</head>
+<body>
+<div class="bloom b1"></div><div class="bloom b2"></div><div class="bloom b3"></div><div class="bloom b4"></div>
+<div class="horizon"></div>
+
+<main>
+  <p class="eyebrow">Introducing Keep</p>
+  <h1>Make something<br>people <span>keep</span></h1>
+  <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+  <a class="cta" href="#">Start a project</a>
+</main>
+
+<aside class="stat">
+  <span class="label">Still in use</span>
+  <span class="num">1,284</span>
+  <span>projects made since 2019</span>
+</aside>
+</body>
+</html>

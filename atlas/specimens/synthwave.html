@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Synthwave</title>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@900&family=Michroma&family=VT323&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --night: oklch(0.18 0.08 295);
+  --magenta: oklch(0.65 0.28 340);
+  --cyan: oklch(0.85 0.14 205);
+  --sun: oklch(0.78 0.15 60);
+  --violet: oklch(0.45 0.20 300);
+  --yellow: oklch(0.92 0.14 95);
+  --chrome: linear-gradient(oklch(0.97 0.03 220) 0%, oklch(0.80 0.10 230) 44%, oklch(0.99 0 0) 49%, oklch(0.28 0.08 300) 52%, oklch(0.60 0.20 340) 74%, oklch(0.93 0.10 80) 100%);
+  --display: "Orbitron", sans-serif;
+  --neon: "Monoton", sans-serif;
+  --wide: "Michroma", sans-serif;
+  --arcade: "VT323", monospace;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden;
+  background: linear-gradient(var(--night) 0%, oklch(0.24 0.12 298) 30%, var(--violet) 50%, oklch(0.55 0.25 330) 60%, var(--night) 60%); }
+body { position: relative; font-family: var(--wide); color: var(--cyan); }
+body > * { position: absolute; margin: 0; }
+
+.stars { left: 0; right: 0; top: 0; height: 240px; opacity: .7;
+  background: radial-gradient(1px 1px at 20% 30%, #fff, transparent), radial-gradient(1px 1px at 70% 20%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 45% 70%, #fff, transparent), radial-gradient(1px 1px at 90% 60%, #fff, transparent) 0 0 / 130px 90px; }
+.glow { left: 250px; top: 120px; width: 300px; height: 220px; border-radius: 50%; background: var(--magenta); filter: blur(60px); opacity: .7; }
+/* [Agent] The sun's stripes are gaps in a mask that widen toward the horizon, so no extra elements are needed. */
+.sun { left: 280px; top: 140px; width: 240px; height: 240px; border-radius: 50%; background: linear-gradient(var(--yellow), var(--sun) 35%, var(--magenta) 70%);
+  -webkit-mask: linear-gradient(#000 36%, transparent 36% 37.5%, #000 37.5% 43%, transparent 43% 45%, #000 45% 50%, transparent 50% 53%, #000 53% 57%, transparent 57% 61%, #000 61% 64%, transparent 64% 69%, #000 69%);
+  mask: linear-gradient(#000 36%, transparent 36% 37.5%, #000 37.5% 43%, transparent 43% 45%, #000 45% 50%, transparent 50% 53%, #000 53% 57%, transparent 57% 61%, #000 61% 64%, transparent 64% 69%, #000 69%); }
+.mountains { left: 0; top: 214px; width: 800px; height: 86px; }
+.floor { left: -500px; right: -500px; top: 300px; height: 560px; transform: perspective(260px) rotateX(72deg); transform-origin: 50% 0;
+  background: linear-gradient(90deg, var(--magenta) 2px, transparent 2px) 0 0 / 60px 60px, linear-gradient(var(--magenta) 2px, transparent 2px) 0 0 / 60px 60px, var(--night);
+  filter: drop-shadow(0 0 4px var(--magenta)); }
+.horizon { left: 0; right: 0; top: 299px; height: 2px; background: var(--cyan); box-shadow: 0 0 12px 2px var(--cyan); }
+
+.eyebrow { left: 0; right: 0; top: 22px; text-align: center; font: 400 26px/1 var(--neon); color: oklch(0.85 0.12 340);
+  text-shadow: 0 0 6px var(--magenta), 0 0 18px var(--magenta); }
+/* [Agent] Orbitron has no italic, so the chrome headline is sheared; the gradient's hard stop fakes a chrome horizon line. */
+h1 { left: 0; right: 0; top: 66px; text-align: center; font: 900 54px/1.08 var(--display); letter-spacing: .02em; transform: skewX(-10deg);
+  filter: drop-shadow(0 3px 0 var(--night)) drop-shadow(0 0 14px oklch(0.65 0.28 340 / .8)); }
+h1 span { display: block; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: 1px oklch(0.97 0.03 220 / .6); }
+.sub { left: 0; right: 0; top: 322px; text-align: center; font-size: 11.5px; line-height: 1.9; letter-spacing: .05em; color: var(--cyan);
+  text-shadow: 0 0 8px oklch(0.85 0.14 205 / .7), 0 1px 2px var(--night); }
+.cta { left: 50%; top: 384px; translate: -50% 0; padding: 12px 26px; border: 2px solid var(--cyan); background: oklch(0.18 0.08 295 / .7);
+  font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: oklch(0.97 0.04 205); text-decoration: none;
+  box-shadow: 0 0 12px var(--cyan), inset 0 0 12px oklch(0.85 0.14 205 / .5); text-shadow: 0 0 8px var(--cyan); }
+
+.card { left: 574px; top: 384px; width: 180px; padding: 8px 14px 10px; border: 2px solid var(--magenta); background: oklch(0.18 0.08 295 / .85);
+  box-shadow: 0 0 14px var(--magenta), inset 0 0 10px oklch(0.65 0.28 340 / .5); font-family: var(--arcade); text-align: center; }
+.card .label { display: block; font-size: 18px; letter-spacing: .12em; text-transform: uppercase; color: oklch(0.85 0.12 340); }
+.card .num { display: block; font-size: 46px; line-height: .9; color: var(--yellow); text-shadow: 0 0 10px var(--sun); }
+.card .cap { font-size: 18px; color: var(--cyan); }
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<div class="glow"></div>
+<div class="sun"></div>
+<svg class="mountains" viewBox="0 0 800 86" preserveAspectRatio="none" aria-hidden="true">
+  <g fill="var(--night)" stroke="var(--magenta)" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M0 86 L0 40 L40 18 L90 52 L140 6 L190 44 L230 30 L290 86 Z"/><path d="M510 86 L560 34 L600 50 L660 4 L710 46 L750 22 L800 44 L800 86 Z"/></g>
+  <g fill="none" stroke="var(--magenta)" stroke-width="1" opacity=".6"><path d="M140 6 L120 86 M140 6 L170 86 M40 18 L60 86 M660 4 L640 86 M660 4 L690 86 M750 22 L770 86"/></g>
+</svg>
+<div class="floor"></div>
+<div class="horizon"></div>
+
+<p class="eyebrow">Introducing Keep</p>
+<h1><span>MAKE SOMETHING</span><span>PEOPLE KEEP</span></h1>
+<p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+<a class="cta" href="#">Start a project</a>
+
+<aside class="card">
+  <span class="label">Still in use</span>
+  <span class="num">1,284</span>
+  <span class="cap">projects made since 2019</span>
+</aside>
+</body>
+</html>

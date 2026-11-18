@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Minimalism</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --white: oklch(0.99 0 0);
+  --black: oklch(0.15 0 0);
+  --grey: oklch(0.55 0 0);
+  --line: oklch(0.92 0 0);
+  --accent: oklch(0.55 0.15 255);
+  --sans: "Inter", sans-serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--white); }
+body { position: relative; font-family: var(--sans); color: var(--black); -webkit-font-smoothing: antialiased; }
+
+main { position: absolute; top: 112px; left: 0; right: 0; text-align: center; }
+.eyebrow { margin: 0 0 18px; font-size: 13px; color: var(--grey); }
+h1 { margin: 0; font-size: 40px; font-weight: 600; line-height: 1.08; letter-spacing: -0.035em; }
+.sub { margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: var(--grey); }
+.cta { display: inline-block; margin-top: 34px; padding: 12px 22px; border-radius: 2px; background: var(--black); color: var(--white); font-size: 13px; font-weight: 500; text-decoration: none; }
+
+.stat { position: absolute; left: 50%; bottom: 40px; width: 240px; translate: -50% 0; padding-top: 20px; border-top: 1px solid var(--line); text-align: center; font-size: 13px; line-height: 1.6; color: var(--grey); }
+.stat .label::before { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 8px 1px 0; border-radius: 50%; background: var(--accent); }
+.stat .num { display: block; font-size: 15px; font-weight: 500; color: var(--black); }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Introducing Keep</p>
+  <h1>Make something people keep</h1>
+  <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+  <a class="cta" href="#">Start a project</a>
+</main>
+<aside class="stat">
+  <span class="label">Still in use</span>
+  <span class="num">1,284</span>
+  <span>projects made since 2019</span>
+</aside>
+</body>
+</html>
