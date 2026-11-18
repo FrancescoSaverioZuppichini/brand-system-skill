@@ -17,11 +17,11 @@ Concrete things to ban, visual and verbal. The client's dislikes from brief.md c
 
 Pick it with `style-picking.md` from `styles.md` (base + one device from a second family; habit 2 for taste versus cliché), e.g. "Swiss timetable base + rubber-stamp device + public-domain botanical plates". The justification against the cliché goes in branding.md § Direction.
 
-## Provisional palette and type, then specimens
+## Three directions, the pick, then palette and type
 
-1. **Palette:** write `src/colors-in.json` (format in `system.md` § Colour) and run palette.py. Phase 5 finalises it; everything reads colors.json, so later changes are cheap.
-2. **Fonts:** download 2–3 candidate OFL families into `fonts/` (Tools § Fonts); the logo needs them next.
-3. **Specimens:** the same small piece of the #1 surface in `surfaces:` (a hero, a bag front, a sign band) in 3 candidate recipes, as `src/html/specimen-{a,b,c}.html` shot into `img/`. Side by side on the page, ★ on the pick, chosen with the strategy.
+1. **Directions:** three cheap directions from three angles, each the same small piece of the #1 surface in `surfaces:` (a hero, a bag front, a sign band), as `src/html/direction-{a,b,c}.html` with its colours and fonts inline, shot into `img/`. Then stop for the user's pick (SKILL.md § The pick).
+2. **Palette (after the pick):** write `src/colors-in.json` for the chosen direction (format in `system.md` § Colour) and run palette.py. Phase 5 finalises it; everything reads colors.json, so later changes are cheap.
+3. **Fonts (after the pick):** download the chosen OFL families into `fonts/` (Tools § Fonts); the logo needs them next.
 
 ## Moodboard from your own renders
 

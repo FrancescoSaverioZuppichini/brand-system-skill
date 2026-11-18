@@ -7,7 +7,7 @@ description: Builds a brand identity and design system the way a senior brand de
 
 Work as a senior brand and UX designer at the level of the best identity studio for this category. Hand over a system people can use: a written rationale, a style chosen on purpose, a logo that works at every size, tokens a developer can paste, and the real surfaces that prove it holds.
 
-Phases run in order and every later choice cites an earlier one. One direction unless the user asks for options. A narrow request ("just a logo") still gets a short strategy and direction (phases 1 and 3), then only the phases it needs; say which you skipped.
+Phases run in order and every later choice cites an earlier one. By default you propose three directions from three angles, stop, and the user picks one (§ The pick); then you build that one. A narrow request ("just a logo") still gets a short strategy and direction (phases 1 and 3), then only the phases it needs; say which you skipped.
 
 **Reading.** Read this file fully. In phase 0 also read `references/review-page.md` and § Surfaces of `references/product.md`. Read each other file when its phase starts. For `references/styles.md`, read its table of contents and the families `references/style-picking.md` points you to.
 
@@ -81,21 +81,21 @@ The page and `branding.md` share one list of sections, in this order (page ids i
 | 0 | Setup | `review-page.md`, `product.md` § Surfaces | tree, stubs, `brief.md`, page | `/api/check` ok; `brief.md` has a `surfaces:` line |
 | 1 | Strategy | `strategy.md` | research, buyer voice, cliché, personas, gap, positioning, personality | the line on why this brand wins for this buyer heads branding.md § Strategy |
 | 2 | Naming (no name only) | `strategy.md` § Naming | candidates, domains, handles, shortlist, ★, folder renamed | the ★ is pronounceable and spellable, its domain status known; collisions listed, none exact in the category, near ones ❓ |
-| 3 | Direction | `direction.md`, `style-picking.md`, `styles.md`, `system.md` § Colour | vibe, idea, NOT list, provisional palette and fonts, 3 specimens, **the user's pick** (§ Style checkpoint), recipe, moodboard | the user picked (or the ★ after the wait); the recipe is justified against the cliché in writing; the page marks each NOT item seen / not seen on the moodboard |
+| 3 | Direction | `direction.md`, `style-picking.md`, `styles.md`, `system.md` § Colour | three directions (vibe, recipe, the same piece of the #1 surface each), then **stop for the user's pick** (§ The pick); after it: NOT list, palette and fonts, moodboard | the user picked (or said "you decide"); the recipe is justified against the cliché in writing; the page marks each NOT item seen / not seen on the moodboard |
 | 4 | Logo | `logo.md` | sketches, ★, mark, wordmark, lockups, favicon, app icon, avatar, usage rules, boards | reads at 16 px and in one colour, tells the idea in one sentence, look-alike sheet done |
 | 5 | System | `system.md` | colour, type, space, components, imagery, motion, voice, print; `tokens.css` | `palette.py` exits 0 with the required pairs; every rule says why |
 | 6 | Primary surfaces | `product.md`, `layouts.md` | the top two surfaces in `surfaces:`, shot | no tell from the general or the type's slop list, no OVERFLOW, every placeholder labelled |
 | 7 | Secondary surfaces / applications | `product.md` § Applications | the other surfaces and the channel assets | each still reads as the brand in a copy with the logo covered |
 | 8 | Review + crit | `review-page.md` | page complete, `crit.md`, page screenshot | `audit.py` exits 0, `/api/check` ok, every `crit.md` line ✓ or a reason |
 
-## Style checkpoint (phase 3)
+## The pick (phase 3): three directions, then the user decides
 
-Taste is the user's call, so the style is the one decision you never take alone. Render the same small piece of the #1 surface in 3 candidate recipes, each a real contrast (different families, not three shades of one). For developer tools, AI and other tech products, one of the three is `styles.md#devtool-dark` (Vercel / Linear-like), the quality bar of that category. Then ask:
+Taste is the user's call, and a wrong direction is the most expensive mistake in this skill, so fail fast: show three cheap directions before anything gets polished.
 
-- **You can ask the user directly** (in Claude Code the `AskUserQuestion` tool: a multiple-choice popup in the chat, with a preview per option): one question, the three recipes as options with your ★ first and labelled "(recommended)", each with its one-line recipe and the image path; then A/B the top two on a second piece of the surface if the answer is "between A and B".
-- **You are a subagent:** put the three in a `<Gallery id="pick-style">` in the Direction section, each `<Media>` with its own id, plus `<Note id="pick-style-note" placeholder="Which style? 👍 one card, or write why">`. Tell the orchestrator the link, then read `$B/feedback.json` every 60 s for up to 10 minutes: a 👍 (`vote: "up"`) on one of the three ids, or a note, is the pick. With no answer, go on with your ★ and mark it ❓ on the page.
-
-Write the pick and why in branding.md § Direction; the runner-up stays on the page, small.
+1. **Three angles.** Each direction comes from a different angle: a different buyer lens or cultural root from the brief, *and* a different style family (`style-picking.md`), never three shades of one idea. For developer tools, AI and other tech products one of the three is `styles.md#devtool-dark` (Vercel / Linear-like), that category's quality bar.
+2. **Cheap.** Per direction: the vibe in one line, the style recipe in one line, a one-line logo idea, and the same small piece of the #1 surface rendered (`src/html/direction-{a,b,c}.html`, colours and fonts inline, shot to `img/`). Minutes each; no logo work, no palette.py, no moodboard yet.
+3. **Stop and ask.** Put the three side by side in the Direction section, ★ on your recommendation with one line on why. Then end your turn with a short message: the page link, the three one-liners, your ★, and the question "A, B, C, or a mix?". Plain text works in every harness; a native multiple-choice tool is fine where one exists. As a subagent, that message is your final report to the orchestrator, which asks the user.
+4. **Continue only on an answer.** Build the chosen direction (a mix like "A's type with C's colour" is a recipe too); the others stay small on the page with the user's reason. If nobody can answer (a non-interactive run, or the user said "you decide"), take the ★ and say so.
 
 ## Tools
 
@@ -124,7 +124,7 @@ The only place with exact commands; phase files name the tool. Python scripts ca
 
 ## Several directions at once
 
-Only when the user asks for options. You are the orchestrator:
+Only when the user asks for several complete brands to compare; for choosing a direction, § The pick is enough. You are the orchestrator:
 
 1. Run phases 0 and 1 once in `~/Documents/<slug>`: research, buyer voice, competitors, personas, assumptions and surfaces go into one `brief.md`. Copy it and `research/` into each designer folder (`<slug>-a`, `-b`, `-c`).
 2. Spawn one senior-designer agent per direction (Opus unless told otherwise) with this skill's absolute path, its own folder, and its lens. Each runs phase 0 around the copied brief, starts branding.md § Strategy from it plus one line on its lens, then works from phase 2 (no name) or 3. None reads another's folder.
