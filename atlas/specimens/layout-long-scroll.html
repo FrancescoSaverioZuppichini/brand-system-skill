@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Long-scroll storytelling</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --bg: oklch(100% 0 0);
+  --surface: oklch(97.6% 0.003 255);
+  --line: oklch(91.5% 0.005 255);
+  --fill: oklch(93% 0.005 255);
+  --fill-2: oklch(87.5% 0.007 255);
+  --text: oklch(23% 0.012 255);
+  --muted: oklch(52% 0.012 255);
+  --accent: oklch(56% 0.2 260);
+  --accent-soft: oklch(95.5% 0.025 260);
+  --radius: 8px;
+  --sans: "Inter", sans-serif;
+  --mono: "JetBrains Mono", monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--bg); }
+body { position: relative; color: var(--text); font-family: var(--sans); }
+.bar { display: block; height: 7px; border-radius: 4px; background: var(--fill-2); }
+p { margin: 0; }
+
+.progress { position: absolute; z-index: 3; top: 0; left: 0; width: 100%; height: 3px; background: var(--line); }
+.progress::after { content: ""; position: absolute; inset: 0 62% 0 0; background: var(--accent); }
+
+/* [Agent] Each chapter is a full-width band with its own tone; the bands scroll past while the visual stays pinned on top of them. */
+.chapter { position: relative; padding: 0 0 0 40px; display: flex; flex-direction: column; justify-content: center; }
+.ch1 { height: 238px; padding-top: 10px; }
+.ch2 { height: 138px; background: var(--surface); border-top: 1px solid var(--line); }
+.ch3 { height: 124px; background: var(--text); }
+.no { margin-bottom: 12px; font: 500 11px/1 var(--mono); color: var(--muted); }
+.ch3 .no { color: oklch(70% 0.01 255); }
+
+.eyebrow { margin-bottom: 10px; font: 500 12px/1 var(--mono); color: var(--accent); }
+h1 { max-width: 350px; margin: 0; font-size: 40px; line-height: 1.02; font-weight: 700; letter-spacing: -0.035em; }
+.sub { max-width: 350px; margin-top: 14px; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+
+.card { width: 200px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+.label, .cap { font-size: 11px; color: var(--muted); }
+.num { margin: 4px 0 2px; font-size: 24px; font-weight: 600; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+
+.ch3 .row { display: flex; align-items: center; gap: 18px; }
+.ch3 .bars { display: grid; gap: 9px; width: 150px; }
+.ch3 .bar { background: oklch(40% 0.01 255); }
+.btn { padding: 10px 16px; border-radius: var(--radius); background: var(--accent); color: white; font-size: 13px; font-weight: 500; }
+
+/* [Agent] The sticky media: fixed to the viewport, it spans all three chapter bands, which is the tell of a pinned scroll section. */
+.sticky { position: absolute; z-index: 2; top: 36px; right: 64px; width: 330px; height: 428px; border-radius: 14px; overflow: hidden; background: linear-gradient(165deg, oklch(95% 0.015 250), oklch(82% 0.06 262)); box-shadow: 0 30px 60px -24px oklch(30% 0.05 260 / 0.4); }
+.sticky::before { content: ""; position: absolute; left: 50%; top: 46%; width: 190px; height: 190px; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle at 35% 30%, oklch(100% 0 0), oklch(88% 0.04 260) 45%, oklch(70% 0.1 262)); box-shadow: 0 40px 50px -30px oklch(30% 0.08 262 / 0.6); }
+.sticky::after { content: ""; position: absolute; left: 24px; right: 24px; bottom: 22px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, oklch(100% 0 0) 38%, oklch(100% 0 0 / 0.35) 38%); }
+
+.rail { position: absolute; z-index: 3; top: 50%; right: 26px; transform: translateY(-50%); display: grid; gap: 10px; }
+.rail i { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--fill-2); background: var(--bg); }
+.rail i.on { border-color: var(--accent); background: var(--accent); }
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<section class="chapter ch1">
+  <p class="no">01</p>
+  <p class="eyebrow">Introducing Keep</p>
+  <h1>Make something people keep</h1>
+  <p class="sub">Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+</section>
+
+<section class="chapter ch2">
+  <p class="no">02</p>
+  <div class="card">
+    <p class="label">Still in use</p>
+    <p class="num">1,284</p>
+    <p class="cap">projects made since 2019</p>
+  </div>
+</section>
+
+<section class="chapter ch3">
+  <p class="no">03</p>
+  <div class="row"><span class="btn">Start a project</span><span class="bars"><span class="bar"></span><span class="bar" style="width:70%"></span></span></div>
+</section>
+
+<div class="sticky" aria-hidden="true"></div>
+<nav class="rail" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></nav>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --bg: oklch(100% 0 0);
+  --surface: oklch(97.6% 0.003 255);
+  --line: oklch(91.5% 0.005 255);
+  --fill: oklch(93% 0.005 255);
+  --fill-2: oklch(87.5% 0.007 255);
+  --text: oklch(23% 0.012 255);
+  --muted: oklch(52% 0.012 255);
+  --accent: oklch(56% 0.2 260);
+  --accent-soft: oklch(95.5% 0.025 260);
+  --good: oklch(62% 0.15 155);
+  --radius: 8px;
+  --sans: "Inter", sans-serif;
+  --mono: "JetBrains Mono", monospace;
+  --sidebar: 176px;
+  --topbar: 48px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--surface); }
+body { display: grid; grid-template-columns: var(--sidebar) 1fr; grid-template-rows: var(--topbar) 1fr; color: var(--text); font-family: var(--sans); font-variant-numeric: tabular-nums; }
+.bar { display: block; height: 6px; border-radius: 3px; background: var(--fill-2); }
+p { margin: 0; }
+
+/* [Agent] The app shell: a full-height sidebar, a thin top bar, and everything else scrolls inside the remaining cell. */
+.side { grid-row: 1 / 3; padding: 14px 12px; display: flex; flex-direction: column; gap: 4px; background: var(--bg); border-right: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 8px; height: 22px; margin: 0 6px 18px; }
+.brand i { width: 20px; height: 20px; border-radius: 6px; background: var(--text); }
+.brand .bar { width: 52px; background: var(--fill-2); }
+.item { display: flex; align-items: center; gap: 10px; height: 30px; padding: 0 8px; border-radius: 6px; }
+.item i { width: 13px; height: 13px; border-radius: 4px; border: 1.5px solid var(--fill-2); }
+.item .bar { background: var(--fill); }
+.item.on { background: var(--accent-soft); }
+.item.on i { border-color: var(--accent); }
+.item.on .bar { background: oklch(56% 0.2 260 / 0.45); }
+.group { height: 6px; width: 40px; margin: 14px 8px 6px; border-radius: 3px; background: var(--fill); }
+
+.top { display: flex; align-items: center; gap: 12px; padding: 0 20px; background: var(--bg); border-bottom: 1px solid var(--line); }
+.crumb { font: 500 11px/1 var(--mono); color: var(--muted); }
+.search { margin-left: auto; width: 180px; height: 28px; padding: 0 10px; display: flex; align-items: center; gap: 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); }
+.search::before { content: ""; width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid var(--fill-2); }
+.search::after { content: ""; width: 64px; height: 6px; border-radius: 3px; background: var(--fill-2); }
+.btn { padding: 7px 12px; border-radius: 6px; background: var(--accent); color: white; font-size: 12px; font-weight: 500; }
+
+.content { padding: 16px 20px; display: grid; gap: 12px; align-content: start; }
+h1 { margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.015em; }
+.sub { margin-top: 3px; font-size: 11.5px; line-height: 1.45; color: var(--muted); }
+
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.panel { padding: 12px 14px; border-radius: var(--radius); background: var(--bg); border: 1px solid var(--line); }
+.kpi { display: grid; gap: 8px; align-content: start; }
+.kpi .big { width: 60%; height: 15px; border-radius: 4px; background: var(--fill-2); }
+.label, .cap { font-size: 10.5px; color: var(--muted); }
+.num { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
+.card { gap: 5px; }
+.delta { width: 34px; height: 12px; border-radius: 99px; background: oklch(62% 0.15 155 / 0.18); }
+
+.row { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; }
+.chart { height: 138px; display: grid; grid-template-rows: auto 1fr; gap: 8px; }
+.chart svg { width: 100%; height: 100%; }
+.list { display: grid; gap: 11px; align-content: start; }
+.li { display: flex; align-items: center; gap: 8px; }
+.li i { width: 8px; height: 8px; border-radius: 50%; background: var(--fill-2); }
+.li .bar { flex: 1; background: var(--fill); }
+.li b { width: 26px; height: 6px; border-radius: 3px; background: var(--fill-2); }
+
+.table { padding: 0; overflow: hidden; }
+.tr { display: grid; grid-template-columns: 24px 2fr 1fr 1fr 60px; gap: 16px; align-items: center; height: 34px; padding: 0 14px; border-top: 1px solid var(--line); }
+.tr:first-child { border-top: 0; background: var(--surface); height: 28px; }
+.tr .pill { width: 46px; height: 14px; border-radius: 99px; background: var(--accent-soft); }
+.tr i { width: 12px; height: 12px; border-radius: 3px; border: 1.5px solid var(--fill-2); }
+</style>
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><i></i><span class="bar"></span></div>
+  <span class="item on"><i></i><span class="bar" style="width:60px"></span></span>
+  <span class="item"><i></i><span class="bar" style="width:72px"></span></span>
+  <span class="item"><i></i><span class="bar" style="width:50px"></span></span>
+  <span class="item"><i></i><span class="bar" style="width:66px"></span></span>
+  <span class="group"></span>
+  <span class="item"><i></i><span class="bar" style="width:58px"></span></span>
+  <span class="item"><i></i><span class="bar" style="width:76px"></span></span>
+  <span class="item"><i></i><span class="bar" style="width:46px"></span></span>
+</aside>
+
+<header class="top">
+  <span class="crumb">Introducing Keep</span>
+  <span class="search"></span>
+  <span class="btn">Start a project</span>
+</header>
+
+<main class="content">
+  <div>
+    <h1>Make something people keep</h1>
+    <p class="sub">Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+  </div>
+
+  <section class="kpis">
+    <div class="panel kpi card">
+      <p class="label">Still in use</p>
+      <p class="num">1,284</p>
+      <p class="cap">projects made since 2019</p>
+    </div>
+    <div class="panel kpi"><span class="bar" style="width:50%"></span><span class="big"></span><span class="delta"></span></div>
+    <div class="panel kpi"><span class="bar" style="width:62%"></span><span class="big" style="width:46%"></span><span class="delta"></span></div>
+    <div class="panel kpi"><span class="bar" style="width:40%"></span><span class="big" style="width:54%"></span><span class="delta"></span></div>
+  </section>
+
+  <section class="row">
+    <div class="panel chart">
+      <span class="bar" style="width:22%"></span>
+      <svg viewBox="0 0 360 100" preserveAspectRatio="none" aria-hidden="true">
+        <g stroke="oklch(91.5% 0.005 255)" stroke-width="1" vector-effect="non-scaling-stroke"><path d="M0 25H360M0 50H360M0 75H360" vector-effect="non-scaling-stroke"/></g>
+        <path d="M0 84 L30 78 L60 80 L90 66 L120 70 L150 56 L180 60 L210 44 L240 48 L270 34 L300 38 L330 22 L360 18 V100 H0Z" fill="oklch(56% 0.2 260 / 0.09)"/>
+        <path d="M0 84 L30 78 L60 80 L90 66 L120 70 L150 56 L180 60 L210 44 L240 48 L270 34 L300 38 L330 22 L360 18" fill="none" stroke="oklch(56% 0.2 260)" stroke-width="1.75" vector-effect="non-scaling-stroke"/>
+        <path d="M0 92 L30 90 L60 88 L90 86 L120 84 L150 82 L180 80 L210 76 L240 74 L270 70 L300 68 L330 64 L360 62" fill="none" stroke="oklch(80% 0.01 255)" stroke-width="1.5" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
+      </svg>
+    </div>
+    <div class="panel list">
+      <span class="bar" style="width:40%"></span>
+      <span class="li"><i style="background:var(--accent)"></i><span class="bar"></span><b></b></span>
+      <span class="li"><i style="background:var(--good)"></i><span class="bar" style="flex:.8"></span><b></b></span>
+      <span class="li"><i></i><span class="bar" style="flex:.6"></span><b></b></span>
+      <span class="li"><i></i><span class="bar" style="flex:.7"></span><b></b></span>
+    </div>
+  </section>
+
+  <section class="panel table">
+    <div class="tr"><span></span><span class="bar" style="width:30%"></span><span class="bar" style="width:40%"></span><span class="bar" style="width:36%"></span><span class="bar"></span></div>
+    <div class="tr"><i></i><span class="bar" style="width:62%;background:var(--fill)"></span><span class="pill"></span><span class="bar" style="width:50%;background:var(--fill)"></span><span class="bar" style="background:var(--fill)"></span></div>
+    <div class="tr"><i></i><span class="bar" style="width:48%;background:var(--fill)"></span><span class="pill" style="background:oklch(62% 0.15 155 / 0.18)"></span><span class="bar" style="width:64%;background:var(--fill)"></span><span class="bar" style="background:var(--fill)"></span></div>
+    <div class="tr"><i></i><span class="bar" style="width:70%;background:var(--fill)"></span><span class="pill"></span><span class="bar" style="width:42%;background:var(--fill)"></span><span class="bar" style="background:var(--fill)"></span></div>
+  </section>
+</main>
+</body>
+</html>
