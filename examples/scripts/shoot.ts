@@ -65,7 +65,12 @@ async function missingFonts(page: Page) {
 			/^(serif|sans-serif|monospace|system-ui|ui-.*|-apple-system|Helvetica|Arial|Times|Georgia|Menlo|Courier)/i
 		const used = new Set(
 			[...document.querySelectorAll("body *")]
-				.filter((element) => element.childNodes.length && (element as HTMLElement).innerText?.trim())
+				.filter(
+					(element) =>
+						[...element.childNodes].some(
+							(node) => node.nodeType === Node.TEXT_NODE && node.textContent?.trim(),
+						) && (element as HTMLElement).offsetParent !== null,
+				)
 				.map((element) => getComputedStyle(element).fontFamily.split(",")[0].trim().replace(/["']/g, "")),
 		)
 		const loaded = new Set(
@@ -159,7 +164,8 @@ async function pool<T>(items: T[], size: number, run: (item: T) => Promise<void>
 const server = await createServer({
 	root,
 	logLevel: "error",
-	server: { port: 5300 + Math.floor(Math.random() * 600) },
+	// [Agent] No HMR and no file watching: other edits in the tree must not reload a page mid-shot.
+	server: { port: 5300 + Math.floor(Math.random() * 600), hmr: false, watch: { ignored: ["**/*"] } },
 })
 await server.listen()
 const base = (server.resolvedUrls?.local[0] ?? "").replace(/\/$/, "")
