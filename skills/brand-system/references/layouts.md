@@ -130,7 +130,7 @@ How it works and Trust fold into the services and the FAQ; the contact section i
 - **Use when:** the default for any product site with up to five top-level pages.
 - **Avoid when:** you have more than six links (use the mega menu). Tell: two filled buttons of equal weight.
 - **Mobile (390):** logo + ≡; the menu opens full screen with the primary action at the bottom.
-- **Pairs with:** every family; it is the neutral choice.
+- **Pairs with:** [every family](styles.md#contents); it is the neutral choice.
 
 #### Centred logo
 - **What:** links split on both sides of a centred logo.
@@ -138,7 +138,7 @@ How it works and Trust fold into the services and the FAQ; the contact section i
 - **Use when:** the brand mark carries the page: fashion, hospitality, editorial, a boutique shop.
 - **Avoid when:** it is a software product; buyers look top-left for the logo and top-right for the action.
 - **Mobile (390):** ≡ left, logo centred, bag or account icon right.
-- **Pairs with:** luxury/minimal, editorial, photographic.
+- **Pairs with:** [luxury](styles.md#luxury), [minimalism](styles.md#minimalism), [editorial](styles.md#editorial), [editorial photography](styles.md#editorial-photo).
 
 #### Logo + one action
 - **What:** only the logo and one primary button.
@@ -146,7 +146,7 @@ How it works and Trust fold into the services and the FAQ; the contact section i
 - **Use when:** a one-page site, a waitlist, a campaign page, a checkout funnel.
 - **Avoid when:** the visitor needs to compare pages (pricing, docs).
 - **Mobile (390):** the same; the button shrinks to fit.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### With search
 - **What:** a search field with ⌘K next to the logo, then links and actions.
@@ -154,7 +154,7 @@ How it works and Trust fold into the services and the FAQ; the contact section i
 - **Use when:** docs-heavy products, dev tools, marketplaces, knowledge bases; search is a main task.
 - **Avoid when:** the site has five pages; a search box with nothing behind it is a dead control.
 - **Mobile (390):** logo + a search icon + ≡; search opens full screen.
-- **Pairs with:** dev-tool/terminal, Swiss/modernist, data-dense.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss), [enterprise-dense](styles.md#enterprise-dense).
 
 #### Mega menu, open
 - **What:** a panel under the bar with product columns (icon, name, one line) and one featured card.
@@ -162,7 +162,7 @@ How it works and Trust fold into the services and the FAQ; the contact section i
 - **Use when:** several products or audiences (platforms, enterprise suites, big shops).
 - **Avoid when:** you have fewer than six destinations. Tell: decorative icons on every item; use them only when they name the product.
 - **Mobile (390):** a full-screen list with accordions per group and both actions at the bottom.
-- **Pairs with:** corporate, Swiss/modernist.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 #### Announcement bar + bar
 - **What:** a thin strip above the nav with one short message and a link.
@@ -170,7 +170,7 @@ How it works and Trust fold into the services and the FAQ; the contact section i
 - **Use when:** a launch, a funding round, a webinar, an outage notice; something time-bound.
 - **Avoid when:** it is permanent filler ("We're hiring!" for a year). Make it dismissible.
 - **Mobile (390):** one line, cut to 40 characters.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Utility bar + bar
 - **What:** a tinted strip with phone, address and hours (or shipping and language), then the main bar.
@@ -178,7 +178,7 @@ How it works and Trust fold into the services and the FAQ; the contact section i
 - **Use when:** local businesses and shops, where phone, hours or free shipping decide the visit.
 - **Avoid when:** software; it reads as an online shop.
 - **Mobile (390):** only the most important item (the phone number, tap to call).
-- **Pairs with:** craft/organic, retro/print, photographic, corporate.
+- **Pairs with:** [food craft](styles.md#food-craft), [wellness](styles.md#wellness), [risograph](styles.md#riso), [letterpress](styles.md#letterpress), [editorial photography](styles.md#editorial-photo), [corporate modernism](styles.md#corporate-modernism).
 
 ## Hero
 
@@ -190,7 +190,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** there is nothing to show yet (a waitlist, a manifesto) or the product is the words (a writing tool shown in the next section).
 - **Avoid when:** you have a product screen. Tell: it fails "the first viewport shows the product".
 - **Mobile (390):** the same stack; the headline wraps to 3–4 lines.
-- **Pairs with:** brutalist, editorial, luxury/minimal.
+- **Pairs with:** [web brutalism](styles.md#web-brutalism), [editorial](styles.md#editorial), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism).
 
 #### Product screenshot below
 - **What:** centred copy, then a large product screenshot that runs past the fold.
@@ -198,7 +198,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** a SaaS with one strong screen; only with a real screenshot of the product's own states.
 - **Avoid when:** the screenshot is a generic dashboard with fake KPIs. Tell: placeholder stats.
 - **Mobile (390):** the copy, then a taller crop of the screen (one panel), never the whole desktop shrunk.
-- **Pairs with:** Swiss/modernist, dev-tool/terminal, data-dense.
+- **Pairs with:** [Swiss](styles.md#swiss), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [enterprise-dense](styles.md#enterprise-dense).
 
 #### Split: text + product
 - **What:** copy and buttons left, the product right, a proof line under the buttons.
@@ -206,7 +206,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** the most flexible hero; works with a screenshot, a photo or the signature visual.
 - **Avoid when:** the visual is an abstract blob or a 3D shape with no product in it.
 - **Mobile (390):** copy first, then the visual (cropped to one panel).
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Split + floating detail cards
 - **What:** the split hero with two small cards over the screenshot's edges (a metric, a status, a notification).
@@ -214,7 +214,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** one screenshot cannot show the key moment; the cards pull out the result (a sent invoice, a passed check).
 - **Avoid when:** the cards repeat what is in the screenshot or show invented numbers. Tell: dead cards.
 - **Mobile (390):** drop the floating cards; keep one as a row under the screenshot if it matters.
-- **Pairs with:** Swiss/modernist, soft consumer, glass/gradient.
+- **Pairs with:** [Swiss](styles.md#swiss), [Scandinavian](styles.md#scandinavian), [glassmorphism](styles.md#glassmorphism), [mesh gradient](styles.md#mesh-gradient).
 
 #### Full-bleed photo
 - **What:** a photograph fills the viewport, a scrim darkens the bottom, the copy sits bottom-left, the nav is transparent on top.
@@ -222,7 +222,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** the product is physical or a place (food, hotels, clinics, gear) and you have a strong photo you own.
 - **Avoid when:** you only have stock photos, or the product is software.
 - **Mobile (390):** a portrait crop chosen by hand; the copy stays on the scrim.
-- **Pairs with:** photographic, luxury/minimal, editorial, craft/organic.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism), [editorial](styles.md#editorial), [food craft](styles.md#food-craft), [wellness](styles.md#wellness).
 
 #### Video background
 - **What:** a muted looping video behind centred copy, with a visible pause button.
@@ -230,7 +230,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** motion is the product (a camera, a sport, an event, a venue), with a short loop under 3 MB.
 - **Avoid when:** the video is decoration. It must have a pause button and a still frame for reduced motion.
 - **Mobile (390):** the poster frame by default; play on tap.
-- **Pairs with:** photographic, editorial, techno/futurist.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [editorial](styles.md#editorial), [sci-fi HUD](styles.md#hud), [spatial](styles.md#spatial).
 
 #### Editorial big type
 - **What:** a headline set across the full width at huge size, the subline and buttons under it, then a wide image strip.
@@ -238,7 +238,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** the voice is the differentiator (studios, magazines, opinionated tools) and the headline is genuinely good.
 - **Avoid when:** the headline is generic; huge type magnifies weak copy.
 - **Mobile (390):** the headline at about 44 px over 3–5 lines; the image strip becomes a 4:3 crop.
-- **Pairs with:** editorial, brutalist, Swiss/modernist, retro/print.
+- **Pairs with:** [editorial](styles.md#editorial), [web brutalism](styles.md#web-brutalism), [Swiss](styles.md#swiss), [risograph](styles.md#riso), [letterpress](styles.md#letterpress).
 
 #### Bento hero
 - **What:** centred copy over a grid of 4–6 tiles, each a different real view (screen, metric, photo, map, list).
@@ -246,7 +246,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** the product does several connected jobs and each tile shows one of them.
 - **Avoid when:** you have to invent tiles to fill the grid. Tells: dead cards, nested card stacks.
 - **Mobile (390):** the main tile first, the small tiles in a sideways scroller.
-- **Pairs with:** Swiss/modernist, soft consumer, glass/gradient.
+- **Pairs with:** [Swiss](styles.md#swiss), [Scandinavian](styles.md#scandinavian), [glassmorphism](styles.md#glassmorphism), [mesh gradient](styles.md#mesh-gradient).
 
 #### Rotating slides
 - **What:** a centred heading over a slide track; neighbours peek at the sides; dots and a pause control.
@@ -254,7 +254,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** several equal products or collections (a shop's seasons, a portfolio).
 - **Avoid when:** the slides carry different messages; visitors read only the first. Auto-advance needs a pause button and a static first slide for reduced motion.
 - **Mobile (390):** swipeable slides with the next one peeking.
-- **Pairs with:** photographic, editorial, playful.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [editorial](styles.md#editorial), [neobrutalism](styles.md#neobrutalism).
 
 #### Terminal / code
 - **What:** copy left with the install command as a copy field next to the primary button; a code or terminal block right.
@@ -262,7 +262,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** developer products where the first action is a command or an API call; the code must actually run.
 - **Avoid when:** the buyer is not technical; fake code with lorem tokens.
 - **Mobile (390):** the install field full width; the code block cut to 6–8 lines.
-- **Pairs with:** dev-tool/terminal, brutalist, Swiss/modernist.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [web brutalism](styles.md#web-brutalism), [Swiss](styles.md#swiss).
 
 #### Form in the hero
 - **What:** copy and 3 checks left; a short form card right (3–4 fields, one button, one reassurance line).
@@ -270,7 +270,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** the conversion is a quote, a demo request or a booking, and the form is genuinely short.
 - **Avoid when:** the form needs more than 4 fields; it then belongs on its own page.
 - **Mobile (390):** the copy, then the form without its card.
-- **Pairs with:** corporate, Swiss/modernist, craft/organic.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss), [food craft](styles.md#food-craft), [wellness](styles.md#wellness).
 
 #### App: phone screens
 - **What:** copy, app-store buttons and a rating left; two phone screens right.
@@ -278,7 +278,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** a mobile-first product; the screens are real states of the app.
 - **Avoid when:** the phones show the same screen twice, or the app is desktop-first.
 - **Mobile (390):** both phones side by side at a small size, or one phone, then the store buttons.
-- **Pairs with:** soft consumer, playful, glass/gradient.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [neobrutalism](styles.md#neobrutalism), [glassmorphism](styles.md#glassmorphism), [mesh gradient](styles.md#mesh-gradient).
 
 #### Search-first (marketplace)
 - **What:** a headline, a large search field with its button, category chips, then a row of real listings.
@@ -286,7 +286,7 @@ Every hero must pass the web-unslop landing check: the first viewport shows the 
 - **Use when:** marketplaces, directories, job boards, travel; search is the product.
 - **Avoid when:** the catalogue is small; an empty result is worse than a list.
 - **Mobile (390):** the search field full width, the chips wrap to two lines, the listings scroll sideways.
-- **Pairs with:** soft consumer, photographic, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [editorial photography](styles.md#editorial-photo), [Swiss](styles.md#swiss).
 
 ## Logo wall / social proof
 
@@ -298,7 +298,7 @@ Every logo, number and rating is real or carries a placeholder label (habit 9 in
 - **Use when:** right under the hero; you have 5–6 recognisable logos.
 - **Avoid when:** the logos are unknown; numbers or a quote prove more.
 - **Mobile (390):** 3 × 2 grid.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Bordered grid
 - **What:** heading and a link left; 8 logos in ruled cells right.
@@ -306,7 +306,7 @@ Every logo, number and rating is real or carries a placeholder label (habit 9 in
 - **Use when:** a dedicated customers or partners section; integrations.
 - **Avoid when:** you have fewer than 8 logos (empty cells look like failure).
 - **Mobile (390):** 2 columns.
-- **Pairs with:** Swiss/modernist, corporate, brutalist.
+- **Pairs with:** [Swiss](styles.md#swiss), [corporate modernism](styles.md#corporate-modernism), [web brutalism](styles.md#web-brutalism).
 
 #### Moving marquee
 - **What:** two rows of logos sliding in opposite directions.
@@ -314,7 +314,7 @@ Every logo, number and rating is real or carries a placeholder label (habit 9 in
 - **Use when:** many small logos (agencies, schools, communities) where volume is the message.
 - **Avoid when:** you have 6 logos repeated to fill the track. It stops on hover and is static for reduced motion.
 - **Mobile (390):** one row, still moving.
-- **Pairs with:** playful, glass/gradient, soft consumer.
+- **Pairs with:** [neobrutalism](styles.md#neobrutalism), [glassmorphism](styles.md#glassmorphism), [mesh gradient](styles.md#mesh-gradient), [Scandinavian](styles.md#scandinavian).
 
 #### Logos + one quote
 - **What:** a large quote and its author left, 6 logos right.
@@ -322,7 +322,7 @@ Every logo, number and rating is real or carries a placeholder label (habit 9 in
 - **Use when:** one customer's words carry more than the logo count.
 - **Avoid when:** the quote is generic praise ("Great tool!").
 - **Mobile (390):** the quote, then the logos 2 per row.
-- **Pairs with:** editorial, Swiss/modernist.
+- **Pairs with:** [editorial](styles.md#editorial), [Swiss](styles.md#swiss).
 
 #### Ratings strip
 - **What:** 3 review-site ratings (stars + count) and an avatar cluster with a count.
@@ -330,7 +330,7 @@ Every logo, number and rating is real or carries a placeholder label (habit 9 in
 - **Use when:** consumer products, apps and local businesses, whose buyers trust reviews more than company logos.
 - **Avoid when:** you have no reviews yet; don't show 5 stars from nowhere.
 - **Mobile (390):** 2 × 2.
-- **Pairs with:** soft consumer, playful, craft/organic.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [neobrutalism](styles.md#neobrutalism), [food craft](styles.md#food-craft), [wellness](styles.md#wellness).
 
 #### Logo + result cards
 - **What:** cards with a customer logo, one result number, one line and a link to the case study.
@@ -338,7 +338,7 @@ Every logo, number and rating is real or carries a placeholder label (habit 9 in
 - **Use when:** B2B with measurable outcomes and real case studies to link to.
 - **Avoid when:** the numbers are invented. Tell: placeholder stats.
 - **Mobile (390):** a sideways scroller.
-- **Pairs with:** corporate, Swiss/modernist, data-dense.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss), [enterprise-dense](styles.md#enterprise-dense).
 
 ## Stats band
 
@@ -350,7 +350,7 @@ A number without context is a dead card. Each one says what it counts, over what
 - **Use when:** a quick pause between two dense sections.
 - **Avoid when:** the numbers repeat the logo wall or the hero. Tell: repeated KPI strips.
 - **Mobile (390):** 2 × 2.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Ruled, left-aligned
 - **What:** a heading, then 4 numbers each under a rule with a one-line explanation.
@@ -358,7 +358,7 @@ A number without context is a dead card. Each one says what it counts, over what
 - **Use when:** the numbers need a sentence each (what was measured).
 - **Avoid when:** the sentences are filler.
 - **Mobile (390):** 2 × 2 with the rules kept.
-- **Pairs with:** Swiss/modernist, editorial, corporate.
+- **Pairs with:** [Swiss](styles.md#swiss), [editorial](styles.md#editorial), [corporate modernism](styles.md#corporate-modernism).
 
 #### Story + 2×2 numbers
 - **What:** a short paragraph left, 4 numbers in tinted tiles right.
@@ -366,7 +366,7 @@ A number without context is a dead card. Each one says what it counts, over what
 - **Use when:** an about or impact section where the story explains the numbers.
 - **Avoid when:** the tiles carry icons or decoration.
 - **Mobile (390):** the story, then the 2 × 2.
-- **Pairs with:** editorial, craft/organic, corporate.
+- **Pairs with:** [editorial](styles.md#editorial), [food craft](styles.md#food-craft), [wellness](styles.md#wellness), [corporate modernism](styles.md#corporate-modernism).
 
 #### One big number
 - **What:** one huge number on a dark band, one sentence of context and a source line.
@@ -374,7 +374,7 @@ A number without context is a dead card. Each one says what it counts, over what
 - **Use when:** one number tells the story (hours saved, money returned) and it is real.
 - **Avoid when:** the number is small or soft; huge type magnifies it.
 - **Mobile (390):** the same, number at about 44 px.
-- **Pairs with:** brutalist, editorial, Swiss/modernist.
+- **Pairs with:** [web brutalism](styles.md#web-brutalism), [editorial](styles.md#editorial), [Swiss](styles.md#swiss).
 
 #### Numbers with trend
 - **What:** cards with a label, a number and a small chart of its trend.
@@ -382,7 +382,7 @@ A number without context is a dead card. Each one says what it counts, over what
 - **Use when:** growth over time is the point (public metrics, an open-startup page).
 - **Avoid when:** the charts are decorative or have no axis.
 - **Mobile (390):** the cards stack.
-- **Pairs with:** data-dense, dev-tool/terminal, Swiss/modernist.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss).
 
 ## Features
 
@@ -394,7 +394,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** 2–4 features, each with its own real screen.
 - **Avoid when:** more than 4 rows (it becomes a slog); the screens are the same one cropped.
 - **Mobile (390):** the image always first, then the text, so the order stays the same in every row.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Bento grid
 - **What:** a heading over tiles of different sizes; each tile is a title, a line and a real UI crop.
@@ -402,7 +402,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** 4–6 features of different weight; the biggest tile is the main job.
 - **Avoid when:** the tiles hold icons or text only. Tells: dead cards, nested cards.
 - **Mobile (390):** tiles stack, biggest first.
-- **Pairs with:** Swiss/modernist, soft consumer, glass/gradient.
+- **Pairs with:** [Swiss](styles.md#swiss), [Scandinavian](styles.md#scandinavian), [glassmorphism](styles.md#glassmorphism), [mesh gradient](styles.md#mesh-gradient).
 
 #### Tabs + one big screenshot
 - **What:** a row of tabs over one large screenshot that changes per tab.
@@ -410,7 +410,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** 3–5 jobs done in the same screen; saves page length.
 - **Avoid when:** the tabs hide the main message; put the most important one first.
 - **Mobile (390):** tabs scroll sideways; the screenshot becomes a tall crop.
-- **Pairs with:** Swiss/modernist, dev-tool/terminal, data-dense.
+- **Pairs with:** [Swiss](styles.md#swiss), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [enterprise-dense](styles.md#enterprise-dense).
 
 #### Sticky scroll-telling
 - **What:** steps scroll on the left while one screenshot stays pinned on the right and changes per step.
@@ -418,7 +418,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** a sequence (import → clean → publish) on one screen.
 - **Avoid when:** the screen doesn't change between steps. Needs a static fallback for reduced motion.
 - **Mobile (390):** no pinning; each step is followed by its own image.
-- **Pairs with:** editorial, Swiss/modernist, techno/futurist.
+- **Pairs with:** [editorial](styles.md#editorial), [Swiss](styles.md#swiss), [sci-fi HUD](styles.md#hud), [spatial](styles.md#spatial).
 
 #### Icon grid (slop tell)
 - **What:** 6 cards, each an icon, a title and a line.
@@ -434,7 +434,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** the replacement for the icon grid: each feature shown by its own UI.
 - **Avoid when:** the crops are illegible at card size; zoom in on one detail.
 - **Mobile (390):** a sideways scroller.
-- **Pairs with:** Swiss/modernist, soft consumer, data-dense.
+- **Pairs with:** [Swiss](styles.md#swiss), [Scandinavian](styles.md#scandinavian), [enterprise-dense](styles.md#enterprise-dense).
 
 #### Screenshot + numbered points
 - **What:** one large screenshot with numbered pins, and the same numbers explained in 3 columns below.
@@ -442,7 +442,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** the features live in one screen and the reader should find them there.
 - **Avoid when:** more than 5 pins.
 - **Mobile (390):** the screenshot crop with pins, then the numbered list.
-- **Pairs with:** Swiss/modernist, data-dense, dev-tool/terminal.
+- **Pairs with:** [Swiss](styles.md#swiss), [enterprise-dense](styles.md#enterprise-dense), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal).
 
 #### Accordion + changing visual
 - **What:** an accordion of features left; the open one's screenshot right.
@@ -450,7 +450,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** 4–6 features with a sentence each and one visual each.
 - **Avoid when:** the visual doesn't change per item.
 - **Mobile (390):** the visual above the accordion, changing with the open item.
-- **Pairs with:** Swiss/modernist, soft consumer, corporate.
+- **Pairs with:** [Swiss](styles.md#swiss), [Scandinavian](styles.md#scandinavian), [corporate modernism](styles.md#corporate-modernism).
 
 #### Old way vs new way
 - **What:** two columns: the chore today (crosses) and with the product (checks), the second one darker.
@@ -458,7 +458,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** the buyer's pain is concrete and you can name it in their words (from the research).
 - **Avoid when:** it attacks a named competitor (use a "vs" page) or the old way is a straw man.
 - **Mobile (390):** old way first, then new way.
-- **Pairs with:** brutalist, playful, Swiss/modernist.
+- **Pairs with:** [web brutalism](styles.md#web-brutalism), [neobrutalism](styles.md#neobrutalism), [Swiss](styles.md#swiss).
 
 ## Product showcase
 
@@ -468,7 +468,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** the default for part 5 of the landing; it reuses the product screen.
 - **Avoid when:** the screen shows fake data without a "sample data" chip.
 - **Mobile (390):** a crop with the pins, then the legend.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Notes on both sides
 - **What:** the screenshot centred with two notes left and two right.
@@ -476,7 +476,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** a wide screen whose interesting parts sit at both edges.
 - **Avoid when:** the notes are longer than two lines.
 - **Mobile (390):** the screenshot, then all four notes in order.
-- **Pairs with:** Swiss/modernist, editorial.
+- **Pairs with:** [Swiss](styles.md#swiss), [editorial](styles.md#editorial).
 
 #### Before / after slider
 - **What:** one image with a draggable divider between the input and the output.
@@ -484,7 +484,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** the product transforms something visible (photos, audio waves, documents, rooms).
 - **Avoid when:** the change is invisible at a glance. The handle must work with arrow keys.
 - **Mobile (390):** the same, taller crop.
-- **Pairs with:** photographic, techno/futurist, soft consumer.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [sci-fi HUD](styles.md#hud), [spatial](styles.md#spatial), [Scandinavian](styles.md#scandinavian).
 
 #### Desktop + phone
 - **What:** the desktop screen with the phone app overlapping its corner.
@@ -492,7 +492,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** the product really has both, and buyers care (field work, consumers on the go).
 - **Avoid when:** the phone screen is the desktop squeezed.
 - **Mobile (390):** only the phone screen.
-- **Pairs with:** soft consumer, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
 
 #### Live demo embed
 - **What:** an input and a button over a live result frame, in a tinted panel; no signup.
@@ -500,7 +500,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** the product returns a result from one input (a URL audit, a name check, a converter).
 - **Avoid when:** it needs an account or takes more than a few seconds; show a recorded result instead.
 - **Mobile (390):** the input and button stacked, then the result.
-- **Pairs with:** dev-tool/terminal, Swiss/modernist, playful.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss), [neobrutalism](styles.md#neobrutalism).
 
 #### Full shot + zoomed crops
 - **What:** the whole screen, then three close-ups of details with a caption each.
@@ -508,7 +508,7 @@ Each feature answers a buyer need or fear from the strategy. Show the product do
 - **Use when:** the craft is in the details (a data table, an editor, a type tool).
 - **Avoid when:** the details are not distinctive.
 - **Mobile (390):** a crop of the screen, then the close-ups in a sideways scroller.
-- **Pairs with:** data-dense, editorial, Swiss/modernist.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [editorial](styles.md#editorial), [Swiss](styles.md#swiss).
 
 ## How it works
 
@@ -520,7 +520,7 @@ Three steps in the buyer's words, not the system's.
 - **Use when:** the default; each step has its own screen.
 - **Avoid when:** it sits next to a features card grid (three equal grids in a row).
 - **Mobile (390):** one column.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Vertical timeline
 - **What:** heading left; numbered steps on a vertical line right.
@@ -528,7 +528,7 @@ Three steps in the buyer's words, not the system's.
 - **Use when:** 4–6 steps, or steps with a time (day 1, week 2).
 - **Avoid when:** the steps are not in sequence.
 - **Mobile (390):** the heading, then the timeline.
-- **Pairs with:** editorial, corporate, craft/organic.
+- **Pairs with:** [editorial](styles.md#editorial), [corporate modernism](styles.md#corporate-modernism), [food craft](styles.md#food-craft), [wellness](styles.md#wellness).
 
 #### Steps with code
 - **What:** each step is a row: number and text left, a code block right.
@@ -536,7 +536,7 @@ Three steps in the buyer's words, not the system's.
 - **Use when:** developer onboarding (install → configure → deploy).
 - **Avoid when:** the code is fake.
 - **Mobile (390):** text then code per step; code cut to 6 lines with horizontal scroll.
-- **Pairs with:** dev-tool/terminal, brutalist.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [web brutalism](styles.md#web-brutalism).
 
 #### Stepper + one panel
 - **What:** a 3-step stepper; the active step's text and screenshot below.
@@ -544,7 +544,7 @@ Three steps in the buyer's words, not the system's.
 - **Use when:** each step has a lot to show and you want a short section.
 - **Avoid when:** the reader must see all steps at once to understand.
 - **Mobile (390):** the stepper stays; the panel stacks.
-- **Pairs with:** Swiss/modernist, soft consumer.
+- **Pairs with:** [Swiss](styles.md#swiss), [Scandinavian](styles.md#scandinavian).
 
 #### Big numerals, no images
 - **What:** 01 / 02 / 03 set large, a rule, a title and a paragraph each.
@@ -552,7 +552,7 @@ Three steps in the buyer's words, not the system's.
 - **Use when:** the steps are a service, not a screen (consulting, a clinic visit, a delivery), or to rest the eye between two image-heavy sections.
 - **Avoid when:** the steps happen in the product; show them.
 - **Mobile (390):** one column.
-- **Pairs with:** editorial, Swiss/modernist, luxury/minimal.
+- **Pairs with:** [editorial](styles.md#editorial), [Swiss](styles.md#swiss), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism).
 
 ## Testimonials
 
@@ -564,7 +564,7 @@ Real quotes with a name, a role and a company, or a placeholder label. No gradie
 - **Use when:** one quote that names a result; a pause after a dense section.
 - **Avoid when:** the quote is vague.
 - **Mobile (390):** the same at about 22 px.
-- **Pairs with:** editorial, luxury/minimal, Swiss/modernist.
+- **Pairs with:** [editorial](styles.md#editorial), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism), [Swiss](styles.md#swiss).
 
 #### Wall of quotes
 - **What:** a masonry of 9+ short quote cards with stars and authors.
@@ -572,7 +572,7 @@ Real quotes with a name, a role and a company, or a placeholder label. No gradie
 - **Use when:** volume is the proof (consumer apps, communities, courses).
 - **Avoid when:** you have fewer than 9 real quotes.
 - **Mobile (390):** 3 cards and a "show more" button.
-- **Pairs with:** playful, soft consumer.
+- **Pairs with:** [neobrutalism](styles.md#neobrutalism), [Scandinavian](styles.md#scandinavian).
 
 #### Card carousel
 - **What:** a heading with arrows, 3 quote cards visible, dots below.
@@ -580,7 +580,7 @@ Real quotes with a name, a role and a company, or a placeholder label. No gradie
 - **Use when:** 5–10 quotes of similar length.
 - **Avoid when:** it is the third card row on the page.
 - **Mobile (390):** swipe, one card with the next peeking.
-- **Pairs with:** soft consumer, corporate.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [corporate modernism](styles.md#corporate-modernism).
 
 #### Case-study cards
 - **What:** cards with a photo, a logo, one result number, a line and a "read" link.
@@ -588,7 +588,7 @@ Real quotes with a name, a role and a company, or a placeholder label. No gradie
 - **Use when:** B2B buyers who want proof from a company like theirs; the case studies exist.
 - **Avoid when:** the links go nowhere.
 - **Mobile (390):** a sideways scroller.
-- **Pairs with:** corporate, Swiss/modernist.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 #### Video + quote
 - **What:** a video thumbnail left, the pull quote and the author right.
@@ -596,7 +596,7 @@ Real quotes with a name, a role and a company, or a placeholder label. No gradie
 - **Use when:** you have a real customer video with captions.
 - **Avoid when:** the video is a stock montage.
 - **Mobile (390):** the video, then the quote.
-- **Pairs with:** photographic, corporate.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [corporate modernism](styles.md#corporate-modernism).
 
 #### Photo + quote split
 - **What:** a portrait of the customer left; stars, quote, author and two result numbers right.
@@ -604,7 +604,7 @@ Real quotes with a name, a role and a company, or a placeholder label. No gradie
 - **Use when:** consumer and local brands where the person is the proof; you have the photo with permission.
 - **Avoid when:** the photo is stock or AI-generated.
 - **Mobile (390):** the photo cropped 4:3, then the quote.
-- **Pairs with:** photographic, craft/organic, soft consumer.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [food craft](styles.md#food-craft), [wellness](styles.md#wellness), [Scandinavian](styles.md#scandinavian).
 
 ## Pricing
 
@@ -616,7 +616,7 @@ web-unslop: three or four plans, price first, value second, name third; discount
 - **Use when:** the default for SaaS with three real tiers.
 - **Avoid when:** a plan exists only to make the middle look cheap. Tell: filler bullets.
 - **Mobile (390):** stacked, featured plan first.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Monthly / yearly toggle
 - **What:** a segmented toggle above the cards; the yearly saving written on the toggle.
@@ -624,7 +624,7 @@ web-unslop: three or four plans, price first, value second, name third; discount
 - **Use when:** there is a real yearly discount.
 - **Avoid when:** yearly is the default without saying so; the discount must be explicit.
 - **Mobile (390):** the toggle stays above the stacked cards.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Two cards
 - **What:** two plans side by side (free and paid, or self-serve and team).
@@ -632,7 +632,7 @@ web-unslop: three or four plans, price first, value second, name third; discount
 - **Use when:** simple products; the choice is binary.
 - **Avoid when:** the second plan hides a third (call us) without saying so.
 - **Mobile (390):** stacked, paid plan first.
-- **Pairs with:** soft consumer, playful, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [neobrutalism](styles.md#neobrutalism), [Swiss](styles.md#swiss).
 
 #### Four with Enterprise
 - **What:** three priced plans and an Enterprise card with "Talk to us" and its own list (SSO, SLA, invoicing).
@@ -640,7 +640,7 @@ web-unslop: three or four plans, price first, value second, name third; discount
 - **Use when:** limits imply enterprise use (seats, volume, compliance).
 - **Avoid when:** Enterprise has no features of its own.
 - **Mobile (390):** stacked; Enterprise last.
-- **Pairs with:** corporate, Swiss/modernist, data-dense.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss), [enterprise-dense](styles.md#enterprise-dense).
 
 #### Usage calculator
 - **What:** sliders for the usage (seats, volume) left; the computed price and plan right.
@@ -648,7 +648,7 @@ web-unslop: three or four plans, price first, value second, name third; discount
 - **Use when:** usage-based pricing (API calls, GB, minutes) that buyers can't estimate from a table.
 - **Avoid when:** pricing is flat; a slider for three prices is a toy.
 - **Mobile (390):** sliders, then the result card.
-- **Pairs with:** dev-tool/terminal, data-dense, Swiss/modernist.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss).
 
 #### Comparison table
 - **What:** plan names, prices and buttons as column heads; feature rows with checks; the featured column tinted.
@@ -656,7 +656,7 @@ web-unslop: three or four plans, price first, value second, name third; discount
 - **Use when:** the plans differ in many details; usually under the cards, or alone for dev tools.
 - **Avoid when:** fewer than 6 rows differ.
 - **Mobile (390):** a plan switcher (segmented control) over one column of checks.
-- **Pairs with:** data-dense, Swiss/modernist, corporate.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss), [corporate modernism](styles.md#corporate-modernism).
 
 #### Enterprise band
 - **What:** a dark band: the enterprise pitch left, 4 checks and "Talk to sales" right.
@@ -664,7 +664,7 @@ web-unslop: three or four plans, price first, value second, name third; discount
 - **Use when:** under the self-serve cards, when Enterprise is a separate sale.
 - **Avoid when:** there is no sales team to answer.
 - **Mobile (390):** stacked.
-- **Pairs with:** corporate, Swiss/modernist.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 #### One plan
 - **What:** one centred card with the price, everything included in two columns, one button.
@@ -672,7 +672,7 @@ web-unslop: three or four plans, price first, value second, name third; discount
 - **Use when:** one price for everyone (a tool, a course, a membership).
 - **Avoid when:** you plan tiers soon; say "early price" instead.
 - **Mobile (390):** the card full width; checks in one column.
-- **Pairs with:** brutalist, editorial, luxury/minimal.
+- **Pairs with:** [web brutalism](styles.md#web-brutalism), [editorial](styles.md#editorial), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism).
 
 #### Stacked plan rows
 - **What:** plans as horizontal rows: name, price, 3 checks, button, separated by rules.
@@ -680,7 +680,7 @@ web-unslop: three or four plans, price first, value second, name third; discount
 - **Use when:** price lists (services, a clinic, a menu, sizes) or more than 4 options.
 - **Avoid when:** the plans need a feature comparison.
 - **Mobile (390):** each row stacks.
-- **Pairs with:** editorial, craft/organic, Swiss/modernist.
+- **Pairs with:** [editorial](styles.md#editorial), [food craft](styles.md#food-craft), [wellness](styles.md#wellness), [Swiss](styles.md#swiss).
 
 ## FAQ
 
@@ -692,7 +692,7 @@ Questions buyers actually ask, from the research. Answers in two or three senten
 - **Use when:** the default.
 - **Avoid when:** more than 10 questions (use categories).
 - **Mobile (390):** the same.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Heading left, accordion right
 - **What:** heading, a line and a contact link left; the accordion right.
@@ -700,7 +700,7 @@ Questions buyers actually ask, from the research. Answers in two or three senten
 - **Use when:** after a centred section, to change the axis.
 - **Avoid when:** —
 - **Mobile (390):** heading, then the accordion.
-- **Pairs with:** Swiss/modernist, editorial, dev-tool/terminal.
+- **Pairs with:** [Swiss](styles.md#swiss), [editorial](styles.md#editorial), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal).
 
 #### Categorised
 - **What:** a search field, categories as a side list, the accordion for the chosen category.
@@ -708,7 +708,7 @@ Questions buyers actually ask, from the research. Answers in two or three senten
 - **Use when:** 15+ questions (billing, data, setup, accounts).
 - **Avoid when:** the categories hold one question each.
 - **Mobile (390):** categories become chips above the accordion.
-- **Pairs with:** corporate, Swiss/modernist.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 #### Answers in a grid
 - **What:** 6 questions with their answers visible in two columns, no accordion.
@@ -716,7 +716,7 @@ Questions buyers actually ask, from the research. Answers in two or three senten
 - **Use when:** few, short, important answers (refunds, delivery) that nobody should have to click for.
 - **Avoid when:** answers are longer than 3 lines.
 - **Mobile (390):** one column.
-- **Pairs with:** editorial, craft/organic, Swiss/modernist.
+- **Pairs with:** [editorial](styles.md#editorial), [food craft](styles.md#food-craft), [wellness](styles.md#wellness), [Swiss](styles.md#swiss).
 
 #### Accordion + contact card
 - **What:** the accordion with a card beside it: who answers, a line, a contact button.
@@ -724,7 +724,7 @@ Questions buyers actually ask, from the research. Answers in two or three senten
 - **Use when:** a human answers fast and that is part of the offer.
 - **Avoid when:** the card is a dead "Contact us" with no person or time.
 - **Mobile (390):** the card after the accordion.
-- **Pairs with:** soft consumer, corporate.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [corporate modernism](styles.md#corporate-modernism).
 
 ## Trust / security
 
@@ -736,7 +736,7 @@ Part 7 of the landing. For low-risk products, fold it into the FAQ.
 - **Use when:** you hold real certifications (SOC 2, ISO 27001, GDPR DPA, HIPAA).
 - **Avoid when:** the badges are invented or only "bank-grade security". Placeholder label if pending.
 - **Mobile (390):** 2 × 2 cards.
-- **Pairs with:** corporate, Swiss/modernist.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 #### Plain claims list
 - **What:** one statement left; 4 ruled claims right, each a title and two lines.
@@ -744,7 +744,7 @@ Part 7 of the landing. For low-risk products, fold it into the FAQ.
 - **Use when:** the guarantees are policies (refunds, ownership, deletion, buyer protection).
 - **Avoid when:** the claims are vague.
 - **Mobile (390):** stacked.
-- **Pairs with:** editorial, Swiss/modernist, craft/organic.
+- **Pairs with:** [editorial](styles.md#editorial), [Swiss](styles.md#swiss), [food craft](styles.md#food-craft), [wellness](styles.md#wellness).
 
 #### Where your data goes
 - **What:** a 3-box diagram (your device → our servers in X → deleted after N days) with one line of fine print.
@@ -752,7 +752,7 @@ Part 7 of the landing. For low-risk products, fold it into the FAQ.
 - **Use when:** the buyer's fear is about data (health, finance, code, AI training).
 - **Avoid when:** the flow is more complex than 4 boxes; link to a page.
 - **Mobile (390):** the boxes stack with down arrows.
-- **Pairs with:** dev-tool/terminal, Swiss/modernist, data-dense.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss), [enterprise-dense](styles.md#enterprise-dense).
 
 ## CTA band
 
@@ -764,7 +764,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** the default.
 - **Avoid when:** the headline is "Ready to get started?".
 - **Mobile (390):** buttons stack full width.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Line left, buttons right
 - **What:** a dark band: headline and line left, buttons right.
@@ -772,7 +772,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** a compact close, or a second audience (sell on X, partner with us).
 - **Avoid when:** it is the third dark band on the page.
 - **Mobile (390):** stacked.
-- **Pairs with:** Swiss/modernist, corporate, brutalist.
+- **Pairs with:** [Swiss](styles.md#swiss), [corporate modernism](styles.md#corporate-modernism), [web brutalism](styles.md#web-brutalism).
 
 #### Inline email form
 - **What:** headline, line, one email field and a button in one row, a reassurance line.
@@ -780,7 +780,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** the first step is just an email (a trial, a waitlist, a download).
 - **Avoid when:** you then ask for 8 more fields.
 - **Mobile (390):** the field and button stack.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Card with product crop
 - **What:** a rounded tinted card: copy and buttons left, a crop of the product right.
@@ -788,7 +788,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** one last look at the product before the footer.
 - **Avoid when:** the crop is the same image as the hero.
 - **Mobile (390):** copy, buttons, then the crop.
-- **Pairs with:** Swiss/modernist, soft consumer, glass/gradient.
+- **Pairs with:** [Swiss](styles.md#swiss), [Scandinavian](styles.md#scandinavian), [glassmorphism](styles.md#glassmorphism), [mesh gradient](styles.md#mesh-gradient).
 
 #### Big closing line
 - **What:** the brand line set huge on a dark band, one button.
@@ -796,7 +796,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** the brand line is strong and short (6 words or fewer).
 - **Avoid when:** the line needs explaining.
 - **Mobile (390):** the line over 3–4 lines at about 44 px.
-- **Pairs with:** brutalist, editorial, retro/print.
+- **Pairs with:** [web brutalism](styles.md#web-brutalism), [editorial](styles.md#editorial), [risograph](styles.md#riso), [letterpress](styles.md#letterpress).
 
 ## Newsletter
 
@@ -806,7 +806,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** above the footer on blogs and docs.
 - **Avoid when:** it competes with the main CTA on a product landing.
 - **Mobile (390):** stacked.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Centred card
 - **What:** a card on a tint: title, line, field + button, "no spam" line.
@@ -814,7 +814,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** the newsletter is a product in itself.
 - **Avoid when:** it is also a popup; pick one.
 - **Mobile (390):** the card loses its border.
-- **Pairs with:** editorial, soft consumer.
+- **Pairs with:** [editorial](styles.md#editorial), [Scandinavian](styles.md#scandinavian).
 
 #### Split with image
 - **What:** an image left; the pitch, field and button right.
@@ -822,7 +822,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** a photo-led brand (food, travel, craft).
 - **Avoid when:** the image is generic.
 - **Mobile (390):** the image cropped, then the form.
-- **Pairs with:** photographic, craft/organic.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [food craft](styles.md#food-craft), [wellness](styles.md#wellness).
 
 #### Form + past issue
 - **What:** the pitch with 4 checks and the form left; a thumbnail of a real past issue right.
@@ -830,7 +830,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** you can show what subscribers get.
 - **Avoid when:** there is no past issue yet.
 - **Mobile (390):** the form, then the issue.
-- **Pairs with:** editorial, Swiss/modernist.
+- **Pairs with:** [editorial](styles.md#editorial), [Swiss](styles.md#swiss).
 
 ## Team
 
@@ -840,7 +840,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** you have consistent real photos.
 - **Avoid when:** some photos are missing (gradient initials are a tell) or AI-made.
 - **Mobile (390):** 2 per row.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Compact list, no photos
 - **What:** names and roles in 3 ruled columns.
@@ -848,7 +848,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** no photos, a large team, or a studio that credits people per project.
 - **Avoid when:** —
 - **Mobile (390):** one column.
-- **Pairs with:** Swiss/modernist, editorial, brutalist.
+- **Pairs with:** [Swiss](styles.md#swiss), [editorial](styles.md#editorial), [web brutalism](styles.md#web-brutalism).
 
 #### Founder letter
 - **What:** a portrait left; a letter with a signature right.
@@ -856,7 +856,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** an about page where the founder's reason is the brand.
 - **Avoid when:** the letter is corporate filler.
 - **Mobile (390):** the portrait, then the letter.
-- **Pairs with:** editorial, craft/organic, luxury/minimal.
+- **Pairs with:** [editorial](styles.md#editorial), [food craft](styles.md#food-craft), [wellness](styles.md#wellness), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism).
 
 #### Avatar cluster + hiring
 - **What:** a row of small faces, a line about the team and an "open roles" button.
@@ -864,7 +864,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** a short team mention on the landing that leads to careers.
 - **Avoid when:** the avatars are not real people.
 - **Mobile (390):** the same, avatars smaller.
-- **Pairs with:** soft consumer, playful.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [neobrutalism](styles.md#neobrutalism).
 
 #### Filterable grid
 - **What:** department chips over the photo grid.
@@ -872,7 +872,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** 20+ people.
 - **Avoid when:** a filter returns 1 person.
 - **Mobile (390):** chips wrap; 2 per row.
-- **Pairs with:** corporate, Swiss/modernist.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 ## Blog index / article
 
@@ -882,7 +882,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** posts have good images and one post deserves the top.
 - **Avoid when:** every post uses the same stock cover.
 - **Mobile (390):** the featured post, then a sideways scroller.
-- **Pairs with:** editorial, soft consumer.
+- **Pairs with:** [editorial](styles.md#editorial), [Scandinavian](styles.md#scandinavian).
 
 #### Dated list
 - **What:** date column left, title and excerpt right, ruled rows, no images.
@@ -890,7 +890,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** text-first blogs, changelogs, engineering notes.
 - **Avoid when:** —
 - **Mobile (390):** the date above each title.
-- **Pairs with:** dev-tool/terminal, Swiss/modernist, brutalist.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss), [web brutalism](styles.md#web-brutalism).
 
 #### Grid + sidebar
 - **What:** a 2-column post grid with a sidebar: search, categories, newsletter.
@@ -898,7 +898,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** large blogs where readers browse by topic.
 - **Avoid when:** fewer than 10 posts.
 - **Mobile (390):** categories become chips on top; the sidebar is dropped.
-- **Pairs with:** corporate, editorial.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [editorial](styles.md#editorial).
 
 #### Magazine front
 - **What:** a lead story left, 4 small headlines with thumbnails right, then a row of 4.
@@ -906,7 +906,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** publishing is the business (a magazine, a media brand).
 - **Avoid when:** you publish once a month.
 - **Mobile (390):** lead story, then the small list, then a scroller.
-- **Pairs with:** editorial, retro/print.
+- **Pairs with:** [editorial](styles.md#editorial), [risograph](styles.md#riso), [letterpress](styles.md#letterpress).
 
 #### Article
 - **What:** one reading column of 640–720 px: category, title, author, image, text with headings and a pull quote.
@@ -914,7 +914,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** every article; line length 60–75 characters.
 - **Avoid when:** —
 - **Mobile (390):** the same column, 17–18 px body.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Article + sticky contents
 - **What:** a sticky table of contents left, the article centre, a small sticky card right.
@@ -922,7 +922,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** long guides and docs-style posts.
 - **Avoid when:** the article has 3 headings.
 - **Mobile (390):** the contents become a select at the top; the card is dropped.
-- **Pairs with:** Swiss/modernist, dev-tool/terminal, editorial.
+- **Pairs with:** [Swiss](styles.md#swiss), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [editorial](styles.md#editorial).
 
 ## Portfolio / gallery
 
@@ -932,7 +932,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** the default for listings, products and projects with consistent images.
 - **Avoid when:** the images have different shapes (use masonry).
 - **Mobile (390):** one column, or 2 for products.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Masonry
 - **What:** columns of images at their own heights.
@@ -940,7 +940,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** photography, interiors, mixed formats.
 - **Avoid when:** the reading order matters.
 - **Mobile (390):** one column (or 2 for small images).
-- **Pairs with:** photographic, editorial, craft/organic.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [editorial](styles.md#editorial), [food craft](styles.md#food-craft), [wellness](styles.md#wellness).
 
 #### Asymmetric, one featured
 - **What:** one large image and two stacked beside it, then a row of three.
@@ -948,7 +948,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** one project leads.
 - **Avoid when:** —
 - **Mobile (390):** the featured image, then the rest stacked or in a scroller.
-- **Pairs with:** editorial, luxury/minimal, Swiss/modernist.
+- **Pairs with:** [editorial](styles.md#editorial), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism), [Swiss](styles.md#swiss).
 
 #### Alternating case studies
 - **What:** rows of image + title, story, two result numbers and a link, alternating sides.
@@ -956,7 +956,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** agencies and studios that sell results; services of a local business.
 - **Avoid when:** more than 4 rows on one page.
 - **Mobile (390):** image first in every row.
-- **Pairs with:** editorial, corporate, craft/organic.
+- **Pairs with:** [editorial](styles.md#editorial), [corporate modernism](styles.md#corporate-modernism), [food craft](styles.md#food-craft), [wellness](styles.md#wellness).
 
 #### One project per screen
 - **What:** each project is a full-bleed image with its title on a scrim.
@@ -964,7 +964,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** few, strong projects; the images carry it.
 - **Avoid when:** the images are weak or similar.
 - **Mobile (390):** portrait crops chosen by hand.
-- **Pairs with:** photographic, luxury/minimal, editorial.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism), [editorial](styles.md#editorial).
 
 #### Horizontal scroller
 - **What:** a heading with arrows; a track of cards with the last one cut at the edge.
@@ -972,7 +972,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** a secondary set (more projects, related products).
 - **Avoid when:** it holds the main content; cards off to the side are easy to miss. Arrows and keys must work.
 - **Mobile (390):** swipe, the next card peeking.
-- **Pairs with:** playful, photographic, soft consumer.
+- **Pairs with:** [neobrutalism](styles.md#neobrutalism), [editorial photography](styles.md#editorial-photo), [Scandinavian](styles.md#scandinavian).
 
 ## Event schedule
 
@@ -982,7 +982,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** one day, one track.
 - **Avoid when:** —
 - **Mobile (390):** time above each title.
-- **Pairs with:** Swiss/modernist, editorial, brutalist.
+- **Pairs with:** [Swiss](styles.md#swiss), [editorial](styles.md#editorial), [web brutalism](styles.md#web-brutalism).
 
 #### Day tabs
 - **What:** a day switcher over the ruled list.
@@ -990,7 +990,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** 2–4 days.
 - **Avoid when:** people need to compare days.
 - **Mobile (390):** the switcher stays at the top.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Multi-track grid
 - **What:** times down the left, tracks as columns, sessions as blocks spanning their length.
@@ -998,7 +998,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** parallel tracks where clashes matter.
 - **Avoid when:** one track.
 - **Mobile (390):** a track switcher and one list; never the grid.
-- **Pairs with:** data-dense, Swiss/modernist.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss).
 
 #### Days as panels
 - **What:** one card per day with its sessions.
@@ -1006,7 +1006,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** a short overview (3 days, 4 highlights each) linking to the full schedule.
 - **Avoid when:** it is the full schedule.
 - **Mobile (390):** a sideways scroller.
-- **Pairs with:** playful, soft consumer.
+- **Pairs with:** [neobrutalism](styles.md#neobrutalism), [Scandinavian](styles.md#scandinavian).
 
 ## Contact
 
@@ -1016,7 +1016,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** one kind of request.
 - **Avoid when:** you ask for phone, company size and budget without a reason.
 - **Mobile (390):** the same.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Details left, form right
 - **What:** heading and email / phone / address rows left; the form in a card right.
@@ -1024,7 +1024,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** B2B and services, where some people prefer to call.
 - **Avoid when:** the details are generic (info@).
 - **Mobile (390):** details, then the form without its card.
-- **Pairs with:** corporate, Swiss/modernist.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 #### Map + address and hours
 - **What:** a map left; address, hours table and "call" / "directions" buttons right.
@@ -1032,7 +1032,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** a place people visit; it is the closing CTA of a local landing.
 - **Avoid when:** the business is online only.
 - **Mobile (390):** the map, then tap-to-call and directions as full-width buttons.
-- **Pairs with:** craft/organic, photographic, retro/print.
+- **Pairs with:** [food craft](styles.md#food-craft), [wellness](styles.md#wellness), [editorial photography](styles.md#editorial-photo), [risograph](styles.md#riso), [letterpress](styles.md#letterpress).
 
 #### Routes by need
 - **What:** 3 cards: sales, support, press, each with who answers and a link.
@@ -1040,7 +1040,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** different teams answer different requests.
 - **Avoid when:** one person answers everything.
 - **Mobile (390):** stacked.
-- **Pairs with:** corporate, Swiss/modernist.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 #### Help hub
 - **What:** a search field, popular topics as chips, 3 route cards.
@@ -1048,7 +1048,7 @@ Part 10: one line that echoes the brand idea, and one action.
 - **Use when:** most questions already have answers in docs.
 - **Avoid when:** there is no help content behind the search.
 - **Mobile (390):** search full width; cards stack.
-- **Pairs with:** soft consumer, corporate.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [corporate modernism](styles.md#corporate-modernism).
 
 ## Footer
 
@@ -1060,7 +1060,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** products with docs, company and legal pages.
 - **Avoid when:** half the links are "Coming soon".
 - **Mobile (390):** columns 2 per row (or accordions).
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### One line
 - **What:** logo, 4 links and icons on one line.
@@ -1068,7 +1068,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** small sites and one-page products.
 - **Avoid when:** legal pages are missing; they still need a link.
 - **Mobile (390):** two lines.
-- **Pairs with:** brutalist, luxury/minimal, dev-tool/terminal.
+- **Pairs with:** [web brutalism](styles.md#web-brutalism), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal).
 
 #### Centred stack
 - **What:** logo, links, icons and the legal line, centred.
@@ -1076,7 +1076,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** consumer brands with few pages.
 - **Avoid when:** more than 6 links.
 - **Mobile (390):** links wrap to two lines.
-- **Pairs with:** soft consumer, playful, luxury/minimal.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [neobrutalism](styles.md#neobrutalism), [luxury](styles.md#luxury), [minimalism](styles.md#minimalism).
 
 #### Giant wordmark
 - **What:** link columns, then the wordmark across the full width, then the legal line.
@@ -1084,7 +1084,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** the wordmark is strong and you want a confident end.
 - **Avoid when:** the logo is a symbol only.
 - **Mobile (390):** the wordmark scales to the width.
-- **Pairs with:** brutalist, editorial, Swiss/modernist.
+- **Pairs with:** [web brutalism](styles.md#web-brutalism), [editorial](styles.md#editorial), [Swiss](styles.md#swiss).
 
 #### Address, hours, map
 - **What:** logo and address, an hours table, a small map, the legal line.
@@ -1092,7 +1092,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** local businesses.
 - **Avoid when:** —
 - **Mobile (390):** stacked, map last.
-- **Pairs with:** craft/organic, retro/print, photographic.
+- **Pairs with:** [food craft](styles.md#food-craft), [wellness](styles.md#wellness), [risograph](styles.md#riso), [letterpress](styles.md#letterpress), [editorial photography](styles.md#editorial-photo).
 
 ---
 
@@ -1104,7 +1104,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** releases with visible changes.
 - **Avoid when:** —
 - **Mobile (390):** date above each entry.
-- **Pairs with:** dev-tool/terminal, Swiss/modernist.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss).
 
 #### Entry cards
 - **What:** each release as a row: screenshot left, badge, title, line and link right.
@@ -1112,7 +1112,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** a feature-announcement feed that links to full posts.
 - **Avoid when:** the releases are small fixes.
 - **Mobile (390):** image, then text.
-- **Pairs with:** soft consumer, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
 
 #### Compact typed list
 - **What:** one ruled line per change: date, a type badge (new / improved / fixed), the change.
@@ -1120,7 +1120,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** frequent small releases; developers scanning for a fix.
 - **Avoid when:** —
 - **Mobile (390):** date and badge above the line.
-- **Pairs with:** dev-tool/terminal, brutalist, data-dense.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [web brutalism](styles.md#web-brutalism), [enterprise-dense](styles.md#enterprise-dense).
 
 ## Docs landing
 
@@ -1130,7 +1130,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** the docs home.
 - **Avoid when:** the cards carry decorative icons only; name the section, list 3 links.
 - **Mobile (390):** search full width; cards stack.
-- **Pairs with:** dev-tool/terminal, Swiss/modernist.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss).
 
 #### Three-pane docs page
 - **What:** a grouped navigation left, the page centre (with code), "on this page" right.
@@ -1138,7 +1138,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** every docs page.
 - **Avoid when:** —
 - **Mobile (390):** navigation behind ≡; "on this page" becomes a select.
-- **Pairs with:** dev-tool/terminal, Swiss/modernist, data-dense.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss), [enterprise-dense](styles.md#enterprise-dense).
 
 #### Quickstart by stack
 - **What:** a stack switcher (tabs) over one code block, then 3 next-step cards.
@@ -1146,7 +1146,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** SDKs in several languages.
 - **Avoid when:** one language.
 - **Mobile (390):** tabs scroll sideways; code scrolls sideways.
-- **Pairs with:** dev-tool/terminal.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal).
 
 ## Careers
 
@@ -1156,7 +1156,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** under 20 open roles.
 - **Avoid when:** the values are generic ("We care").
 - **Mobile (390):** stacked; roles as rows.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Searchable roles table
 - **What:** search and two filters over a table of roles (title, team, location, type).
@@ -1164,7 +1164,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** 20+ roles.
 - **Avoid when:** —
 - **Mobile (390):** filters stack; the table becomes a list.
-- **Pairs with:** corporate, data-dense.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [enterprise-dense](styles.md#enterprise-dense).
 
 #### Role page + apply card
 - **What:** the job text left (chips for location and type, what you'll do, what you bring); a sticky apply card right.
@@ -1172,7 +1172,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** every role page.
 - **Avoid when:** —
 - **Mobile (390):** the apply button sticks to the bottom of the screen.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 ## 404
 
@@ -1182,7 +1182,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** the default.
 - **Avoid when:** a joke takes the place of a way out.
 - **Mobile (390):** the same.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Search + popular pages
 - **What:** a heading, a search field, a list of popular pages.
@@ -1190,7 +1190,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** docs and large sites.
 - **Avoid when:** —
 - **Mobile (390):** the same.
-- **Pairs with:** dev-tool/terminal, Swiss/modernist.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss).
 
 #### Split with useful links
 - **What:** the message left, 4 link cards right.
@@ -1198,7 +1198,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** a product site with clear main destinations.
 - **Avoid when:** —
 - **Mobile (390):** message, then the cards.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 ## Legal / privacy
 
@@ -1208,7 +1208,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** terms, privacy, DPA.
 - **Avoid when:** —
 - **Mobile (390):** contents as a select at the top.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Plain-words summary first
 - **What:** a tinted box "in plain words" with 5 checks, then the full text.
@@ -1216,7 +1216,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** privacy is part of the pitch (health, finance, children, AI).
 - **Avoid when:** the summary says something the full text does not.
 - **Mobile (390):** the same column.
-- **Pairs with:** soft consumer, editorial, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [editorial](styles.md#editorial), [Swiss](styles.md#swiss).
 
 ## Waitlist
 
@@ -1226,7 +1226,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** before launch, with nothing to show yet.
 - **Avoid when:** the count is invented.
 - **Mobile (390):** field and button stack.
-- **Pairs with:** brutalist, editorial, glass/gradient.
+- **Pairs with:** [web brutalism](styles.md#web-brutalism), [editorial](styles.md#editorial), [glassmorphism](styles.md#glassmorphism), [mesh gradient](styles.md#mesh-gradient).
 
 #### Form + product preview
 - **What:** the form left, a preview of the product right.
@@ -1234,7 +1234,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** you have a working screen to show.
 - **Avoid when:** the preview is a mock you can't ship.
 - **Mobile (390):** form first, then the preview crop.
-- **Pairs with:** Swiss/modernist, soft consumer.
+- **Pairs with:** [Swiss](styles.md#swiss), [Scandinavian](styles.md#scandinavian).
 
 #### After signup: your place
 - **What:** "you're in", the position number large, the referral link with copy, 3 share buttons, a progress bar.
@@ -1242,7 +1242,7 @@ Links, the placeholder-domain note and the credits line (part 11).
 - **Use when:** a referral waitlist.
 - **Avoid when:** referrals don't actually move people up.
 - **Mobile (390):** the same card full width.
-- **Pairs with:** playful, soft consumer.
+- **Pairs with:** [neobrutalism](styles.md#neobrutalism), [Scandinavian](styles.md#scandinavian).
 
 ## Comparison "vs" page
 
@@ -1254,7 +1254,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** buyers search "X vs Y" and the differences are factual.
 - **Avoid when:** you win every row; nobody believes it.
 - **Mobile (390):** a switcher between the two columns.
-- **Pairs with:** Swiss/modernist, data-dense, corporate.
+- **Pairs with:** [Swiss](styles.md#swiss), [enterprise-dense](styles.md#enterprise-dense), [corporate modernism](styles.md#corporate-modernism).
 
 #### Switching guide
 - **What:** the reason to switch left, migration steps on a timeline right, then a quote from someone who switched.
@@ -1262,7 +1262,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** the fear is the migration, not the product.
 - **Avoid when:** there is no import tool.
 - **Mobile (390):** stacked.
-- **Pairs with:** dev-tool/terminal, corporate.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [corporate modernism](styles.md#corporate-modernism).
 
 #### Side-by-side columns
 - **What:** two cards: theirs (crosses, tinted) and yours (checks, dark), a fairness note under them.
@@ -1270,7 +1270,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** a short comparison on the landing or a vs page.
 - **Avoid when:** —
 - **Mobile (390):** theirs, then yours.
-- **Pairs with:** brutalist, playful, Swiss/modernist.
+- **Pairs with:** [web brutalism](styles.md#web-brutalism), [neobrutalism](styles.md#neobrutalism), [Swiss](styles.md#swiss).
 
 ---
 
@@ -1282,7 +1282,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** the default.
 - **Avoid when:** —
 - **Mobile (390):** no card; fields full width on the page.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Form + brand panel
 - **What:** the form left; a full-height brand image or product panel right.
@@ -1290,7 +1290,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** consumer and brand-led products; the panel can carry news or a quote.
 - **Avoid when:** the panel is a gradient blob.
 - **Mobile (390):** the panel is dropped.
-- **Pairs with:** photographic, soft consumer, editorial.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [Scandinavian](styles.md#scandinavian), [editorial](styles.md#editorial).
 
 #### SSO first
 - **What:** 3 provider buttons on top, "or", one email field with "email me a link".
@@ -1298,7 +1298,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** B2B tools where most users come through Google, Microsoft or SAML.
 - **Avoid when:** consumers who don't use those providers.
 - **Mobile (390):** the same.
-- **Pairs with:** dev-tool/terminal, corporate, Swiss/modernist.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 #### One-time code
 - **What:** a title, the address the code went to, 6 code boxes, one button, "resend".
@@ -1306,7 +1306,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** passwordless login and two-factor steps.
 - **Avoid when:** —
 - **Mobile (390):** the boxes fill the width; the OS can autofill the code.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 ## Register
 
@@ -1316,7 +1316,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** the default; 3 fields at most.
 - **Avoid when:** you ask for company size and role before the product is used; ask in onboarding.
 - **Mobile (390):** no card.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Form + proof panel
 - **What:** the form left; a tinted panel right with a quote, 3 checks and a few logos.
@@ -1324,7 +1324,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** B2B trials where doubt peaks at signup.
 - **Avoid when:** the proof is invented.
 - **Mobile (390):** the panel is dropped; one line of proof under the button.
-- **Pairs with:** corporate, Swiss/modernist.
+- **Pairs with:** [corporate modernism](styles.md#corporate-modernism), [Swiss](styles.md#swiss).
 
 #### Multi-step signup
 - **What:** a stepper, then 2–3 fields per step, back and next.
@@ -1332,7 +1332,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** signup genuinely needs more (a business account, a medical profile).
 - **Avoid when:** it is 4 fields split into steps to look easy.
 - **Mobile (390):** the same; buttons full width.
-- **Pairs with:** soft consumer, corporate.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [corporate modernism](styles.md#corporate-modernism).
 
 ## Onboarding
 
@@ -1342,7 +1342,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** setup has 3–6 independent steps (import, invite, connect).
 - **Avoid when:** the checklist never goes away; hide it when done.
 - **Mobile (390):** the list, then the video.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### One question per screen
 - **What:** a stepper at the top, one question as large text, 4 option cards, back and next.
@@ -1350,7 +1350,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** the answers change what the product shows (role, use case, goal).
 - **Avoid when:** the answers are only for your marketing.
 - **Mobile (390):** options stack; buttons at the bottom.
-- **Pairs with:** soft consumer, playful, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [neobrutalism](styles.md#neobrutalism), [Swiss](styles.md#swiss).
 
 #### Start from a template
 - **What:** a title, category chips and a grid of template previews; "start blank" as a secondary button.
@@ -1358,7 +1358,7 @@ Fair claims only, with dates and sources; competitors' names and logos used as r
 - **Use when:** a blank canvas is the main reason people quit (editors, builders, trackers).
 - **Avoid when:** the templates are empty shells.
 - **Mobile (390):** one column of previews.
-- **Pairs with:** soft consumer, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
 
 ## App shell
 
@@ -1370,7 +1370,7 @@ web-unslop: the sidebar is compact and task-based; no metrics or counters in it;
 - **Use when:** the default for tools with 5+ areas.
 - **Avoid when:** the sidebar holds dashboard numbers. Tell: hero-size type in the sidebar.
 - **Mobile (390):** ≡ opens the sidebar as a drawer; the title and the account in the top bar.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Top bar
 - **What:** logo, 5 links with the active one underlined, search and account right; content centred.
@@ -1378,7 +1378,7 @@ web-unslop: the sidebar is compact and task-based; no metrics or counters in it;
 - **Use when:** apps with 3–5 areas and content that wants full width (consumer, analytics).
 - **Avoid when:** areas will grow past 6.
 - **Mobile (390):** ≡, or a bottom tab bar for 3–5 areas.
-- **Pairs with:** soft consumer, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
 
 #### Icon rail + list
 - **What:** a dark icon rail for areas, a secondary list for the area's items, then the work area.
@@ -1386,7 +1386,7 @@ web-unslop: the sidebar is compact and task-based; no metrics or counters in it;
 - **Use when:** many objects per area (mail, chat, projects, files).
 - **Avoid when:** icons without tooltips; or only 3 areas.
 - **Mobile (390):** the rail becomes a bottom tab bar; the list is the first screen.
-- **Pairs with:** data-dense, dev-tool/terminal.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal).
 
 #### List + inspector
 - **What:** sidebar, a list in the middle with the selected row, an inspector panel right.
@@ -1394,7 +1394,7 @@ web-unslop: the sidebar is compact and task-based; no metrics or counters in it;
 - **Use when:** operator tools (the `product.md` default): triage, review, CRM.
 - **Avoid when:** the inspector repeats the row.
 - **Mobile (390):** the list; a tap opens the item as a new screen.
-- **Pairs with:** data-dense, Swiss/modernist, dev-tool/terminal.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal).
 
 #### Command palette (⌘K)
 - **What:** a centred search panel over the dimmed app: grouped results (pages, actions, recent).
@@ -1402,7 +1402,7 @@ web-unslop: the sidebar is compact and task-based; no metrics or counters in it;
 - **Use when:** power users and keyboard workflows; add it to any shell.
 - **Avoid when:** it is the only way to reach something.
 - **Mobile (390):** full screen.
-- **Pairs with:** dev-tool/terminal, Swiss/modernist, data-dense.
+- **Pairs with:** [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal), [Swiss](styles.md#swiss), [enterprise-dense](styles.md#enterprise-dense).
 
 ## Dashboard
 
@@ -1414,7 +1414,7 @@ web-unslop: the dashboard answers "what changed and what needs attention?"; fewe
 - **Use when:** the default overview.
 - **Avoid when:** the same KPIs appear on other pages. Tell: repeated KPI strips, naked numbers.
 - **Mobile (390):** KPIs in a sideways scroller, chart, then the list.
-- **Pairs with:** data-dense, Swiss/modernist.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss).
 
 #### Needs-you first
 - **What:** a tinted list of the 3 things that need the user (with a button each) above two charts.
@@ -1422,7 +1422,7 @@ web-unslop: the dashboard answers "what changed and what needs attention?"; fewe
 - **Use when:** the user's job is to act, not to watch (approvals, reviews, failures).
 - **Avoid when:** nothing needs action most days; then show an "all clear" state.
 - **Mobile (390):** the list, then charts stacked.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Metric tabs + breakdown
 - **What:** KPI tabs (each a label and number) switch one big chart; a ranked table under it.
@@ -1430,7 +1430,7 @@ web-unslop: the dashboard answers "what changed and what needs attention?"; fewe
 - **Use when:** analytics: trend plus breakdown of one metric at a time.
 - **Avoid when:** the table repeats the chart.
 - **Mobile (390):** 4 tabs in one row, chart, then a list.
-- **Pairs with:** data-dense, Swiss/modernist.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss).
 
 #### Activity feed + side stats
 - **What:** a timeline of recent events; a column of 3 small stats with sparklines.
@@ -1438,7 +1438,7 @@ web-unslop: the dashboard answers "what changed and what needs attention?"; fewe
 - **Use when:** collaborative tools where "what happened" is the main question.
 - **Avoid when:** the feed is noise (every view logged).
 - **Mobile (390):** the feed; stats after.
-- **Pairs with:** soft consumer, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
 
 ## List / table
 
@@ -1450,7 +1450,7 @@ web-unslop: name left, the important number or status right, metadata between; r
 - **Use when:** the default for many objects with several attributes.
 - **Avoid when:** 3 buttons per row. Tell: button clutter.
 - **Mobile (390):** search and filters stack; rows become a list.
-- **Pairs with:** data-dense, Swiss/modernist, dev-tool/terminal.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal).
 
 #### Selection + bulk bar
 - **What:** a table with checkboxes; a floating bar appears with the count and bulk actions.
@@ -1458,7 +1458,7 @@ web-unslop: name left, the important number or status right, metadata between; r
 - **Use when:** users act on many rows at once (archive, assign, export).
 - **Avoid when:** nothing can be done in bulk.
 - **Mobile (390):** long-press to select; the bar docks at the bottom.
-- **Pairs with:** data-dense.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense).
 
 #### Card grid
 - **What:** cards with a preview image, title, meta, a status badge and an owner avatar.
@@ -1466,7 +1466,7 @@ web-unslop: name left, the important number or status right, metadata between; r
 - **Use when:** the objects are visual (designs, files, listings, projects).
 - **Avoid when:** the objects have no preview; a list scans faster.
 - **Mobile (390):** one column.
-- **Pairs with:** soft consumer, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
 
 #### Board (kanban)
 - **What:** columns per status, cards with title, line, tag and owner.
@@ -1474,7 +1474,7 @@ web-unslop: name left, the important number or status right, metadata between; r
 - **Use when:** work moves through stages and people drag it.
 - **Avoid when:** more than 6 columns, or the status rarely changes.
 - **Mobile (390):** one column at a time, swipe between them.
-- **Pairs with:** playful, soft consumer, Swiss/modernist.
+- **Pairs with:** [neobrutalism](styles.md#neobrutalism), [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
 
 #### Grouped list
 - **What:** a list with group labels (today, yesterday; or by project).
@@ -1482,7 +1482,7 @@ web-unslop: name left, the important number or status right, metadata between; r
 - **Use when:** time or category is the main way people scan.
 - **Avoid when:** groups hold one row each.
 - **Mobile (390):** sticky group labels.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 ## Detail / inspector
 
@@ -1492,7 +1492,7 @@ web-unslop: name left, the important number or status right, metadata between; r
 - **Use when:** users go through records one by one (mail, tickets, leads).
 - **Avoid when:** records are rarely opened.
 - **Mobile (390):** the list; the record opens as its own screen with a back arrow.
-- **Pairs with:** data-dense, Swiss/modernist.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss).
 
 #### Table + inspector panel
 - **What:** the table stays; a right panel edits the selected row (fields, metadata, one action).
@@ -1500,7 +1500,7 @@ web-unslop: name left, the important number or status right, metadata between; r
 - **Use when:** quick edits without losing the list (the `product.md` operator layout).
 - **Avoid when:** the record needs more than one panel of fields.
 - **Mobile (390):** the panel becomes a bottom sheet.
-- **Pairs with:** data-dense, dev-tool/terminal.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal).
 
 #### Full record page
 - **What:** breadcrumb, title with status badges and actions, tabs, main content left, a key-value card right.
@@ -1508,7 +1508,7 @@ web-unslop: name left, the important number or status right, metadata between; r
 - **Use when:** rich objects (a customer, a project, an order).
 - **Avoid when:** the key-value card repeats the header.
 - **Mobile (390):** header, tabs, then the key-values before the content.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Record + activity log
 - **What:** the record's fields left; its activity timeline and a comment box right.
@@ -1516,7 +1516,7 @@ web-unslop: name left, the important number or status right, metadata between; r
 - **Use when:** audit and collaboration matter (who changed what).
 - **Avoid when:** —
 - **Mobile (390):** fields, then the log.
-- **Pairs with:** data-dense, corporate.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [corporate modernism](styles.md#corporate-modernism).
 
 ## Creation flow / form
 
@@ -1528,7 +1528,7 @@ web-unslop: required fields visible, advanced options collapsed, one obvious pri
 - **Use when:** creating a simple object without leaving the list.
 - **Avoid when:** the form scrolls inside the modal; use a page.
 - **Mobile (390):** full screen with the action at the top or bottom.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Sectioned page form
 - **What:** each section has its label and a line left and its fields in a card right; save at the end.
@@ -1536,7 +1536,7 @@ web-unslop: required fields visible, advanced options collapsed, one obvious pri
 - **Use when:** long forms and settings-like creation.
 - **Avoid when:** —
 - **Mobile (390):** labels above their fields.
-- **Pairs with:** Swiss/modernist, corporate.
+- **Pairs with:** [Swiss](styles.md#swiss), [corporate modernism](styles.md#corporate-modernism).
 
 #### Multi-step form
 - **What:** a stepper, one card of fields, back and next.
@@ -1544,7 +1544,7 @@ web-unslop: required fields visible, advanced options collapsed, one obvious pri
 - **Use when:** the later steps depend on earlier answers.
 - **Avoid when:** it's one form split for no reason.
 - **Mobile (390):** compact stepper; buttons at the bottom.
-- **Pairs with:** soft consumer, corporate.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [corporate modernism](styles.md#corporate-modernism).
 
 #### Form + live preview
 - **What:** the fields left; a live preview of the result right (card, link preview, email).
@@ -1552,7 +1552,7 @@ web-unslop: required fields visible, advanced options collapsed, one obvious pri
 - **Use when:** the output is visible (a link card, an invoice, a page); for link tools include slug, domain, title, description, UTM and expiry.
 - **Avoid when:** the preview is static.
 - **Mobile (390):** fields, then a "preview" button or tab.
-- **Pairs with:** Swiss/modernist, soft consumer.
+- **Pairs with:** [Swiss](styles.md#swiss), [Scandinavian](styles.md#scandinavian).
 
 ## Settings
 
@@ -1562,7 +1562,7 @@ web-unslop: required fields visible, advanced options collapsed, one obvious pri
 - **Use when:** the default for apps with several settings areas.
 - **Avoid when:** settings are scattered across the app instead.
 - **Mobile (390):** the menu becomes a select or its own screen.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Tabbed settings
 - **What:** tabs over rows of label + field; a danger zone card with a strong border at the end.
@@ -1570,7 +1570,7 @@ web-unslop: required fields visible, advanced options collapsed, one obvious pri
 - **Use when:** 3–5 settings groups.
 - **Avoid when:** more than 6 tabs.
 - **Mobile (390):** tabs scroll sideways; labels above fields.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Preference rows
 - **What:** ruled rows: a title and a line left, a switch right.
@@ -1578,7 +1578,7 @@ web-unslop: required fields visible, advanced options collapsed, one obvious pri
 - **Use when:** notification and privacy preferences.
 - **Avoid when:** a switch needs explaining in a modal.
 - **Mobile (390):** the same.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 ## Billing / usage
 
@@ -1590,7 +1590,7 @@ web-unslop: plan, usage and invoices separated; usage against limits; the curren
 - **Use when:** the default billing page.
 - **Avoid when:** cards that do no billing task. Tell: dead cards.
 - **Mobile (390):** cards stack; invoices as a list.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Usage against limits
 - **What:** progress bars per metered item (used / limit), a usage chart, the reset date.
@@ -1598,7 +1598,7 @@ web-unslop: plan, usage and invoices separated; usage against limits; the curren
 - **Use when:** usage-based or capped plans.
 - **Avoid when:** bars without the limit number.
 - **Mobile (390):** the same; chart shorter.
-- **Pairs with:** data-dense, Swiss/modernist.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss).
 
 #### Current plan → next plan
 - **What:** the current plan card beside a dark card of what the next plan unlocks, with the upgrade button.
@@ -1606,7 +1606,7 @@ web-unslop: plan, usage and invoices separated; usage against limits; the curren
 - **Use when:** the upgrade path is the main billing action.
 - **Avoid when:** the next plan's gain is unclear.
 - **Mobile (390):** current, then next.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 ## Empty states
 
@@ -1618,7 +1618,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** the first visit to any list or dashboard.
 - **Avoid when:** a cartoon illustration takes the place of the explanation.
 - **Mobile (390):** the same, centred.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### No results
 - **What:** the search and active filters stay visible; an icon, why nothing matched, "clear filters".
@@ -1626,7 +1626,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** search and filtered views.
 - **Avoid when:** —
 - **Mobile (390):** the same.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Sample data + import
 - **What:** a strong-bordered banner "this is sample data" with "import yours", the table faded below.
@@ -1634,7 +1634,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** the product only makes sense with data (analytics, CRM).
 - **Avoid when:** the sample data can be mistaken for real data.
 - **Mobile (390):** banner, then the list.
-- **Pairs with:** data-dense, Swiss/modernist.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss).
 
 ## Modals / drawers
 
@@ -1644,7 +1644,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** destructive or costly actions.
 - **Avoid when:** the action is undoable; use a toast with "undo".
 - **Mobile (390):** the dialog stays small; buttons full width.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Side drawer
 - **What:** a full-height panel from the right over the dimmed app; fields; actions at the bottom.
@@ -1652,7 +1652,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** editing while keeping the list in context.
 - **Avoid when:** the form is short (use a modal) or wide (use a page).
 - **Mobile (390):** full screen.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Menu → bottom sheet
 - **What:** a popover menu at the ⋯ button on desktop; the same items in a bottom sheet with a handle on mobile.
@@ -1660,7 +1660,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** row and object actions.
 - **Avoid when:** —
 - **Mobile (390):** the sheet, background dimmed.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Full-screen task
 - **What:** a full-screen layer with its own bar (title, stepper, primary action) for a focused job.
@@ -1668,7 +1668,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** composing, editing a document, a multi-step import.
 - **Avoid when:** the task is short.
 - **Mobile (390):** the same; side panel dropped.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 ## Notifications / inbox
 
@@ -1678,7 +1678,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** occasional notifications.
 - **Avoid when:** notifications are the work (use an inbox).
 - **Mobile (390):** full screen.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Inbox: list + message
 - **What:** tabs and a list left, the selected item right with sender and actions.
@@ -1686,7 +1686,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** requests, approvals and messages are a main task.
 - **Avoid when:** —
 - **Mobile (390):** the list; items open as their own screen.
-- **Pairs with:** data-dense, Swiss/modernist.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Swiss](styles.md#swiss).
 
 #### Toasts
 - **What:** small stacked messages bottom-right with an icon, a line and one action (undo, view).
@@ -1694,7 +1694,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** feedback on an action the user just took.
 - **Avoid when:** the message must be read (use a banner) or needs a decision (use a dialog).
 - **Mobile (390):** full width at the bottom, above the tab bar.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 ## Search / results
 
@@ -1704,7 +1704,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** finding a known item fast.
 - **Avoid when:** results need filters to make sense.
 - **Mobile (390):** search opens full screen.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Results + facets
 - **What:** facet groups with checkboxes left; count, sort and results right.
@@ -1712,7 +1712,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** large catalogues (shops, jobs, docs).
 - **Avoid when:** facets with one value.
 - **Mobile (390):** a "filters" button opens the facets as a sheet.
-- **Pairs with:** data-dense, soft consumer.
+- **Pairs with:** [enterprise-dense](styles.md#enterprise-dense), [Scandinavian](styles.md#scandinavian).
 
 #### Grouped results page
 - **What:** the search field, type tabs (all, docs, people, files), results with their source and highlighted terms.
@@ -1720,7 +1720,7 @@ web-unslop: empty states explain what must happen before data appears.
 - **Use when:** workspace or site-wide search.
 - **Avoid when:** —
 - **Mobile (390):** tabs scroll sideways.
-- **Pairs with:** Swiss/modernist, dev-tool/terminal.
+- **Pairs with:** [Swiss](styles.md#swiss), [dev-tool dark](styles.md#devtool-dark), [terminal](styles.md#terminal).
 
 ## Mobile tab-bar app
 
@@ -1731,21 +1731,21 @@ These are designed at 390 first (`product.md`: mobile-first products).
 - **Wireframe:** [mobile/home](../../../atlas/layouts/mobile/home.svg)
 - **Use when:** the default home of a consumer app.
 - **Avoid when:** more than 5 tabs; the 5th becomes "more".
-- **Pairs with:** soft consumer, playful, glass/gradient.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [neobrutalism](styles.md#neobrutalism), [glassmorphism](styles.md#glassmorphism), [mesh gradient](styles.md#mesh-gradient).
 
 #### Feed
 - **What:** filter chips over a vertical feed of image cards; tab bar.
 - **Wireframe:** [mobile/feed](../../../atlas/layouts/mobile/feed.svg)
 - **Use when:** content and discovery apps.
 - **Avoid when:** —
-- **Pairs with:** photographic, playful.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [neobrutalism](styles.md#neobrutalism).
 
 #### Detail + sticky action
 - **What:** a back arrow, an image, title, rating, options, text, details, and the primary action fixed at the bottom.
 - **Wireframe:** [mobile/detail](../../../atlas/layouts/mobile/detail.svg)
 - **Use when:** any item page that ends in one action (book, buy, join).
 - **Avoid when:** —
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 ## Shop
 
@@ -1757,7 +1757,7 @@ For a marketplace or a brand shop, next to the landing.
 - **Use when:** a catalogue of 20+ products.
 - **Avoid when:** —
 - **Mobile (390):** 2-column grid; filters behind a button.
-- **Pairs with:** photographic, soft consumer, Swiss/modernist.
+- **Pairs with:** [editorial photography](styles.md#editorial-photo), [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
 
 #### Product page
 - **What:** a gallery with thumbnails left; title, rating, price, options, add to cart, delivery checks and detail accordions right.
@@ -1765,7 +1765,7 @@ For a marketplace or a brand shop, next to the landing.
 - **Use when:** every product.
 - **Avoid when:** —
 - **Mobile (390):** gallery as a swipe, then the details; "add to cart" sticks to the bottom.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Cart + summary
 - **What:** cart rows (image, name, quantity, price) left; a summary card with totals and checkout right.
@@ -1773,7 +1773,7 @@ For a marketplace or a brand shop, next to the landing.
 - **Use when:** every shop.
 - **Avoid when:** —
 - **Mobile (390):** rows, then the summary; checkout button sticks to the bottom.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### One-page checkout
 - **What:** contact, shipping and payment sections in one column; the order summary right.
@@ -1781,7 +1781,7 @@ For a marketplace or a brand shop, next to the landing.
 - **Use when:** the default checkout.
 - **Avoid when:** —
 - **Mobile (390):** a collapsed "order summary · total" bar on top, then the sections.
-- **Pairs with:** every family.
+- **Pairs with:** [every family](styles.md#contents).
 
 #### Order tracking
 - **What:** order number, a 4-step progress, a map beside the delivery timeline, the items.
@@ -1789,7 +1789,7 @@ For a marketplace or a brand shop, next to the landing.
 - **Use when:** physical deliveries.
 - **Avoid when:** —
 - **Mobile (390):** progress, map, timeline, items.
-- **Pairs with:** soft consumer, Swiss/modernist.
+- **Pairs with:** [Scandinavian](styles.md#scandinavian), [Swiss](styles.md#swiss).
 
 ---
 

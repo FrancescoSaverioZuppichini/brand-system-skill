@@ -39,9 +39,9 @@ body { font-family: var(--sans); }
 .eyebrow { font: 700 13px/1 var(--sans); font-stretch: 150%; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
 .glyphs { font: 700 24px/1 var(--sans); }
 .names { font: 500 11px/1 var(--sans); }
-h1 { font: 800 80px/1.04 var(--sans); text-transform: uppercase; }
+h1 { font: 800 70px/1.06 var(--sans); text-transform: uppercase; }
 /* [Agent] Each letter gets its own point on the width and weight axes (--t, 0..1 along the line), so one face stretches from compressed-light to expanded-black. */
-.ramp span { font-stretch: calc(50% + var(--t) * 100%); font-weight: calc(300 + var(--t) * 600); }
+.ramp span { font-stretch: calc(62% + var(--t) * 88%); font-weight: calc(500 + var(--t) * 400); }
 .glyphs .ramp span { font-stretch: calc(80% + var(--t) * 70%); }
 @media (prefers-reduced-motion: no-preference) {
   .ramp span { animation: stretch 2.4s ease-in-out calc(var(--t) * -2.4s) infinite alternate; }
@@ -57,7 +57,7 @@ h1 { font: 800 80px/1.04 var(--sans); text-transform: uppercase; }
 </head>
 <body>
 <p class="eyebrow">Introducing Keep</p>
-<p class="specimen"><span class="glyphs"><span class="ramp">Aa 0123456789</span></span><span class="names">Anybody · wdth 50–150 · wght 300–900</span></p>
+<p class="specimen"><span class="glyphs"><span class="ramp">Aa 0123456789</span></span><span class="names">Anybody · wdth 62–150 · wght 500–900</span></p>
 <h1><span class="ramp">Make something</span><br><span class="ramp">people keep</span></h1>
 <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
 <a class="button" href="#">Start a project</a>

@@ -40,6 +40,8 @@ Families 7 (layout) and 8 (motion) hold grid and motion tokens in the token sket
 
 The grammar most brand work still runs on. Grids, type as image, flat colour. Low dating risk, high sameness risk: the style alone is never the idea.
 
+<a id="swiss"></a>
+
 ### Swiss / International Typographic · `swiss` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/swiss.jpg)
 - **What:** the 1950s Zurich/Basel style: objective type, an asymmetric layout on a strict grid, information as the image.
 - **Signature traits:** neo-grotesk set flush-left, ragged-right, hierarchy by size and position, not by style · black, white and one signal red · square corners · no shadows, whitespace and 1 px rules separate · modular grid with a strong left axis · objective photography or type only, no illustration · motion: cuts and slides along grid lines.
@@ -49,6 +51,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **Cliché / dating risk:** dates slowly; "Helvetica plus red" is the default of every design studio, so it needs a grid idea, not just a font.
 - **References:** Josef Müller-Brockmann's Musica Viva posters (1950s–70s) · [Vitra](https://www.vitra.com) · [SBB](https://www.sbb.ch) · Unimark's NYC Subway signage (1970).
 - **Combines well with:** mono-forward data, documentary photography, functional micro motion, an ASCII or dither device.
+
+<a id="bauhaus"></a>
 
 ### Bauhaus · `bauhaus` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/bauhaus.jpg)
 - **What:** the 1919–33 school's kit of primary shapes and primary colours, revived since about 2018 as "shape-kit" brand illustration.
@@ -60,6 +64,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **References:** Joost Schmidt's 1923 Bauhaus exhibition poster · Herbert Bayer's universal alphabet (1925) · [Bauhaus Dessau Foundation](https://www.bauhaus-dessau.de).
 - **Combines well with:** a Swiss grid, constructivist diagonals, spring motion, kids and education.
 
+<a id="constructivism"></a>
+
 ### Constructivism · `constructivism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/constructivism.jpg)
 - **What:** the 1920s Soviet avant-garde (Rodchenko, Lissitzky, the Stenberg brothers): diagonals, photomontage, red and black, type as force.
 - **Signature traits:** heavy condensed sans in caps, stacked and set on diagonals · red and black on cream · wedges, bars and circles · flat · 15–45° diagonal compositions with type cutting across them · photomontage and halftone faces · motion: hard slides along the diagonal.
@@ -69,6 +75,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **Cliché / dating risk:** propaganda pastiche reads ironic fast; the Franz Ferdinand sleeve made it a rock cliché.
 - **References:** Rodchenko's "Books" poster for Lengiz (1924) · Lissitzky's "Beat the Whites with the Red Wedge" (1919) · Franz Ferdinand's "You Could Have It So Much Better" sleeve (2005).
 - **Combines well with:** halftone imagery, condensed type, stepped motion, punk.
+
+<a id="de-stijl"></a>
 
 ### De Stijl · `de-stijl` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/de-stijl.jpg)
 - **What:** the Dutch 1917–31 movement (Mondrian, van Doesburg, Rietveld): black orthogonal bars dividing white planes, some filled with primaries.
@@ -80,6 +88,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **References:** Mondrian's "Composition with Red, Blue and Yellow" (1930) · Rietveld Schröder House (1924) · Yves Saint Laurent's Mondrian dress (1965).
 - **Combines well with:** Swiss, Bauhaus, pixel blocks; the bento grid is its grandchild.
 
+<a id="mid-century"></a>
+
 ### Mid-century modern · `mid-century` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/mid-century.jpg)
 - **What:** 1945–65 American and European modernism with wit: Saul Bass, Paul Rand's ads, the Eameses, Alexander Girard.
 - **Signature traits:** geometric sans or a soft serif with hand-cut lettering · mustard, burnt orange, teal and olive on warm paper · organic cut-paper shapes with rough edges · flat, with a little print grain · playful asymmetric layouts with lots of air · cut-paper illustration, silhouettes, simple symbols · motion: Bass-style shapes that cut and reassemble.
@@ -89,6 +99,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **Cliché / dating risk:** "mustard and teal retro" is an Etsy and Mad Men cliché; the cut-paper craft is what saves it.
 - **References:** Saul Bass's "Anatomy of a Murder" titles (1959) · Paul Rand's "Thoughts on Design" (1947) · [Herman Miller](https://www.hermanmiller.com) · Alexander Girard's textiles.
 - **Combines well with:** letterpress, collage, cinematic motion, Googie as a single accent.
+
+<a id="corporate-modernism"></a>
 
 ### Corporate modernism · `corporate-modernism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/corporate-modernism.jpg)
 - **What:** the 1956–80 identity programme: one mark, one typeface, one colour and a rulebook (Rand's IBM, Aicher's Lufthansa, Chermayeff & Geismar's Mobil, NASA's worm).
@@ -100,6 +112,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **References:** Paul Rand's IBM 8-bar logo (1972) · Otl Aicher's Lufthansa (1962) · NASA Graphics Standards Manual (Danne & Blackburn, 1975) · [IBM Design Language](https://www.ibm.com/design/language/).
 - **Combines well with:** technical manual, wayfinding pictograms, enterprise-dense UI, no-motion.
 
+<a id="editorial"></a>
+
 ### Editorial / magazine · `editorial` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/editorial.jpg)
 - **What:** the magazine page on screen: serif display, columns, standfirsts, big pictures, the reader treated as a guest.
 - **Signature traits:** high-contrast serif headlines, a text serif or quiet sans, italic standfirsts, small-caps labels · black on white or cream with one accent · square images · hairlines · multi-column grid with deliberate asymmetry, drop caps and captions · commissioned photography or illustration · motion: slow fades.
@@ -109,6 +123,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **Cliché / dating risk:** low dating; the risk is "every Substack" blandness.
 - **References:** [The New York Times Magazine](https://www.nytimes.com/section/magazine) · [The Atlantic](https://www.theatlantic.com) · [Stripe Press](https://press.stripe.com).
 - **Combines well with:** Swiss labels, documentary photography, duotone, an ASCII or engraving device.
+
+<a id="broadsheet"></a>
 
 ### Newspaper / broadsheet · `broadsheet` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/broadsheet.jpg)
 - **What:** the front page: masthead, dense columns, rules and datelines. Authority by density.
@@ -120,6 +136,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **References:** [Financial Times](https://www.ft.com) · [The Guardian](https://www.theguardian.com) · The Wall Street Journal's hedcuts · [Semafor](https://www.semafor.com).
 - **Combines well with:** engraving, halftone, editorial, no-motion.
 
+<a id="brutalist-print"></a>
+
 ### Brutalist print (Dutch, post-Swiss) · `brutalist-print` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/brutalist-print.jpg)
 - **What:** raw, oversized, system-led print from the Dutch school: one grotesk set huge, cropped, on exposed structure.
 - **Signature traits:** one heavy grotesk, cropped off the edge, tight leading · pure black and white plus one loud field colour · square · no depth · the structure is shown (grid lines, numbers, rules) · imagery: none, or hard-cropped photos · motion: hard cuts.
@@ -129,6 +147,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **Cliché / dating risk:** every art-school graduate show; dates slowly but signals "studio", not "product".
 - **References:** Experimental Jetset's Whitney "Responsive W" identity (2013) · Wim Crouwel's Stedelijk posters · [Stedelijk Museum](https://www.stedelijk.nl) (Mevis & van Deursen).
 - **Combines well with:** web brutalism, documentary photography, stepped motion.
+
+<a id="riso"></a>
 
 ### Risograph · `riso` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/riso.jpg)
 - **What:** the stencil-duplicator print look: 1–3 fluorescent spot inks, misregistration, grain and overprint. It also covers riso as an imagery treatment.
@@ -140,6 +160,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **References:** [Risotto Studio](https://www.risottostudio.com) · Hato Press (London) · Colorama's riso colour charts.
 - **Combines well with:** zine, halftone, doodle illustration, spring motion.
 
+<a id="zine"></a>
+
 ### Zine / DIY · `zine` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/zine.jpg)
 - **What:** photocopied self-publishing: typewriter, marker, tape, staples, cut-outs.
 - **Signature traits:** typewriter mono, marker handwriting, letters cut from print · black on photocopy white with at most one highlighter colour · torn edges, tape, items rotated 1–4° · toner noise instead of UI shadows · collage layouts with hand-drawn arrows · xerox photos and scribbles · motion: jittery stop-motion.
@@ -149,6 +171,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **Cliché / dating risk:** "grunge-lite" stock templates; authentic only if the brand really is DIY.
 - **References:** "Sniffin' Glue" (1976–77) · Riot grrrl zines (early 1990s) · Maximum Rocknroll (1982–2019).
 - **Combines well with:** punk, riso, collage, doodle, stepped motion.
+
+<a id="letterpress"></a>
 
 ### Letterpress · `letterpress` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/letterpress.jpg)
 - **What:** metal and wood type pressed into thick paper: bite, uneven ink, ornaments, centred job-printing layouts.
@@ -160,6 +184,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **References:** [Hatch Show Print](https://hatchshowprint.com) (Nashville) · Hamilton Wood Type Museum · Kelmscott Press (with Arts & Crafts).
 - **Combines well with:** Victorian, engraving, food craft, no-motion.
 
+<a id="wayfinding"></a>
+
 ### Signage / wayfinding · `wayfinding` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/wayfinding.jpg)
 - **What:** the language of transport and public signs (Kinneir & Calvert, Aicher, DIN): legible at distance, pictograms, arrows, colour-coded panels.
 - **Signature traits:** a signage sans with open apertures and generous spacing · white on deep panels (green, blue, black) plus one code colour per line · rounded-corner panels, circles for line numbers, arrows as type · flat · panel-and-grid layouts, numbers and arrows lead · pictograms only · motion: functional, like a departure board.
@@ -169,6 +195,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 - **Cliché / dating risk:** low dating; overused as "airport chic" in merch.
 - **References:** Kinneir & Calvert's UK road signs (1965) · Otl Aicher's Munich 1972 pictograms · [Transport for London](https://tfl.gov.uk) (Johnston) · Schiphol wayfinding (Mijksenaar).
 - **Combines well with:** Swiss, corporate modernism, civic, functional micro motion.
+
+<a id="technical-manual"></a>
 
 ### Technical manual (industrial) · `technical-manual` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/technical-manual.jpg)
 - **What:** the Braun / Dieter Rams line made current by Teenage Engineering and Nothing: product as instrument, labels, part numbers, diagrams.
@@ -184,6 +212,8 @@ The grammar most brand work still runs on. Grids, type as image, flat colour. Lo
 
 Used in branding as a cultural root: the brand borrows an era's materials, light and ornament. The failure mode is costume. Take the era's *method* (how it made images, how it set type), not its clip art.
 
+<a id="renaissance"></a>
+
 ### Renaissance / classical · `renaissance` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/renaissance.jpg)
 - **What:** 15th–16th-century Italy: humanist letterforms, proportion, sfumato (soft smoky transitions, Leonardo) and chiaroscuro (hard light from dark, Caravaggio is its Baroque extreme).
 - **Signature traits:** Roman inscriptional capitals and old-style serifs with real small caps and italics · earth pigments: lead white, ochre, sinopia red, umber, verdigris, lapis used rarely · square or arched frames, no radius · depth from painted light (soft gradients, vignettes), never UI shadows · centred, proportioned layouts with wide margins (canon of page proportions) · public-domain paintings, silverpoint and red-chalk drawings · motion: slow dissolves, like light moving.
@@ -193,6 +223,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** museum-shop pastiche; painted heads with sunglasses. The real thing doesn't date; the meme versions date in months.
 - **References:** Leonardo's sfumato in the Mona Lisa · Caravaggio's chiaroscuro · Aldus Manutius's italic (1501) · [Uffizi](https://www.uffizi.it).
 - **Combines well with:** Swiss editorial (modern structure, classical image), ASCII or dither treatment of the paintings, no-motion or cinematic.
+
+<a id="baroque"></a>
 
 ### Baroque · `baroque` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/baroque.jpg)
 - **What:** 17th-century drama: deep darks, gold, curves, movement, abundance.
@@ -204,6 +236,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** Caravaggio's "The Calling of Saint Matthew" (1600) · Bernini's Baldacchino · [Versace](https://www.versace.com) (the Medusa and Greek-key world) · Dolce & Gabbana's Sicilian Baroque campaigns.
 - **Combines well with:** maximalism, didone luxury, cinematic motion.
 
+<a id="medieval"></a>
+
 ### Medieval / illuminated · `medieval` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/medieval.jpg)
 - **What:** manuscripts and heraldry: blackletter and uncials, illuminated initials, gold leaf, flat jewel colours.
 - **Signature traits:** textura blackletter or uncial display, a book serif for reading · vellum with ultramarine, vermilion, malachite green and gold · rectangular frames, decorated initials, heraldic shapes (shields, banners) · flat colour, gold catches light · margins full of drolleries, ruled columns · illuminated letters, heraldry, woodcuts · motion: rare; page turns.
@@ -213,6 +247,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** "Ye Olde" pastiche; Renaissance-fair kitsch.
 - **References:** the Book of Kells (c. 800) · Très Riches Heures du Duc de Berry (1410s) · Elden Ring's title lettering and heraldry (FromSoftware, 2022) · [The Morgan Library manuscripts](https://www.themorgan.org).
 - **Combines well with:** blackletter type voice, gaming, letterpress.
+
+<a id="victorian"></a>
 
 ### Victorian · `victorian` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/victorian.jpg)
 - **What:** 1840–1900 commercial print: playbills and apothecary labels with many typefaces per page, ornament, engravings.
@@ -224,6 +260,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** Victorian playbills · [Hendrick's Gin](https://www.hendricksgin.com) · [Penhaligon's](https://www.penhaligons.com) · Lea & Perrins's label.
 - **Combines well with:** letterpress, engraving, food craft.
 
+<a id="arts-and-crafts"></a>
+
 ### Arts & Crafts · `arts-and-crafts` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/arts-and-crafts.jpg)
 - **What:** William Morris and the 1880–1920 movement: handmade against the machine, dense botanical patterns, the book as craft.
 - **Signature traits:** heavy roman and gothic-roman book faces, decorated initials · indigo, madder red, weld yellow, willow green, natural dyes · interlaced vines and leaves, framed text blocks · flat woodblock colour, no shading · dense symmetrical repeat patterns, wide margins · woodcuts, textile repeats · motion: none.
@@ -233,6 +271,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** Morris patterns on tote bags and phone cases; low dating if the pattern is your own.
 - **References:** William Morris's "Strawberry Thief" (1883) · the Kelmscott Chaucer (1896) · Morris & Co. wallpapers · [Liberty London](https://www.libertylondon.com).
 - **Combines well with:** letterpress, engraving and botanical plates, wellness-organic.
+
+<a id="art-nouveau"></a>
 
 ### Art Nouveau · `art-nouveau` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/art-nouveau.jpg)
 - **What:** 1890–1910 organic modern (Mucha, Horta, Guimard, Klimt's Secession): whiplash curves, plant forms, women framed by halos.
@@ -244,6 +284,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** Alphonse Mucha's "Job" cigarette paper poster (1896) · Hector Guimard's Paris Métro entrances · Klimt's Secession posters · [Fragonard](https://www.fragonard.com).
 - **Combines well with:** engraving and botanical plates, beauty, Art Deco for a 1920s transition.
 
+<a id="art-deco"></a>
+
 ### Art Deco · `art-deco` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/art-deco.jpg)
 - **What:** 1920s–30s machine-age luxury: geometric ornament, sunbursts, stepped forms, gold on black.
 - **Signature traits:** high-waisted geometric display faces, thin-thick contrast, wide tracking in caps · black, gold, cream, emerald or navy · stepped ziggurats, fans, sunbursts, chevrons, symmetric · metallic gradients on gold lines only · strict symmetry, framed centre panels · geometric ornament, posters by Cassandre · motion: symmetric reveals, lines drawing from the centre.
@@ -253,6 +295,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** "Gatsby party" theme; wedding invitations.
 - **References:** A.M. Cassandre's "Normandie" poster (1935) · the Chrysler Building · [The Savoy](https://www.thesavoylondon.com) · Gatsby-themed everything (the cliché).
 - **Combines well with:** didone luxury, nightlife, cinematic motion.
+
+<a id="streamline"></a>
 
 ### Streamline Moderne · `streamline` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/streamline.jpg)
 - **What:** 1930s–40s American industrial design (Loewy, Dreyfuss): speed lines, rounded corners, chrome, aerodynamic everything.
@@ -264,6 +308,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** Raymond Loewy's Pennsylvania Railroad S1 locomotive (1939) · the Airstream trailer · Dreyfuss's 20th Century Limited · [Smeg](https://www.smeg.com) (appliance styling).
 - **Combines well with:** retro-futurism, Googie, Art Deco.
 
+<a id="googie"></a>
+
 ### Googie / Atomic age · `googie` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/googie.jpg)
 - **What:** 1950s–60s American space-age commercial style: boomerangs, starbursts, atoms, cantilevered diner signs.
 - **Signature traits:** jaunty script and bouncy display caps · turquoise, coral, mustard, pink on cream · boomerangs, starbursts, atoms, parabolas, kidney shapes · flat, two-tone · tilted, playful compositions, signage-like · space-age icons, dingbat stars · motion: twinkling, orbiting atoms.
@@ -273,6 +319,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** reads as theme-park nostalgia; narrow use.
 - **References:** the Welcome to Fabulous Las Vegas sign (Betty Willis, 1959) · LAX Theme Building · The Jetsons (1962).
 - **Combines well with:** mid-century, streamline, kids-playful.
+
+<a id="psychedelic"></a>
 
 ### Psychedelic · `psychedelic` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/psychedelic.jpg)
 - **What:** 1966–70 San Francisco concert posters (Wes Wilson, Victor Moscoso, Bonnie MacLean): letters that melt to fill space, vibrating complementary colours.
@@ -284,6 +332,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** Wes Wilson's Fillmore posters (1966) · Victor Moscoso's Neon Rose series · Milton Glaser's Dylan poster (1967).
 - **Combines well with:** maximalism, liquid blobs, kinetic type.
 
+<a id="pop-art"></a>
+
 ### Pop art · `pop-art` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/pop-art.jpg)
 - **What:** 1955–70 Warhol and Lichtenstein: comics, Ben-Day dots, mass-product repetition, flat primaries.
 - **Signature traits:** comic-book lettering, speech bubbles, heavy black outlines · primaries plus hot pink on white · bold outlines, bursts ("POW"), rounded bubbles · Ben-Day dot shading · repeated grids (Warhol), single big panels (Lichtenstein) · screenprinted photos, comic frames · motion: pops and bursts.
@@ -293,6 +343,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** "POW!" and Warhol grids are a cliché; screen-printed portraits of the founder are worse.
 - **References:** Lichtenstein's "Whaam!" (1963) · Warhol's "Campbell's Soup Cans" (1962) · Warhol's banana sleeve for The Velvet Underground (1967).
 - **Combines well with:** halftone, neobrutalism, spring motion.
+
+<a id="surrealism"></a>
 
 ### Surrealism · `surrealism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/surrealism.jpg)
 - **What:** dream logic from Magritte and Dalí, used in branding as impossible objects in calm, clean settings.
@@ -304,6 +356,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** Magritte's "The Son of Man" (1964) · Dalí's "The Persistence of Memory" (1931) · Mailchimp's 2018 rebrand illustrations (Collins).
 - **Combines well with:** editorial, 3D clay, cinematic motion.
 
+<a id="memphis"></a>
+
 ### Memphis · `memphis` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/memphis.jpg)
 - **What:** Ettore Sottsass's 1981–87 Milan collective: clashing pastels and primaries, squiggles, terrazzo, confetti geometry.
 - **Signature traits:** geometric or quirky display sans · pastel pink, mint, yellow, cobalt, black on white · squiggles, zigzags, dots, confetti triangles, terrazzo · flat with hard offset shadows · scattered asymmetric shapes around the content · patterns over photos · motion: bouncy, shapes rotating.
@@ -313,6 +367,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** the 2016–19 revival was everywhere; dates fast, often mistaken for Alegria.
 - **References:** Sottsass's "Carlton" bookcase (1981) · Nathalie Du Pasquier's patterns · the "Saved by the Bell" titles (1989).
 - **Combines well with:** neobrutalism, pop art, spring motion.
+
+<a id="new-wave"></a>
 
 ### New Wave typography · `new-wave` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/new-wave.jpg)
 - **What:** Wolfgang Weingart and April Greiman, 1975–88: the Swiss grid loosened, stepped and layered, with textures and early-computer bitmaps.
@@ -324,6 +380,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** Wolfgang Weingart's Kunstgewerbeschule Basel posters (1970s) · April Greiman's "Does It Make Sense?" (Design Quarterly 133, 1986).
 - **Combines well with:** Swiss, postmodern, kinetic type.
 
+<a id="postmodern"></a>
+
 ### Postmodern / deconstructivist · `postmodern` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/postmodern.jpg)
 - **What:** Emigre and Cranbrook, 1985–98: layered texts, multiple readings, vernacular citation, type as theory.
 - **Signature traits:** odd custom faces (Emigre fonts), mixed scales and directions, overlapping text · muted greys with acid accents · fragmented geometry, cut columns · layered transparency · broken grid, text running vertically, multiple entry points · vernacular images, signage, low-res scans · motion: glitchy reflow.
@@ -333,6 +391,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** looks like 1995 Emigre if copied; a quiet revival in 2020s design schools.
 - **References:** Emigre magazine (Rudy VanderLans, Zuzana Licko) · Katherine McCoy's Cranbrook graduate design poster (1989) · Neville Brody's "The Face" (1980s).
 - **Combines well with:** grunge, anti-design, kinetic type.
+
+<a id="punk"></a>
 
 ### Punk · `punk` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/punk.jpg)
 - **What:** 1976–80 UK and US punk: ransom-note letters, photocopies, safety pins, fluorescent ink on black and white.
@@ -344,6 +404,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** Jamie Reid's "God Save the Queen" sleeve (1977) · "Sniffin' Glue" · [Vivienne Westwood](https://www.viviennewestwood.com).
 - **Combines well with:** zine, collage, glitch, stepped motion.
 
+<a id="grunge"></a>
+
 ### Grunge · `grunge` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/grunge.jpg)
 - **What:** David Carson's Ray Gun and 1990s distressed type: degraded scans, overlapping text, illegibility as attitude.
 - **Signature traits:** distressed and eroded fonts, mixed sizes, text overprinted on text · desaturated browns, olive, dirty white, black · scratches, stains, film burns · texture over everything · collapsed grid, columns cut by images · grainy photos, scanned textures · motion: shaky, flicker, film burn.
@@ -353,6 +415,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** reads as 1994 unless deliberately ironic; Y2K revival is pulling it back.
 - **References:** David Carson's Ray Gun (1992–95) · Nine Inch Nails "The Downward Spiral" packaging (Russell Mills, 1994) · Se7en's title sequence (Kyle Cooper, 1995).
 - **Combines well with:** punk, glitch, documentary photography.
+
+<a id="japanese-ma"></a>
 
 ### Japanese minimal (ma, wabi-sabi) · `japanese-ma` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/japanese-ma.jpg)
 - **What:** ma (meaningful empty space) and wabi-sabi (beauty in the imperfect and impermanent): Kenya Hara's Muji, Ikko Tanaka.
@@ -364,6 +428,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** [Muji](https://www.muji.com) (Kenya Hara) · Ikko Tanaka's "Nihon Buyo" poster (1981) · [Aesop](https://www.aesop.com) stores in Japan.
 - **Combines well with:** editorial, Japandi, no-motion.
 
+<a id="scandinavian"></a>
+
 ### Scandinavian · `scandinavian` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/scandinavian.jpg)
 - **What:** Nordic functional warmth: bright, clean, soft-geometric, with one playful colour and lots of white light.
 - **Signature traits:** soft geometric or humanist sans, medium weights, friendly lowercase · white, light birch, black, and one clear colour (tomato, forest green, sky) · soft rounded corners, simple pictograms · flat, maybe a soft shadow · clean grid, generous rhythm · bright daylight photos, simple flat illustration · motion: calm, gentle ease.
@@ -374,6 +440,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **References:** [HAY](https://www.hay.com) · [Muuto](https://www.muuto.com) · the Norwegian passport (Neue Design Studio, 2020).
 - **Combines well with:** rounded sans, flat vector illustration, spring motion (gently).
 
+<a id="ukiyo-e"></a>
+
 ### Ukiyo-e · `ukiyo-e` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/ukiyo-e.jpg)
 - **What:** Edo-period woodblock prints (Hokusai, Hiroshige): flat colour, strong outlines, Prussian blue, bokashi gradients.
 - **Signature traits:** bold brush-like display, a calm text serif · Prussian blue, indigo, vermilion, soft green, paper beige · strong black outlines, stylised waves and clouds · flat colour with bokashi (one-colour gradient bands) · asymmetric compositions, cartouches with text, extreme crops · woodblock scenes, waves, mountains · motion: slow parallax of layers.
@@ -383,6 +451,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 - **Cliché / dating risk:** The Great Wave on everything; low dating, high cliché.
 - **References:** Hokusai's "The Great Wave off Kanagawa" (c. 1831) · Hiroshige's "One Hundred Famous Views of Edo" · [Uniqlo UT](https://www.uniqlo.com) collaborations with museums.
 - **Combines well with:** Japanese minimal, painterly public-domain art, editorial.
+
+<a id="islamic-geometric"></a>
 
 ### Islamic geometric · `islamic-geometric` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/islamic-geometric.jpg)
 - **What:** girih and star tessellations from Alhambra to Isfahan: infinite pattern from compass-and-straightedge construction.
@@ -398,6 +468,8 @@ Used in branding as a cultural root: the brand borrows an era's materials, light
 
 Interface languages, from platform systems (Material, Fluent, HIG) to surface trends (glass, neumorphism) to retro-digital nostalgia. These date fastest of all families: check the trend lifecycle in `style-picking.md` before you build a brand on one.
 
+<a id="skeuomorphism"></a>
+
 ### Skeuomorphism · `skeuomorphism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/skeuomorphism.jpg)
 - **What:** pre-2013 iOS and Mac OS X: interfaces that imitate real materials (leather, felt, brushed metal, paper, glass buttons).
 - **Signature traits:** system sans with embossed or engraved text shadows · material colours: leather brown, felt green, linen, chrome · rounded glossy buttons, stitched edges · real lighting: gradients, highlights, inner and drop shadows · objects as layouts (a notepad, a bookshelf, a mixing desk) · photoreal textures and icons · motion: physical (page curls, switches flicking).
@@ -407,6 +479,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** dated in 2013 and now returning as "tactile" nostalgia; the stitched leather is the joke.
 - **References:** iOS 6 Notes and Game Center (2012) · Apple's Find My Friends leather (2011) · audio plug-ins (Arturia, Native Instruments), where it never left.
 - **Combines well with:** retro-OS, technical manual, spring motion.
+
+<a id="retro-os"></a>
 
 ### Retro OS (Classic Mac / Windows 9x) · `retro-os` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/retro-os.jpg)
 - **What:** 1984–2000 desktop chrome: bevelled grey windows, title bars, pixel fonts, dialog boxes.
@@ -418,6 +492,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** Susan Kare's original Macintosh icons (1984) · Windows 95 · [Poolsuite](https://poolsuite.net) (Mac OS 8 styling) · [98.css](https://jdan.github.io/98.css/).
 - **Combines well with:** pixel, dithered, Web 1.0.
 
+<a id="web1"></a>
+
 ### Web 1.0 / GeoCities · `web1` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/web1.jpg)
 - **What:** the amateur web of 1995–2002: tiled backgrounds, Times New Roman, blue links, GIFs, visitor counters, "under construction".
 - **Signature traits:** Times and Comic Sans and Arial, default sizes, underlined blue links · tiled star or cloud backgrounds, saturated defaults · tables with bevel borders, HR rules · no CSS depth beyond `border="1"` · centred everything, marquee text, webrings · animated GIFs, clip art · motion: blinking, marquees (respect reduced motion).
@@ -427,6 +503,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** the joke only works once per campaign.
 - **References:** GeoCities archive at [oocities.org](https://www.oocities.org) · the Space Jam (1996) site, live until 2021 · [Neocities](https://neocities.org) communities.
 - **Combines well with:** retro OS, pixel, anti-design.
+
+<a id="y2k"></a>
 
 ### Y2K · `y2k` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/y2k.jpg)
 - **What:** 1998–2004 millennium optimism: chrome type, bubble shapes, translucent plastics, blue and silver, futurism-for-teens.
@@ -438,6 +516,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** the iMac G3 (1998) · Britney Spears-era album art and MTV TRL · [Blumarine](https://www.blumarine.com) revival · Charli XCX's chrome covers ("Pop 2", 2017).
 - **Combines well with:** holographic, Frutiger Aero, kinetic type.
 
+<a id="frutiger-aero"></a>
+
 ### Frutiger Aero · `frutiger-aero` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/frutiger-aero.jpg)
 - **What:** 2004–2013 Windows Vista/7 and Wii-era optimism: glossy aqua, bubbles, green fields, blue skies, humanist sans.
 - **Signature traits:** humanist sans (Frutiger, Segoe) · sky blue, grass green, water aqua, white · glossy rounded buttons, bubbles, orbs · glass gloss with a hard top highlight, reflections · centred, airy, nature backgrounds · stock photos of skies, water drops, fish, aurora wallpapers · motion: floating bubbles, soft glow pulses.
@@ -447,6 +527,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** named and revived around 2017–2022 online; niche nostalgia.
 - **References:** Windows Vista / 7 Aero (2007–09) · the Nintendo Wii menus (2006) · Windows Live Messenger · the name, coined in 2017 and catalogued by the Consumer Aesthetics Research Institute.
 - **Combines well with:** Y2K, glassmorphism, blob.
+
+<a id="flat"></a>
 
 ### Flat · `flat` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/flat.jpg)
 - **What:** the 2012–14 reaction to skeuomorphism: no gradients, no shadows, solid saturated colours, simple icons.
@@ -458,6 +540,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** iOS 7 (2013) · Windows 8 Metro (2012) · [Flat UI Colors](https://flatuicolors.com) (the cliché palette).
 - **Combines well with:** flat vector illustration, Material, functional micro motion.
 
+<a id="metro"></a>
+
 ### Metro (Microsoft design language) · `metro` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/metro.jpg)
 - **What:** Windows Phone 7 / Windows 8 (2010–15): typography-first, live tiles, edge-to-edge colour, "authentically digital".
 - **Signature traits:** big light-weight Segoe headings, lowercase, overflowing the screen edge · solid tile colours (cobalt, magenta, lime, orange) on black or white · square tiles, no radius · completely flat · panoramic horizontal layouts, tile grids · pictogram icons, white on colour · motion: tiles flip, turnstile transitions, content slides in staggered.
@@ -467,6 +551,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** dated, and owned by Microsoft in people's memory.
 - **References:** Windows Phone 7 (2010) · Zune HD (2009) · Windows 8 start screen (2012).
 - **Combines well with:** Swiss, flat, functional motion.
+
+<a id="material"></a>
 
 ### Material Design (M2 → M3 Expressive) · `material` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/material.jpg)
 - **What:** Google's system. M1/M2 (2014–20): paper and ink, elevation shadows. M3 / Material You (2021+): dynamic colour from the wallpaper, tonal palettes, big radii, pill buttons; M3 Expressive (2025) adds shape morphs and springier motion.
@@ -478,6 +564,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** [Material Design 3](https://m3.material.io) · Google's Pixel UI · [Material You colour generator](https://material-foundation.github.io/material-theme-builder/).
 - **Combines well with:** flat illustration, rounded sans, spring motion (M3 Expressive).
 
+<a id="apple-hig"></a>
+
 ### Apple HIG (incl. Liquid Glass) · `apple-hig` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/apple-hig.jpg)
 - **What:** Apple's platform language: iOS 7–18 flat-with-blur, grouped lists, SF type; since 2025 Liquid Glass adds refractive, lens-like translucent controls floating over content.
 - **Signature traits:** SF Pro with large bold titles, optical sizes · system colours (blue tint, grouped grey backgrounds), vibrant materials · continuous-curvature "squircle" corners · blur materials; Liquid Glass bends and highlights what's behind · inset grouped lists, tab bars, sheets · product photography on white or black · motion: spring physics, fluid gestures.
@@ -487,6 +575,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** "Apple-inspired premium" is the most common landing page; Liquid Glass imitations will date with iOS 26.
 - **References:** [Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) · iOS 26 Liquid Glass (2025) · [apple.com](https://www.apple.com) product pages.
 - **Combines well with:** studio product photography, spring motion, minimalism.
+
+<a id="fluent"></a>
 
 ### Fluent · `fluent` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/fluent.jpg)
 - **What:** Microsoft's language since 2017 (Fluent 2 since 2023): light, depth, Mica and Acrylic materials, rounded, calm productivity.
@@ -498,6 +588,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** [Fluent 2](https://fluent2.microsoft.design) · Windows 11 · Microsoft Teams.
 - **Combines well with:** enterprise-dense, functional micro motion, 3D clay emoji.
 
+<a id="glassmorphism"></a>
+
 ### Glassmorphism · `glassmorphism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/glassmorphism.jpg)
 - **What:** the 2020–22 trend: frosted translucent cards floating over colourful blurred blobs.
 - **Signature traits:** geometric or neutral sans, white text · vivid gradient blobs behind, white at 10–25 % alpha on top · rounded cards 16–24 px with 1 px light borders · `backdrop-filter` blur, soft shadows · floating cards over a colour field · abstract blobs, 3D shapes · motion: blobs drifting slowly.
@@ -507,6 +599,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** peaked 2021 (Dribbble); dated now except as Apple's Liquid Glass (a different, refractive idea).
 - **References:** macOS Big Sur control centre (2020) · Michal Malewicz's "Glassmorphism" article (2020) · Windows 11 Acrylic.
 - **Combines well with:** aurora gradients, Frutiger Aero, devtool-dark (sparingly).
+
+<a id="neumorphism"></a>
 
 ### Neumorphism · `neumorphism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/neumorphism.jpg)
 - **What:** "soft UI" (2019–20): elements extruded from or pressed into a single-colour surface with paired light and dark shadows.
@@ -518,6 +612,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** Alexander Plyuto's Dribbble banking concept (2019) · [neumorphism.io](https://neumorphism.io) generator.
 - **Combines well with:** minimal, rounded sans; nothing heavy.
 
+<a id="claymorphism"></a>
+
 ### Claymorphism · `claymorphism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/claymorphism.jpg)
 - **What:** 2021–23 puffy 3D: inflated pastel cards and buttons that look like soft clay, often with 3D clay illustrations.
 - **Signature traits:** rounded friendly sans, bold · candy pastels (lilac, peach, mint, sky) · very large radii, pill and blob shapes · double inner shadows (light top, dark bottom) plus a soft outer drop · floating cards, playful layouts · 3D clay characters and icons · motion: squishy springs.
@@ -527,6 +623,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** dated quickly with the 3D-emoji wave.
 - **References:** Michal Malewicz's "Claymorphism" article (2021) · Microsoft Fluent 3D emoji.
 - **Combines well with:** 3D clay illustration, kids-playful, spring motion.
+
+<a id="neobrutalism"></a>
 
 ### Neobrutalism · `neobrutalism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/neobrutalism.jpg)
 - **What:** the 2021+ web trend: thick black borders, hard offset shadows, flat saturated fills, chunky sans, on warm backgrounds.
@@ -538,6 +636,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** [Gumroad](https://gumroad.com) · [neobrutalism.dev](https://www.neobrutalism.dev) component kit · Hype4's "Neubrutalism" articles (2022).
 - **Combines well with:** Memphis, pop art, stepped or spring motion.
 
+<a id="web-brutalism"></a>
+
 ### Web brutalism · `web-brutalism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/web-brutalism.jpg)
 - **What:** raw HTML honesty (brutalistwebsites.com, 2014+): default fonts, visible structure, no decoration, form follows markup.
 - **Signature traits:** system serif or mono at default sizes, underlined links · black on white, default blue links, maybe one harsh colour · rectangles, `<hr>`, borders as tables · no depth · document flow, often a single column or raw table · images unprocessed or none · motion: none.
@@ -547,6 +647,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** now a recognisable "designer pretending not to design" signal.
 - **References:** [brutalistwebsites.com](https://brutalistwebsites.com) · [Bloomberg Businessweek's "Code" issue (2015)](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) · [Craigslist](https://craigslist.org) (vernacular).
 - **Combines well with:** brutalist print, terminal, no-motion.
+
+<a id="devtool-dark"></a>
 
 ### Dev-tool dark (Vercel / Linear) · `devtool-dark` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/devtool-dark.jpg)
 - **What:** the 2020s developer-product look: near-black, hairline borders, crisp sans, mono details, one subtle glow.
@@ -558,6 +660,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** [Linear](https://linear.app) · [Vercel](https://vercel.com) · [Raycast](https://www.raycast.com) · [Resend](https://resend.com).
 - **Combines well with:** terminal or ASCII devices, mono-forward, functional micro motion.
 
+<a id="shadcn"></a>
+
 ### Shadcn-minimal · `shadcn` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/shadcn.jpg)
 - **What:** the default of shadcn/ui + Tailwind (2023+): zinc neutrals, black primary buttons, small radius, quiet borders, Geist or Inter.
 - **Signature traits:** Geist/Inter at medium weights, small text sizes · zinc or slate neutrals, black primary, near-zero colour · 6–8 px radius, 1 px zinc-200 borders · subtle shadow-sm only · cards, forms, data tables, sidebar app layouts · Lucide icons, no illustration · motion: minimal, Radix defaults.
@@ -567,6 +671,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** the 2024–26 default of every v0/AI-built app; identity zero.
 - **References:** [shadcn/ui](https://ui.shadcn.com) · [v0](https://v0.dev) output · [Cal.com](https://cal.com).
 - **Combines well with:** one brand device (a colour, a type voice, an ASCII motif) to escape the default.
+
+<a id="enterprise-dense"></a>
 
 ### Enterprise / dashboard-dense · `enterprise-dense` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/enterprise-dense.jpg)
 - **What:** high-density B2B systems (IBM Carbon, Ant Design, SAP Fiori, Salesforce Lightning): many controls, tables, small type, blue actions.
@@ -578,6 +684,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** [IBM Carbon](https://carbondesignsystem.com) · [Ant Design](https://ant.design) · [SAP Fiori](https://experience.sap.com/fiori-design-web/) · [Salesforce Lightning](https://www.lightningdesignsystem.com).
 - **Combines well with:** corporate modernism, mono-forward, no-motion.
 
+<a id="minimalism"></a>
+
 ### Minimalism · `minimalism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/minimalism.jpg)
 - **What:** reduction as the message: few elements, much space, one typeface, near-monochrome. "Less, but better" (Rams).
 - **Signature traits:** one neutral sans or serif in 2–3 sizes · black, white, one grey, maybe one accent used once · square or small radius · no shadows, few borders; space does the grouping · centred or strict single column, generous margins · one large product image or none · motion: barely there, slow fades.
@@ -587,6 +695,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** doesn't date; is invisible if the content isn't exceptional.
 - **References:** [Aesop](https://www.aesop.com) · [Apple](https://www.apple.com) product pages · [COS](https://www.cos.com) · Dieter Rams's ten principles.
 - **Combines well with:** editorial serif accent, studio product photography, no-motion.
+
+<a id="maximalism"></a>
 
 ### Maximalism · `maximalism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/maximalism.jpg)
 - **What:** more is more, deliberately: clashing colour, many typefaces, layered patterns and images, controlled by a strong idea.
@@ -598,6 +708,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** [Gucci under Alessandro Michele](https://www.gucci.com) (2015–22) · [MSCHF](https://mschf.com) · Spotify Wrapped (yearly).
 - **Combines well with:** collage, kinetic type, spring motion.
 
+<a id="anti-design"></a>
+
 ### Anti-design / ugly · `anti-design` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/anti-design.jpg)
 - **What:** deliberate rule-breaking (2018+): clashing defaults, distorted type, bad crops, chaos as authenticity.
 - **Signature traits:** stretched or distorted type, default fonts mixed with expressive ones · garish defaults (pure RGB, neon on neon) · random shapes and rotation · inconsistent depth, deliberately wrong drop shadows · asymmetric, overlapping, broken grid · low-res images, MS Paint marks, stickers · motion: jarring, cursor trails.
@@ -607,6 +719,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** ugliness is its own trend now; Balenciaga made it luxury.
 - **References:** [Balenciaga](https://www.balenciaga.com) (2019–23 site) · [Yale School of Art](https://www.art.yale.edu) (wiki site) · [Bloomberg Businessweek covers](https://www.bloomberg.com/businessweek) under Richard Turley.
 - **Combines well with:** web brutalism, glitch, maximalism.
+
+<a id="japandi"></a>
 
 ### Japandi minimal · `japandi` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/japandi.jpg)
 - **What:** Japanese restraint plus Scandinavian warmth: oak, linen, clay, low contrast, soft serif or light sans. The interiors and DTC home look.
@@ -618,6 +732,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** [Kinfolk](https://www.kinfolk.com) · [Norm Architects](https://normcph.com) · [Karimoku Case](https://www.karimoku-case.com).
 - **Combines well with:** editorial photography, Japanese minimal, no-motion.
 
+<a id="aurora"></a>
+
 ### Aurora gradients · `aurora` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/aurora.jpg)
 - **What:** soft blurred colour blooms glowing behind content on a dark background, like northern lights. The 2021–25 AI-startup hero.
 - **Signature traits:** neutral sans, white text, gradient-filled headline words · dark navy or black with violet, cyan, pink and green blooms · rounded cards, pills · large blurred radial gradients, glow, no hard shadows · centred hero above the glow · no imagery, the light is the image · motion: blooms drifting slowly.
@@ -627,6 +743,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** the defining AI-startup cliché of 2023–25; dates fast.
 - **References:** early [Linear](https://linear.app) hero glows · [Raycast](https://www.raycast.com) · most AI landing pages of 2023–25 (the cliché).
 - **Combines well with:** devtool-dark, glassmorphism; prefer a single bloom.
+
+<a id="mesh-gradient"></a>
 
 ### Mesh gradient · `mesh-gradient` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/mesh-gradient.jpg)
 - **What:** multi-point smooth colour fields used as a brand material, usually bright and saturated on light pages (Stripe 2020's animated WebGL gradient).
@@ -638,6 +756,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** [Stripe](https://stripe.com) (2020 home) · Apple's macOS Big Sur wallpaper (2020) · conference sites built from Stripe's open gradient code.
 - **Combines well with:** Swiss grid, editorial type, functional motion.
 
+<a id="holographic"></a>
+
 ### Holographic / iridescent · `holographic` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/holographic.jpg)
 - **What:** oil-slick and holographic foil: pastel rainbow sheens that shift, pearlescent surfaces.
 - **Signature traits:** clean extended sans or chrome type · pearl white, lilac, mint, peach, sky shifting through each other · smooth rounded objects, pills, liquid shapes · conic and linear gradient sheens, specular highlights · centred hero objects on pale ground · 3D foil renders, iridescent textures · motion: sheen rotating with the cursor or scroll.
@@ -647,6 +767,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** foil-on-everything 2017–19 and Web3 2021; dates fast.
 - **References:** [Glossier](https://www.glossier.com) Play's chrome packaging (2019) · [Paco Rabanne](https://www.pacorabanne.com) metallic campaigns · foil festival wristbands and merch (the cliché).
 - **Combines well with:** Y2K, blob, beauty.
+
+<a id="blob"></a>
 
 ### Liquid / blob · `blob` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/blob.jpg)
 - **What:** organic morphing shapes as the brand's container: blobs, lava-lamp forms, gooey buttons.
@@ -658,6 +780,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** [Headspace](https://www.headspace.com) characters and shapes · [blobmaker.app](https://www.blobmaker.app) (the tool everyone used).
 - **Combines well with:** mesh gradient, rounded sans, spring motion.
 
+<a id="spatial"></a>
+
 ### Spatial / 3D · `spatial` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/spatial.jpg)
 - **What:** interfaces as objects in space: depth, perspective, real-time 3D, visionOS-style floating panels.
 - **Signature traits:** clean sans with depth-aware weight · neutral glass panels over an environment, soft light · rounded panels with real thickness, pill controls · real perspective, parallax, lighting, depth of field · layered panels at different depths, perspective grids · real-time 3D objects, environments · motion: parallax, camera moves, tilt with the pointer.
@@ -667,6 +791,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** Spline-built 3D heroes are everywhere since 2021; visionOS imitation will date with the platform.
 - **References:** [Apple visionOS](https://developer.apple.com/visionos/) · [Spline](https://spline.design) showcases · Bruno Simon's 3D portfolio.
 - **Combines well with:** isometric, cinematic motion, studio product photography.
+
+<a id="vaporwave"></a>
 
 ### Vaporwave · `vaporwave` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/vaporwave.jpg)
 - **What:** 2011–16 internet art and music aesthetic: Greek busts, Windows 95, Japanese text, pink-teal sunsets, ironic consumerism.
@@ -678,6 +804,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** Macintosh Plus's "Floral Shoppe" cover (2011) · [Adult Swim](https://www.adultswim.com) bumps · "aesthetic" Tumblr.
 - **Combines well with:** retro OS, glitch, synthwave.
 
+<a id="synthwave"></a>
+
 ### Synthwave / outrun · `synthwave` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/synthwave.jpg)
 - **What:** an imagined 1984: neon grid horizons, chrome script, magenta-to-orange suns, night drives.
 - **Signature traits:** chrome italic display and neon script · deep purple night, magenta, cyan, orange sun · grid floor to horizon, striped sun · neon glow (text-shadow), chrome gradients · horizon-centred compositions · sports cars, palms, mountains in wireframe · motion: grid scrolling toward the viewer.
@@ -687,6 +815,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** heavily used since "Drive" (2011) and "Stranger Things"; a known costume.
 - **References:** "Far Cry 3: Blood Dragon" (2013) · "Drive" (2011) poster typography · "Kung Fury" (2015).
 - **Combines well with:** retro-futurism, pixel, nightlife.
+
+<a id="cyberpunk"></a>
 
 ### Cyberpunk · `cyberpunk` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/cyberpunk.jpg)
 - **What:** high tech, low life: neon signs in rain, glitches, warning yellow, dense Asian-city signage, aggressive HUDs.
@@ -698,6 +828,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** "Cyberpunk 2077" UI (CD Projekt, 2020) · "Blade Runner" (1982) · "Ghost in the Shell" (1995).
 - **Combines well with:** HUD, glitch, gaming.
 
+<a id="retro-futurism"></a>
+
 ### Retro-futurism · `retro-futurism` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/retro-futurism.jpg)
 - **What:** the future as imagined in 1955–80: NASA-era optimism, space-age orange, rounded CRTs, rocket diagrams.
 - **Signature traits:** extended geometric sans (Eurostile-like), NASA worm-like lettering · cream, space orange, avocado, brown, navy · rounded rectangles like CRTs, circles, orbits · flat with print grain · technical diagrams, mission patches, grids · rockets, planets, technical drawings · motion: slow orbits, countdowns.
@@ -707,6 +839,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** "NASA merch" fashion; Space Mono everywhere.
 - **References:** NASA worm logo (Danne & Blackburn, 1975) · "2001: A Space Odyssey" interface graphics · [SpaceX](https://www.spacex.com) mission patches (as current descendants).
 - **Combines well with:** technical manual, streamline, Swiss.
+
+<a id="hud"></a>
 
 ### Sci-fi HUD / FUI · `hud` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/hud.jpg)
 - **What:** fictional user interfaces from film: thin lines, brackets, readouts, radar arcs, cyan on black.
@@ -718,6 +852,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** Territory Studio's FUI for "Guardians of the Galaxy" and "Blade Runner 2049" · Mark Coleran's FUI work · "Oblivion" (2013) UI by GMUNK.
 - **Combines well with:** cyberpunk, terminal, generative motion.
 
+<a id="pixel"></a>
+
 ### Pixel / 8-bit · `pixel` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/pixel.jpg)
 - **What:** the 8- and 16-bit game screen: bitmap fonts, limited palettes, chunky pixels, sprites.
 - **Signature traits:** pixel fonts at integer sizes · limited palettes (NES, PICO-8, Game Boy greens) · stepped pixel edges, no radius (or pixel-stepped corners) · hard 4–8 px offset shadows, pixel bevels · tile grids, game HUDs, dialog boxes · sprites, pixel art · motion: stepped, 8–12 fps, `steps()` easing.
@@ -728,6 +864,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **References:** Nintendo NES (1983) · PICO-8 fantasy console's 16-colour palette · [Celeste](https://www.celestegame.com) and indie pixel games.
 - **Combines well with:** dithered, retro OS, stepped motion.
 
+<a id="terminal"></a>
+
 ### Terminal / CLI · `terminal` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/terminal.jpg)
 - **What:** the command line as brand: monospace everything, prompts, cursors, box-drawing characters, ANSI colours.
 - **Signature traits:** one mono at one size, hierarchy by colour and prefixes (`$`, `>`, `#`) · black or dark with phosphor green, amber, or ANSI colours; light "paper terminal" also works · box-drawing frames (┌─┐), brackets · no shadows; maybe a faint CRT glow · character grid, everything aligned to the cell · ASCII diagrams, logs · motion: typing, blinking cursor, stepped.
@@ -737,6 +875,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 - **Cliché / dating risk:** "The Matrix"; low dating with a modern mono and restraint.
 - **References:** [Warp](https://www.warp.dev) · [Charm](https://charm.sh) (Bubble Tea CLIs) · [Ghostty](https://ghostty.org).
 - **Combines well with:** dev-tool dark, ASCII art, stepped motion, Swiss.
+
+<a id="dithered"></a>
 
 ### Dithered / 1-bit · `dithered` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/dithered.jpg)
 - **What:** images and surfaces built from two colours using ordered (Bayer) or error-diffusion dithering, as on early Macs and e-ink.
@@ -752,6 +892,8 @@ Interface languages, from platform systems (Material, Fluent, HIG) to surface tr
 
 What a category looks like when it plays it safe. Use these blocks two ways: to name the **category cliché** in phase 1 (what you will stand apart from), and to list the **trust cues** you must keep while you do it. Copying one whole makes you invisible in your own category.
 
+<a id="fintech"></a>
+
 ### Fintech trust · `fintech` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/fintech.jpg)
 - **What:** money products that must feel safe and modern: deep navy or green, crisp sans, big numbers, cards, calm.
 - **Signature traits:** neutral or geometric sans, tabular figures, large balance numbers · navy or deep green with one bright accent (lime, electric blue), lots of white · 12–16 px radius cards, card-shaped objects · soft shadows or none · split hero with phone mock, trust bar, numbers · product UI, cards, people photos · motion: number counters, smooth 200–300 ms.
@@ -761,6 +903,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **Cliché / dating risk:** "phone tilted on a gradient with a card floating" and purple neobanks; low dating, high sameness.
 - **References:** [Wise](https://wise.com) (lime on forest) · [Revolut](https://www.revolut.com) · [Mercury](https://mercury.com) (the calm counter-example) · [Monzo](https://monzo.com).
 - **Combines well with:** editorial or Swiss for a calmer stance, mono-forward numbers, functional motion.
+
+<a id="luxury"></a>
 
 ### Luxury / fashion · `luxury` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/luxury.jpg)
 - **What:** the maison language: black and white, a didone or a tracked-out sans wordmark, huge photography, almost no UI.
@@ -772,6 +916,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **References:** [Saint Laurent](https://www.ysl.com) · [Hermès](https://www.hermes.com) · [The Row](https://www.therow.com) · [Celine](https://www.celine.com).
 - **Combines well with:** didone type, editorial photography, cinematic motion.
 
+<a id="beauty"></a>
+
 ### Beauty / clean-girl · `beauty` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/beauty.jpg)
 - **What:** DTC skincare and makeup since 2014: millennial pink to sandy nude, soft serif, dewy skin close-ups, minimal packaging.
 - **Signature traits:** soft serif or light sans, lowercase · blush, nude, sand, milky white, one brand pop · rounded pills, soft radii, squeezable shapes · soft natural shadows, glossy highlights in photography · big product shots on pastel grounds · skin close-ups, textures (swatches, droplets) · motion: gentle, glossy hovers.
@@ -781,6 +927,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **Cliché / dating risk:** millennial pink (2016) and "clean girl" (2022) are both named clichés.
 - **References:** [Glossier](https://www.glossier.com) · [Rhode](https://www.rhodeskin.com) · [The Ordinary](https://theordinary.com) (the clinical counter-example) · [Summer Fridays](https://summerfridays.com).
 - **Combines well with:** studio product photography, editorial, holographic accents.
+
+<a id="wellness"></a>
 
 ### Wellness / organic · `wellness` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/wellness.jpg)
 - **What:** calm, earthy, natural: sage and clay, soft serif or rounded sans, organic shapes, sunlight.
@@ -792,6 +940,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **References:** [Headspace](https://www.headspace.com) · [Calm](https://www.calm.com) · [Aesop](https://www.aesop.com) (the restrained counter-example) · [Ritual](https://ritual.com) (clinical yellow counter-example).
 - **Combines well with:** line art, botanical engraving, Japandi.
 
+<a id="food-craft"></a>
+
 ### Food & beverage craft · `food-craft` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/food-craft.jpg)
 - **What:** small-batch food and drink: badges and seals, hand lettering, kraft paper, warm photos of ingredients and hands.
 - **Signature traits:** chunky slabs or quirky serifs with a script accent, stamped badges · warm palettes: tomato red, mustard, kraft brown, cream, bottle green · badges, seals, labels, wavy borders · flat with paper textures · labels and packaging as layout · ingredient photography, hands, illustration, stamps · motion: playful, stickers landing.
@@ -801,6 +951,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **Cliché / dating risk:** "established 20XX" badges, the 2010s hipster label; the 2020s version is wonky serif + bright flat colour (Graza, Fishwife).
 - **References:** [Graza](https://www.graza.co) · [Fishwife](https://eatfishwife.com) · [Fly By Jing](https://flybyjing.com) · [Oatly](https://www.oatly.com) (the copy-led counter-example).
 - **Combines well with:** letterpress, doodle, riso.
+
+<a id="kids"></a>
 
 ### Kids / playful · `kids` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/kids.jpg)
 - **What:** bright, rounded, chunky, character-led: thick outlines, primary-plus colours, buttons that look pressable.
@@ -812,6 +964,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **References:** [Duolingo](https://www.duolingo.com) · [Khan Academy Kids](https://learn.khanacademy.org/khan-academy-kids/) · [Toca Boca](https://tocaboca.com) · [LEGO](https://www.lego.com).
 - **Combines well with:** mascot, claymorphism, spring motion.
 
+<a id="gaming"></a>
+
 ### Gaming · `gaming` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/gaming.jpg)
 - **What:** game launchers and esports: dark, high contrast, angular, key art first, neon accents, aggressive type.
 - **Signature traits:** condensed or extended caps, italic for speed · near-black with one neon (lime, red, cyan) and metallic greys · chamfered angles, slanted buttons, clipped corners · glows, gradients, textures · key art full-bleed, cards with stats · 3D renders, character art · motion: fast, punchy, sound-backed.
@@ -821,6 +975,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **Cliché / dating risk:** RGB "gamer" aesthetics; the 2020s counter-trend is cosy, editorial and indie.
 - **References:** [Razer](https://www.razer.com) · [Riot Games](https://www.riotgames.com) (Valorant's red and cream is the smarter version) · [Epic Games Store](https://store.epicgames.com).
 - **Combines well with:** cyberpunk, HUD, condensed type.
+
+<a id="web3"></a>
 
 ### Crypto / web3 · `web3` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/web3.jpg)
 - **What:** 2017–22 crypto: dark mode, gradients, 3D coins, glowing orbs, "decentralised" network motifs.
@@ -832,6 +988,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **References:** [Uniswap](https://uniswap.org) (the pink exception) · [Phantom](https://phantom.app) · [Coinbase](https://www.coinbase.com) (the fintech-trust counter-example).
 - **Combines well with:** fintech trust or Swiss if you want to escape it.
 
+<a id="civic"></a>
+
 ### Government / civic (GOV.UK) · `civic` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/civic.jpg)
 - **What:** public-service design: accessibility first, plain language, one column, black header, big type, no decoration.
 - **Signature traits:** one highly legible sans at 19 px body, bold headings · black, white, link blue, focus yellow, functional greens and reds · square, no radius · no shadows; thick focus rings · single column, max 2/3 width, clear headings, step-by-step · no imagery or simple documentary photos · motion: none.
@@ -841,6 +999,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **Cliché / dating risk:** barely dates by design; it can feel cold for a consumer product.
 - **References:** [GOV.UK Design System](https://design-system.service.gov.uk) · [U.S. Web Design System](https://designsystem.digital.gov) · [Estonia's e-services](https://www.eesti.ee).
 - **Combines well with:** wayfinding, Swiss, no-motion.
+
+<a id="healthcare"></a>
 
 ### Healthcare · `healthcare` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/healthcare.jpg)
 - **What:** clinical but human: teal and soft blue, friendly sans, rounded cards, real people smiling, lots of white.
@@ -852,6 +1012,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **References:** [One Medical](https://www.onemedical.com) · [Oscar Health](https://www.hioscar.com) · [Hims & Hers](https://www.forhims.com) (the DTC counter-example) · [NHS](https://www.nhs.uk) (civic).
 - **Combines well with:** civic, editorial, humanist sans.
 
+<a id="education"></a>
+
 ### Education · `education` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/education.jpg)
 - **What:** learning products and institutions: friendly authority, clear structure, progress, warm colours; universities add crests and serifs.
 - **Signature traits:** friendly sans for products, a serif for institutions · a confident primary (blue, green, purple) plus warm accents · rounded cards, progress bars, badges · soft shadows · course grids, progress steps, outlines · illustrations of people learning, campus photos · motion: progress fills, small celebrations.
@@ -861,6 +1023,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **Cliché / dating risk:** graduation caps, lightbulbs, pencils; generic blue.
 - **References:** [Khan Academy](https://www.khanacademy.org) · [Coursera](https://www.coursera.org) · [Brilliant](https://brilliant.org) (the crafted counter-example) · [MIT OpenCourseWare](https://ocw.mit.edu).
 - **Combines well with:** editorial, flat vector, Bauhaus for design schools.
+
+<a id="outdoor"></a>
 
 ### Outdoor / utilitarian · `outdoor` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/outdoor.jpg)
 - **What:** gear and workwear: earth tones, safety orange, condensed caps, topographic lines, rugged photography.
@@ -872,6 +1036,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **References:** [Patagonia](https://www.patagonia.com) · [Snow Peak](https://www.snowpeak.com) · [Filson](https://www.filson.com) · [Carhartt WIP](https://www.carhartt-wip.com).
 - **Combines well with:** technical manual, documentary photography, wayfinding.
 
+<a id="automotive"></a>
+
 ### Automotive / industrial · `automotive` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/automotive.jpg)
 - **What:** cars, EVs and heavy industry: dark studios, extended sans, metallic greys, precise lines, cinematic product renders.
 - **Signature traits:** wide extended sans in caps, thin weights, specs in mono · black, graphite, silver, one signal colour · thin lines, sharp corners, a few large radii from the product · studio lighting, reflections on renders · full-bleed product, spec strips · studio renders, motion shots · motion: slow reveals, light sweeps.
@@ -881,6 +1047,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **Cliché / dating risk:** every EV launch since 2018 (dark studio, wide caps, "Model" naming).
 - **References:** [Polestar](https://www.polestar.com) · [Porsche](https://www.porsche.com) · [Rivian](https://rivian.com) (the outdoor-warm counter-example) · [Lucid](https://lucidmotors.com).
 - **Combines well with:** studio product photography, cinematic motion, technical manual.
+
+<a id="b2b-saas"></a>
 
 ### B2B SaaS · `b2b-saas` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/b2b-saas.jpg)
 - **What:** the default software landing: a headline, a subline, two buttons, a product screenshot, a logo wall, three feature columns, pricing.
@@ -892,6 +1060,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **References:** [HubSpot](https://www.hubspot.com) · [Intercom](https://www.intercom.com) · [Notion](https://www.notion.so) (the illustrated counter-example) · [Attio](https://attio.com).
 - **Combines well with:** almost anything as a skeleton; give it one strong device from another family.
 
+<a id="ai-lab"></a>
+
 ### AI lab (humanist) · `ai-lab` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/ai-lab.jpg)
 - **What:** the 2023+ look of frontier AI labs that avoid sci-fi: warm paper, serif or humanist type, research-journal calm, hand-drawn or painterly imagery.
 - **Signature traits:** a serif or humanist display with a quiet grotesk, mono for code · warm off-white or stone, near-black ink, one earthy accent (clay, rust) · square or slightly rounded · flat, hairlines · editorial layouts, research-paper structure · hand-drawn or painterly illustration, abstract shapes, no robots · motion: calm, minimal.
@@ -901,6 +1071,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **Cliché / dating risk:** became the "thoughtful AI" default by 2024 (and the counter to neon AI); same risk as any default.
 - **References:** [Anthropic](https://www.anthropic.com) (warm stone, serif display, hand-drawn illustration) · [OpenAI](https://openai.com) (2024 identity: OpenAI Sans, warm photography, no robots) · [Mistral](https://mistral.ai) (pixel orange, a different route).
 - **Combines well with:** editorial, painterly art, ASCII or dither as a device.
+
+<a id="creator"></a>
 
 ### Creator / influencer · `creator` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/creator.jpg)
 - **What:** personal brands and creator tools: bold faces, the person's photo in a cut-out, stickers, social-native layouts, link-in-bio energy.
@@ -912,6 +1084,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **References:** [Linktree](https://linktr.ee) · [Beacons](https://beacons.ai) · [MrBeast](https://www.youtube.com/@MrBeast) thumbnails (the extreme) · [Substack](https://substack.com) (the editorial counter-example).
 - **Combines well with:** neobrutalism, doodle, kinetic type.
 
+<a id="nightlife"></a>
+
 ### Adult / nightlife (tasteful) · `nightlife` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/nightlife.jpg)
 - **What:** clubs, bars, dating and adult-adjacent brands done with taste: dark, intimate, red or magenta light, grain, discretion.
 - **Signature traits:** condensed or high-contrast display, small discreet text · black, deep red, magenta or ultraviolet, warm skin tones in light · tall narrow shapes, round dots, minimal UI · low-key lighting, grain, glow, blur · poster-like single images, event lists · flash photography, silhouettes, crops (never explicit) · motion: slow pulses, strobe-free.
@@ -922,6 +1096,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **References:** [Berghain](https://www.berghain.berlin) (the anti-brand) · [Dame](https://www.dame.com) (adult wellness, tasteful) · [Feeld](https://feeld.co) · [Soho House](https://www.sohohouse.com).
 - **Combines well with:** Art Deco, editorial photography (flash), cinematic motion.
 
+<a id="sports"></a>
+
 ### Sports / athletic · `sports` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/sports.jpg)
 - **What:** performance and fandom: heavy condensed italic type, high-contrast action photography, numbers, speed.
 - **Signature traits:** heavy condensed or extended italic caps, big numbers · black, white, one team or signal colour (volt, red) · slanted shapes, stripes, angled cuts · flat, high contrast; motion blur in imagery · full-bleed action photos, giant type, stat blocks · athletes in action, sweat, crops · motion: fast, punchy, kinetic type.
@@ -931,6 +1107,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 - **Cliché / dating risk:** "Just Do It" bombast; every gym looks like Nike.
 - **References:** [Nike](https://www.nike.com) · [On](https://www.on.com) (the Swiss-minimal counter-example) · [Strava](https://www.strava.com) · the Premier League identity (DesignStudio, 2016).
 - **Combines well with:** condensed type, kinetic type, documentary photography.
+
+<a id="professional-services"></a>
 
 ### Professional services · `professional-services` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/professional-services.jpg)
 - **What:** law, consulting, accounting, private banking: navy and serif, restraint, institutional calm.
@@ -946,6 +1124,8 @@ What a category looks like when it plays it safe. Use these blocks two ways: to 
 
 How the pictures are made. An imagery style sits on top of a base style and often IS the signature device (an ASCII treatment, a duotone, an engraving). One imagery style per brand, applied to every image; mixing two reads as a stock library. Risograph as an imagery treatment is covered by `riso` in family 1.
 
+<a id="flat-vector"></a>
+
 ### Flat vector illustration · `flat-vector` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/flat-vector.jpg)
 - **What:** geometric vector scenes with solid fills, no outlines, limited palette; the 2014–20 default of tech marketing.
 - **Signature traits:** pairs with a neutral or geometric sans · 4–6 brand colours, solid, no gradients · simple geometric shapes, rounded joints · flat, maybe one shadow tone · spot illustrations beside text, empty states · people, devices, plants, abstract objects · motion: Lottie loops, simple.
@@ -955,6 +1135,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **Cliché / dating risk:** reads 2016 unless the drawing has a real hand; unDraw-style libraries made it commodity.
 - **References:** [unDraw](https://undraw.co) (the commodity) · Material Design's 2014–18 product illustrations · [Slack](https://slack.com) (2019-era spots).
 - **Combines well with:** flat UI, Scandinavian, Material.
+
+<a id="alegria"></a>
 
 ### Corporate Memphis ("Alegria") · `alegria` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/alegria.jpg)
 - **What:** named here as a cliché: flat people with tiny heads, long bendy limbs, purple or blue skin, from Facebook's 2017 "Alegria" system by Buck.
@@ -966,6 +1148,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **References:** Facebook's "Alegria" by Buck (2017) · Google, Slack and Airbnb-era spots (2018–20) · the "Corporate Memphis" critique (Are.na, Tumblr, 2020).
 - **Combines well with:** nothing you want to be associated with; replace it with a drawn voice (line art, collage, engraving).
 
+<a id="line-art"></a>
+
 ### Line art · `line-art` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/line-art.jpg)
 - **What:** clean single-weight outlines, often one continuous line, no fills or one flat accent.
 - **Signature traits:** pairs with a light serif or geometric sans · black or ink lines on paper, one accent fill offset from the line · monoline stroke 1.5–3 px, round caps · flat · lots of space around the drawing · objects, faces, botanicals in one line · motion: line drawing itself (stroke-dashoffset).
@@ -975,6 +1159,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **Cliché / dating risk:** the "one-line face" print and tattoo cliché since 2017.
 - **References:** Picasso's one-line animal drawings · Ellsworth Kelly's plant drawings · Matisse's line portraits.
 - **Combines well with:** minimalism, wellness, editorial.
+
+<a id="doodle"></a>
 
 ### Hand-drawn / doodle · `doodle` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/doodle.jpg)
 - **What:** imperfect marker and pencil drawings: wobbly lines, scribbles, arrows, underlines, handwriting.
@@ -986,6 +1172,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **References:** [Excalidraw](https://excalidraw.com) · [Notion](https://www.notion.so) (Roman Muradov's drawings, the refined version) · [Basecamp](https://basecamp.com).
 - **Combines well with:** zine, kids, education, Scandinavian.
 
+<a id="collage"></a>
+
 ### Collage · `collage` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/collage.jpg)
 - **What:** cut-out photos, paper scraps, shapes and type layered into a new image; Dada to modern editorial.
 - **Signature traits:** pairs with editorial serif or grotesk, type as a cut-out element · mixed: B&W photos with 2–3 flat colour shapes · torn and cut edges, hard silhouettes · cast paper shadows, tape · layered compositions with deliberate scale clashes · public-domain engravings, archive photos, product cut-outs · motion: stop-motion pieces shifting.
@@ -995,6 +1183,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **Cliché / dating risk:** the 2018+ "Gen-Z collage" with mouths and eyes; still flexible.
 - **References:** Hannah Höch's photomontages (1919) · Eduardo Paolozzi's pop collages · Barbara Kruger (type + photo).
 - **Combines well with:** editorial, punk, surrealism, halftone.
+
+<a id="clay-3d"></a>
 
 ### 3D clay / soft 3D · `clay-3d` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/clay-3d.jpg)
 - **What:** soft rendered 3D objects and characters with a matte clay or plastic look, rounded and toy-like.
@@ -1006,6 +1196,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **References:** Microsoft Fluent 3D emoji (2021) · [Spline](https://spline.design) 3D icon packs · Airbnb's 3D app icons (2025).
 - **Combines well with:** claymorphism, kids, spring motion.
 
+<a id="isometric"></a>
+
 ### Isometric · `isometric` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/isometric.jpg)
 - **What:** 30° axonometric drawings: technical objects, cities, stacks and pipelines without perspective.
 - **Signature traits:** pairs with neutral or mono type · 3-tone shading per hue (top light, left mid, right dark) · cubes, stacks, platforms on a 30° grid · depth by face shading only, no perspective · diagrams of systems, layered stacks · servers, rooms, cities, data flows · motion: blocks stacking, packets moving along paths.
@@ -1015,6 +1207,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **Cliché / dating risk:** the 2016–19 "isometric server illustration"; dated in SaaS, timeless in games.
 - **References:** Monument Valley (ustwo, 2014) · SimCity 2000 (1993) · Habbo Hotel (2000).
 - **Combines well with:** technical manual, enterprise, pixel (pixel isometric).
+
+<a id="editorial-photo"></a>
 
 ### Editorial photography · `editorial-photo` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/editorial-photo.jpg)
 - **What:** commissioned, directed photography with a point of view: considered light, real locations, styling, often film-like grain or direct flash.
@@ -1026,6 +1220,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **References:** [Kinfolk](https://www.kinfolk.com) · [Aesop](https://www.aesop.com) · Juergen Teller's campaigns · [Apartamento](https://www.apartamentomagazine.com).
 - **Combines well with:** editorial, minimalism, luxury.
 
+<a id="documentary"></a>
+
 ### Documentary photography · `documentary` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/documentary.jpg)
 - **What:** real people, real places, available light, unposed moments; truth over polish.
 - **Signature traits:** pairs with a neutral sans or newspaper serif · natural colour or black and white, grain allowed · rectangular, uncropped frames, sometimes with film borders · available light, motion blur ok · photo essays, sequences, captions with who/where/when · workers, communities, process · motion: sequences, slow dissolves.
@@ -1035,6 +1231,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **Cliché / dating risk:** low; "authentic" stock (staged candid) is the cliché.
 - **References:** Magnum Photos · [Patagonia](https://www.patagonia.com) stories · [The Guardian](https://www.theguardian.com) long reads · Dorothea Lange's FSA work (1930s).
 - **Combines well with:** Swiss, broadsheet, civic.
+
+<a id="studio-product"></a>
 
 ### Studio product photography · `studio-product` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/studio-product.jpg)
 - **What:** objects on seamless backgrounds under controlled light: hero product, shadows, reflections, colour-blocked sets.
@@ -1046,6 +1244,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **References:** [Apple](https://www.apple.com) product pages · [Bang & Olufsen](https://www.bang-olufsen.com) · [Glossier](https://www.glossier.com) colour-blocked sets.
 - **Combines well with:** minimalism, Apple HIG, luxury.
 
+<a id="duotone"></a>
+
 ### Duotone · `duotone` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/duotone.jpg)
 - **What:** photographs mapped to two colours (shadows to one, highlights to another).
 - **Signature traits:** pairs with bold grotesk · two brand colours: a dark and a bright · square crops, often full-bleed · no extra depth; the map flattens the image · big image panels with type over the bright end · portraits, concerts, cityscapes · motion: colour pairs shifting between sections.
@@ -1055,6 +1255,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **Cliché / dating risk:** Spotify's 2015 duotones made it famous; still useful as a unifier.
 - **References:** Spotify's 2015 brand campaign (Collins) · Reid Miles's Blue Note sleeves (1950s–60s, single-colour tints).
 - **Combines well with:** Swiss, brutalist print, constructivism.
+
+<a id="halftone"></a>
 
 ### Halftone · `halftone` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/halftone.jpg)
 - **What:** images made of dots of varying size, as in newspaper and screen printing, enlarged until the dots show.
@@ -1066,6 +1268,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **References:** Lichtenstein's Ben-Day dots · newspaper photo screens · Shepard Fairey's Obey posters.
 - **Combines well with:** pop art, broadsheet, constructivism.
 
+<a id="generative"></a>
+
 ### Generative / data art · `generative` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/generative.jpg)
 - **What:** images made by code from rules or data: flow fields, particle systems, data-driven patterns, unique per user or per item.
 - **Signature traits:** pairs with neutral sans and mono · a tight palette mapped to data or noise · lines, dots, fields, contours · depth by density and opacity · a generative field as hero, systems of variants · flow fields, contours, data portraits · motion: live, continuous, seeded.
@@ -1075,6 +1279,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **Cliché / dating risk:** "particle network" (2015) is the cliché; flow fields are getting common.
 - **References:** MIT Media Lab identity (TheGreenEyl, 2011) · Casa da Música identity (Sagmeister, 2007) · Refik Anadol's data paintings · [Processing](https://processing.org).
 - **Combines well with:** Swiss, technical manual, generative motion.
+
+<a id="ascii-art"></a>
 
 ### ASCII art · `ascii-art` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/ascii-art.jpg)
 - **What:** images rendered from characters on a mono grid, from ramps (` .:-=+*#%@`, ░▒▓█) to box drawing.
@@ -1086,6 +1292,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **References:** Ken Knowlton's "Studies in Perception I" (1966) · [Charm](https://charm.sh) · the ASCII hero animations on AI and dev-tool sites (2024–26).
 - **Combines well with:** Swiss, terminal, dev-tool dark, Renaissance paintings as source material.
 
+<a id="glitch"></a>
+
 ### Glitch · `glitch` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/glitch.jpg)
 - **What:** deliberate digital errors: RGB channel splits, pixel sorting, scan-line tears, datamoshing.
 - **Signature traits:** pairs with mono or techno type, glitched headlines · RGB split colours (red, cyan) on black or white · horizontal slices, offsets · chromatic aberration, noise · torn images, displaced blocks · corrupted photos, video stills · motion: sharp jitters (keep flashes under 3 per second).
@@ -1095,6 +1303,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **Cliché / dating risk:** the 2015–19 tech-event cliché.
 - **References:** Rosa Menkman's glitch art · [Nine Inch Nails](https://www.nin.com) "Year Zero" (2007) · "Mr. Robot" title cards.
 - **Combines well with:** cyberpunk, grunge, terminal.
+
+<a id="painterly"></a>
 
 ### Painterly / public-domain art · `painterly` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/painterly.jpg)
 - **What:** fine-art paintings (often public domain) or painterly illustration used as brand imagery, framed with modern type.
@@ -1106,6 +1316,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **References:** [Rijksmuseum Studio](https://www.rijksmuseum.nl/en/rijksstudio) (open images) · [The Met Open Access](https://www.metmuseum.org/about-the-met/policies-and-procedures/image-resources) · [Hermès](https://www.hermes.com) painted and illustrated campaigns.
 - **Combines well with:** Swiss or editorial base, ASCII or dither treatment, Renaissance.
 
+<a id="engraving"></a>
+
 ### Engraving / scientific plates · `engraving` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/engraving.jpg)
 - **What:** line engraving, woodcut and stipple: banknote portraits, WSJ hedcuts, botanical and anatomical plates.
 - **Signature traits:** pairs with old-style or Scotch serifs and small caps · one ink on cream, sometimes hand-tinted · fine parallel hatching, cross-hatching, stipple · depth by hatching density · plates with labels, numbers and captions · botanicals, anatomy, portraits, machines · motion: none, or hatch lines drawing.
@@ -1116,6 +1328,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **References:** The Wall Street Journal's hedcuts · Ernst Haeckel's "Kunstformen der Natur" (1904) · US banknote engraving.
 - **Combines well with:** letterpress, broadsheet, Victorian.
 
+<a id="blueprint"></a>
+
 ### Blueprint / technical drawing · `blueprint` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/blueprint.jpg)
 - **What:** engineering drawings: cyanotype blue or white with fine lines, dimensions, grid paper, title blocks.
 - **Signature traits:** pairs with mono and technical sans, small caps labels · cyanotype blue with white lines, or white with blue lines · fine 1 px lines, dimension arrows, construction circles · flat · grid paper, title blocks, callouts · orthographic and exploded drawings · motion: lines drawing on, measurements appearing.
@@ -1125,6 +1339,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 - **Cliché / dating risk:** "blueprint" as generic tech wallpaper; low dating.
 - **References:** Anna Atkins's cyanotypes (1843) · patent drawings · [Teenage Engineering](https://teenage.engineering) exploded views.
 - **Combines well with:** technical manual, isometric, Swiss.
+
+<a id="mascot"></a>
 
 ### Mascot-led · `mascot` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/mascot.jpg)
 - **What:** a character that carries the brand: in the logo, in empty states, in notifications, with poses and moods.
@@ -1140,6 +1356,8 @@ How the pictures are made. An imagery style sits on top of a base style and ofte
 
 Type is the cheapest and strongest style signal: the same layout in a didone and in a mono is two different brands. Pick the voice from the vibe sentence, then the family. Every font named here is on Google Fonts under the OFL. The specimen shows the same hero in each voice on a neutral page.
 
+<a id="type-grotesk"></a>
+
 ### Grotesk neutral · `type-grotesk` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-grotesk.jpg)
 - **What:** the plain, contemporary sans that disappears behind the content (Helvetica, Akzidenz, Söhne lineage).
 - **Signature traits:** closed apertures, uniform stroke, regular widths · works with any palette · neutral shapes; radius set by the base style · no effects · hierarchy by size and weight only · any imagery · motion: none implied.
@@ -1149,6 +1367,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **Cliché / dating risk:** invisible; "Inter everywhere".
 - **References:** [Stripe](https://stripe.com) (Söhne) · [Notion](https://www.notion.so) · [GitHub](https://github.com) (Mona Sans).
 - **Combines well with:** any style; pair with a serif or a mono for a second voice.
+
+<a id="type-humanist"></a>
 
 ### Humanist sans · `type-humanist` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-humanist.jpg)
 - **What:** sans with calligraphic roots: open apertures, varied stroke, a true italic (Frutiger, Gill, Myriad, Fira lineage).
@@ -1160,6 +1380,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **References:** [NHS](https://www.nhs.uk) (Frutiger) · Mozilla's Fira system · [GOV.UK](https://www.gov.uk) (GDS Transport).
 - **Combines well with:** civic, healthcare, Scandinavian.
 
+<a id="type-geometric"></a>
+
 ### Geometric sans · `type-geometric` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-geometric.jpg)
 - **What:** sans built from circles and lines (Futura, Avenir, Circular lineage): round o's, single-storey a.
 - **Signature traits:** perfect circles, single-storey a and g, low contrast · bright palettes suit it · circles and pills · flat · big headlines, tight tracking · flat illustration · friendly, spring motion.
@@ -1169,6 +1391,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **Cliché / dating risk:** Poppins and Montserrat defaults; Airbnb/Spotify Circular-alikes.
 - **References:** [Spotify](https://www.spotify.com) (Circular until 2023) · Louis Vuitton (Futura) · [Airbnb](https://www.airbnb.com) (Cereal).
 - **Combines well with:** Bauhaus, flat, kids.
+
+<a id="type-tight-grotesk"></a>
 
 ### Tight neo-grotesk display · `type-tight-grotesk` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-tight-grotesk.jpg)
 - **What:** grotesk headlines set very large, bold or medium, with −4 to −6 % tracking and leading under 1.0: the confident tech-poster voice.
@@ -1180,6 +1404,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **References:** [Vercel](https://vercel.com) (Geist) · [Linear](https://linear.app) · [Nike](https://www.nike.com) campaign type.
 - **Combines well with:** Swiss, dev-tool dark, sports.
 
+<a id="type-rounded"></a>
+
 ### Rounded sans · `type-rounded` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-rounded.jpg)
 - **What:** sans with rounded stroke ends and corners: soft, friendly, harmless.
 - **Signature traits:** round terminals, generous x-height · pastels or bright friendly colours · large radii everywhere · soft shadows or chunky bottom edges · simple centred layouts · mascots and clay · bouncy motion.
@@ -1189,6 +1415,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **Cliché / dating risk:** "friendly app" default.
 - **References:** [Duolingo](https://www.duolingo.com) (Feather Bold) · VAG Rounded (Volkswagen, 1979; Apple keyboards until 2007) · [Headspace](https://www.headspace.com).
 - **Combines well with:** kids, claymorphism, mascot.
+
+<a id="type-condensed"></a>
 
 ### Condensed / compressed · `type-condensed` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-condensed.jpg)
 - **What:** tall, narrow grotesks in caps: newspaper headlines, sports, posters, signage.
@@ -1200,6 +1428,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **References:** [The New York Post](https://nypost.com) headlines · [Nike](https://www.nike.com) (Futura Condensed) · Big Shoulders (made for the City of Chicago).
 - **Combines well with:** sports, constructivism, outdoor.
 
+<a id="type-serif-editorial"></a>
+
 ### Serif editorial (transitional / modern) · `type-serif-editorial` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-serif-editorial.jpg)
 - **What:** contemporary text and display serifs with crisp contrast (Tiempos, GT Super, Lyon lineage): the voice of serious publishing.
 - **Signature traits:** sharp contrast, vertical stress, large optical sizes for display · black on white or cream, little colour · square · hairlines · columns, standfirsts, pull quotes · photography and illustration · slow, calm.
@@ -1209,6 +1439,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **Cliché / dating risk:** "every thoughtful startup" since 2022.
 - **References:** [The New York Times](https://www.nytimes.com) (Cheltenham, Imperial) · [Anthropic](https://www.anthropic.com) · [The Atlantic](https://www.theatlantic.com) (2019 redesign).
 - **Combines well with:** editorial, AI lab, minimalism.
+
+<a id="type-oldstyle"></a>
 
 ### Old-style / Garalde · `type-oldstyle` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-oldstyle.jpg)
 - **What:** Renaissance book types (Garamond, Bembo, Caslon): diagonal stress, low contrast, old-style figures, real italics.
@@ -1220,6 +1452,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **References:** Penguin Classics · [Apple](https://www.apple.com) (Apple Garamond, 1984–2002) · Aldus Manutius's editions (1490s–1510s).
 - **Combines well with:** Renaissance, letterpress, editorial.
 
+<a id="type-didone"></a>
+
 ### Didone (luxury) · `type-didone` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-didone.jpg)
 - **What:** Bodoni and Didot: extreme thick-thin contrast, vertical stress, hairline serifs; fashion magazines.
 - **Signature traits:** hairlines, ball terminals, high contrast · black and white, gold at most · square · none · big display sizes, lots of air · fashion photography · slow fades.
@@ -1229,6 +1463,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **Cliché / dating risk:** Vogue and Harper's Bazaar mastheads; Playfair Display is overused.
 - **References:** [Vogue](https://www.vogue.com) (Didot) · Harper's Bazaar (Alexey Brodovitch era) · [Dior](https://www.dior.com) wordmark.
 - **Combines well with:** luxury, Art Deco, beauty.
+
+<a id="type-slab"></a>
 
 ### Slab serif · `type-slab` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-slab.jpg)
 - **What:** serifs as thick as the stems (Rockwell, Clarendon, Archer): sturdy, mechanical, friendly or Western.
@@ -1240,6 +1476,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **References:** Mozilla's Zilla Slab (2017) · Archer for Martha Stewart Living (Hoefler & Frere-Jones, 2001) · Clarendon on 19th-century wanted posters.
 - **Combines well with:** letterpress, food craft, outdoor.
 
+<a id="type-mono"></a>
+
 ### Mono-forward · `type-mono` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-mono.jpg)
 - **What:** a monospace as the main voice, not just for code: headlines, labels, numbers.
 - **Signature traits:** fixed widths, grid alignment, tabular by nature · black, white, one signal · square, box-drawing · none · tables, logs, labels with prefixes · ASCII, diagrams · stepped motion.
@@ -1249,6 +1487,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **Cliché / dating risk:** Space Mono was the 2016–20 "tech-cool" default.
 - **References:** [Teenage Engineering](https://teenage.engineering) · [Nothing](https://nothing.tech) (dot-matrix) · Space Mono for Google Design (Colophon, 2016).
 - **Combines well with:** terminal, Swiss, technical manual.
+
+<a id="type-display"></a>
 
 ### Display expressive · `type-display` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-display.jpg)
 - **What:** characterful display faces (wide, wonky, inline, stencil, extreme weights) that make the headline itself the image.
@@ -1260,6 +1500,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **References:** [Mailchimp](https://mailchimp.com) (Means, Cooper-adjacent) · [Oatly](https://www.oatly.com) (hand-drawn headlines) · [Graza](https://www.graza.co).
 - **Combines well with:** food craft, maximalism, Memphis.
 
+<a id="type-kinetic"></a>
+
 ### Kinetic / variable · `type-kinetic` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-kinetic.jpg)
 - **What:** type that moves and changes: variable weight and width axes animated, text on paths, scroll-reactive letters.
 - **Signature traits:** variable fonts with wide axes (wght, wdth, opsz) · strong contrast, often black and one colour · letters as shapes · none · headline-as-animation layouts · no imagery, type is the image · motion: axis animation, stretching, stepping.
@@ -1270,6 +1512,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **References:** DIA Studio's kinetic identities · [Variable Fonts](https://v-fonts.com) showcases.
 - **Combines well with:** scroll-driven motion, brutalist print, maximalism.
 
+<a id="type-handwritten"></a>
+
 ### Handwritten / script · `type-handwritten` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-handwritten.jpg)
 - **What:** handwriting, marker and brush script as the brand voice or as annotations.
 - **Signature traits:** irregular baselines, real pen texture · warm, personal palettes · hand-drawn shapes · none · annotations, notes, signatures · doodles, photos with notes · wiggle motion.
@@ -1279,6 +1523,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 - **Cliché / dating risk:** "handwritten = authentic" font cliché; Pacifico and Lobster are dated.
 - **References:** [Coca-Cola](https://www.coca-cola.com) (Spencerian script, the ancestor) · [Innocent Drinks](https://www.innocentdrinks.co.uk) · Basecamp's hand notes.
 - **Combines well with:** doodle, zine, creator.
+
+<a id="type-blackletter"></a>
 
 ### Blackletter · `type-blackletter` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/type-blackletter.jpg)
 - **What:** gothic scripts (textura, fraktur): medieval, newspaper mastheads, metal, streetwear, tattoo.
@@ -1294,6 +1540,8 @@ Type is the cheapest and strongest style signal: the same layout in a didone and
 
 The skeleton under any style. A layout is chosen by the job of the page (convert, explain, browse, operate, read), not by the brand; the style dresses it. Fonts and colour come from the base style, so the token sketch here holds grid tokens instead. The specimens use a neutral grey skin so only the structure shows.
 
+<a id="layout-split-hero"></a>
+
 ### Split hero · `layout-split-hero` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-split-hero.jpg)
 - **What:** copy on one side, product picture on the other, CTA under the copy.
 - **Signature traits:** headline, subline, 1–2 buttons left; screenshot, phone or object right · works with any type and colour · the image carries the shape · depth from the product image · 12-column grid split 5/7 or 6/6, stacks on mobile (copy first) · product UI or object · motion: image slides in once.
@@ -1303,6 +1551,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **Cliché / dating risk:** the most common hero on the web; neutral.
 - **References:** [Stripe](https://stripe.com) · [Mercury](https://mercury.com) · [Notion](https://www.notion.so).
 - **Combines well with:** any style; B2B SaaS, fintech.
+
+<a id="layout-centred-hero"></a>
 
 ### Centred hero · `layout-centred-hero` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-centred-hero.jpg)
 - **What:** one centred headline, a subline and a button, product below or behind.
@@ -1314,6 +1564,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **References:** [Linear](https://linear.app) · [Vercel](https://vercel.com) · [Raycast](https://www.raycast.com).
 - **Combines well with:** dev-tool dark, minimalism, aurora (sparingly).
 
+<a id="layout-bento"></a>
+
 ### Bento grid · `layout-bento` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-bento.jpg)
 - **What:** a grid of rounded tiles of different sizes, each one feature, like a Japanese lunchbox (Apple keynote slides made it famous).
 - **Signature traits:** short tile headlines, one stat or visual per tile · each tile can carry its own accent · 16–24 px radius tiles, consistent gaps · light borders or subtle fills · 4- or 6-column grid with 1×1, 2×1, 2×2 spans · UI fragments, numbers, icons · motion: tiles fade in staggered, hover lifts.
@@ -1323,6 +1575,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **Cliché / dating risk:** saturated since 2023 (every landing has a bento); it's De Stijl in rounded corners.
 - **References:** Apple's keynote feature slides (2020+) · [Linear](https://linear.app) features · [bentogrids.com](https://bentogrids.com).
 - **Combines well with:** dev-tool dark, shadcn, Apple HIG.
+
+<a id="layout-editorial-grid"></a>
 
 ### Editorial asymmetric grid · `layout-editorial-grid` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-editorial-grid.jpg)
 - **What:** a magazine spread on the web: an asymmetric multi-column grid where text and images interlock at different widths.
@@ -1334,6 +1588,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **References:** [The Pudding](https://pudding.cool) · [Bloomberg Businessweek](https://www.bloomberg.com/businessweek) features · [Stripe Press](https://press.stripe.com).
 - **Combines well with:** editorial, Swiss, broadsheet.
 
+<a id="layout-long-scroll"></a>
+
 ### Long-scroll storytelling · `layout-long-scroll` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-long-scroll.jpg)
 - **What:** one narrative told in chapters as you scroll: full-screen sections, sticky visuals, progressive reveals.
 - **Signature traits:** big chapter headlines, short paragraphs · section colours change with the story · full-bleed sections · depth from sticky layers and parallax · 100 vh chapters, sticky media + scrolling text · photography, 3D, video · motion: scroll-driven.
@@ -1343,6 +1599,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **Cliché / dating risk:** "Apple product page scroll" imitation; heavy pages.
 - **References:** Apple's AirPods Pro page · NYT "Snow Fall" (2012) · [The Pudding](https://pudding.cool).
 - **Combines well with:** scroll-driven motion, cinematic, spatial.
+
+<a id="layout-card-feed"></a>
 
 ### Card feed · `layout-card-feed` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-card-feed.jpg)
 - **What:** a stream of same-shaped cards (posts, items, articles), single column or masonry, endless or paginated.
@@ -1354,6 +1612,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **References:** [Pinterest](https://www.pinterest.com) · [Are.na](https://www.are.na) · [Dribbble](https://dribbble.com).
 - **Combines well with:** any style; creator, food, editorial.
 
+<a id="layout-dashboard"></a>
+
 ### Dashboard · `layout-dashboard` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-dashboard.jpg)
 - **What:** the app shell for operating something: sidebar navigation, top bar, KPI tiles, charts, tables.
 - **Signature traits:** small UI type, tabular numbers · neutral surfaces, status colours as signals · compact controls, 4–8 px radius · borders over shadows · sidebar 220–260 px, top bar 48–56 px, 12-column content, KPI row then charts then table · charts, no photography · motion: functional micro.
@@ -1363,6 +1623,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **Cliché / dating risk:** neutral; generic admin templates are the cliché.
 - **References:** [Stripe Dashboard](https://dashboard.stripe.com) · [Linear](https://linear.app) app · [PostHog](https://posthog.com).
 - **Combines well with:** enterprise-dense, dev-tool dark, shadcn.
+
+<a id="layout-docs"></a>
 
 ### Documentation · `layout-docs` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-docs.jpg)
 - **What:** three columns for reading reference: navigation tree, article, on-page contents; code blocks and callouts.
@@ -1374,6 +1636,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **References:** [Stripe Docs](https://docs.stripe.com) · [MDN](https://developer.mozilla.org) · [Tailwind CSS docs](https://tailwindcss.com/docs).
 - **Combines well with:** any base; terminal, Swiss, dev-tool dark.
 
+<a id="layout-manifesto"></a>
+
 ### Single-page manifesto · `layout-manifesto` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-manifesto.jpg)
 - **What:** one page of huge type that states beliefs, like a poster or open letter; the words are the product.
 - **Signature traits:** huge display type, numbered statements, a signature · high contrast, one colour · no UI chrome · none · one column, giant type, sometimes one statement per screen · no imagery · motion: none, or statements appearing on scroll.
@@ -1384,6 +1648,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **References:** [The Agile Manifesto](https://agilemanifesto.org) (the plain version) · [Basecamp](https://basecamp.com) (Shape Up, manifesto voice) · First Things First (1964).
 - **Combines well with:** brutalist print, constructivism, kinetic type.
 
+<a id="layout-catalogue"></a>
+
 ### Catalogue / e-commerce · `layout-catalogue` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-catalogue.jpg)
 - **What:** a product grid with filters, then a product detail page with gallery, price, options and add-to-cart.
 - **Signature traits:** small product names, prices in tabular figures · neutral surfaces so products carry colour · image tiles 0–8 px radius · minimal borders · 2–4 column product grid, filter bar, sticky cart · studio product photos · motion: image swaps on hover, cart drawer.
@@ -1393,6 +1659,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 - **Cliché / dating risk:** Shopify-template sameness.
 - **References:** [Aesop](https://www.aesop.com) · [SSENSE](https://www.ssense.com) · [Muji](https://www.muji.com).
 - **Combines well with:** studio product, minimalism, luxury.
+
+<a id="layout-index"></a>
 
 ### Index / list site · `layout-index` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/layout-index.jpg)
 - **What:** a page that is a table: rows of projects, posts or items with columns (year, title, type), hover previews.
@@ -1408,6 +1676,8 @@ The skeleton under any style. A layout is chosen by the job of the page (convert
 
 How things move is as much a brand signal as colour. Pick one language and write its easing and duration tokens; the specimens are diagrams (the easing curve plus a five-frame strip of the card entering), because a still image can't move. Every language needs a `prefers-reduced-motion` fallback: instant or a plain opacity fade.
 
+<a id="motion-none"></a>
+
 ### No-motion · `motion-none` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/motion-none.jpg)
 - **What:** state changes are instant; nothing animates except what the browser does natively.
 - **Signature traits:** cuts, not transitions · focus and hover change instantly · no easing to design · fastest perceived UI · fits print-rooted styles · motion is absent on purpose, so it reads as confident and calm.
@@ -1417,6 +1687,8 @@ How things move is as much a brand signal as colour. Pick one language and write
 - **Cliché / dating risk:** none; reads austere if the rest is also bare.
 - **References:** [GOV.UK](https://www.gov.uk) · [Craigslist](https://craigslist.org) · [Bloomberg](https://www.bloomberg.com) terminal-style pages.
 - **Combines well with:** civic, web brutalism, broadsheet, Swiss.
+
+<a id="motion-micro"></a>
 
 ### Functional micro · `motion-micro` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/motion-micro.jpg)
 - **What:** short, purposeful transitions that explain state: 100–250 ms, ease-out, opacity and small translations.
@@ -1428,6 +1700,8 @@ How things move is as much a brand signal as colour. Pick one language and write
 - **References:** [Linear](https://linear.app) · [Material motion](https://m3.material.io/styles/motion/overview) durations · [Radix](https://www.radix-ui.com) primitives.
 - **Combines well with:** any style.
 
+<a id="motion-spring"></a>
+
 ### Spring / playful · `motion-spring` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/motion-spring.jpg)
 - **What:** physics-based springs with overshoot and settle: bouncy buttons, squishy presses, elastic sheets.
 - **Signature traits:** overshoot 5–15 % · squash on press, stretch on release · delightful celebrations · interruptible (springs keep velocity) · feels alive, toy-like · reads friendly and young.
@@ -1437,6 +1711,8 @@ How things move is as much a brand signal as colour. Pick one language and write
 - **Cliché / dating risk:** "bouncy everything" feels gimmicky after the first day.
 - **References:** iOS UIKit springs · [Duolingo](https://www.duolingo.com) celebrations · [Framer Motion](https://motion.dev) springs.
 - **Combines well with:** kids, claymorphism, Memphis, neobrutalism.
+
+<a id="motion-cinematic"></a>
 
 ### Cinematic · `motion-cinematic` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/motion-cinematic.jpg)
 - **What:** slow, dramatic, film-like motion: long eases, reveals, masks, camera moves, letterboxing.
@@ -1448,6 +1724,8 @@ How things move is as much a brand signal as colour. Pick one language and write
 - **References:** Apple product launch pages · [Porsche](https://www.porsche.com) · Saul Bass title sequences (the origin).
 - **Combines well with:** luxury, automotive, Art Deco, spatial.
 
+<a id="motion-stepped"></a>
+
 ### Stepped / mechanical · `motion-stepped` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/motion-stepped.jpg)
 - **What:** motion in discrete steps: `steps()` easing, frame-by-frame, ticking counters, split-flap boards, blinking cursors.
 - **Signature traits:** no interpolation, 3–12 discrete states · ticks, clicks, flips · cursor blinks at 1 Hz · feels mechanical, digital, honest · pairs with mono and pixel type.
@@ -1458,6 +1736,8 @@ How things move is as much a brand signal as colour. Pick one language and write
 - **References:** Solari split-flap departure boards · [Teenage Engineering](https://teenage.engineering) displays · Vestaboard.
 - **Combines well with:** terminal, pixel, dithered, technical manual, ASCII.
 
+<a id="motion-scroll"></a>
+
 ### Scroll-driven · `motion-scroll` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/motion-scroll.jpg)
 - **What:** animation tied to scroll position: parallax, pinned sections, progress-linked reveals, now native via CSS `animation-timeline: scroll()`.
 - **Signature traits:** elements move at different rates · sections pin while content changes · progress bars and reveals linked to position · user controls the time · feels immersive · can feel hijacked.
@@ -1467,6 +1747,8 @@ How things move is as much a brand signal as colour. Pick one language and write
 - **Cliché / dating risk:** heavy parallax was 2013; the native CSS version is current.
 - **References:** Apple product pages · [Stripe Sessions](https://stripe.com/sessions) · [scroll-driven-animations.style](https://scroll-driven-animations.style).
 - **Combines well with:** long-scroll layout, spatial, editorial.
+
+<a id="motion-generative"></a>
 
 ### Generative · `motion-generative` · [specimen](https://github.com/FrancescoSaverioZuppichini/brand-system-skill/blob/main/atlas/motion-generative.jpg)
 - **What:** motion produced by code, not keyframes: noise fields, particles, simulations, live data, never the same twice.
