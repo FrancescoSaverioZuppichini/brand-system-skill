@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Enterprise dashboard-dense</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --canvas: oklch(0.96 0.003 250);
+  --panel: oklch(1 0 0);
+  --text: oklch(0.25 0.01 250);
+  --text-2: oklch(0.48 0.01 250);
+  --blue: oklch(0.55 0.18 258);
+  --border: oklch(0.88 0.005 250);
+  --row: oklch(0.975 0.003 250);
+  --success: oklch(0.60 0.15 150);
+  --warning: oklch(0.78 0.15 80);
+  --danger: oklch(0.58 0.20 27);
+  --shell: oklch(0.21 0 0);
+  --sans: "IBM Plex Sans", sans-serif;
+  --mono: "IBM Plex Mono", monospace;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--canvas); }
+body { position: relative; font: 400 12px/1.35 var(--sans); color: var(--text); font-variant-numeric: tabular-nums; }
+p, h1 { margin: 0; }
+svg { display: block; fill: none; stroke: currentColor; stroke-width: 1.5; }
+
+.shell { height: 40px; display: flex; align-items: center; background: var(--shell); color: oklch(0.96 0 0); }
+.shell .cell { width: 48px; height: 40px; display: grid; place-items: center; }
+.shell .name { font: 600 14px/1 var(--sans); }
+.shell .r { margin-left: auto; display: flex; }
+.shell .av { width: 24px; height: 24px; border-radius: 50%; background: var(--blue); }
+
+.rail { position: absolute; left: 0; top: 40px; bottom: 0; width: 48px; background: var(--panel); border-right: 1px solid var(--border); display: flex; flex-direction: column; color: var(--text-2); }
+.rail i { position: relative; height: 40px; display: grid; place-items: center; }
+.rail i.on { background: var(--canvas); color: var(--text); box-shadow: inset 3px 0 0 var(--blue); }
+
+.main { position: absolute; left: 48px; right: 0; top: 40px; bottom: 0; padding: 10px 20px 0; }
+.crumb { color: var(--text-2); }
+.crumb a { color: var(--blue); }
+.head { display: flex; align-items: flex-start; gap: 16px; margin-top: 6px; }
+h1 { font: 400 24px/1.2 var(--sans); }
+.sub { margin-top: 4px; color: var(--text-2); font-size: 12.5px; }
+/* [Agent] Carbon-style primary button: label on the left, icon pinned to the right edge, square corners. */
+.btn { margin-left: auto; margin-top: 4px; display: flex; align-items: center; gap: 28px; height: 32px; padding: 0 12px 0 14px; border-radius: 2px; background: var(--blue); color: white; font: 500 13px/1 var(--sans); white-space: nowrap; }
+
+.kpis { display: grid; grid-template-columns: 252px 1fr 150px; gap: 8px; margin-top: 12px; }
+.tile { background: var(--panel); border: 1px solid var(--border); border-radius: 2px; padding: 9px 12px; height: 72px; box-sizing: border-box; }
+.tile .label { color: var(--text-2); font-weight: 500; }
+.tile .num { margin: 2px 0 0; font: 500 26px/1.1 var(--sans); }
+.tile .cap { color: var(--text-2); }
+.stat { display: grid; grid-template-columns: 1fr auto; }
+.stat .spark { grid-row: 1 / 4; grid-column: 2; align-self: center; color: var(--blue); }
+.chart { display: flex; align-items: flex-end; gap: 0; padding-bottom: 6px; }
+.chart .bars { flex: 1; height: 100%; display: flex; align-items: flex-end; gap: 6px; }
+.chart .bars span { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; font: 400 9.5px/1 var(--mono); color: var(--text-2); }
+.chart .bars i { width: 100%; background: var(--blue); border-radius: 1px 1px 0 0; }
+.donut { display: flex; align-items: center; gap: 10px; }
+.legend { display: grid; gap: 4px; font: 400 11px/1 var(--mono); color: var(--text-2); }
+.legend b { display: inline-block; width: 8px; height: 8px; margin-right: 5px; border-radius: 1px; }
+
+.table { margin-top: 10px; background: var(--panel); border: 1px solid var(--border); border-radius: 2px; }
+.toolbar { height: 36px; display: flex; align-items: center; gap: 2px; padding: 0 4px 0 8px; border-bottom: 1px solid var(--border); color: var(--text-2); }
+.toolbar .search { width: 200px; height: 26px; padding: 0 8px; display: flex; align-items: center; background: var(--canvas); border-bottom: 1px solid oklch(0.70 0.005 250); box-sizing: border-box; }
+.toolbar .tb { margin-left: auto; display: flex; }
+.toolbar .tb i { width: 30px; height: 30px; display: grid; place-items: center; }
+table { width: 100%; border-collapse: collapse; }
+th, td { height: 26px; padding: 0 8px; text-align: left; white-space: nowrap; border-bottom: 1px solid var(--border); }
+th { background: var(--canvas); font-weight: 600; color: var(--text); }
+th.n, td.n { text-align: right; }
+td.id { font: 400 11.5px/1 var(--mono); color: var(--blue); }
+tr.sel td { background: oklch(0.95 0.025 258); }
+.cb { width: 12px; height: 12px; border: 1px solid oklch(0.55 0.01 250); border-radius: 1px; display: inline-block; vertical-align: middle; }
+.cb.on { background: var(--blue); border-color: var(--blue); }
+.prog { width: 110px; height: 4px; background: var(--border); }
+.prog i { display: block; height: 100%; background: var(--blue); }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; vertical-align: middle; }
+.ini { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: oklch(0.92 0.03 258); color: var(--blue); font: 600 9px/1 var(--sans); }
+.foot { height: 26px; display: flex; align-items: center; gap: 12px; padding: 0 8px; color: var(--text-2); }
+.foot .pg { margin-left: auto; display: flex; gap: 14px; }
+</style>
+</head>
+<body>
+  <header class="shell">
+    <span class="cell"><svg width="16" height="16"><path d="M2 4h12M2 8h12M2 12h12"/></svg></span>
+    <span class="name">Keep</span>
+    <span class="r">
+      <span class="cell"><svg width="16" height="16"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5l4 4"/></svg></span>
+      <span class="cell"><svg width="16" height="16"><path d="M4 11V7a4 4 0 0 1 8 0v4l1.5 1.5h-11zM6.5 14h3"/></svg></span>
+      <span class="cell"><svg width="16" height="16"><path d="M2 2h3v3H2zM6.5 2h3v3h-3zM11 2h3v3h-3zM2 6.5h3v3H2zM6.5 6.5h3v3h-3zM11 6.5h3v3h-3zM2 11h3v3H2zM6.5 11h3v3h-3zM11 11h3v3h-3z"/></svg></span>
+      <span class="cell"><i class="av"></i></span>
+    </span>
+  </header>
+
+  <nav class="rail">
+    <i class="on"><svg width="16" height="16"><path d="M2 2h5v5H2zM9 2h5v5H9zM2 9h5v5H2zM9 9h5v5H9z"/></svg></i>
+    <i><svg width="16" height="16"><path d="M2 13h12M4 13V8M8 13V4M12 13V6"/></svg></i>
+    <i><svg width="16" height="16"><path d="M2 3h12v10H2zM2 6h12M6 6v7"/></svg></i>
+    <i><svg width="16" height="16"><circle cx="8" cy="5.5" r="2.5"/><path d="M3 14c0-3 2.2-4.5 5-4.5s5 1.5 5 4.5"/></svg></i>
+    <i><svg width="16" height="16"><circle cx="8" cy="8" r="2.2"/><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2M3.4 3.4l1.4 1.4M11.2 11.2l1.4 1.4M3.4 12.6l1.4-1.4M11.2 4.8l1.4-1.4"/></svg></i>
+  </nav>
+
+  <main class="main">
+    <p class="crumb"><a>Keep</a> &nbsp;/&nbsp; Introducing Keep</p>
+    <div class="head">
+      <div>
+        <h1>Make something people keep</h1>
+        <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+      </div>
+      <a class="btn">Start a project<svg width="14" height="14"><path d="M7 1v12M1 7h12"/></svg></a>
+    </div>
+
+    <div class="kpis">
+      <div class="tile stat">
+        <p class="label">Still in use</p>
+        <p class="num">1,284</p>
+        <p class="cap">projects made since 2019</p>
+        <svg class="spark" width="54" height="30"><path d="M1 27l7-4 7 2 7-7 7 1 7-8 7 2 9-11"/></svg>
+      </div>
+      <div class="tile chart">
+        <div class="bars">
+          <span><i style="height:10px"></i>2019</span><span><i style="height:16px"></i>2020</span><span><i style="height:21px"></i>2021</span><span><i style="height:27px"></i>2022</span><span><i style="height:33px"></i>2023</span><span><i style="height:38px"></i>2024</span><span><i style="height:44px"></i>2025</span><span><i style="height:50px"></i>2026</span>
+        </div>
+      </div>
+      <div class="tile donut">
+        <svg width="48" height="48" viewBox="0 0 48 48" style="stroke-width:8"><circle cx="24" cy="24" r="18" stroke="oklch(0.88 0.005 250)"/><circle cx="24" cy="24" r="18" stroke="oklch(0.60 0.15 150)" stroke-dasharray="80 113" transform="rotate(-90 24 24)"/><circle cx="24" cy="24" r="18" stroke="oklch(0.78 0.15 80)" stroke-dasharray="20 113" stroke-dashoffset="-80" transform="rotate(-90 24 24)"/></svg>
+        <div class="legend"><span><b style="background:var(--success)"></b>71%</span><span><b style="background:var(--warning)"></b>18%</span><span><b style="background:var(--border)"></b>11%</span></div>
+      </div>
+    </div>
+
+    <div class="table">
+      <div class="toolbar">
+        <span class="search"><svg width="14" height="14"><circle cx="6" cy="6" r="4"/><path d="M9 9l4 4"/></svg></span>
+        <span class="tb">
+          <i><svg width="16" height="16"><path d="M2 3h12l-4.5 5.5V13l-3-1.5v-3z"/></svg></i>
+          <i><svg width="16" height="16"><path d="M8 2v8M4.5 7L8 10.5 11.5 7M2.5 13.5h11"/></svg></i>
+          <i><svg width="16" height="16"><path d="M2 4h12M2 8h12M2 12h12"/></svg></i>
+        </span>
+      </div>
+      <table>
+        <tr><th style="width:12px"><i class="cb"></i></th><th>ID</th><th></th><th>Progress</th><th class="n">Items</th><th>Since</th><th></th></tr>
+        <tr><td><i class="cb"></i></td><td class="id">KP-1284</td><td><i class="ini">AM</i></td><td><div class="prog"><i style="width:82%"></i></div></td><td class="n">1,206</td><td>2019-03-14</td><td><i class="dot" style="background:var(--success)"></i></td></tr>
+        <tr class="sel"><td><i class="cb on"></i></td><td class="id">KP-1279</td><td><i class="ini">JL</i></td><td><div class="prog"><i style="width:64%"></i></div></td><td class="n">884</td><td>2019-06-02</td><td><i class="dot" style="background:var(--success)"></i></td></tr>
+        <tr><td><i class="cb"></i></td><td class="id">KP-1261</td><td><i class="ini">RS</i></td><td><div class="prog"><i style="width:41%"></i></div></td><td class="n">517</td><td>2020-01-21</td><td><i class="dot" style="background:var(--warning)"></i></td></tr>
+        <tr><td><i class="cb"></i></td><td class="id">KP-1240</td><td><i class="ini">NO</i></td><td><div class="prog"><i style="width:93%"></i></div></td><td class="n">2,048</td><td>2021-09-08</td><td><i class="dot" style="background:var(--success)"></i></td></tr>
+        <tr><td><i class="cb"></i></td><td class="id">KP-1198</td><td><i class="ini">TK</i></td><td><div class="prog"><i style="width:18%"></i></div></td><td class="n">96</td><td>2023-11-30</td><td><i class="dot" style="background:var(--danger)"></i></td></tr>
+      </table>
+      <div class="foot">1–5 of 1,284<span class="pg"><svg width="12" height="12"><path d="M8 2L4 6l4 4"/></svg><svg width="12" height="12"><path d="M4 2l4 4-4 4"/></svg></span></div>
+    </div>
+  </main>
+</body>
+</html>

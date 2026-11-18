@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Skeuomorphism</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;700&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --linen: oklch(0.90 0.02 80);
+  --leather: oklch(0.40 0.07 50);
+  --leather-deep: oklch(0.27 0.05 45);
+  --felt: oklch(0.45 0.09 150);
+  --felt-deep: oklch(0.30 0.07 150);
+  --gloss-blue: oklch(0.60 0.15 250);
+  --chrome: oklch(0.85 0.01 250);
+  --paper: oklch(0.95 0.07 95);
+  --rule: oklch(0.80 0.05 235);
+  --margin: oklch(0.68 0.14 25);
+  --ink: oklch(0.30 0.05 55);
+  --stitch: oklch(0.86 0.05 80);
+  --sans: "Inter", "Helvetica Neue", sans-serif;
+  --print: "Fraunces", Georgia, serif;
+  /* [Agent] Grey fractal noise as a data-URI SVG; blended over a flat colour it becomes leather grain, felt fuzz or paper tooth. */
+  --grain: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' seed='7'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  /* [Agent] Linen is two stretched noises, one long horizontally and one vertically, so the threads cross. */
+  --weave: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='h'><feTurbulence type='fractalNoise' baseFrequency='.012 .95' numOctaves='2' seed='3'/><feColorMatrix type='saturate' values='0'/></filter><filter id='v'><feTurbulence type='fractalNoise' baseFrequency='.95 .012' numOctaves='2' seed='9'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23h)'/><rect width='100%25' height='100%25' filter='url(%23v)' opacity='.5'/></svg>");
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--linen); }
+body {
+  position: relative;
+  font-family: var(--sans);
+  background: var(--weave), var(--linen);
+  background-blend-mode: overlay;
+}
+
+/* Notes pad: leather binding, torn stubs, ruled yellow paper */
+.pad {
+  position: absolute; left: 36px; top: 26px; width: 488px; height: 448px;
+  border-radius: 10px; overflow: hidden;
+  box-shadow: 0 2px 3px oklch(0 0 0 / .35), 0 18px 34px oklch(0.2 0.03 60 / .45);
+}
+.binding {
+  position: relative; height: 62px;
+  background: var(--grain), linear-gradient(180deg, oklch(0.47 0.07 52), var(--leather) 55%, var(--leather-deep));
+  background-blend-mode: overlay, normal;
+  display: flex; align-items: center; justify-content: center;
+}
+.binding::after {
+  content: ""; position: absolute; left: 6px; right: 6px; bottom: 7px;
+  border-bottom: 2px dashed var(--stitch);
+  filter: drop-shadow(0 1px 0 oklch(0.15 0.03 45));
+}
+.binding h2 {
+  margin: 0; font: 700 20px/1 var(--sans); letter-spacing: -.01em;
+  color: oklch(0.86 0.04 75);
+  text-shadow: 0 -1px 0 oklch(0.15 0.03 45), 0 1px 0 oklch(0.55 0.06 55 / .6);
+}
+.binding .add {
+  position: absolute; right: 12px; top: 13px; width: 38px; height: 30px; border-radius: 6px;
+  background: linear-gradient(180deg, oklch(0.50 0.07 52), oklch(0.36 0.06 48) 50%, oklch(0.30 0.05 46) 51%, oklch(0.38 0.06 48));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / .35), 0 1px 0 oklch(1 0 0 / .15), 0 0 0 1px oklch(0.18 0.03 45);
+  display: grid; place-items: center;
+}
+.binding .add::before, .binding .add::after {
+  content: ""; position: absolute; width: 14px; height: 3px; border-radius: 1px;
+  background: oklch(0.92 0.02 80); box-shadow: 0 -1px 0 oklch(0 0 0 / .5);
+}
+.binding .add::after { transform: rotate(90deg); }
+/* [Agent] The jagged stubs left when pages were torn out of the binding (iOS 6 Notes). */
+.stubs {
+  height: 9px; background: oklch(0.90 0.06 92);
+  clip-path: polygon(0 0,100% 0,100% 70%,97% 100%,93% 35%,89% 90%,85% 25%,81% 80%,76% 45%,72% 100%,67% 30%,63% 85%,58% 40%,54% 100%,49% 30%,45% 75%,40% 45%,36% 100%,31% 35%,27% 85%,22% 25%,18% 90%,13% 45%,9% 100%,5% 40%,0 85%);
+  filter: drop-shadow(0 1px 1px oklch(0 0 0 / .4));
+  position: relative; z-index: 1;
+}
+.paper {
+  position: absolute; inset: 62px 0 0 0;
+  padding: 26px 30px 0 66px;
+  background:
+    linear-gradient(90deg, transparent 46px, var(--margin) 46px 47px, transparent 47px 50px, var(--margin) 50px 51px, transparent 51px),
+    repeating-linear-gradient(180deg, transparent 0 29px, var(--rule) 29px 30px),
+    var(--grain), var(--paper);
+  background-blend-mode: normal, normal, soft-light, normal;
+  color: var(--ink);
+}
+.eyebrow {
+  margin: 4px 0 0; height: 30px; line-height: 30px;
+  font: 700 12px/30px var(--sans); letter-spacing: .14em; text-transform: uppercase;
+  color: var(--leather);
+}
+h1 {
+  margin: 0; font: 700 44px/60px var(--print); letter-spacing: -.01em;
+  color: var(--ink); text-shadow: 0 1px 0 oklch(1 0 0 / .6);
+}
+.sub { margin: 0; font: 400 14.5px/30px var(--sans); color: oklch(0.38 0.04 55); }
+.btn {
+  display: inline-block; margin-top: 22px; padding: 0 20px; height: 38px; line-height: 38px;
+  border-radius: 8px; font: 700 15px/38px var(--sans); color: white; text-decoration: none;
+  text-shadow: 0 -1px 0 oklch(0.25 0.08 255 / .7);
+  background: linear-gradient(180deg, oklch(0.78 0.10 250), var(--gloss-blue) 50%, oklch(0.52 0.16 255) 51%, oklch(0.58 0.15 252));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / .55), 0 0 0 1px oklch(0.38 0.13 258), 0 2px 3px oklch(0 0 0 / .3);
+}
+
+/* Game Center felt card with a brushed-metal plate */
+.felt {
+  position: absolute; left: 556px; top: 92px; width: 210px; height: 300px;
+  border-radius: 16px; box-sizing: border-box; padding: 28px 22px 0;
+  background: var(--grain), radial-gradient(120% 90% at 50% 20%, oklch(0.52 0.10 150), var(--felt) 55%, var(--felt-deep));
+  background-blend-mode: overlay, normal;
+  box-shadow: inset 0 2px 8px oklch(0 0 0 / .45), inset 0 -1px 0 oklch(1 0 0 / .15), 0 14px 28px oklch(0.2 0.03 60 / .45), 0 1px 2px oklch(0 0 0 / .4);
+  text-align: center; color: oklch(0.97 0.01 120);
+}
+.felt::before {
+  content: ""; position: absolute; inset: 9px; border-radius: 10px;
+  border: 2px dashed oklch(0.82 0.06 140 / .8);
+  filter: drop-shadow(0 1px 0 oklch(0.2 0.05 150));
+}
+.felt .label {
+  margin: 4px 0 0; font: 700 13px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase;
+  text-shadow: 0 -1px 0 oklch(0.18 0.05 150);
+}
+.plate {
+  position: relative; margin: 22px 0 18px; height: 112px; border-radius: 8px;
+  background:
+    repeating-linear-gradient(90deg, oklch(1 0 0 / 0) 0 1px, oklch(0 0 0 / .05) 1px 2px, oklch(1 0 0 / .12) 2px 3px),
+    linear-gradient(180deg, oklch(0.97 0.004 250), var(--chrome) 46%, oklch(0.74 0.01 250) 54%, oklch(0.90 0.006 250));
+  box-shadow: inset 0 1px 0 white, inset 0 -1px 0 oklch(0.6 0.01 250), 0 3px 6px oklch(0 0 0 / .45);
+  display: grid; place-items: center;
+}
+.plate .num {
+  font: 700 50px/1 var(--print); letter-spacing: -.01em;
+  color: oklch(0.42 0.01 250);
+  text-shadow: 0 1px 0 oklch(1 0 0 / .9), 0 -1px 0 oklch(0 0 0 / .35);
+}
+.screw {
+  position: absolute; width: 9px; height: 9px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, white, oklch(0.70 0.01 250) 60%, oklch(0.45 0.01 250));
+  box-shadow: 0 1px 0 oklch(1 0 0 / .7), inset 0 0 0 .5px oklch(0.4 0 0);
+}
+.screw::after { content: ""; position: absolute; left: 1px; right: 1px; top: 4px; height: 1px; background: oklch(0.35 0 0); transform: rotate(-35deg); }
+.screw:nth-child(1) { left: 7px; top: 7px; } .screw:nth-child(2) { right: 7px; top: 7px; }
+.screw:nth-child(3) { left: 7px; bottom: 7px; } .screw:nth-child(4) { right: 7px; bottom: 7px; }
+.felt .cap {
+  margin: 0; font: 500 14px/1.35 var(--sans); color: oklch(0.92 0.03 140);
+  text-shadow: 0 -1px 0 oklch(0.18 0.05 150);
+}
+</style>
+</head>
+<body>
+  <section class="pad">
+    <header class="binding"><h2>Keep</h2><span class="add"></span></header>
+    <div class="stubs"></div>
+    <div class="paper">
+      <p class="eyebrow">Introducing Keep</p>
+      <h1>Make something<br>people keep</h1>
+      <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+      <a class="btn" href="#">Start a project</a>
+    </div>
+  </section>
+
+  <aside class="felt">
+    <p class="label">Still in use</p>
+    <div class="plate"><i class="screw"></i><i class="screw"></i><i class="screw"></i><i class="screw"></i><span class="num">1,284</span></div>
+    <p class="cap">projects made<br>since 2019</p>
+  </aside>
+</body>
+</html>

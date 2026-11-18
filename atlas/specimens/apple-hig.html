@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Apple HIG</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --grouped: oklch(0.96 0.003 260);
+  --surface: oklch(1 0 0);
+  --label: oklch(0.20 0.005 260);
+  --secondary: oklch(0.55 0.01 260);
+  --separator: oklch(0.88 0.004 260);
+  --blue: oklch(0.60 0.20 255);
+  --green: oklch(0.72 0.19 150);
+  --text: "Inter", -apple-system, sans-serif;
+  --title: "Inter Tight", "Inter", sans-serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--grouped); }
+body { position: relative; font-family: var(--text); color: var(--label); -webkit-font-smoothing: antialiased; }
+p, h1 { margin: 0; }
+svg { display: block; }
+
+.status { position: absolute; left: 30px; right: 30px; top: 12px; display: flex; align-items: center; gap: 6px; font: 600 15px/1 var(--text); }
+.status .r { margin-left: auto; display: flex; gap: 6px; align-items: center; }
+
+.col { position: absolute; left: 32px; top: 52px; width: 404px; }
+.eyebrow { font: 600 13px/1 var(--text); letter-spacing: .02em; text-transform: uppercase; color: var(--secondary); }
+h1 { margin: 8px 0 10px; font: 800 37px/1.08 var(--title); letter-spacing: -.012em; }
+.sub { font: 400 15px/1.45 var(--text); color: var(--secondary); }
+
+/* Inset grouped list */
+.group { margin-top: 22px; border-radius: 18px; background: var(--surface); overflow: hidden; }
+.cell { display: flex; align-items: center; gap: 12px; padding: 0 16px; min-height: 48px; }
+.cell + .cell { box-shadow: inset 56px 1px 0 var(--surface), inset 0 .5px 0 var(--separator); }
+.cell .ico { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; }
+.cell .t { font: 500 16px/1 var(--text); }
+.cell .v { margin-left: auto; font: 400 16px/1 var(--text); color: var(--secondary); }
+.cell.big { padding: 14px 16px 12px; }
+.cell .num { font: 700 30px/1 var(--title); letter-spacing: -.01em; }
+.cell .lab { font: 500 13px/1 var(--text); color: var(--secondary); margin-bottom: 6px; }
+.bars { margin-left: auto; display: flex; gap: 5px; align-items: flex-end; height: 40px; }
+.bars i { width: 9px; border-radius: 3px; background: var(--blue); }
+.bars i.dim { background: oklch(0.88 0.06 255); }
+.foot { margin: 7px 16px 0; font: 400 13px/1.3 var(--text); color: var(--secondary); }
+
+.btn {
+  display: flex; align-items: center; justify-content: center; margin-top: 18px; height: 50px; border-radius: 25px;
+  background: var(--blue); color: white; font: 600 17px/1 var(--text);
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / .35), inset 0 -1px 0 oklch(0 0 0 / .08);
+}
+
+/* Content the glass floats over */
+.art {
+  position: absolute; left: 460px; top: 44px; width: 312px; height: 436px; border-radius: 30px; overflow: hidden;
+  background:
+    linear-gradient(165deg, oklch(0.62 0.20 300), oklch(0.45 0.20 280) 60%, oklch(0.32 0.14 270));
+}
+.art i { position: absolute; border-radius: 50%; }
+.art .s1 { left: -90px; top: 210px; width: 330px; height: 330px; background: radial-gradient(circle at 40% 35%, oklch(0.88 0.14 80), oklch(0.72 0.19 45)); }
+.art .s2 { left: 150px; top: 250px; width: 260px; height: 260px; background: radial-gradient(circle at 40% 35%, oklch(0.75 0.15 230), oklch(0.50 0.20 262)); }
+.art .s3 { left: 110px; top: 40px; width: 210px; height: 210px; background: radial-gradient(circle at 40% 35%, oklch(0.88 0.08 350), oklch(0.66 0.20 355)); }
+
+/* [Agent] Liquid Glass: almost clear, a slight warp of what's behind, a bright rim on the lit edge and a faint one opposite. */
+.glass {
+  position: absolute; background: oklch(1 0 0 / .16);
+  backdrop-filter: url(#lens) blur(1.5px) saturate(1.8) brightness(1.06);
+  box-shadow: inset 1.5px 1.5px 0 oklch(1 0 0 / .8), inset -1px -1px 0 oklch(1 0 0 / .45), inset 0 0 16px oklch(1 0 0 / .28), 0 8px 24px oklch(0.2 0.05 280 / .25);
+  display: flex; align-items: center; justify-content: space-around;
+}
+.tabbar { left: 474px; bottom: 34px; width: 222px; height: 60px; border-radius: 30px; }
+.tabbar .on { width: 62px; height: 50px; border-radius: 25px; background: oklch(1 0 0 / .32); display: grid; place-items: center; box-shadow: inset 0 0 0 .5px oklch(1 0 0 / .6); }
+.search { left: 704px; bottom: 34px; width: 60px; height: 60px; border-radius: 50%; justify-content: center; }
+.back { left: 474px; top: 58px; width: 44px; height: 44px; border-radius: 50%; justify-content: center; }
+.more { left: 664px; top: 58px; width: 94px; height: 44px; border-radius: 22px; }
+</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <filter id="lens" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".012 .03" numOctaves="1" seed="4" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="22" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <div class="status">9:41
+    <span class="r">
+      <svg width="18" height="12"><rect x="0" y="8" width="3" height="4" rx="1" fill="currentColor"/><rect x="5" y="5" width="3" height="7" rx="1" fill="currentColor"/><rect x="10" y="2.5" width="3" height="9.5" rx="1" fill="currentColor"/><rect x="15" y="0" width="3" height="12" rx="1" fill="currentColor"/></svg>
+      <svg width="16" height="12" viewBox="0 0 16 12"><path d="M8 11.5l2.4-2.6a3.4 3.4 0 0 0-4.8 0zM3.3 6.6a6.6 6.6 0 0 1 9.4 0l1.6-1.7a9 9 0 0 0-12.6 0zM.2 3.4a11 11 0 0 1 15.6 0" fill="currentColor" stroke="currentColor" stroke-width=".4"/></svg>
+      <svg width="27" height="13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="18" height="9" rx="2" fill="currentColor"/><rect x="25" y="4.5" width="1.5" height="4" rx=".7" fill="currentColor" opacity=".4"/></svg>
+    </span>
+  </div>
+
+  <section class="col">
+    <p class="eyebrow">Introducing Keep</p>
+    <h1>Make something<br>people keep</h1>
+    <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+
+    <div class="group">
+      <div class="cell big">
+        <div><p class="lab">Still in use</p><p class="num">1,284</p></div>
+        <div class="bars"><i class="dim" style="height:14px"></i><i class="dim" style="height:20px"></i><i class="dim" style="height:18px"></i><i class="dim" style="height:26px"></i><i class="dim" style="height:24px"></i><i class="dim" style="height:31px"></i><i style="height:40px"></i></div>
+      </div>
+      <div class="cell">
+        <span class="ico" style="background:var(--green)"><svg width="16" height="16"><path d="M3 8.5l3.2 3.2L13 4.5" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="t">projects made since 2019</span>
+        <span class="v"><svg width="8" height="13"><path d="M1.5 1.5l5 5-5 5" fill="none" stroke="oklch(0.75 0.01 260)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </div>
+
+    <a class="btn">Start a project</a>
+  </section>
+
+  <div class="art"><i class="s3"></i><i class="s1"></i><i class="s2"></i></div>
+
+  <div class="glass back"><svg width="12" height="20"><path d="M10 2L2 10l8 8" fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="glass more">
+    <svg width="20" height="22"><path d="M10 14V2M5 6l5-5 5 5M3 10v10h14V10" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg width="22" height="6"><circle cx="3" cy="3" r="2.4" fill="white"/><circle cx="11" cy="3" r="2.4" fill="white"/><circle cx="19" cy="3" r="2.4" fill="white"/></svg>
+  </div>
+  <nav class="glass tabbar">
+    <span class="on"><svg width="26" height="22"><path d="M2 10L13 1l11 9v11H16v-7h-6v7H2z" fill="white"/></svg></span>
+    <svg width="24" height="24"><rect x="2" y="2" width="8" height="8" rx="2" fill="white"/><rect x="14" y="2" width="8" height="8" rx="2" fill="white"/><rect x="2" y="14" width="8" height="8" rx="2" fill="white"/><rect x="14" y="14" width="8" height="8" rx="2" fill="white"/></svg>
+    <svg width="24" height="24"><circle cx="12" cy="8" r="5" fill="white"/><path d="M2 23c0-5 4.5-8 10-8s10 3 10 8z" fill="white"/></svg>
+  </nav>
+  <div class="glass search"><svg width="22" height="22"><circle cx="9.5" cy="9.5" r="7" fill="none" stroke="white" stroke-width="2.4"/><path d="M14.5 14.5l6 6" stroke="white" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+</body>
+</html>
