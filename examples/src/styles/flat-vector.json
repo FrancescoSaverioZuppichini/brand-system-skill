@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "page, cards"],
+		"cobalt": [0.55, 0.17, 265, "primary blue"],
+		"tint": [0.94, 0.027, 265, "blue blob, card shadow"],
+		"coral": [0.72, 0.15, 35, "coral shapes"],
+		"lemon": [0.87, 0.14, 90, "yellow shapes"],
+		"ink": [0.27, 0.04, 265, "text, dark shapes"],
+		"skin": [0.72, 0.08, 55, "skin tone"],
+		"slate": [0.5, 0.03, 265, "muted text"],
+		"line": [0.91, 0.01, 265, "borders"],
+		"brick": [0.52, 0.17, 30, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "ink", "card": "white", "card-foreground": "ink", "popover": "white", "popover-foreground": "ink", "primary": "cobalt", "primary-foreground": "white", "secondary": "tint", "secondary-foreground": "ink", "muted": "tint", "muted-foreground": "slate", "accent": "lemon", "accent-foreground": "ink", "destructive": "brick", "border": "line", "input": "line", "ring": "cobalt", "chart-1": "cobalt", "chart-2": "coral", "chart-3": "lemon", "chart-4": "ink", "chart-5": "tint"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "white", "body text"],
+		["slate", "white", "muted text"],
+		["white", "cobalt", "primary text on primary"],
+		["ink", "tint", "secondary text on secondary"],
+		["ink", "lemon", "accent text on accent"],
+		["slate", "tint", "muted text on muted"],
+		["cobalt", "white", "focus ring", "ui"],
+		["line", "white", "hairline", "decorative"]
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"linen": [0.99, 0, 0, "white page, cards"],
+		"mist": [0.96, 0.015, 200, "soft teal surfaces, pills"],
+		"haze": [0.92, 0.03, 195, "deeper mist, hairlines"],
+		"teal": [0.52, 0.088, 195, "clinical teal: actions"],
+		"deep": [0.3, 0.05, 230, "deep blue text"],
+		"slate": [0.45, 0.03, 230, "muted text"],
+		"coral": [0.72, 0.12, 30, "warm coral: hearts, pulses"],
+		"blush": [0.92, 0.04, 35, "soft coral tiles"],
+		"flush": [0.52, 0.17, 25, "alerts"]
+	},
+	"roles": {
+		"light": {"background": "linen", "foreground": "deep", "card": "linen", "card-foreground": "deep", "popover": "linen", "popover-foreground": "deep", "primary": "teal", "primary-foreground": "linen", "secondary": "mist", "secondary-foreground": "deep", "muted": "mist", "muted-foreground": "slate", "accent": "blush", "accent-foreground": "deep", "destructive": "flush", "border": "haze", "input": "haze", "ring": "teal", "chart-1": "teal", "chart-2": "coral", "chart-3": "deep", "chart-4": "haze", "chart-5": "slate"}
+	},
+	"default": "light",
+	"pairs": [
+		["deep", "linen", "body text"],
+		["slate", "linen", "muted text"],
+		["linen", "teal", "primary text on primary"],
+		["deep", "mist", "secondary text on secondary"],
+		["deep", "blush", "accent text on accent"],
+		["slate", "mist", "muted text on muted"],
+		["teal", "linen", "focus ring", "ui"],
+		["haze", "linen", "hairline", "decorative"]
+	]
+}

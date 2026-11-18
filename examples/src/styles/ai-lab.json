@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"stone": [0.96, 0.012, 80, "warm paper page"],
+		"ink": [0.2, 0.01, 60, "near-black ink: text, primary"],
+		"clay": [0.62, 0.13, 40, "the one earthy accent"],
+		"grey": [0.5, 0.01, 60, "captions"],
+		"umber": [0.36, 0.01, 60, "body copy"],
+		"line": [0.88, 0.01, 80, "hairlines"],
+		"sand": [0.92, 0.015, 80, "quiet surfaces"],
+		"rust": [0.5, 0.15, 35, "errors"],
+		"sage": [0.62, 0.05, 140, "chart sage"]
+	},
+	"roles": {
+		"light": {"background": "stone", "foreground": "ink", "card": "stone", "card-foreground": "ink", "popover": "stone", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "stone", "secondary": "sand", "secondary-foreground": "ink", "muted": "sand", "muted-foreground": "umber", "accent": "sand", "accent-foreground": "ink", "destructive": "rust", "border": "line", "input": "line", "ring": "clay", "chart-1": "clay", "chart-2": "ink", "chart-3": "sage", "chart-4": "grey", "chart-5": "line"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "stone", "body text"],
+		["umber", "stone", "muted text"],
+		["stone", "ink", "primary text on primary"],
+		["ink", "sand", "secondary text on secondary"],
+		["umber", "sand", "muted text on muted"],
+		["clay", "stone", "focus ring", "ui"],
+		["line", "stone", "hairline", "decorative"]
+	]
+}

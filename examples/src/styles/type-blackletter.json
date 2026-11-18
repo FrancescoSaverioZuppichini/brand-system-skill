@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"vellum": [0.98, 0, 0, "page"],
+		"ink": [0.12, 0, 0, "text, primary"],
+		"lead": [0.4, 0, 0, "captions"],
+		"rubric": [0.45, 0.17, 25, "the one red: rubrics, labels"],
+		"fog": [0.94, 0, 0, "quiet surfaces"],
+		"pewter": [0.6, 0, 0, "chart grey"],
+		"rule": [0.82, 0, 0, "hairlines"]
+	},
+	"roles": {
+		"light": {"background": "vellum", "foreground": "ink", "card": "vellum", "card-foreground": "ink", "popover": "vellum", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "vellum", "secondary": "fog", "secondary-foreground": "ink", "muted": "fog", "muted-foreground": "lead", "accent": "fog", "accent-foreground": "ink", "destructive": "rubric", "border": "rule", "input": "rule", "ring": "rubric", "chart-1": "rubric", "chart-2": "ink", "chart-3": "pewter", "chart-4": "lead", "chart-5": "rule"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "vellum", "body text"],
+		["lead", "vellum", "muted text"],
+		["vellum", "ink", "primary text on primary"],
+		["ink", "fog", "secondary text on secondary"],
+		["lead", "fog", "muted text on muted"],
+		["rubric", "vellum", "focus ring", "ui"],
+		["rule", "vellum", "hairline", "decorative"]
+	]
+}

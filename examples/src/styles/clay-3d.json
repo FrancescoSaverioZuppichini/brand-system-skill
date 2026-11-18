@@ -1,0 +1,35 @@
+{
+	"tokens": {
+		"haze": [0.95, 0.02, 260, "soft lavender-blue studio"],
+		"clay-blue": [0.7, 0.13, 255, "blue clay"],
+		"blue-lit": [0.88, 0.059, 255, "blue highlight"],
+		"cobalt": [0.5, 0.14, 260, "blue in shadow: primary"],
+		"coral": [0.75, 0.13, 30, "coral clay"],
+		"coral-lit": [0.9, 0.053, 40, "coral highlight"],
+		"brick": [0.58, 0.14, 28, "coral in shadow"],
+		"butter": [0.88, 0.13, 90, "yellow clay"],
+		"butter-lit": [0.97, 0.047, 95, "yellow highlight"],
+		"ochre": [0.72, 0.13, 75, "yellow in shadow"],
+		"floor": [0.75, 0.03, 260, "contact shadows"],
+		"ink": [0.3, 0.05, 265, "text"],
+		"putty": [0.99, 0.004, 260, "white clay, cards"],
+		"slate": [0.46, 0.04, 265, "muted text"],
+		"puddle": [0.91, 0.025, 260, "quiet surfaces"]
+	},
+	"roles": {
+		"light": {"background": "haze", "foreground": "ink", "card": "putty", "card-foreground": "ink", "popover": "putty", "popover-foreground": "ink", "primary": "cobalt", "primary-foreground": "putty", "secondary": "butter", "secondary-foreground": "ink", "muted": "puddle", "muted-foreground": "slate", "accent": "coral-lit", "accent-foreground": "ink", "destructive": "brick", "border": "puddle", "input": "puddle", "ring": "cobalt", "chart-1": "clay-blue", "chart-2": "coral", "chart-3": "butter", "chart-4": "cobalt", "chart-5": "floor"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "haze", "body text"],
+		["slate", "haze", "muted text"],
+		["ink", "putty", "card text on card"],
+		["putty", "cobalt", "primary text on primary"],
+		["ink", "butter", "secondary text on secondary"],
+		["ink", "coral-lit", "accent text on accent"],
+		["slate", "puddle", "muted text on muted"],
+		["slate", "putty", "muted text on cards"],
+		["cobalt", "haze", "focus ring", "ui"],
+		["puddle", "haze", "hairline", "decorative"]
+	]
+}

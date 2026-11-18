@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"midnight": [0.12, 0.01, 20, "black room"],
+		"velvet": [0.18, 0.015, 20, "booths, cards"],
+		"booth": [0.26, 0.02, 20, "raised surfaces"],
+		"red": [0.52, 0.21, 25, "red light"],
+		"magenta": [0.6, 0.24, 345, "magenta neon"],
+		"skin": [0.75, 0.06, 50, "skin in warm light"],
+		"cream": [0.95, 0.01, 60, "text"],
+		"smoke": [0.7, 0.012, 50, "dim text"]
+	},
+	"roles": {
+		"dark": {"background": "midnight", "foreground": "cream", "card": "velvet", "card-foreground": "cream", "popover": "velvet", "popover-foreground": "cream", "primary": "cream", "primary-foreground": "midnight", "secondary": "booth", "secondary-foreground": "cream", "muted": "velvet", "muted-foreground": "smoke", "accent": "booth", "accent-foreground": "cream", "destructive": "red", "border": "booth", "input": "booth", "ring": "magenta", "chart-1": "magenta", "chart-2": "red", "chart-3": "skin", "chart-4": "cream", "chart-5": "smoke"}
+	},
+	"default": "dark",
+	"pairs": [
+		["cream", "midnight", "body text"],
+		["smoke", "midnight", "muted text"],
+		["cream", "velvet", "card text on card"],
+		["midnight", "cream", "primary text on primary"],
+		["cream", "booth", "secondary text on secondary"],
+		["smoke", "velvet", "muted text on muted"],
+		["magenta", "midnight", "focus ring", "ui"],
+		["booth", "midnight", "hairline", "decorative"]
+	]
+}

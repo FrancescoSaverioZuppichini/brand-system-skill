@@ -1,0 +1,23 @@
+{
+	"tokens": {
+		"paper": [0.99, 0, 0, "page and cards"],
+		"ink": [0.14, 0, 0, "text, outlines"],
+		"grey": [0.5, 0, 0, "captions"],
+		"signal": [0.7, 0.22, 140, "the one green, actions"],
+		"mist": [0.95, 0, 0, "quiet surfaces"],
+		"siren": [0.55, 0.21, 27, "destructive"],
+		"steel": [0.75, 0, 0, "chart grey, hairlines"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "signal", "primary-foreground": "ink", "secondary": "ink", "secondary-foreground": "paper", "muted": "mist", "muted-foreground": "grey", "accent": "mist", "accent-foreground": "ink", "destructive": "siren", "border": "ink", "input": "ink", "ring": "ink", "chart-1": "signal", "chart-2": "ink", "chart-3": "grey", "chart-4": "steel", "chart-5": "siren"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["grey", "paper", "muted text"],
+		["ink", "signal", "primary text on primary"],
+		["paper", "ink", "secondary text on secondary"],
+		["ink", "mist", "accent text on accent"],
+		["grey", "mist", "muted text on muted"]
+	]
+}

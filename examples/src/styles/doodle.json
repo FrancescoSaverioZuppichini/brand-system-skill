@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"paper": [0.97, 0.015, 90, "notebook paper"],
+		"ink": [0.24, 0.02, 260, "pen ink, text"],
+		"marker": [0.58, 0.15, 250, "blue marker"],
+		"highlighter": [0.92, 0.15, 105, "yellow highlighter"],
+		"redpen": [0.58, 0.19, 28, "red pen: circles, arrows"],
+		"pencil": [0.45, 0.02, 260, "muted text"],
+		"scrap": [0.93, 0.02, 90, "quiet surfaces"],
+		"crossout": [0.5, 0.19, 28, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "highlighter", "primary-foreground": "ink", "secondary": "scrap", "secondary-foreground": "ink", "muted": "scrap", "muted-foreground": "pencil", "accent": "highlighter", "accent-foreground": "ink", "destructive": "crossout", "border": "ink", "input": "ink", "ring": "marker", "chart-1": "marker", "chart-2": "redpen", "chart-3": "highlighter", "chart-4": "ink", "chart-5": "pencil"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["pencil", "paper", "muted text"],
+		["ink", "highlighter", "primary text on primary"],
+		["ink", "scrap", "secondary text on secondary"],
+		["pencil", "scrap", "muted text on muted"],
+		["marker", "paper", "focus ring", "ui"]
+	]
+}

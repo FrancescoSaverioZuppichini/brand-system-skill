@@ -1,0 +1,29 @@
+{
+	"tokens": {
+		"sheet": [1, 0, 0, "page, cards"],
+		"panel": [0.976, 0.003, 255, "app panes, the bento floor"],
+		"hairline": [0.915, 0.005, 255, "borders, rules"],
+		"block": [0.93, 0.005, 255, "placeholder bars"],
+		"shade": [0.875, 0.007, 255, "darker placeholders"],
+		"graphite": [0.23, 0.012, 255, "text"],
+		"pencil": [0.52, 0.012, 255, "muted text"],
+		"cobalt": [0.56, 0.2, 260, "the one accent: actions, the live state"],
+		"tint": [0.955, 0.021, 260, "accent wash"],
+		"leaf": [0.62, 0.15, 155, "chart green, good"],
+		"brick": [0.55, 0.2, 27, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "sheet", "foreground": "graphite", "card": "sheet", "card-foreground": "graphite", "popover": "sheet", "popover-foreground": "graphite", "primary": "cobalt", "primary-foreground": "sheet", "secondary": "panel", "secondary-foreground": "graphite", "muted": "panel", "muted-foreground": "pencil", "accent": "tint", "accent-foreground": "graphite", "destructive": "brick", "border": "hairline", "input": "hairline", "ring": "cobalt", "chart-1": "cobalt", "chart-2": "graphite", "chart-3": "leaf", "chart-4": "shade", "chart-5": "pencil"}
+	},
+	"default": "light",
+	"pairs": [
+		["graphite", "sheet", "body text"],
+		["pencil", "sheet", "muted text"],
+		["sheet", "cobalt", "primary text on primary"],
+		["graphite", "panel", "secondary text on secondary"],
+		["graphite", "tint", "accent text on accent"],
+		["pencil", "panel", "muted text on muted"],
+		["cobalt", "sheet", "focus ring", "ui"],
+		["hairline", "sheet", "hairline", "decorative"]
+	]
+}

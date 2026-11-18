@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"paper": [0.94, 0.02, 85, "backing paper"],
+		"ink": [0.18, 0.01, 60, "black ink"],
+		"vermilion": [0.58, 0.2, 30, "cut red paper"],
+		"cobalt": [0.5, 0.15, 255, "cut blue paper"],
+		"newsprint": [0.75, 0.01, 90, "newsprint scraps"],
+		"bond": [0.985, 0.005, 90, "white scraps"],
+		"clipping": [0.42, 0.01, 60, "muted text"],
+		"oxide": [0.48, 0.18, 30, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "bond", "card-foreground": "ink", "popover": "bond", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "bond", "secondary": "newsprint", "secondary-foreground": "ink", "muted": "bond", "muted-foreground": "clipping", "accent": "newsprint", "accent-foreground": "ink", "destructive": "oxide", "border": "ink", "input": "ink", "ring": "cobalt", "chart-1": "vermilion", "chart-2": "cobalt", "chart-3": "ink", "chart-4": "newsprint", "chart-5": "clipping"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["clipping", "paper", "muted text"],
+		["ink", "bond", "card text on card"],
+		["bond", "ink", "primary text on primary"],
+		["ink", "newsprint", "secondary text on secondary"],
+		["clipping", "bond", "muted text on muted"],
+		["cobalt", "paper", "focus ring", "ui"]
+	]
+}

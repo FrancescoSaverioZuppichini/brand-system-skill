@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "page"],
+		"navy": [0.27, 0.06, 260, "navy: text, primary"],
+		"slate": [0.36, 0.06, 258, "lit glass, hover navy"],
+		"stone": [0.94, 0.008, 80, "stone panels"],
+		"gold": [0.68, 0.08, 80, "muted gold rules"],
+		"grey": [0.5, 0.01, 260, "secondary text"],
+		"rule": [0.86, 0.01, 260, "hairlines"],
+		"burgundy": [0.42, 0.12, 15, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "navy", "card": "stone", "card-foreground": "navy", "popover": "white", "popover-foreground": "navy", "primary": "navy", "primary-foreground": "white", "secondary": "stone", "secondary-foreground": "navy", "muted": "stone", "muted-foreground": "grey", "accent": "stone", "accent-foreground": "navy", "destructive": "burgundy", "border": "rule", "input": "rule", "ring": "navy", "chart-1": "navy", "chart-2": "gold", "chart-3": "slate", "chart-4": "grey", "chart-5": "burgundy"}
+	},
+	"default": "light",
+	"pairs": [
+		["navy", "white", "body text"],
+		["grey", "white", "muted text"],
+		["navy", "stone", "card text on card"],
+		["white", "navy", "primary text on primary"],
+		["grey", "stone", "muted text on muted"],
+		["rule", "white", "hairline", "decorative"]
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"paper": [0.97, 0.006, 80, "page"],
+		"ink": [0.18, 0.01, 60, "text, primary"],
+		"warm-grade": [0.75, 0.06, 60, "warm film grade"],
+		"shadow-grade": [0.3, 0.03, 250, "cool shadow grade"],
+		"pencil": [0.45, 0.01, 60, "captions"],
+		"rule": [0.85, 0.01, 70, "hairlines"],
+		"linen": [0.93, 0.01, 75, "quiet surfaces"],
+		"terracotta": [0.5, 0.12, 40, "destructive, the cup"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "paper", "card-foreground": "ink", "popover": "paper", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "paper", "secondary": "linen", "secondary-foreground": "ink", "muted": "linen", "muted-foreground": "pencil", "accent": "linen", "accent-foreground": "ink", "destructive": "terracotta", "border": "rule", "input": "rule", "ring": "ink", "chart-1": "ink", "chart-2": "warm-grade", "chart-3": "shadow-grade", "chart-4": "terracotta", "chart-5": "rule"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["pencil", "paper", "muted text"],
+		["paper", "ink", "primary text on primary"],
+		["ink", "linen", "secondary text on secondary"],
+		["pencil", "linen", "muted text on muted"],
+		["rule", "paper", "hairline", "decorative"]
+	]
+}

@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"paper": [0.97, 0.015, 90, "notebook page"],
+		"ink": [0.25, 0.03, 260, "pen ink, text"],
+		"pencil": [0.48, 0.01, 260, "captions"],
+		"marker": [0.6, 0.18, 25, "red marker, notes"],
+		"sticky": [0.99, 0.01, 90, "the note card"],
+		"smudge": [0.92, 0.02, 90, "quiet surfaces"],
+		"crease": [0.88, 0.02, 90, "card edges, hairlines"],
+		"highlighter": [0.88, 0.14, 100, "chart yellow"],
+		"biro": [0.5, 0.14, 260, "chart blue pen"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "ink", "card": "sticky", "card-foreground": "ink", "popover": "sticky", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "paper", "secondary": "smudge", "secondary-foreground": "ink", "muted": "smudge", "muted-foreground": "pencil", "accent": "smudge", "accent-foreground": "ink", "destructive": "marker", "border": "crease", "input": "crease", "ring": "marker", "chart-1": "marker", "chart-2": "ink", "chart-3": "biro", "chart-4": "highlighter", "chart-5": "pencil"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "paper", "body text"],
+		["pencil", "paper", "muted text"],
+		["ink", "sticky", "card text on card"],
+		["paper", "ink", "primary text on primary"],
+		["ink", "smudge", "secondary text on secondary"],
+		["pencil", "smudge", "muted text on muted"],
+		["pencil", "sticky", "muted text on cards"],
+		["marker", "paper", "focus ring", "ui"],
+		["crease", "paper", "hairline", "decorative"]
+	]
+}

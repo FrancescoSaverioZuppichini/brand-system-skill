@@ -1,0 +1,29 @@
+{
+	"tokens": {
+		"page": [1, 0, 0, "white page"],
+		"ink": [0.15, 0.002, 180, "text, header bar"],
+		"slate": [0.45, 0.015, 230, "secondary text, captions"],
+		"link": [0.53, 0.14, 250, "link blue, header rule"],
+		"focus": [0.91, 0.16, 98, "focus yellow"],
+		"go": [0.47, 0.116, 155, "start-button green"],
+		"moss": [0.28, 0.06, 155, "start-button shadow"],
+		"rule": [0.76, 0.008, 230, "borders, dividers"],
+		"stone": [0.96, 0.003, 90, "footer, quiet panels"],
+		"wash": [0.9, 0.03, 245, "phase tag background"],
+		"navy": [0.3, 0.07, 250, "phase tag text"],
+		"alarm": [0.5, 0.19, 27, "error red"]
+	},
+	"roles": {
+		"light": {"background": "page", "foreground": "ink", "card": "page", "card-foreground": "ink", "popover": "page", "popover-foreground": "ink", "primary": "go", "primary-foreground": "page", "secondary": "stone", "secondary-foreground": "ink", "muted": "stone", "muted-foreground": "slate", "accent": "wash", "accent-foreground": "navy", "destructive": "alarm", "border": "rule", "input": "ink", "ring": "ink", "chart-1": "link", "chart-2": "go", "chart-3": "focus", "chart-4": "alarm", "chart-5": "slate"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "page", "body text"],
+		["slate", "page", "muted text"],
+		["page", "go", "primary text on primary"],
+		["ink", "stone", "secondary text on secondary"],
+		["navy", "wash", "accent text on accent"],
+		["slate", "stone", "muted text on muted"],
+		["rule", "page", "hairline", "decorative"]
+	]
+}

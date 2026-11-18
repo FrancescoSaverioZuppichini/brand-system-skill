@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"studio": [0.13, 0, 0, "black studio"],
+		"graphite": [0.28, 0.005, 260, "graphite panels"],
+		"carbon": [0.2, 0.004, 260, "raised dark surfaces"],
+		"silver": [0.8, 0.005, 260, "silver: secondary text"],
+		"chrome": [0.98, 0, 0, "white type, outline buttons"],
+		"signal": [0.62, 0.22, 28, "tail-light red: the one signal"],
+		"steel": [0.45, 0.005, 260, "hairlines"]
+	},
+	"roles": {
+		"dark": {"background": "studio", "foreground": "chrome", "card": "carbon", "card-foreground": "chrome", "popover": "carbon", "popover-foreground": "chrome", "primary": "chrome", "primary-foreground": "studio", "secondary": "graphite", "secondary-foreground": "chrome", "muted": "carbon", "muted-foreground": "silver", "accent": "graphite", "accent-foreground": "chrome", "destructive": "signal", "border": "graphite", "input": "graphite", "ring": "signal", "chart-1": "signal", "chart-2": "chrome", "chart-3": "silver", "chart-4": "steel", "chart-5": "graphite"}
+	},
+	"default": "dark",
+	"pairs": [
+		["chrome", "studio", "body text"],
+		["silver", "studio", "muted text"],
+		["chrome", "carbon", "card text on card"],
+		["studio", "chrome", "primary text on primary"],
+		["chrome", "graphite", "secondary text on secondary"],
+		["silver", "carbon", "muted text on muted"],
+		["signal", "studio", "focus ring", "ui"],
+		["graphite", "studio", "hairline", "decorative"]
+	]
+}

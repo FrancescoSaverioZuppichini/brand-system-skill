@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"void": [0.14, 0.01, 270, "near-black stage"],
+		"panel": [0.2, 0.015, 270, "HUD panels, cards"],
+		"plate": [0.26, 0.02, 270, "armour plate: raised surfaces, off segments"],
+		"neon": [0.88, 0.22, 135, "neon lime: the one signal"],
+		"ember": [0.6, 0.24, 25, "red rim light, damage"],
+		"steel": [0.65, 0.02, 260, "metallic grey text"],
+		"frost": [0.97, 0.005, 270, "white type"]
+	},
+	"roles": {
+		"dark": {"background": "void", "foreground": "frost", "card": "panel", "card-foreground": "frost", "popover": "panel", "popover-foreground": "frost", "primary": "neon", "primary-foreground": "void", "secondary": "plate", "secondary-foreground": "frost", "muted": "panel", "muted-foreground": "steel", "accent": "plate", "accent-foreground": "frost", "destructive": "ember", "border": "plate", "input": "plate", "ring": "neon", "chart-1": "neon", "chart-2": "ember", "chart-3": "steel", "chart-4": "frost", "chart-5": "plate"}
+	},
+	"default": "dark",
+	"pairs": [
+		["frost", "void", "body text"],
+		["steel", "void", "muted text"],
+		["frost", "panel", "card text on card"],
+		["void", "neon", "primary text on primary"],
+		["frost", "plate", "secondary text on secondary"],
+		["steel", "panel", "muted text on muted"],
+		["neon", "void", "focus ring", "ui"],
+		["plate", "void", "hairline", "decorative"]
+	]
+}

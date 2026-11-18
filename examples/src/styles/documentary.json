@@ -1,0 +1,23 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "page"],
+		"black": [0.15, 0, 0, "text, prints, primary"],
+		"grey": [0.6, 0, 0, "mid grey"],
+		"caption": [0.4, 0, 0, "captions"],
+		"rule": [0.85, 0, 0, "hairlines"],
+		"silver": [0.95, 0, 0, "quiet surfaces"],
+		"red": [0.5, 0.18, 27, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "black", "card": "white", "card-foreground": "black", "popover": "white", "popover-foreground": "black", "primary": "black", "primary-foreground": "white", "secondary": "silver", "secondary-foreground": "black", "muted": "silver", "muted-foreground": "caption", "accent": "silver", "accent-foreground": "black", "destructive": "red", "border": "rule", "input": "rule", "ring": "black", "chart-1": "black", "chart-2": "grey", "chart-3": "caption", "chart-4": "rule", "chart-5": "red"}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "white", "body text"],
+		["caption", "white", "muted text"],
+		["white", "black", "primary text on primary"],
+		["black", "silver", "secondary text on secondary"],
+		["caption", "silver", "muted text on muted"],
+		["rule", "white", "hairline", "decorative"]
+	]
+}

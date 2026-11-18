@@ -1,0 +1,32 @@
+{
+	"tokens": {
+		"cream": [0.97, 0.017, 60, "peachy page"],
+		"lilac": [0.62, 0.15, 295, "lilac: purple skin, sleeves, the kicker"],
+		"violet": [0.55, 0.15, 295, "deeper lilac: primary buttons"],
+		"peach": [0.84, 0.08, 50, "peach ground"],
+		"teal": [0.72, 0.1, 190, "teal leaves, shirts"],
+		"lemon": [0.88, 0.14, 90, "yellow sun, UI blocks"],
+		"navy": [0.3, 0.07, 265, "text, trousers, the phone"],
+		"tangerine": [0.68, 0.14, 45, "orange skin"],
+		"white": [0.995, 0, 0, "cards, screens"],
+		"dusk": [0.45, 0.05, 265, "muted text"],
+		"wash": [0.93, 0.03, 60, "quiet surfaces"],
+		"cherry": [0.52, 0.18, 20, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "cream", "foreground": "navy", "card": "white", "card-foreground": "navy", "popover": "white", "popover-foreground": "navy", "primary": "violet", "primary-foreground": "white", "secondary": "lemon", "secondary-foreground": "navy", "muted": "wash", "muted-foreground": "dusk", "accent": "peach", "accent-foreground": "navy", "destructive": "cherry", "border": "peach", "input": "peach", "ring": "violet", "chart-1": "lilac", "chart-2": "teal", "chart-3": "lemon", "chart-4": "tangerine", "chart-5": "navy"}
+	},
+	"default": "light",
+	"pairs": [
+		["navy", "cream", "body text"],
+		["dusk", "cream", "muted text"],
+		["navy", "white", "card text on card"],
+		["white", "violet", "primary text on primary"],
+		["navy", "lemon", "secondary text on secondary"],
+		["navy", "peach", "accent text on accent"],
+		["dusk", "wash", "muted text on muted"],
+		["dusk", "white", "muted text on cards"],
+		["violet", "cream", "focus ring", "ui"],
+		["peach", "cream", "hairline", "decorative"]
+	]
+}

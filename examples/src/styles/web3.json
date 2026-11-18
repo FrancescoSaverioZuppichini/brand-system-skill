@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"void": [0.13, 0.02, 280, "deep space page"],
+		"smoke": [0.19, 0.025, 280, "glass panels"],
+		"seam": [0.3, 0.03, 280, "glass edges"],
+		"violet": [0.55, 0.24, 295, "violet: the gradient's start, primary"],
+		"cyan": [0.82, 0.14, 205, "cyan: the gradient's end, network lines"],
+		"gain": [0.85, 0.2, 150, "gain green, live dots"],
+		"frost": [0.96, 0.01, 280, "text"],
+		"haze": [0.75, 0.03, 280, "muted text"],
+		"flare": [0.66, 0.2, 20, "loss red"]
+	},
+	"roles": {
+		"dark": {"background": "void", "foreground": "frost", "card": "smoke", "card-foreground": "frost", "popover": "smoke", "popover-foreground": "frost", "primary": "violet", "primary-foreground": "frost", "secondary": "seam", "secondary-foreground": "frost", "muted": "smoke", "muted-foreground": "haze", "accent": "seam", "accent-foreground": "frost", "destructive": "flare", "border": "seam", "input": "seam", "ring": "cyan", "chart-1": "violet", "chart-2": "cyan", "chart-3": "gain", "chart-4": "flare", "chart-5": "haze"}
+	},
+	"default": "dark",
+	"pairs": [
+		["frost", "void", "body text"],
+		["haze", "void", "muted text"],
+		["frost", "smoke", "card text on card"],
+		["frost", "violet", "primary text on primary"],
+		["frost", "seam", "secondary text on secondary"],
+		["haze", "smoke", "muted text on muted"],
+		["cyan", "void", "focus ring", "ui"],
+		["seam", "void", "hairline", "decorative"]
+	]
+}

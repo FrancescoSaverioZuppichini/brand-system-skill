@@ -1,0 +1,35 @@
+{
+	"tokens": {
+		"drafting": [0.97, 0.005, 250, "graph-paper page"],
+		"top": [0.85, 0.07, 255, "lit top faces"],
+		"left": [0.65, 0.13, 258, "mid left faces"],
+		"right": [0.48, 0.15, 262, "dark right faces: primary"],
+		"amber": [0.75, 0.15, 60, "accent top faces, packets"],
+		"amber-left": [0.65, 0.15, 55, "accent left faces"],
+		"amber-right": [0.56, 0.14, 50, "accent right faces"],
+		"deck-top": [0.93, 0.01, 255, "platform top"],
+		"deck-left": [0.84, 0.015, 255, "platform left side"],
+		"deck-right": [0.75, 0.02, 255, "platform right side"],
+		"ink": [0.24, 0.03, 260, "text"],
+		"graphite": [0.48, 0.03, 260, "muted text"],
+		"grid": [0.9, 0.01, 255, "grid lines, borders"],
+		"sheet": [1, 0, 0, "cards"],
+		"fault": [0.52, 0.18, 25, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "drafting", "foreground": "ink", "card": "sheet", "card-foreground": "ink", "popover": "sheet", "popover-foreground": "ink", "primary": "right", "primary-foreground": "drafting", "secondary": "deck-top", "secondary-foreground": "ink", "muted": "deck-top", "muted-foreground": "graphite", "accent": "top", "accent-foreground": "ink", "destructive": "fault", "border": "grid", "input": "grid", "ring": "right", "chart-1": "right", "chart-2": "left", "chart-3": "top", "chart-4": "amber", "chart-5": "amber-right"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "drafting", "body text"],
+		["graphite", "drafting", "muted text"],
+		["ink", "sheet", "card text on card"],
+		["drafting", "right", "primary text on primary"],
+		["ink", "deck-top", "secondary text on secondary"],
+		["ink", "top", "accent text on accent"],
+		["graphite", "deck-top", "muted text on muted"],
+		["graphite", "sheet", "muted text on cards"],
+		["right", "drafting", "focus ring", "ui"],
+		["grid", "drafting", "hairline", "decorative"]
+	]
+}

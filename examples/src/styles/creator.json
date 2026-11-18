@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"blush": [0.95, 0.02, 15, "soft pink page"],
+		"white": [0.99, 0, 0, "sticker outlines, cards"],
+		"punch": [0.65, 0.238, 15, "signature pink-red"],
+		"sun": [0.88, 0.17, 95, "second signature: yellow"],
+		"ink": [0.2, 0.01, 270, "text, sticker shadows"],
+		"skin": [0.8, 0.07, 55, "cut-out skin"],
+		"plum": [0.42, 0.04, 15, "muted text"],
+		"petal": [0.9, 0.04, 15, "pink surfaces"],
+		"berry": [0.5, 0.2, 15, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "blush", "foreground": "ink", "card": "white", "card-foreground": "ink", "popover": "white", "popover-foreground": "ink", "primary": "punch", "primary-foreground": "ink", "secondary": "sun", "secondary-foreground": "ink", "muted": "petal", "muted-foreground": "plum", "accent": "sun", "accent-foreground": "ink", "destructive": "berry", "border": "ink", "input": "ink", "ring": "ink", "chart-1": "punch", "chart-2": "sun", "chart-3": "ink", "chart-4": "skin", "chart-5": "plum"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "blush", "body text"],
+		["plum", "blush", "muted text"],
+		["ink", "white", "card text on card"],
+		["ink", "punch", "primary text on primary"],
+		["ink", "sun", "secondary text on secondary"],
+		["plum", "petal", "muted text on muted"],
+		["plum", "white", "muted text on cards"]
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"tokens": {
+		"white": [1, 0, 0, "page, cards, screenshots"],
+		"section": [0.97, 0.005, 260, "grey section band, sidebars"],
+		"ink": [0.22, 0.02, 265, "text"],
+		"slate": [0.46, 0.02, 265, "muted text"],
+		"iris": [0.52, 0.22, 275, "the SaaS blue-purple"],
+		"lilac": [0.95, 0.023, 275, "soft primary: bars, active rows"],
+		"line": [0.91, 0.01, 265, "borders"],
+		"skeleton": [0.94, 0.008, 265, "placeholder lines"],
+		"teal": [0.6, 0.105, 185, "chart teal"],
+		"amber": [0.78, 0.14, 75, "chart amber"],
+		"red": [0.55, 0.2, 27, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "ink", "card": "white", "card-foreground": "ink", "popover": "white", "popover-foreground": "ink", "primary": "iris", "primary-foreground": "white", "secondary": "section", "secondary-foreground": "ink", "muted": "section", "muted-foreground": "slate", "accent": "lilac", "accent-foreground": "ink", "destructive": "red", "border": "line", "input": "line", "ring": "iris", "chart-1": "iris", "chart-2": "teal", "chart-3": "amber", "chart-4": "lilac", "chart-5": "slate"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "white", "body text"],
+		["slate", "white", "muted text"],
+		["white", "iris", "primary text on primary"],
+		["ink", "section", "secondary text on secondary"],
+		["ink", "lilac", "accent text on accent"],
+		["slate", "section", "muted text on muted"],
+		["iris", "white", "focus ring", "ui"],
+		["line", "white", "hairline", "decorative"]
+	]
+}
