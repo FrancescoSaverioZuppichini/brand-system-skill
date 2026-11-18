@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 OUT = ROOT / "assets/readme"
 ATLAS = ROOT / "atlas"
-LAYOUTS = ATLAS / "layouts"
+LAYOUTS = ATLAS / "blocks"
 HERO = """swiss art-deco devtool-dark riso baroque y2k terminal memphis luxury vaporwave bauhaus ukiyo-e neobrutalism
 broadsheet glassmorphism pixel art-nouveau cyberpunk japandi pop-art blueprint web1 constructivism clay-3d
 type-blackletter synthwave editorial retro-os psychedelic collage""".split()
@@ -85,14 +85,14 @@ def styles_mosaic():
 
 
 def layouts_mosaic():
-    files = sorted(p for p in LAYOUTS.glob("*/*.png") if p.parent.name not in ("sheets", "landings"))
+    files = sorted(p for p in LAYOUTS.glob("*/*.jpg") if p.parent.name not in ("sheets", "landings") and not p.stem.endswith("-390"))
     sections = len({p.parent.name for p in files})
     tiles = [fit(p, 200, 100, (235, 235, 237)) for p in files]
     grid(tiles, 12, 200, 100, f"{len(tiles)} layouts · {sections} sections · 1440 + 390", OUT / "layouts.jpg", INK)
 
 
 def landings():
-    files = sorted((LAYOUTS / "landings").glob("*.png"))
+    files = sorted((LAYOUTS / "landings").glob("*.jpg"))
     W, H, PAD, TOP = 340, 1100, 24, 56
     font = mono(20)
     sheet = Image.new("RGB", (len(files) * (W + PAD) + PAD, H + TOP + PAD), (235, 235, 237))

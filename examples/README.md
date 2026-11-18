@@ -10,6 +10,7 @@ Bun + Vite + React 19 + Tailwind 4 + shadcn/ui (new-york, Radix, Lucide).
 bun install
 bun dev            # http://localhost:5173
 bun run typecheck
+bun run colors     # palette.py on all 141 style palettes
 bun run format     # Biome
 ```
 
@@ -43,8 +44,9 @@ shadcn components and every block restyle with no per-style code.
 1. Write `src/styles/<slug>.json` from the style's token sketch: pigments named for the style's world (`[L, C, H,
    "what it is"]`), the 18 shadcn roles plus `chart-1`…`chart-5` under `roles.light` (or `roles.dark` with
    `"default": "dark"`), and the contrast pairs. The format is in `references/system.md` § Colour.
-2. Check it: `uv run ../skills/brand-system/scripts/palette.py src/styles/<slug>.json /dev/null`. It must print no
-   PROBLEMS (text pairs 4.5:1, focus ring 3:1, every colour inside sRGB).
+2. Check it: `uv run ../skills/brand-system/scripts/palette.py src/styles/<slug>.json /dev/null` (or `bun run colors`
+   for all of them). It must print no PROBLEMS (text pairs 4.5:1, focus ring 3:1, every colour inside sRGB). Don't name a
+   pigment `radius`, `shadow` or `border-width`: those names are the style's own tokens.
 3. Write `src/styles/<slug>.ts` (`satisfies Style`): the Google Fonts (OFL) query, radius, border width, shadow,
    heading weight/case/tracking, and `specimen: "start" | "center"`.
 4. Art-direct the specimen with `css`: rules nested under the style's root that target the specimen's parts

@@ -9,7 +9,7 @@ export default function Editorial() {
 			</span>
 			<span className="absolute top-[72px] bottom-8 left-[510px] w-px bg-[var(--rule)]" />
 			<figure className="absolute top-[72px] right-10 w-[220px]">
-				<Photo scene="object" className="h-[150px]" />
+				<Photo scene="object" variant={0} className="h-[150px]" />
 				<figcaption className="mt-2 font-mono text-[11px] text-[var(--ink)]">Fig. 1</figcaption>
 			</figure>
 		</div>

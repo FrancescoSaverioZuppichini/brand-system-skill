@@ -1,4 +1,3 @@
-
 // [Agent] What lands in Ana's inbox (she is the signed-in user of AppShell). Every release and project named here is
 // in workspace.ts with the same state, so the bell popover, the inbox and the phone app tell one story.
 export const notices: {

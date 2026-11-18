@@ -1,6 +1,6 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-	"files": { "includes": ["src/**", "scripts/**", "*.ts", "!src/components/ui"] },
+	"files": { "includes": ["src/**", "scripts/**", "*.ts", "!src/components/ui", "!src/styles/*.json"] },
 	"formatter": { "lineWidth": 110, "expand": "never" },
 	"javascript": { "formatter": { "semicolons": "asNeeded" } },
 	"css": { "parser": { "tailwindDirectives": true } },
