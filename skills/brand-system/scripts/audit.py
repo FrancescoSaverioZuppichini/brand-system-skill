@@ -5,7 +5,7 @@
 # [Agent] Mechanical half of the crit: deliverables for the surfaces in brief.md, contrast, broken
 # pages. Taste is judged by eye on the PNGs.
 # usage: uv run audit.py <brand-folder>      (exit 1 when anything fails)
-import json, re, sys, urllib.request
+import json, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
 Checks = tuple[dict[str, bool], dict[str, bool]]  # (FAIL, warn) checks: message → passed
@@ -80,7 +80,7 @@ def check_pages(root: Path) -> Checks:
         reduced = not moves or "prefers-reduced-motion" in html + shared
         need[f"{page.name}: animates but has no prefers-reduced-motion fallback"] = reduced
     try:
-        url = f"http://127.0.0.1:8800/api/check/{root.name}"
+        url = "http://127.0.0.1:8800/api/check?path=" + urllib.parse.quote(str(root / "page.mdx"))
         result = json.loads(urllib.request.urlopen(url, timeout=10).read())
     except (OSError, ValueError) as e:
         return need, {f"artifacts app not reachable ({e}); check page.mdx by hand": False}

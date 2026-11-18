@@ -29,7 +29,7 @@ Phases run in order and every later choice cites an earlier one. By default you 
 
 Bash state doesn't persist between calls and the working directory can reset. Find the folder this SKILL.md was read from, start every call with `S=<that folder>/scripts B=<absolute brand folder>`, and write every path as `$B/…`.
 
-The brand folder is `<root>/<slug>`: `<root>` is the place the user names, else a folder the artifacts server watches (then it is served at `http://127.0.0.1:8800/<slug>`), else the current working directory. With no name yet it is `<root>/<category>-wip`: rename it once, after the phase 2 ★, and tell the user the new URL. Files inside use the brand slug (`<slug>-mark.svg`), also in parallel folders (`<slug>-a`).
+The brand folder is `<root>/<slug>`: `<root>` is the place the user names, else the current working directory. With the artifacts app the page opens at `http://127.0.0.1:8800/?path=$B/page.mdx`. With no name yet it is `<root>/<category>-wip`: rename it once, after the phase 2 ★, and tell the user the new URL. Files inside use the brand slug (`<slug>-mark.svg`), also in parallel folders (`<slug>-a`).
 
 ```
 $B/
@@ -118,7 +118,7 @@ The only place with exact commands; phase files name the tool. Python scripts ca
 - **Trace a hand-drawn mark:** `potrace -s <sketch>.bmp -o <mark>.svg` (`/opt/homebrew/bin/potrace`; input BMP or PBM).
 - **Public-domain art:** `uv run $S/commons.py search "<query>"`, then `uv run $S/commons.py fetch "File:<name>" $B/img/<name>.jpg 1600 --credits $B/CREDITS.md`.
 - **Icons:** `curl -sLo $B/src/icons/<name>.svg https://unpkg.com/lucide-static/icons/<name>.svg` (or Phosphor, Tabler).
-- **Review page:** `curl -s 127.0.0.1:8800/api/check/<folder>`; shoot it with `$S/shoot.sh view http://127.0.0.1:8800/<folder> $B/img/page.png 1440 900`.
+- **Review page:** `curl -s "127.0.0.1:8800/api/check?path=$B/page.mdx"`; shoot it with `$S/shoot.sh view "http://127.0.0.1:8800/?path=$B/page.mdx" $B/img/page.png 1440 900` (URL-encode spaces as `%20`).
 - **Audit:** `uv run $S/audit.py $B`: the files for each surface in `brief.md`, contrast pairs, lorem, alt text, reduced motion, the page check.
 - **Mac traps:** BSD `sed -i ''`; `grep` may be ugrep and choke on long HTML regexes, so use Python for regex on HTML.
 
@@ -142,7 +142,7 @@ Write `crit.md`, one line per item with ✓ or the reason it misses, and show it
 
 ## Report
 
-- The page URL and each section link (`http://127.0.0.1:8800/<folder>#<id>`).
+- The page URL and each section link (`http://127.0.0.1:8800/?path=<abs path>/page.mdx#<id>`).
 - The vibe, the target and the style recipe in three lines; the logo in one.
 - The ❓ questions for the user.
 - Anything you couldn't do.

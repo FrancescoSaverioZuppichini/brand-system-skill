@@ -4,7 +4,7 @@ The brand book on screen is where the user judges the work, so it is part of the
 
 ## The artifacts app
 
-[artifacts](https://github.com/FrancescoSaverioZuppichini/artifacts) serves every folder with a `page.mdx` inside the folders it is pointed at (its roots; see its [AGENTS.md](https://github.com/FrancescoSaverioZuppichini/artifacts/blob/main/AGENTS.md)) at `http://127.0.0.1:8800/<folder>`, and saves 👍/👎, notes and comments to `feedback.json`. Folder names must be unique. If the `local-artifacts` skill is installed, use it; otherwise this is enough.
+[artifacts](https://github.com/FrancescoSaverioZuppichini/artifacts) opens any `page.mdx` on disk at `http://127.0.0.1:8800/?path=<abs path>/page.mdx` (see its [AGENTS.md](https://github.com/FrancescoSaverioZuppichini/artifacts/blob/main/AGENTS.md)), and saves 👍/👎, notes and comments to `feedback.json`. If the `local-artifacts` skill is installed, use it; otherwise this is enough.
 
 - **Is it up?** Run the page check (Tools § Review page). No answer: if the app is installed but down, keep writing `page.mdx` and tell the orchestrator or the user; if it isn't installed at all, write the same seven sections as a static `$B/review.html` (images, captions, the ❓ questions as a list) and give the user its file path or the PDF from shoot.sh pdf.
 - **Write it by hand.** The app re-renders when the file changes; no generator scripts or watchers. A section looks like:
@@ -18,11 +18,11 @@ The brand book on screen is where the user judges the work, so it is part of the
   </Section>
   ```
 - **Components:** `Section` (`id`, `title`, `badges`, `open`), `Gallery` (`title`), `Media` (`src`, `id`, `title`, `caption`, `badges`, `compare`), `Code` (`src` or `text`, `title`; re-read when the file changes), `Note` (`id`, `placeholder`), `Badge`. `badges` is always a list of strings. In prose, backslash-escape `{ } < >` outside backticks.
-- **Ids and links:** section ids are the ones in SKILL.md § Sections. Ids are feedback keys: unique and stable. Link a section or a card as `http://127.0.0.1:8800/<folder>#<id>`.
+- **Ids and links:** section ids are the ones in SKILL.md § Sections. Ids are feedback keys: unique and stable. Link a section or a card as `http://127.0.0.1:8800/?path=<abs path>/page.mdx#<id>`.
 - **Check after every edit.** The check answers:
 
   ```json
-  {"ok":true,"sections":7,"media":12,"missing":[],"errors":[],"warnings":[],"url":"http://127.0.0.1:8800/<folder>","links":{"logo":"http://127.0.0.1:8800/<folder>#logo"}}
+  {"ok":true,"sections":7,"media":12,"missing":[],"errors":[],"warnings":[],"url":"http://127.0.0.1:8800/?path=…/page.mdx","links":{"logo":"http://127.0.0.1:8800/?path=…/page.mdx#logo"}}
   ```
   `ok:false` is an MDX error or a duplicate id (the page keeps showing the last good version). `missing` lists files not there yet, shown as ⏳: fine mid-phase, empty at the end. `warnings` are videos Chrome can't play. It proves the page compiles, not that it looks right, so shoot the page and view the shot with the Read tool.
 - **Feedback:** read `feedback.json` at the start of every round and say what you changed in response.
