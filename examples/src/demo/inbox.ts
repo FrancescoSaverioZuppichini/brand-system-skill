@@ -1,6 +1,3 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { people } from "@/demo/content"
-import { cn } from "@/lib/utils"
 
 // [Agent] What lands in Ana's inbox (she is the signed-in user of AppShell). Every release and project named here is
 // in workspace.ts with the same state, so the bell popover, the inbox and the phone app tell one story.
@@ -65,13 +62,3 @@ export const notices: {
 		kind: "Update",
 	},
 ]
-
-export function Face({ name, className }: { name: string; className?: string }) {
-	return (
-		<Avatar className={cn("size-8", className)}>
-			<AvatarFallback className="text-[11px]">
-				{people.find((person) => person.name === name)?.initials}
-			</AvatarFallback>
-		</Avatar>
-	)
-}
