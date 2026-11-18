@@ -1,0 +1,22 @@
+{
+	"tokens": {
+		"clay-base": [0.92, 0.01, 250, "the one surface"],
+		"highlight": [0.99, 0.004, 250, "light shadow, top-left"],
+		"shade": [0.78, 0.015, 250, "dark shadow, bottom-right"],
+		"graphite": [0.4, 0.02, 250, "text"],
+		"pebble": [0.48, 0.02, 250, "secondary text"],
+		"cobalt": [0.52, 0.16, 255, "the one accent"],
+		"signal-red": [0.52, 0.18, 25, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "clay-base", "foreground": "graphite", "card": "clay-base", "card-foreground": "graphite", "popover": "clay-base", "popover-foreground": "graphite", "primary": "cobalt", "primary-foreground": "highlight", "secondary": "clay-base", "secondary-foreground": "graphite", "muted": "clay-base", "muted-foreground": "pebble", "accent": "clay-base", "accent-foreground": "graphite", "destructive": "signal-red", "border": "shade", "input": "shade", "ring": "cobalt", "chart-1": "cobalt", "chart-2": "graphite", "chart-3": "pebble", "chart-4": "shade", "chart-5": "highlight"}
+	},
+	"default": "light",
+	"pairs": [
+		["graphite", "clay-base", "body text"],
+		["pebble", "clay-base", "muted text"],
+		["highlight", "cobalt", "primary text on primary"],
+		["cobalt", "clay-base", "focus ring", "ui"],
+		["shade", "clay-base", "hairline", "decorative"]
+	]
+}

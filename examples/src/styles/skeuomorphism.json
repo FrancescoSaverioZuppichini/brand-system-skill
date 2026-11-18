@@ -1,0 +1,37 @@
+{
+	"tokens": {
+		"linen": [0.9, 0.02, 80, "linen desk"],
+		"notepad": [0.95, 0.07, 95, "yellow ruled paper"],
+		"seam": [0.78, 0.02, 80, "hairlines"],
+		"canvas": [0.86, 0.02, 80, "quiet surfaces"],
+		"leather": [0.4, 0.07, 50, "leather binding"],
+		"leather-deep": [0.27, 0.05, 45, "leather in shadow"],
+		"felt": [0.45, 0.09, 150, "Game Center felt"],
+		"felt-deep": [0.3, 0.07, 150, "felt in shadow"],
+		"gloss-blue": [0.6, 0.15, 250, "glossy button highlight"],
+		"aqua": [0.5, 0.16, 255, "glossy button body, actions"],
+		"chrome": [0.85, 0.01, 250, "brushed metal"],
+		"rule-blue": [0.8, 0.05, 235, "notepad rules"],
+		"margin-red": [0.68, 0.14, 25, "notepad margin"],
+		"ink": [0.3, 0.05, 55, "text"],
+		"stitch": [0.86, 0.05, 80, "stitching"],
+		"highlight": [0.99, 0.005, 90, "white text on gloss"],
+		"alarm": [0.5, 0.17, 25, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "linen", "foreground": "ink", "card": "notepad", "card-foreground": "ink", "popover": "notepad", "popover-foreground": "ink", "primary": "aqua", "primary-foreground": "highlight", "secondary": "chrome", "secondary-foreground": "ink", "muted": "canvas", "muted-foreground": "leather", "accent": "felt", "accent-foreground": "highlight", "destructive": "alarm", "border": "seam", "input": "seam", "ring": "aqua", "chart-1": "aqua", "chart-2": "felt", "chart-3": "leather", "chart-4": "margin-red", "chart-5": "chrome"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "linen", "body text"],
+		["leather", "linen", "muted text"],
+		["ink", "notepad", "card text on card"],
+		["highlight", "aqua", "primary text on primary"],
+		["ink", "chrome", "secondary text on secondary"],
+		["highlight", "felt", "accent text on accent"],
+		["leather", "canvas", "muted text on muted"],
+		["leather", "notepad", "muted text on cards"],
+		["aqua", "linen", "focus ring", "ui"],
+		["seam", "linen", "hairline", "decorative"]
+	]
+}

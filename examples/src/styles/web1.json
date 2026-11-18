@@ -1,0 +1,30 @@
+{
+	"tokens": {
+		"starfield": [0.2, 0.08, 270, "navy page"],
+		"night": [0.28, 0.08, 270, "panels"],
+		"moonlight": [0.8, 0.03, 270, "muted text"],
+		"link-blue": [0.45, 0.26, 264, "unvisited link"],
+		"visited": [0.45, 0.21, 320, "visited link"],
+		"gif-yellow": [0.95, 0.16, 105, "headline yellow"],
+		"lime": [0.87, 0.28, 142, "counter digits"],
+		"silver": [0.8, 0, 0, "table and button grey"],
+		"white": [1, 0, 0, "text"],
+		"black": [0, 0, 0, "text on silver"],
+		"red": [0.63, 0.25, 29, "drop shadows, errors"]
+	},
+	"roles": {
+		"dark": {"background": "starfield", "foreground": "white", "card": "night", "card-foreground": "white", "popover": "night", "popover-foreground": "white", "primary": "gif-yellow", "primary-foreground": "starfield", "secondary": "silver", "secondary-foreground": "black", "muted": "night", "muted-foreground": "moonlight", "accent": "lime", "accent-foreground": "black", "destructive": "red", "border": "silver", "input": "silver", "ring": "gif-yellow", "chart-1": "gif-yellow", "chart-2": "lime", "chart-3": "red", "chart-4": "visited", "chart-5": "silver"}
+	},
+	"default": "dark",
+	"pairs": [
+		["white", "starfield", "body text"],
+		["moonlight", "starfield", "muted text"],
+		["white", "night", "card text on card"],
+		["starfield", "gif-yellow", "primary text on primary"],
+		["black", "silver", "secondary text on secondary"],
+		["black", "lime", "accent text on accent"],
+		["moonlight", "night", "muted text on muted"],
+		["gif-yellow", "starfield", "focus ring", "ui"],
+		["silver", "starfield", "hairline", "decorative"]
+	]
+}

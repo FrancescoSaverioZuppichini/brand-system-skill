@@ -1,0 +1,32 @@
+{
+	"tokens": {
+		"lilac-mist": [0.95, 0.02, 300, "page"],
+		"marshmallow": [0.97, 0.016, 300, "clay panels"],
+		"putty": [0.91, 0.03, 300, "quiet surfaces"],
+		"seam": [0.86, 0.03, 300, "hairlines"],
+		"lilac": [0.8, 0.09, 300, "lilac clay"],
+		"peach": [0.85, 0.08, 50, "peach clay, actions"],
+		"mint": [0.88, 0.08, 165, "mint clay"],
+		"sky": [0.85, 0.08, 230, "sky clay"],
+		"grape": [0.3, 0.05, 290, "ink"],
+		"plum": [0.45, 0.04, 290, "secondary text"],
+		"violet": [0.52, 0.14, 300, "focus"],
+		"cherry": [0.55, 0.18, 20, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "lilac-mist", "foreground": "grape", "card": "marshmallow", "card-foreground": "grape", "popover": "marshmallow", "popover-foreground": "grape", "primary": "peach", "primary-foreground": "grape", "secondary": "lilac", "secondary-foreground": "grape", "muted": "putty", "muted-foreground": "plum", "accent": "mint", "accent-foreground": "grape", "destructive": "cherry", "border": "seam", "input": "seam", "ring": "violet", "chart-1": "lilac", "chart-2": "peach", "chart-3": "mint", "chart-4": "sky", "chart-5": "grape"}
+	},
+	"default": "light",
+	"pairs": [
+		["grape", "lilac-mist", "body text"],
+		["plum", "lilac-mist", "muted text"],
+		["grape", "marshmallow", "card text on card"],
+		["grape", "peach", "primary text on primary"],
+		["grape", "lilac", "secondary text on secondary"],
+		["grape", "mint", "accent text on accent"],
+		["plum", "putty", "muted text on muted"],
+		["plum", "marshmallow", "muted text on cards"],
+		["violet", "lilac-mist", "focus ring", "ui"],
+		["seam", "lilac-mist", "hairline", "decorative"]
+	]
+}

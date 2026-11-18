@@ -1,0 +1,32 @@
+{
+	"tokens": {
+		"ice": [0.93, 0.03, 230, "icy page"],
+		"frost": [0.98, 0.01, 230, "cards"],
+		"chrome": [0.82, 0.01, 250, "silver"],
+		"haze": [0.89, 0.015, 240, "quiet surfaces"],
+		"baby-pink": [0.85, 0.08, 350, "baby pink"],
+		"cyber-cyan": [0.8, 0.13, 210, "cyan plastic"],
+		"aqua": [0.5, 0.114, 240, "glossy button body, actions"],
+		"lime": [0.9, 0.2, 125, "lime"],
+		"grape": [0.62, 0.2, 305, "iMac grape"],
+		"navy": [0.32, 0.09, 262, "text"],
+		"dusk": [0.46, 0.06, 260, "muted text"],
+		"error": [0.55, 0.2, 15, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "ice", "foreground": "navy", "card": "frost", "card-foreground": "navy", "popover": "frost", "popover-foreground": "navy", "primary": "aqua", "primary-foreground": "frost", "secondary": "baby-pink", "secondary-foreground": "navy", "muted": "haze", "muted-foreground": "dusk", "accent": "lime", "accent-foreground": "navy", "destructive": "error", "border": "chrome", "input": "chrome", "ring": "aqua", "chart-1": "cyber-cyan", "chart-2": "baby-pink", "chart-3": "lime", "chart-4": "grape", "chart-5": "chrome"}
+	},
+	"default": "light",
+	"pairs": [
+		["navy", "ice", "body text"],
+		["dusk", "ice", "muted text"],
+		["navy", "frost", "card text on card"],
+		["frost", "aqua", "primary text on primary"],
+		["navy", "baby-pink", "secondary text on secondary"],
+		["navy", "lime", "accent text on accent"],
+		["dusk", "haze", "muted text on muted"],
+		["dusk", "frost", "muted text on cards"],
+		["aqua", "ice", "focus ring", "ui"],
+		["chrome", "ice", "hairline", "decorative"]
+	]
+}

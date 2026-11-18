@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"washi": [0.96, 0.01, 85, "paper"],
+		"kozo": [0.92, 0.012, 85, "quiet surfaces"],
+		"sumi": [0.2, 0.005, 60, "ink, text"],
+		"usuzumi": [0.5, 0.01, 60, "thin ink, captions"],
+		"rule": [0.84, 0.01, 70, "hairlines"],
+		"shu": [0.55, 0.19, 33, "vermilion seal"],
+		"ai": [0.33, 0.08, 260, "indigo"],
+		"stone": [0.62, 0.005, 60, "ink wash"]
+	},
+	"roles": {
+		"light": {"background": "washi", "foreground": "sumi", "card": "washi", "card-foreground": "sumi", "popover": "washi", "popover-foreground": "sumi", "primary": "sumi", "primary-foreground": "washi", "secondary": "kozo", "secondary-foreground": "sumi", "muted": "kozo", "muted-foreground": "usuzumi", "accent": "kozo", "accent-foreground": "sumi", "destructive": "shu", "border": "rule", "input": "rule", "ring": "ai", "chart-1": "sumi", "chart-2": "shu", "chart-3": "ai", "chart-4": "stone", "chart-5": "rule"}
+	},
+	"default": "light",
+	"pairs": [
+		["sumi", "washi", "body text"],
+		["usuzumi", "washi", "muted text"],
+		["washi", "sumi", "primary text on primary"],
+		["sumi", "kozo", "secondary text on secondary"],
+		["usuzumi", "kozo", "muted text on muted"],
+		["ai", "washi", "focus ring", "ui"],
+		["rule", "washi", "hairline", "decorative"]
+	]
+}

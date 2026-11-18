@@ -1,0 +1,30 @@
+{
+	"tokens": {
+		"grouped": [0.96, 0.003, 260, "grouped background"],
+		"surface": [1, 0, 0, "cells and sheets"],
+		"fill": [0.92, 0.004, 260, "quiet fills"],
+		"separator": [0.88, 0.004, 260, "hairline separators"],
+		"label": [0.2, 0.005, 260, "primary label"],
+		"secondary-label": [0.5, 0.01, 260, "secondary label"],
+		"system-blue": [0.6, 0.197, 255, "system blue tint"],
+		"tint": [0.53, 0.187, 257, "blue for filled buttons"],
+		"pale-blue": [0.88, 0.059, 255, "dimmed chart bars"],
+		"system-green": [0.72, 0.19, 150, "system green"],
+		"system-red": [0.55, 0.21, 27, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "grouped", "foreground": "label", "card": "surface", "card-foreground": "label", "popover": "surface", "popover-foreground": "label", "primary": "tint", "primary-foreground": "surface", "secondary": "fill", "secondary-foreground": "label", "muted": "fill", "muted-foreground": "secondary-label", "accent": "fill", "accent-foreground": "label", "destructive": "system-red", "border": "separator", "input": "separator", "ring": "system-blue", "chart-1": "system-blue", "chart-2": "system-green", "chart-3": "pale-blue", "chart-4": "system-red", "chart-5": "secondary-label"}
+	},
+	"default": "light",
+	"pairs": [
+		["label", "grouped", "body text"],
+		["secondary-label", "grouped", "muted text"],
+		["label", "surface", "card text on card"],
+		["surface", "tint", "primary text on primary"],
+		["label", "fill", "secondary text on secondary"],
+		["secondary-label", "fill", "muted text on muted"],
+		["secondary-label", "surface", "muted text on cards"],
+		["system-blue", "grouped", "focus ring", "ui"],
+		["separator", "grouped", "hairline", "decorative"]
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"hosho": [0.92, 0.03, 85, "woodblock paper"],
+		"kinari": [0.87, 0.035, 85, "quiet surfaces"],
+		"sumi": [0.18, 0.01, 60, "key-block ink, text"],
+		"usuzumi": [0.45, 0.02, 70, "captions"],
+		"bero": [0.35, 0.099, 250, "Prussian blue"],
+		"surf": [0.62, 0.07, 240, "pale Prussian, sea"],
+		"ai": [0.28, 0.06, 265, "indigo"],
+		"shu": [0.52, 0.18, 35, "vermilion"],
+		"moss": [0.7, 0.07, 145, "sage hills"],
+		"wakaba": [0.88, 0.05, 145, "pale green cartouche"]
+	},
+	"roles": {
+		"light": {"background": "hosho", "foreground": "sumi", "card": "hosho", "card-foreground": "sumi", "popover": "hosho", "popover-foreground": "sumi", "primary": "shu", "primary-foreground": "hosho", "secondary": "wakaba", "secondary-foreground": "sumi", "muted": "kinari", "muted-foreground": "usuzumi", "accent": "bero", "accent-foreground": "hosho", "destructive": "shu", "border": "sumi", "input": "sumi", "ring": "bero", "chart-1": "bero", "chart-2": "shu", "chart-3": "moss", "chart-4": "surf", "chart-5": "ai"}
+	},
+	"default": "light",
+	"pairs": [
+		["sumi", "hosho", "body text"],
+		["usuzumi", "hosho", "muted text"],
+		["hosho", "shu", "primary text on primary"],
+		["sumi", "wakaba", "secondary text on secondary"],
+		["hosho", "bero", "accent text on accent"],
+		["usuzumi", "kinari", "muted text on muted"],
+		["bero", "hosho", "focus ring", "ui"]
+	]
+}

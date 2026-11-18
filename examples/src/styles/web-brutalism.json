@@ -1,0 +1,23 @@
+{
+	"tokens": {
+		"paper": [1, 0, 0, "default white"],
+		"type": [0, 0, 0, "default black"],
+		"button-face": [0.94, 0, 0, "default button grey"],
+		"button-edge": [0.85, 0, 0, "outset bevel"],
+		"grey-text": [0.4, 0, 0, "muted text"],
+		"link": [0.45, 0.26, 264, "default link blue"],
+		"harsh": [0.63, 0.25, 29, "the one harsh colour"]
+	},
+	"roles": {
+		"light": {"background": "paper", "foreground": "type", "card": "paper", "card-foreground": "type", "popover": "paper", "popover-foreground": "type", "primary": "type", "primary-foreground": "paper", "secondary": "button-face", "secondary-foreground": "type", "muted": "button-face", "muted-foreground": "grey-text", "accent": "button-face", "accent-foreground": "type", "destructive": "harsh", "border": "type", "input": "type", "ring": "link", "chart-1": "type", "chart-2": "harsh", "chart-3": "link", "chart-4": "grey-text", "chart-5": "button-edge"}
+	},
+	"default": "light",
+	"pairs": [
+		["type", "paper", "body text"],
+		["grey-text", "paper", "muted text"],
+		["paper", "type", "primary text on primary"],
+		["type", "button-face", "secondary text on secondary"],
+		["grey-text", "button-face", "muted text on muted"],
+		["link", "paper", "focus ring", "ui"]
+	]
+}

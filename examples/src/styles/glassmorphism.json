@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"deep-violet": [0.28, 0.08, 285, "base field"],
+		"smoke": [0.36, 0.07, 285, "panels, the glass read as solid"],
+		"rim": [0.52, 0.06, 285, "glass edges"],
+		"frost": [0.99, 0, 0, "white text and buttons"],
+		"haze": [0.85, 0.03, 285, "secondary text"],
+		"blob-violet": [0.6, 0.22, 300, "violet blob"],
+		"blob-cyan": [0.78, 0.13, 210, "cyan blob"],
+		"blob-pink": [0.72, 0.18, 350, "pink blob"],
+		"coral-red": [0.66, 0.2, 20, "destructive"]
+	},
+	"roles": {
+		"dark": {"background": "deep-violet", "foreground": "frost", "card": "smoke", "card-foreground": "frost", "popover": "smoke", "popover-foreground": "frost", "primary": "frost", "primary-foreground": "deep-violet", "secondary": "smoke", "secondary-foreground": "frost", "muted": "smoke", "muted-foreground": "haze", "accent": "blob-cyan", "accent-foreground": "deep-violet", "destructive": "coral-red", "border": "rim", "input": "rim", "ring": "blob-cyan", "chart-1": "blob-cyan", "chart-2": "blob-pink", "chart-3": "blob-violet", "chart-4": "haze", "chart-5": "rim"}
+	},
+	"default": "dark",
+	"pairs": [
+		["frost", "deep-violet", "body text"],
+		["haze", "deep-violet", "muted text"],
+		["frost", "smoke", "card text on card"],
+		["deep-violet", "frost", "primary text on primary"],
+		["deep-violet", "blob-cyan", "accent text on accent"],
+		["haze", "smoke", "muted text on muted"],
+		["blob-cyan", "deep-violet", "focus ring", "ui"],
+		["rim", "deep-violet", "hairline", "decorative"]
+	]
+}

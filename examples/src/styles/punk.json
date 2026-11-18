@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"xerox": [0.97, 0, 0, "photocopy white, paper"],
+		"toner": [0.12, 0, 0, "black page, type"],
+		"fluo-pink": [0.68, 0.25, 350, "fluorescent pink"],
+		"fluo-yellow": [0.93, 0.2, 110, "fluorescent yellow"],
+		"newsprint": [0.86, 0.005, 90, "cut-up newspaper"],
+		"tar": [0.21, 0, 0, "dark panels"],
+		"smudge": [0.72, 0, 0, "muted text"],
+		"blood": [0.62, 0.22, 25, "destructive"]
+	},
+	"roles": {
+		"dark": {"background": "toner", "foreground": "xerox", "card": "tar", "card-foreground": "xerox", "popover": "tar", "popover-foreground": "xerox", "primary": "fluo-pink", "primary-foreground": "toner", "secondary": "fluo-yellow", "secondary-foreground": "toner", "muted": "tar", "muted-foreground": "smudge", "accent": "newsprint", "accent-foreground": "toner", "destructive": "blood", "border": "newsprint", "input": "newsprint", "ring": "fluo-pink", "chart-1": "fluo-pink", "chart-2": "fluo-yellow", "chart-3": "xerox", "chart-4": "newsprint", "chart-5": "smudge"}
+	},
+	"default": "dark",
+	"pairs": [
+		["xerox", "toner", "body text"],
+		["smudge", "toner", "muted text"],
+		["xerox", "tar", "card text on card"],
+		["toner", "fluo-pink", "primary text on primary"],
+		["toner", "fluo-yellow", "secondary text on secondary"],
+		["toner", "newsprint", "accent text on accent"],
+		["smudge", "tar", "muted text on muted"],
+		["fluo-pink", "toner", "focus ring", "ui"],
+		["newsprint", "toner", "hairline", "decorative"]
+	]
+}

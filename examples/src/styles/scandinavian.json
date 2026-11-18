@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"daylight": [0.99, 0.002, 90, "white page"],
+		"birch": [0.93, 0.02, 80, "light birch panels"],
+		"oak": [0.84, 0.04, 75, "deeper wood floor"],
+		"slate": [0.2, 0.005, 250, "text"],
+		"pebble": [0.48, 0.005, 250, "muted text"],
+		"mist": [0.9, 0.005, 250, "hairlines"],
+		"tomato": [0.57, 0.19, 32, "the one clear colour"],
+		"forest": [0.42, 0.08, 155, "plants, links"],
+		"sky": [0.72, 0.09, 230, "chart sky"],
+		"lingon": [0.5, 0.18, 25, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "daylight", "foreground": "slate", "card": "daylight", "card-foreground": "slate", "popover": "daylight", "popover-foreground": "slate", "primary": "tomato", "primary-foreground": "daylight", "secondary": "birch", "secondary-foreground": "slate", "muted": "birch", "muted-foreground": "pebble", "accent": "birch", "accent-foreground": "slate", "destructive": "lingon", "border": "mist", "input": "mist", "ring": "forest", "chart-1": "tomato", "chart-2": "forest", "chart-3": "sky", "chart-4": "oak", "chart-5": "slate"}
+	},
+	"default": "light",
+	"pairs": [
+		["slate", "daylight", "body text"],
+		["pebble", "daylight", "muted text"],
+		["daylight", "tomato", "primary text on primary"],
+		["slate", "birch", "secondary text on secondary"],
+		["pebble", "birch", "muted text on muted"],
+		["forest", "daylight", "focus ring", "ui"],
+		["mist", "daylight", "hairline", "decorative"]
+	]
+}

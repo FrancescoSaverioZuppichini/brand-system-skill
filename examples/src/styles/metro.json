@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"black": [0.12, 0, 0, "start screen"],
+		"charcoal": [0.2, 0, 0, "panels"],
+		"graphite": [0.35, 0, 0, "hairlines"],
+		"white": [1, 0, 0, "text, outlines"],
+		"grey": [0.7, 0, 0, "secondary text"],
+		"cobalt": [0.45, 0.183, 260, "cobalt tiles, actions"],
+		"magenta": [0.55, 0.238, 340, "magenta tiles"],
+		"lime": [0.75, 0.18, 130, "lime tiles"],
+		"orange": [0.66, 0.188, 45, "orange tiles"],
+		"crimson": [0.6, 0.22, 27, "destructive"]
+	},
+	"roles": {
+		"dark": {"background": "black", "foreground": "white", "card": "charcoal", "card-foreground": "white", "popover": "charcoal", "popover-foreground": "white", "primary": "cobalt", "primary-foreground": "white", "secondary": "magenta", "secondary-foreground": "white", "muted": "charcoal", "muted-foreground": "grey", "accent": "lime", "accent-foreground": "black", "destructive": "crimson", "border": "graphite", "input": "graphite", "ring": "white", "chart-1": "cobalt", "chart-2": "magenta", "chart-3": "lime", "chart-4": "orange", "chart-5": "grey"}
+	},
+	"default": "dark",
+	"pairs": [
+		["white", "black", "body text"],
+		["grey", "black", "muted text"],
+		["white", "charcoal", "card text on card"],
+		["white", "cobalt", "primary text on primary"],
+		["white", "magenta", "secondary text on secondary"],
+		["black", "lime", "accent text on accent"],
+		["grey", "charcoal", "muted text on muted"],
+		["graphite", "black", "hairline", "decorative"]
+	]
+}

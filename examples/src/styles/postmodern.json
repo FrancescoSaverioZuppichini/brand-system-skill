@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"concrete": [0.88, 0.01, 80, "warm grey page"],
+		"slab": [0.8, 0.01, 80, "quiet surfaces"],
+		"outline": [0.62, 0.01, 80, "ghost type, hairlines"],
+		"charcoal": [0.25, 0.01, 80, "text, button"],
+		"scan": [0.42, 0.01, 80, "captions"],
+		"acid": [0.88, 0.2, 120, "acid green slab"],
+		"emigre-orange": [0.66, 0.19, 42, "orange sun, numbers"],
+		"brick": [0.5, 0.17, 35, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "concrete", "foreground": "charcoal", "card": "concrete", "card-foreground": "charcoal", "popover": "concrete", "popover-foreground": "charcoal", "primary": "charcoal", "primary-foreground": "acid", "secondary": "acid", "secondary-foreground": "charcoal", "muted": "slab", "muted-foreground": "scan", "accent": "emigre-orange", "accent-foreground": "charcoal", "destructive": "brick", "border": "charcoal", "input": "charcoal", "ring": "charcoal", "chart-1": "emigre-orange", "chart-2": "acid", "chart-3": "charcoal", "chart-4": "outline", "chart-5": "scan"}
+	},
+	"default": "light",
+	"pairs": [
+		["charcoal", "concrete", "body text"],
+		["scan", "concrete", "muted text"],
+		["acid", "charcoal", "primary text on primary"],
+		["charcoal", "acid", "secondary text on secondary"],
+		["charcoal", "emigre-orange", "accent text on accent"],
+		["scan", "slab", "muted text on muted"]
+	]
+}

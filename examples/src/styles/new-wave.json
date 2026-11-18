@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"sheet": [0.97, 0, 0, "white board"],
+		"type": [0.16, 0, 0, "black type, rules, buttons"],
+		"film-pink": [0.75, 0.13, 355, "pink overlay film"],
+		"film-cyan": [0.8, 0.1, 210, "cyan overlay film"],
+		"film-yellow": [0.9, 0.14, 100, "yellow overlay film"],
+		"screen": [0.7, 0, 0, "halftone grey"],
+		"pencil": [0.45, 0, 0, "captions"],
+		"vellum": [0.93, 0, 0, "quiet surfaces"],
+		"red-film": [0.55, 0.19, 25, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "sheet", "foreground": "type", "card": "sheet", "card-foreground": "type", "popover": "sheet", "popover-foreground": "type", "primary": "type", "primary-foreground": "sheet", "secondary": "film-yellow", "secondary-foreground": "type", "muted": "vellum", "muted-foreground": "pencil", "accent": "film-pink", "accent-foreground": "type", "destructive": "red-film", "border": "type", "input": "type", "ring": "type", "chart-1": "film-pink", "chart-2": "film-cyan", "chart-3": "film-yellow", "chart-4": "type", "chart-5": "screen"}
+	},
+	"default": "light",
+	"pairs": [
+		["type", "sheet", "body text"],
+		["pencil", "sheet", "muted text"],
+		["sheet", "type", "primary text on primary"],
+		["type", "film-yellow", "secondary text on secondary"],
+		["type", "film-pink", "accent text on accent"],
+		["pencil", "vellum", "muted text on muted"]
+	]
+}

@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"mica": [0.97, 0.003, 250, "app background"],
+		"layer": [1, 0, 0, "cards and the content layer"],
+		"subtle": [0.94, 0.004, 250, "subtle fills"],
+		"stroke": [0.88, 0.005, 250, "control strokes"],
+		"ink": [0.24, 0.005, 250, "text"],
+		"ink-secondary": [0.45, 0.005, 250, "secondary text"],
+		"communication-blue": [0.53, 0.158, 252, "brand blue, actions"],
+		"blue-pressed": [0.45, 0.147, 255, "pressed blue, numbers"],
+		"bloom": [0.7, 0.11, 255, "wallpaper bloom"],
+		"fluent-red": [0.53, 0.2, 27, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "mica", "foreground": "ink", "card": "layer", "card-foreground": "ink", "popover": "layer", "popover-foreground": "ink", "primary": "communication-blue", "primary-foreground": "layer", "secondary": "subtle", "secondary-foreground": "ink", "muted": "subtle", "muted-foreground": "ink-secondary", "accent": "subtle", "accent-foreground": "ink", "destructive": "fluent-red", "border": "stroke", "input": "stroke", "ring": "ink", "chart-1": "communication-blue", "chart-2": "bloom", "chart-3": "blue-pressed", "chart-4": "ink-secondary", "chart-5": "stroke"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "mica", "body text"],
+		["ink-secondary", "mica", "muted text"],
+		["ink", "layer", "card text on card"],
+		["layer", "communication-blue", "primary text on primary"],
+		["ink", "subtle", "secondary text on secondary"],
+		["ink-secondary", "subtle", "muted text on muted"],
+		["ink-secondary", "layer", "muted text on cards"],
+		["stroke", "mica", "hairline", "decorative"]
+	]
+}

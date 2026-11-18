@@ -1,0 +1,34 @@
+{
+	"tokens": {
+		"neutral-98": [0.97, 0.012, 300, "surface"],
+		"neutral-94": [0.935, 0.016, 300, "tinted container behind panes"],
+		"neutral-92": [0.915, 0.018, 300, "high container, off switch"],
+		"violet-40": [0.48, 0.17, 290, "primary tone 40"],
+		"violet-100": [1, 0, 0, "on primary"],
+		"violet-90": [0.92, 0.04, 300, "primary container"],
+		"violet-30": [0.3, 0.12, 290, "text on primary container"],
+		"lilac-90": [0.9, 0.03, 300, "secondary container, active indicator"],
+		"rose-40": [0.55, 0.1, 0, "tertiary rose"],
+		"rose-90": [0.91, 0.05, 0, "FAB container"],
+		"neutral-10": [0.22, 0.01, 300, "text"],
+		"neutral-variant-30": [0.45, 0.02, 300, "secondary text, icons"],
+		"neutral-variant-80": [0.8, 0.02, 300, "outlines"],
+		"red-40": [0.5, 0.19, 25, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "neutral-98", "foreground": "neutral-10", "card": "neutral-94", "card-foreground": "neutral-10", "popover": "neutral-98", "popover-foreground": "neutral-10", "primary": "violet-40", "primary-foreground": "violet-100", "secondary": "lilac-90", "secondary-foreground": "neutral-10", "muted": "neutral-92", "muted-foreground": "neutral-variant-30", "accent": "violet-90", "accent-foreground": "violet-30", "destructive": "red-40", "border": "neutral-variant-80", "input": "neutral-variant-80", "ring": "violet-40", "chart-1": "violet-40", "chart-2": "rose-40", "chart-3": "violet-30", "chart-4": "lilac-90", "chart-5": "neutral-variant-30"}
+	},
+	"default": "light",
+	"pairs": [
+		["neutral-10", "neutral-98", "body text"],
+		["neutral-variant-30", "neutral-98", "muted text"],
+		["neutral-10", "neutral-94", "card text on card"],
+		["violet-100", "violet-40", "primary text on primary"],
+		["neutral-10", "lilac-90", "secondary text on secondary"],
+		["violet-30", "violet-90", "accent text on accent"],
+		["neutral-variant-30", "neutral-92", "muted text on muted"],
+		["neutral-variant-30", "neutral-94", "muted text on cards"],
+		["violet-40", "neutral-98", "focus ring", "ui"],
+		["neutral-variant-80", "neutral-98", "hairline", "decorative"]
+	]
+}

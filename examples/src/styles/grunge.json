@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"dirty-white": [0.9, 0.02, 85, "stained page"],
+		"nicotine": [0.84, 0.03, 85, "quiet surfaces"],
+		"tar": [0.15, 0.01, 60, "black type, scans"],
+		"ash": [0.42, 0.02, 70, "captions"],
+		"olive": [0.48, 0.06, 110, "olive drab"],
+		"rust": [0.48, 0.12, 45, "rust, actions"],
+		"burn": [0.62, 0.14, 50, "film burn"],
+		"scab": [0.45, 0.15, 30, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "dirty-white", "foreground": "tar", "card": "dirty-white", "card-foreground": "tar", "popover": "dirty-white", "popover-foreground": "tar", "primary": "rust", "primary-foreground": "dirty-white", "secondary": "olive", "secondary-foreground": "dirty-white", "muted": "nicotine", "muted-foreground": "ash", "accent": "nicotine", "accent-foreground": "tar", "destructive": "scab", "border": "tar", "input": "tar", "ring": "rust", "chart-1": "rust", "chart-2": "olive", "chart-3": "tar", "chart-4": "burn", "chart-5": "ash"}
+	},
+	"default": "light",
+	"pairs": [
+		["tar", "dirty-white", "body text"],
+		["ash", "dirty-white", "muted text"],
+		["dirty-white", "rust", "primary text on primary"],
+		["dirty-white", "olive", "secondary text on secondary"],
+		["tar", "nicotine", "accent text on accent"],
+		["ash", "nicotine", "muted text on muted"],
+		["rust", "dirty-white", "focus ring", "ui"]
+	]
+}

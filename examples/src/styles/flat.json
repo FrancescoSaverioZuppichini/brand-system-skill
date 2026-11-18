@@ -1,0 +1,29 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "page"],
+		"cloud": [0.95, 0.008, 250, "quiet surfaces"],
+		"fog": [0.9, 0.01, 250, "hairlines"],
+		"turquoise": [0.72, 0.12, 180, "turquoise"],
+		"turquoise-shade": [0.62, 0.11, 180, "long shadow"],
+		"coral": [0.57, 0.17, 30, "coral, actions"],
+		"flat-blue": [0.6, 0.15, 250, "flat blue tiles"],
+		"sun": [0.84, 0.16, 85, "yellow dot"],
+		"midnight": [0.3, 0.04, 260, "text, nav bar"],
+		"slate": [0.52, 0.03, 260, "muted text"],
+		"alizarin": [0.55, 0.2, 25, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "midnight", "card": "white", "card-foreground": "midnight", "popover": "white", "popover-foreground": "midnight", "primary": "coral", "primary-foreground": "white", "secondary": "turquoise", "secondary-foreground": "midnight", "muted": "cloud", "muted-foreground": "slate", "accent": "cloud", "accent-foreground": "midnight", "destructive": "alizarin", "border": "fog", "input": "fog", "ring": "flat-blue", "chart-1": "turquoise", "chart-2": "coral", "chart-3": "flat-blue", "chart-4": "sun", "chart-5": "midnight"}
+	},
+	"default": "light",
+	"pairs": [
+		["midnight", "white", "body text"],
+		["slate", "white", "muted text"],
+		["white", "coral", "primary text on primary"],
+		["midnight", "turquoise", "secondary text on secondary"],
+		["midnight", "cloud", "accent text on accent"],
+		["slate", "cloud", "muted text on muted"],
+		["flat-blue", "white", "focus ring", "ui"],
+		["fog", "white", "hairline", "decorative"]
+	]
+}

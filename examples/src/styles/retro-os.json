@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"window": [0.8, 0, 0, "window grey"],
+		"desktop": [0.52, 0.088, 195, "teal desktop"],
+		"titlebar": [0.3, 0.14, 265, "active title bar navy"],
+		"titlebar-fade": [0.58, 0.13, 245, "title bar gradient end"],
+		"highlight": [1, 0, 0, "bevel highlight, fields"],
+		"light": [0.9, 0, 0, "inner bevel light"],
+		"bevel-shadow": [0.58, 0, 0, "inner bevel shadow"],
+		"pitch": [0, 0, 0, "text, outer bevel"],
+		"status": [0.36, 0, 0, "disabled and muted text"],
+		"error": [0.48, 0.19, 27, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "window", "foreground": "pitch", "card": "window", "card-foreground": "pitch", "popover": "highlight", "popover-foreground": "pitch", "primary": "titlebar", "primary-foreground": "highlight", "secondary": "light", "secondary-foreground": "pitch", "muted": "light", "muted-foreground": "status", "accent": "titlebar", "accent-foreground": "highlight", "destructive": "error", "border": "bevel-shadow", "input": "bevel-shadow", "ring": "pitch", "chart-1": "titlebar", "chart-2": "desktop", "chart-3": "titlebar-fade", "chart-4": "error", "chart-5": "bevel-shadow"}
+	},
+	"default": "light",
+	"pairs": [
+		["pitch", "window", "body text"],
+		["status", "window", "muted text"],
+		["pitch", "highlight", "popover text on popover"],
+		["highlight", "titlebar", "primary text on primary"],
+		["pitch", "light", "secondary text on secondary"],
+		["status", "light", "muted text on muted"],
+		["bevel-shadow", "window", "hairline", "decorative"]
+	]
+}

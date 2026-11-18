@@ -1,0 +1,30 @@
+{
+	"tokens": {
+		"cloud": [0.99, 0, 0, "white glass panels"],
+		"mist": [0.95, 0.02, 220, "quiet surfaces"],
+		"frost-line": [0.86, 0.04, 225, "hairlines"],
+		"sky": [0.8, 0.1, 230, "sky blue"],
+		"sky-deep": [0.58, 0.14, 245, "upper sky"],
+		"aqua": [0.85, 0.1, 200, "water aqua"],
+		"grass": [0.72, 0.17, 140, "grass green"],
+		"meadow": [0.5, 0.15, 145, "deep grass, actions"],
+		"deep-blue": [0.4, 0.132, 255, "headings"],
+		"ink-blue": [0.32, 0.05, 250, "text"],
+		"slate-blue": [0.48, 0.05, 250, "muted text"],
+		"close-red": [0.52, 0.2, 28, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "cloud", "foreground": "ink-blue", "card": "cloud", "card-foreground": "ink-blue", "popover": "cloud", "popover-foreground": "ink-blue", "primary": "meadow", "primary-foreground": "cloud", "secondary": "aqua", "secondary-foreground": "ink-blue", "muted": "mist", "muted-foreground": "slate-blue", "accent": "sky", "accent-foreground": "ink-blue", "destructive": "close-red", "border": "frost-line", "input": "frost-line", "ring": "deep-blue", "chart-1": "sky-deep", "chart-2": "grass", "chart-3": "aqua", "chart-4": "deep-blue", "chart-5": "meadow"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink-blue", "cloud", "body text"],
+		["slate-blue", "cloud", "muted text"],
+		["cloud", "meadow", "primary text on primary"],
+		["ink-blue", "aqua", "secondary text on secondary"],
+		["ink-blue", "sky", "accent text on accent"],
+		["slate-blue", "mist", "muted text on muted"],
+		["deep-blue", "cloud", "focus ring", "ui"],
+		["frost-line", "cloud", "hairline", "decorative"]
+	]
+}

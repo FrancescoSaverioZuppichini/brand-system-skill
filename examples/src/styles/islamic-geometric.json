@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"ivory": [0.94, 0.025, 85, "plaster, page"],
+		"plaster": [0.89, 0.03, 85, "quiet surfaces"],
+		"lapis": [0.38, 0.13, 262, "lapis lazuli, text and actions"],
+		"night-lapis": [0.28, 0.1, 262, "deep tile ground"],
+		"turquoise": [0.62, 0.1, 195, "faience tiles"],
+		"terracotta": [0.53, 0.13, 40, "fired clay, labels"],
+		"gold": [0.75, 0.11, 85, "gilt lines"],
+		"ink": [0.24, 0.04, 262, "text"],
+		"faded-ink": [0.45, 0.04, 262, "captions"],
+		"cinnabar": [0.5, 0.17, 30, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "ivory", "foreground": "ink", "card": "ivory", "card-foreground": "ink", "popover": "ivory", "popover-foreground": "ink", "primary": "lapis", "primary-foreground": "ivory", "secondary": "turquoise", "secondary-foreground": "ink", "muted": "plaster", "muted-foreground": "faded-ink", "accent": "gold", "accent-foreground": "ink", "destructive": "cinnabar", "border": "gold", "input": "gold", "ring": "lapis", "chart-1": "lapis", "chart-2": "turquoise", "chart-3": "terracotta", "chart-4": "gold", "chart-5": "night-lapis"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "ivory", "body text"],
+		["faded-ink", "ivory", "muted text"],
+		["ivory", "lapis", "primary text on primary"],
+		["ink", "turquoise", "secondary text on secondary"],
+		["ink", "gold", "accent text on accent"],
+		["faded-ink", "plaster", "muted text on muted"],
+		["lapis", "ivory", "focus ring", "ui"],
+		["gold", "ivory", "hairline", "decorative"]
+	]
+}
