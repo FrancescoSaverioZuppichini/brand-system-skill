@@ -34,6 +34,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group"
 import { Kbd } from "@/components/ui/kbd"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { people } from "@/demo/content"
 import { Logo } from "@/demo/logo"
@@ -228,5 +229,31 @@ export function RowMenu({ items, className }: { items: string[]; className?: str
 				))}
 			</DropdownMenuContent>
 		</DropdownMenu>
+	)
+}
+
+// [Agent] A Select over plain strings, the shape most settings and form fields take in these screens.
+export function Pick({
+	value,
+	options,
+	className,
+}: {
+	value: string
+	options: string[]
+	className?: string
+}) {
+	return (
+		<Select defaultValue={value}>
+			<SelectTrigger className={cn("w-full", className)}>
+				<SelectValue />
+			</SelectTrigger>
+			<SelectContent>
+				{options.map((option) => (
+					<SelectItem key={option} value={option}>
+						{option}
+					</SelectItem>
+				))}
+			</SelectContent>
+		</Select>
 	)
 }

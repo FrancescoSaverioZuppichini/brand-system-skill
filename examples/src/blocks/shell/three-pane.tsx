@@ -1,13 +1,12 @@
 import { Search } from "lucide-react"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group"
 import { Kbd } from "@/components/ui/kbd"
 import { Separator } from "@/components/ui/separator"
-import { Sparkline } from "@/demo/chart"
 import { AppShell, RowMenu } from "@/demo/app-nav"
-import { people } from "@/demo/content"
+import { Sparkline } from "@/demo/chart"
+import { Face } from "@/demo/workspace"
 import { cn } from "@/lib/utils"
 
 type Due = "Overdue" | "Today" | "This week" | "Snoozed"
@@ -50,8 +49,6 @@ const facts = [
 	["Open issues", "2 minor"],
 ]
 
-const initials = (name: string) => people.find((person) => person.name === name)?.initials ?? name.slice(0, 2)
-
 // [Agent] The inspector shows what the row can't (uptime trend, last year's notes, the review checklist), so it never
 // repeats the list. On a phone only the list renders; tapping a review opens it as its own screen.
 export default function ShellThreePane() {
@@ -81,9 +78,7 @@ export default function ShellThreePane() {
 								key={review.project}
 								className={cn("flex items-center gap-3 px-4 py-3 text-sm", review === selected && "bg-muted")}
 							>
-								<Avatar className="size-8">
-									<AvatarFallback className="text-[11px]">{initials(review.owner)}</AvatarFallback>
-								</Avatar>
+								<Face name={review.owner} />
 								<div className="flex min-w-0 flex-1 flex-col">
 									<span className="truncate font-medium">{review.project}</span>
 									<span className="truncate text-xs text-muted-foreground">

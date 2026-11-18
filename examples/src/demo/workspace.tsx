@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { plans, projects } from "@/demo/content"
 import { cn } from "@/lib/utils"
@@ -132,5 +133,17 @@ export function ReleaseBadge({ state }: { state: ReleaseState }) {
 			<span className={cn("size-1.5 rounded-full", dots[state])} />
 			{state}
 		</Badge>
+	)
+}
+
+export function Face({ name, className }: { name: string; className?: string }) {
+	const initials = name
+		.split(" ")
+		.map((part) => part[0])
+		.join("")
+	return (
+		<Avatar className={cn("size-8", className)} title={name}>
+			<AvatarFallback className="text-[10px]">{initials}</AvatarFallback>
+		</Avatar>
 	)
 }

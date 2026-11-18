@@ -1,4 +1,5 @@
 import { CornerDownLeft, FileText, FolderKanban, LifeBuoy, Plus, Rocket, UserPlus } from "lucide-react"
+import ShellSidebar from "@/blocks/shell/sidebar"
 import {
 	CommandDialog,
 	CommandGroup,
@@ -9,7 +10,6 @@ import {
 	CommandShortcut,
 } from "@/components/ui/command"
 import { Kbd } from "@/components/ui/kbd"
-import ShellSidebar from "@/blocks/shell/sidebar"
 
 const recent = [
 	{ label: "Billing rewrite", hint: "Project", icon: FolderKanban },
