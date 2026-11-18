@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 616" width="1200" height="616" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+<rect width="1200" height="616" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8c959f"/></marker></defs>
+<line x1="398" y1="94.0" x2="414" y2="94.0" stroke="#8c959f" stroke-width="2" marker-end="url(#a)"/>
+<line x1="786" y1="94.0" x2="802" y2="94.0" stroke="#8c959f" stroke-width="2" marker-end="url(#a)"/>
+<line x1="988.0" y1="186" x2="988.0" y2="222" stroke="#8c959f" stroke-width="2" marker-end="url(#a)"/>
+<line x1="810" y1="314.0" x2="778" y2="314.0" stroke="#8c959f" stroke-width="2" marker-end="url(#a)"/>
+<line x1="422" y1="314.0" x2="390" y2="314.0" stroke="#8c959f" stroke-width="2" marker-end="url(#a)"/>
+<line x1="212.0" y1="406" x2="212.0" y2="442" stroke="#8c959f" stroke-width="2" marker-end="url(#a)"/>
+<line x1="398" y1="534.0" x2="414" y2="534.0" stroke="#8c959f" stroke-width="2" marker-end="url(#a)"/>
+<line x1="786" y1="534.0" x2="802" y2="534.0" stroke="#8c959f" stroke-width="2" marker-end="url(#a)"/>
+<rect x="30" y="6" width="352" height="164" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="52" y="50" font-size="28" font-weight="700" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">0</text>
+<text x="86" y="49" font-size="26" font-weight="650" fill="#1f2328">Setup</text>
+<text x="52" y="86" font-size="19" fill="#1f2328">brief.md, surfaces ranked,</text>
+<text x="52" y="112" font-size="19" fill="#1f2328">review page live</text>
+<text x="52" y="152" font-size="16" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ page check passes</text>
+<rect x="418" y="6" width="352" height="164" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="440" y="50" font-size="28" font-weight="700" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">1</text>
+<text x="474" y="49" font-size="26" font-weight="650" fill="#1f2328">Strategy</text>
+<text x="440" y="86" font-size="19" fill="#1f2328">competitors, buyer voice,</text>
+<text x="440" y="112" font-size="19" fill="#1f2328">personas, gap, positioning</text>
+<text x="440" y="152" font-size="16" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ why it wins, in one line</text>
+<rect x="806" y="6" width="352" height="164" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="828" y="50" font-size="28" font-weight="700" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">2</text>
+<text x="862" y="49" font-size="26" font-weight="650" fill="#1f2328">Naming</text>
+<text x="828" y="86" font-size="19" fill="#1f2328">only with no name: candidates,</text>
+<text x="828" y="112" font-size="19" fill="#1f2328">domain + handle checks, ★</text>
+<text x="828" y="152" font-size="16" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ domain status known</text>
+<rect x="806" y="226" width="352" height="164" rx="12" fill="#fbf1e9" stroke="#C97031" stroke-width="2.5"/>
+<text x="828" y="270" font-size="28" font-weight="700" fill="#C97031" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">3</text>
+<text x="862" y="269" font-size="26" font-weight="650" fill="#1f2328">Direction</text>
+<rect x="1040" y="244" width="100" height="30" rx="15" fill="#C97031"/><text x="1090" y="265" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">you pick</text>
+<text x="828" y="306" font-size="19" fill="#1f2328">3 directions, the same piece</text>
+<text x="828" y="332" font-size="19" fill="#1f2328">rendered in each, then stop</text>
+<text x="828" y="372" font-size="16" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ you pick A, B, C or a mix</text>
+<rect x="418" y="226" width="352" height="164" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="440" y="270" font-size="28" font-weight="700" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">4</text>
+<text x="474" y="269" font-size="26" font-weight="650" fill="#1f2328">Logo</text>
+<text x="440" y="306" font-size="19" fill="#1f2328">sketches, mark, lockups,</text>
+<text x="440" y="332" font-size="19" fill="#1f2328">favicon, app icon, avatar</text>
+<text x="440" y="372" font-size="16" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ reads at 16 px, one colour</text>
+<rect x="30" y="226" width="352" height="164" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="52" y="270" font-size="28" font-weight="700" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">5</text>
+<text x="86" y="269" font-size="26" font-weight="650" fill="#1f2328">System</text>
+<text x="52" y="306" font-size="19" fill="#1f2328">OKLCH colour, OFL type, space,</text>
+<text x="52" y="332" font-size="19" fill="#1f2328">components, motion, voice</text>
+<text x="52" y="372" font-size="16" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ palette.py: every pair passes</text>
+<rect x="30" y="446" width="352" height="164" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="52" y="490" font-size="28" font-weight="700" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">6</text>
+<text x="86" y="489" font-size="26" font-weight="650" fill="#1f2328">Primary surfaces</text>
+<text x="52" y="526" font-size="19" fill="#1f2328">landing + product screen, or</text>
+<text x="52" y="552" font-size="19" fill="#1f2328">packaging + signage</text>
+<text x="52" y="592" font-size="16" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ no slop, fits 390 px</text>
+<rect x="418" y="446" width="352" height="164" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="440" y="490" font-size="28" font-weight="700" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">7</text>
+<text x="474" y="489" font-size="26" font-weight="650" fill="#1f2328">Applications</text>
+<text x="440" y="526" font-size="19" fill="#1f2328">OG card, social, business</text>
+<text x="440" y="552" font-size="19" fill="#1f2328">card, print</text>
+<text x="440" y="592" font-size="16" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ still the brand, logo covered</text>
+<rect x="806" y="446" width="352" height="164" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="828" y="490" font-size="28" font-weight="700" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">8</text>
+<text x="862" y="489" font-size="26" font-weight="650" fill="#1f2328">Review + crit</text>
+<text x="828" y="526" font-size="19" fill="#1f2328">the review page, crit.md,</text>
+<text x="828" y="552" font-size="19" fill="#1f2328">an automated audit</text>
+<text x="828" y="592" font-size="16" fill="#59636e" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">✓ audit.py exits 0</text>
+</svg>
