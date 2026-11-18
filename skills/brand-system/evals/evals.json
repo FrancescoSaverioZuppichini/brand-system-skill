@@ -1,0 +1,8 @@
+{
+  "skill_name": "brand-system",
+  "evals": [
+    {"id": 1, "name": "tostato-coffee", "prompt": "Make a full brand kit for Tostato, a small specialty coffee roaster in Lugano. They sell beans by subscription online and supply ~30 cafés in Ticino. The owner wants it warm and premium but not hipster-cliché, and it has to work on bags, a web shop and Instagram.", "expected_output": "Complete brand folder + review page: strategy with real competitor research, logo that survives 16 px and a coffee-bag label, OKLCH tokens with contrast table, OFL type, landing (web shop) + one product screen, applications incl. a bag label mock.", "files": []},
+    {"id": 2, "name": "scraping-api-noname", "prompt": "I'm launching a web-scraping API for developers and data teams (LLM-ready extraction, schema in → JSON out). No name yet, need one. I love brutalist / terminal vibes. Do the whole brand: name, logo, system, landing.", "expected_output": "Naming phase with domain checks and a ★ pick, then the full system; dark-leaning dev-tool brand that is not a generic hacker-green cliché.", "files": []},
+    {"id": 3, "name": "franco-finance-reference", "prompt": "Brand for Franco, a personal-finance app for expats living in Switzerland (pillar 3a, taxes, budgeting in CHF). Look at my other brand's branding.md (a strict Vercel-like token system) for the level of rigour I want, but don't copy it. Light theme, trustworthy, a bit witty.", "expected_output": "Full system with rigour comparable to the reference doc but its own identity: no look-alike logo, palette or layout.", "files": []}
+  ]
+}
