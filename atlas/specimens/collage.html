@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Collage</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,800;1,800&family=Courier+Prime:wght@400;700&family=Instrument+Serif&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --paper: oklch(0.94 0.02 85);
+  --ink: oklch(0.18 0.01 60);
+  --red: oklch(0.58 0.20 30);
+  --blue: oklch(0.50 0.15 255);
+  --newsprint: oklch(0.75 0.01 90);
+  --white: oklch(0.985 0.005 90);
+  --tape: oklch(0.90 0.04 90 / .7);
+  --shadow: 2px 3px 0 oklch(0 0 0 / .2);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--paper); }
+body { font-family: "Archivo", sans-serif; color: var(--ink); position: relative; }
+.scrap { position: absolute; box-shadow: var(--shadow); }
+.tape { position: absolute; width: 64px; height: 20px; background: var(--tape); }
+
+.eyebrow { left: 54px; top: 50px; background: var(--white); font: 700 13px/1 "Courier Prime", monospace; letter-spacing: .08em; text-transform: uppercase; padding: 9px 14px; transform: rotate(-3deg); }
+.eyebrow .tape { left: -26px; top: -6px; transform: rotate(-30deg); }
+.h1a { left: 40px; top: 96px; background: var(--white); font: 400 60px/1 "Instrument Serif", serif; padding: 10px 22px 12px 18px; transform: rotate(-1.5deg); clip-path: polygon(0 4%, 22% 0, 48% 5%, 76% 1%, 100% 3%, 98% 52%, 100% 100%, 70% 96%, 40% 100%, 12% 95%, 1% 100%, 2% 48%); }
+.h1b { left: 64px; top: 176px; background: var(--red); color: var(--white); font: italic 800 44px/1 "Archivo", sans-serif; letter-spacing: -.02em; padding: 10px 18px; transform: rotate(1.5deg); }
+.sub { left: 52px; top: 262px; width: 300px; background: var(--newsprint); font-size: 13.5px; line-height: 1.5; padding: 12px 16px; transform: rotate(-1deg); }
+.btn { left: 60px; top: 368px; background: var(--ink); color: var(--white); font: 800 14px/1 "Archivo", sans-serif; letter-spacing: .1em; text-transform: uppercase; padding: 16px 22px; transform: rotate(-2deg); }
+.card { left: 270px; top: 382px; background: var(--white); padding: 12px 18px 14px; transform: rotate(3deg); font-family: "Courier Prime", monospace; border-left: 6px dashed var(--paper); }
+.card small { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.card b { display: block; font: 400 40px/1 "Instrument Serif", serif; margin: 4px 0 2px; }
+.card span { font-size: 12px; }
+.card .tape { right: -20px; top: -8px; transform: rotate(35deg); }
+
+.art { position: absolute; left: 380px; top: 0; width: 420px; height: 500px; }
+</style>
+</head>
+<body>
+<svg class="art" viewBox="0 0 420 500" aria-hidden="true">
+  <defs>
+    <!-- [Agent] Grain lives only inside the cut shapes: noise is overlaid on the source, then clipped back to its alpha. -->
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/>
+      <feColorMatrix type="matrix" values=".45 0 0 0 .27  .45 0 0 0 .27  .45 0 0 0 .27  0 0 0 0 1"/>
+      <feBlend in="SourceGraphic" mode="overlay"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <filter id="cut" x="-5%" y="-5%" width="115%" height="115%"><feDropShadow dx="2" dy="3" stdDeviation="0" flood-opacity=".22"/></filter>
+    <linearGradient id="sky" x2="0" y2="1"><stop offset="0" stop-color="#d9d9d6"/><stop offset=".7" stop-color="#8f8f8c"/></linearGradient>
+    <linearGradient id="pot" x2="1"><stop offset="0" stop-color="#1c1c1c"/><stop offset=".3" stop-color="#b9b9b6"/><stop offset=".45" stop-color="#7a7a78"/><stop offset="1" stop-color="#121212"/></linearGradient>
+  </defs>
+
+  <polygon fill="var(--blue)" filter="url(#cut)" points="-10,300 430,170 440,236 0,372 -6,350 4,336"/>
+  <circle cx="250" cy="170" r="120" fill="var(--red)" filter="url(#cut)"/>
+
+  <g filter="url(#cut)" transform="rotate(-4 200 380)">
+    <g filter="url(#grain)">
+      <polygon points="40,300 360,300 360,440 346,446 330,438 310,447 288,440 262,448 240,439 214,447 190,440 166,448 140,439 116,447 92,440 66,448 40,442" fill="url(#sky)"/>
+      <path d="M40 400C90 370 140 380 190 360S290 350 360 372V448H40z" fill="#4a4a48"/>
+      <path d="M40 420C110 404 200 414 260 400S340 404 360 410V448H40z" fill="#222"/>
+    </g>
+  </g>
+  <rect x="166" y="290" width="62" height="20" fill="var(--tape)" transform="rotate(-8 196 300)"/>
+
+  <g filter="url(#cut)" transform="translate(250 64)">
+    <g filter="url(#grain)">
+      <path fill="url(#pot)" d="M-26 0H26L22 10C20 30 20 44 24 56C70 76 84 110 80 150C76 210 40 260 18 290L30 318H-30L-18 290C-40 260-76 210-80 150C-84 110-70 76-24 56C-20 44-20 30-22 10Z"/>
+      <path d="M-22 22C-62 18-74 52-58 84M22 22C62 18 74 52 58 84" stroke="#2a2a2a" stroke-width="9" fill="none"/>
+      <rect x="-78" y="118" width="156" height="10" fill="#e8e8e4" opacity=".55"/>
+    </g>
+  </g>
+
+  <g fill="var(--ink)"><circle cx="116" cy="352" r="6"/><path d="M108 361h16l4 26h-4l-2-14v20l-1 26h-5l-1-22-2 22h-5l-1-26v-20l-2 14h-4z"/></g>
+  <rect x="326" y="424" width="70" height="20" fill="var(--tape)" transform="rotate(40 360 434)"/>
+</svg>
+
+<div class="scrap eyebrow"><span class="tape"></span>Introducing Keep</div>
+<div class="scrap h1a">Make something</div>
+<div class="scrap h1b">people keep</div>
+<div class="scrap sub">Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</div>
+<div class="scrap btn">Start a project</div>
+<div class="scrap card"><span class="tape"></span><small>Still in use</small><b>1,284</b><span>projects made since 2019</span></div>
+</body>
+</html>

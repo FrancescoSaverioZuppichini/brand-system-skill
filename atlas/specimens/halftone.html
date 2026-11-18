@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Halftone</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600&family=Oswald:wght@500;700&family=Space+Mono:wght@400;700&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --paper: oklch(0.95 0.015 90);
+  --ink: oklch(0.18 0.01 260);
+  --red: oklch(0.58 0.21 28);
+  --blue: oklch(0.50 0.16 258);
+  --muted: oklch(0.38 0.01 260);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--paper); }
+body { font-family: "Archivo Narrow", sans-serif; color: var(--ink); position: relative; }
+
+canvas { position: absolute; right: 0; top: 0; width: 440px; height: 500px; }
+
+.copy { position: absolute; left: 44px; top: 40px; width: 306px; }
+.eyebrow { font: 700 12px/1 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
+h1 { font: 700 64px/.92 "Oswald", sans-serif; text-transform: uppercase; letter-spacing: -.01em; margin: 14px 0 18px; }
+h1 span { color: var(--red); }
+p { font-size: 16px; line-height: 1.4; margin: 0 0 22px; color: var(--muted); width: 300px; }
+.btn { display: inline-block; font: 500 16px/1 "Oswald", sans-serif; letter-spacing: .06em; text-transform: uppercase; background: var(--ink); color: var(--paper); padding: 13px 22px; }
+
+.card { position: absolute; right: 28px; bottom: 28px; background: var(--paper); border: 2px solid var(--ink); padding: 10px 14px; display: flex; align-items: center; gap: 12px; }
+.card b { font: 700 36px/1 "Oswald", sans-serif; }
+.card small { display: block; font: 700 10px/1.2 "Space Mono", monospace; text-transform: uppercase; letter-spacing: .06em; }
+.card span { font: 400 10px/1.2 "Space Mono", monospace; }
+</style>
+</head>
+<body>
+<canvas id="screen" width="440" height="500" aria-hidden="true"></canvas>
+
+<div class="copy">
+  <div class="eyebrow">Introducing Keep</div>
+  <h1>Make something people <span>keep</span></h1>
+  <p>Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+  <span class="btn">Start a project</span>
+</div>
+
+<div class="card">
+  <b>1,284</b>
+  <div><small>Still in use</small><span>projects made since 2019</span></div>
+</div>
+
+<script>
+// [Agent] Two screens like a two-colour print: the black plate at 45 degrees (a lit sphere and its cast shadow), the red plate at 15 degrees (a flat "sun"). Dot area tracks darkness, so dot radius is the square root of it.
+const c = document.getElementById("screen"), g = c.getContext("2d");
+const css = getComputedStyle(document.documentElement);
+const W = 440, H = 500;
+g.globalCompositeOperation = "multiply";
+
+function screen(angle, step, color, tone) {
+  const a = angle * Math.PI / 180, cos = Math.cos(a), sin = Math.sin(a), R = Math.hypot(W, H);
+  g.fillStyle = css.getPropertyValue(color);
+  for (let u = -R; u < R; u += step) for (let v = -R; v < R; v += step) {
+    const x = W / 2 + u * cos - v * sin, y = H / 2 + u * sin + v * cos;
+    if (x < -step || y < -step || x > W + step || y > H + step) continue;
+    const d = tone(x, y);
+    if (d < 0.04) continue;
+    g.beginPath(); g.arc(x, y, Math.sqrt(d) * step * 0.62, 0, 7); g.fill();
+  }
+}
+
+const L = [-0.55, -0.6, 0.58], ln = Math.hypot(...L);
+screen(15, 12, "--red", (x, y) => {
+  const r = Math.hypot(x - 350, y - 104);
+  return r < 96 ? 0.5 : 0;
+});
+screen(45, 10, "--ink", (x, y) => {
+  const cx = 200, cy = 250, r = 135, nx = (x - cx) / r, ny = (y - cy) / r, q = nx * nx + ny * ny;
+  if (q < 1) {
+    const nz = Math.sqrt(1 - q), lit = Math.max(0, (nx * L[0] + ny * L[1] + nz * L[2]) / ln);
+    return Math.min(1, 0.06 + 0.94 * Math.pow(1 - lit, 1.4));
+  }
+  const sx = (x - 250) / 170, sy = (y - 400) / 24, s = sx * sx + sy * sy;
+  if (s < 1) return 0.85 * (1 - s * s);
+  return 0.2 + 0.1 * (y / H);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Line art</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Hanken+Grotesk:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --paper: oklch(0.97 0.01 85);
+  --ink: oklch(0.22 0.01 60);
+  --accent: oklch(0.80 0.10 60);
+  --secondary: oklch(0.70 0.06 150);
+  --muted: oklch(0.45 0.01 60);
+  --stroke: 2px;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--paper); }
+body { font-family: "Hanken Grotesk", sans-serif; color: var(--ink); position: relative; }
+
+.copy { position: absolute; left: 64px; top: 92px; width: 340px; }
+.eyebrow { font: 400 11px/1 "DM Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 400 54px/1 "Instrument Serif", serif; letter-spacing: -.01em; margin: 22px 0 22px; }
+h1 em { font-style: italic; }
+p { font-size: 15px; font-weight: 300; line-height: 1.6; color: var(--muted); margin: 0 0 30px; }
+.btn { display: inline-block; border: 1.5px solid var(--ink); border-radius: 99px; padding: 11px 22px; font-size: 14px; font-weight: 500; }
+
+.art { position: absolute; left: 440px; top: 26px; width: 308px; height: 360px; }
+.art path { fill: none; stroke: var(--ink); stroke-width: var(--stroke); stroke-linecap: round; stroke-linejoin: round; }
+
+.card { position: absolute; right: 52px; bottom: 34px; text-align: right; border-top: 1px solid var(--ink); padding-top: 10px; width: 170px; }
+.card small { font: 400 10px/1 "DM Mono", monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.card b { display: block; font: 400 34px/1 "Instrument Serif", serif; margin: 6px 0 2px; }
+.card span { font-size: 12px; font-weight: 300; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="copy">
+  <div class="eyebrow">Introducing Keep</div>
+  <h1>Make something <em>people keep</em></h1>
+  <p>Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+  <span class="btn">Start a project</span>
+</div>
+
+<svg class="art" viewBox="0 0 360 420" aria-hidden="true">
+  <!-- [Agent] Flat colour shapes sit slightly off the drawing on purpose: a misregistered fill, never a coloured-in outline. -->
+  <circle cx="214" cy="300" r="62" fill="var(--accent)" stroke="none" opacity=".75"/>
+  <ellipse cx="112" cy="128" rx="30" ry="14" transform="rotate(28 112 128)" fill="var(--secondary)" opacity=".55"/>
+  <!-- [Agent] One path, one pen stroke: table, vase body, up the stem through every leaf loop, back down, and out along the table. -->
+  <path d="M20 380H140C100 340 100 270 160 230C168 222 166 214 152 206C160 203 170 202 178 204
+           C172 186 170 172 174 160C150 160 126 150 120 130C140 126 166 138 174 156
+           C172 140 176 128 182 116C204 120 230 116 240 96C220 92 192 100 184 112
+           C186 100 188 90 190 80C176 78 156 70 148 52C166 50 186 60 192 76
+           C196 62 200 52 206 42C204 32 206 24 214 16C218 28 214 38 208 46
+           C196 90 178 150 184 204C192 202 200 203 208 206C194 214 192 222 200 230
+           C260 270 260 340 220 380H340"/>
+</svg>
+
+<div class="card">
+  <small>Still in use</small>
+  <b>1,284</b>
+  <span>projects made since 2019</span>
+</div>
+</body>
+</html>

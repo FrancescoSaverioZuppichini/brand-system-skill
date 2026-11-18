@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Generative art</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600&family=Inter:wght@400&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --bg: oklch(0.97 0.005 90);
+  --ink: oklch(0.20 0.01 260);
+  --c1: oklch(0.60 0.18 260);
+  --c2: oklch(0.72 0.16 50);
+  --c3: oklch(0.70 0.12 170);
+  --muted: oklch(0.48 0.01 260);
+  --rule: oklch(0.88 0.005 260);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--bg); }
+body { font-family: "Geist", sans-serif; color: var(--ink); position: relative; }
+
+canvas { position: absolute; left: 340px; top: 0; width: 460px; height: 500px; }
+
+.copy { position: absolute; left: 44px; top: 56px; width: 270px; }
+.eyebrow { font: 500 11px/1 "Geist Mono", monospace; letter-spacing: .04em; color: var(--c1); }
+h1 { font-size: 42px; font-weight: 600; line-height: 1.04; letter-spacing: -.035em; margin: 16px 0 16px; }
+p { font-size: 14px; line-height: 1.55; color: var(--muted); margin: 0 0 24px; }
+.btn { display: inline-block; font-size: 14px; font-weight: 500; background: var(--ink); color: var(--bg); padding: 12px 18px; }
+
+.card { position: absolute; left: 44px; bottom: 40px; width: 270px; border-top: 1px solid var(--rule); padding-top: 12px; display: grid; grid-template-columns: 1fr auto; row-gap: 6px; font-family: "Geist Mono", monospace; }
+.card small { font-size: 11px; color: var(--muted); }
+.card b { grid-row: span 2; font: 500 30px/1 "Geist Mono", monospace; letter-spacing: -.04em; align-self: end; }
+.card span { font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<canvas id="field" width="460" height="500" aria-hidden="true"></canvas>
+
+<div class="copy">
+  <div class="eyebrow">Introducing Keep</div>
+  <h1>Make something people keep</h1>
+  <p>Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+  <span class="btn">Start a project</span>
+</div>
+
+<div class="card">
+  <small>Still in use</small>
+  <b>1,284</b>
+  <span>projects made since 2019</span>
+</div>
+
+<script>
+// [Agent] Seeded so the hero is identical on every load: a smooth noise field gives each point an angle, and ~900 particles trace it as hairlines.
+const seed = 1284;
+let s = seed;
+const rand = () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296;
+const N = 16, grid = Array.from({ length: (N + 1) * (N + 1) }, rand);
+const fade = t => t * t * (3 - 2 * t);
+function noise(x, y) {
+  const i = Math.floor(x), j = Math.floor(y), u = fade(x - i), v = fade(y - j), at = (a, b) => grid[(b % N) * (N + 1) + (a % N)];
+  return (at(i, j) * (1 - u) + at(i + 1, j) * u) * (1 - v) + (at(i, j + 1) * (1 - u) + at(i + 1, j + 1) * u) * v;
+}
+const c = document.getElementById("field"), g = c.getContext("2d"), css = getComputedStyle(document.documentElement);
+const palette = ["--c3", "--c1", "--c1", "--ink", "--c2"].map(v => css.getPropertyValue(v));
+g.lineWidth = 1; g.lineCap = "round";
+for (let k = 0; k < 900; k++) {
+  let x = rand() * 520 - 30, y = rand() * 560 - 30;
+  const tone = noise(x / 150 + 3, y / 150 + 3);
+  g.strokeStyle = palette[Math.max(0, Math.min(4, Math.floor((tone - 0.25) * 10)))];
+  g.globalAlpha = 0.25 + 0.6 * rand();
+  g.beginPath(); g.moveTo(x, y);
+  for (let t = 0; t < 60 + rand() * 120; t++) {
+    const a = noise(x / 110 + 5, y / 110 + 5) * Math.PI * 4;
+    x += Math.cos(a) * 2; y += Math.sin(a) * 2;
+    g.lineTo(x, y);
+  }
+  g.stroke();
+}
+</script>
+</body>
+</html>

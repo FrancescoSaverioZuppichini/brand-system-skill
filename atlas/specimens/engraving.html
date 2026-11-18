@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Engraving</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IM+Fell+English:ital@0;1&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --cream: oklch(0.94 0.025 85);
+  --ink: oklch(0.22 0.02 260);
+  --tint-green: oklch(0.65 0.06 140);
+  --tint-red: oklch(0.60 0.10 30);
+  --muted: oklch(0.40 0.02 260);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--cream); }
+body { font-family: "EB Garamond", serif; color: var(--ink); position: relative; }
+
+.copy { position: absolute; left: 52px; top: 58px; width: 320px; }
+.eyebrow { font-size: 15px; font-variant: all-small-caps; letter-spacing: .14em; }
+.eyebrow::after { content: ""; display: block; width: 44px; height: 1px; background: var(--ink); margin-top: 10px; }
+h1 { font: 400 48px/1.02 "IM Fell English", serif; margin: 16px 0 16px; }
+h1 em { font-style: italic; }
+p { font-size: 16px; line-height: 1.45; color: var(--muted); margin: 0 0 24px; }
+.btn { display: inline-block; font-size: 15px; font-variant: all-small-caps; letter-spacing: .14em; border: 1px solid var(--ink); outline: 1px solid var(--ink); outline-offset: 3px; padding: 8px 18px 10px; }
+
+.card { position: absolute; left: 52px; bottom: 38px; display: flex; align-items: baseline; gap: 12px; }
+.card small { display: block; font-size: 14px; font-variant: all-small-caps; letter-spacing: .12em; }
+.card b { font: 400 40px/1 "IM Fell English", serif; }
+.card span { font-size: 14px; font-style: italic; color: var(--muted); }
+
+/* [Agent] Plate border = a heavy rule inside a hairline, the way book plates were framed. */
+.plate { position: absolute; left: 432px; top: 26px; width: 330px; height: 446px; border: 1px solid var(--ink); }
+.plate::before { content: ""; position: absolute; inset: 5px; border: 2px solid var(--ink); }
+.plate .no { position: absolute; top: 14px; right: 16px; font: 400 10px/1 "DM Mono", monospace; letter-spacing: .1em; }
+.plate canvas { position: absolute; left: 10px; top: 30px; }
+.plate .fig { position: absolute; bottom: 16px; left: 0; right: 0; text-align: center; font: italic 400 14px/1 "IM Fell English", serif; }
+</style>
+</head>
+<body>
+<div class="copy">
+  <div class="eyebrow">Introducing Keep</div>
+  <h1>Make something<br><em>people keep</em></h1>
+  <p>Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+  <span class="btn">Start a project</span>
+</div>
+
+<div class="card">
+  <b>1,284</b>
+  <div><small>Still in use</small><span>projects made since 2019</span></div>
+</div>
+
+<div class="plate">
+  <span class="no">PL. IV</span>
+  <canvas id="plate" width="310" height="380" aria-hidden="true"></canvas>
+  <div class="fig">Fig. 1.</div>
+</div>
+
+<script>
+// [Agent] Engraving by rule: a pear modelled as a solid of revolution; contour lines wrap the form as arcs, and each line swells where the surface turns from the light, like a burin cutting deeper.
+const c = document.getElementById("plate"), g = c.getContext("2d"), css = getComputedStyle(document.documentElement);
+const ink = css.getPropertyValue("--ink");
+const cx = 150, y0 = 92, y1 = 330, maxR = 92;
+const bump = (t, m, w) => { const u = (t - m) / w; return u * u < 1 ? Math.sqrt(1 - u * u) : 0; };
+const R = y => { const t = (y - y0) / (y1 - y0); if (t < 0 || t > 1) return 0; const a = 0.46 * bump(t, 0.24, 0.26), b = bump(t, 0.66, 0.34); return maxR * Math.pow(a ** 4 + b ** 4, 0.25); };
+const L = [-0.6, -0.45, 0.66];
+function shade(x, y) {
+  const r = R(y); if (r < 1) return -1;
+  const nx = (x - cx) / r; if (nx * nx >= 1) return -1;
+  const dr = (R(y + 1) - R(y - 1)) / 2, nz = Math.sqrt(1 - nx * nx);
+  const n = [nx, -dr * 0.9, nz], l = Math.hypot(...n);
+  return Math.max(0, (n[0] * L[0] + n[1] * L[1] + n[2] * L[2]) / l);
+}
+
+g.save(); g.globalCompositeOperation = "multiply";
+g.fillStyle = css.getPropertyValue("--tint-green"); g.globalAlpha = 0.35;
+g.beginPath(); for (let y = y0; y <= y1; y++) g.lineTo(cx - R(y), y); for (let y = y1; y >= y0; y--) g.lineTo(cx + R(y), y); g.fill();
+g.fillStyle = css.getPropertyValue("--tint-red"); g.globalAlpha = 0.16;
+g.beginPath(); g.ellipse(cx + 34, 262, 46, 54, 0, 0, 7); g.fill();
+g.restore();
+
+g.strokeStyle = ink; g.lineCap = "round";
+for (let yk = y0 - 4; yk < y1 + 4; yk += 3.4) {
+  for (let x = cx - maxR; x < cx + maxR; x += 1.5) {
+    const r = R(yk) || 1, nx = Math.min(1, Math.abs(x - cx) / r), y = yk + 0.18 * r * Math.sqrt(Math.max(0, 1 - nx * nx));
+    const b = shade(x, y); if (b < 0) continue;
+    const d = 1 - b; if (d < 0.22) continue;
+    g.lineWidth = 0.25 + 1.6 * d * d; g.beginPath(); g.moveTo(x, y); g.lineTo(x + 1.6, y); g.stroke();
+  }
+}
+for (let k = -400; k < 400; k += 3.6) {
+  for (let t = 0; t < 400; t += 1.5) {
+    const x = k + t * 0.55, y = t; const b = shade(x, y); if (b < 0) continue;
+    const d = 1 - b; if (d < 0.62) continue;
+    g.lineWidth = 0.3 + 1.2 * (d - 0.6); g.beginPath(); g.moveTo(x, y); g.lineTo(x + 0.8, y + 1.4); g.stroke();
+  }
+}
+
+g.lineWidth = 0.9; g.beginPath();
+for (let y = y0; y <= y1; y++) g.lineTo(cx - R(y), y); for (let y = y1; y >= y0; y--) g.lineTo(cx + R(y), y); g.closePath(); g.stroke();
+
+for (let y = y1 - 6, i = 0; y < y1 + 22; y += 2.6, i++) {
+  const w = 120 * Math.sqrt(Math.max(0, 1 - ((y - y1 - 6) / 16) ** 2));
+  g.lineWidth = 0.4 + 0.9 * (1 - Math.abs(y - y1 - 4) / 18);
+  g.beginPath(); g.moveTo(cx - w * 0.4 + 30, y); g.lineTo(cx + w + 30, y); g.stroke();
+}
+
+g.lineWidth = 3.2; g.beginPath(); g.moveTo(cx + 2, y0 + 4); g.quadraticCurveTo(cx - 4, y0 - 24, cx + 12, y0 - 44); g.stroke();
+g.lineWidth = 1;
+g.beginPath(); g.moveTo(cx + 4, y0 - 20); g.bezierCurveTo(cx + 40, y0 - 70, cx + 110, y0 - 64, cx + 128, y0 - 50); g.bezierCurveTo(cx + 96, y0 - 8, cx + 34, y0 - 2, cx + 4, y0 - 20); g.stroke();
+g.beginPath(); g.moveTo(cx + 4, y0 - 20); g.quadraticCurveTo(cx + 66, y0 - 46, cx + 128, y0 - 50); g.stroke();
+g.save(); g.beginPath(); g.moveTo(cx + 4, y0 - 20); g.quadraticCurveTo(cx + 66, y0 - 46, cx + 128, y0 - 50); g.bezierCurveTo(cx + 96, y0 - 8, cx + 34, y0 - 2, cx + 4, y0 - 20); g.clip();
+g.lineWidth = 0.5; for (let k = 0; k < 160; k += 2.4) { g.beginPath(); g.moveTo(cx + k, y0 - 60); g.lineTo(cx + k - 30, y0 + 10); g.stroke(); }
+g.restore();
+g.lineWidth = 0.6; for (const t of [0.25, 0.45, 0.65, 0.82]) { const x = cx + 4 + 124 * t, y = y0 - 20 - 30 * t + 2; g.beginPath(); g.moveTo(x, y); g.lineTo(x + 10, y - 9); g.stroke(); }
+</script>
+</body>
+</html>

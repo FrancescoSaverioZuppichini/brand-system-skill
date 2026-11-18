@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mascot-led</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --white: oklch(0.99 0 0);
+  --green: oklch(0.75 0.19 140);
+  --green-light: oklch(0.88 0.12 140);
+  --green-pale: oklch(0.95 0.05 140);
+  --dark: oklch(0.35 0.08 150);
+  --cheek: oklch(0.80 0.10 15);
+  --ink: oklch(0.28 0.02 260);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--white); }
+body { font-family: "Nunito", sans-serif; color: var(--ink); position: relative; }
+
+.copy { position: absolute; left: 52px; top: 64px; width: 340px; }
+.eyebrow { display: inline-block; font: 500 12px/1 "DM Mono", monospace; color: var(--dark); background: var(--green-pale); padding: 7px 12px; border-radius: 99px; }
+h1 { font: 700 50px/1.02 "Fredoka", sans-serif; letter-spacing: -.01em; margin: 16px 0 14px; }
+p { font-size: 15px; font-weight: 500; line-height: 1.55; margin: 0 0 24px; opacity: .75; }
+.btn { display: inline-block; font: 600 17px/1 "Fredoka", sans-serif; color: var(--white); background: var(--dark); padding: 15px 28px; border-radius: 99px; }
+
+.blob { position: absolute; left: 440px; top: 46px; width: 320px; height: 320px; border-radius: 50%; background: var(--green-pale); }
+.hero { position: absolute; left: 470px; top: 70px; width: 270px; height: 300px; }
+
+.card { position: absolute; left: 500px; top: 378px; width: 240px; background: var(--white); border: 2px solid var(--green-pale); border-radius: 20px; padding: 14px 18px; box-sizing: border-box; }
+.card small { font: 600 13px/1 "Fredoka", sans-serif; color: var(--dark); }
+.card b { display: block; font: 700 30px/1 "Fredoka", sans-serif; margin: 6px 0 2px; }
+.card span { font-size: 12px; opacity: .7; }
+.peek { position: absolute; left: 666px; top: 316px; width: 64px; height: 64px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true">
+  <defs>
+    <!-- [Agent] One character built from a few primitives (jar body, lid hat, sprout), so every pose is the same parts re-posed. -->
+    <g id="body">
+      <path fill="var(--green)" d="M40 90c0-30 20-38 60-38s60 8 60 38v70c0 32-24 44-60 44s-60-12-60-44z"/>
+      <ellipse cx="100" cy="158" rx="40" ry="34" fill="var(--green-light)"/>
+      <rect x="44" y="36" width="112" height="24" rx="12" fill="var(--dark)"/>
+      <circle cx="100" cy="32" r="8" fill="var(--dark)"/>
+      <path d="M100 26c0-10 2-16 6-22" stroke="var(--dark)" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <ellipse cx="116" cy="8" rx="12" ry="6" fill="var(--green)" transform="rotate(-24 116 8)"/>
+      <ellipse cx="94" cy="10" rx="9" ry="5" fill="var(--green-light)" transform="rotate(30 94 10)"/>
+      <ellipse cx="62" cy="124" rx="10" ry="6" fill="var(--cheek)"/>
+      <ellipse cx="138" cy="124" rx="10" ry="6" fill="var(--cheek)"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="copy">
+  <span class="eyebrow">Introducing Keep</span>
+  <h1>Make something people keep</h1>
+  <p>Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+  <span class="btn">Start a project</span>
+</div>
+
+<div class="blob"></div>
+<svg class="hero" viewBox="0 -6 200 226" aria-hidden="true">
+  <ellipse cx="100" cy="212" rx="58" ry="7" fill="oklch(0.88 0.04 140)"/>
+  <ellipse cx="78" cy="204" rx="16" ry="9" fill="var(--dark)"/>
+  <ellipse cx="122" cy="204" rx="16" ry="9" fill="var(--dark)"/>
+  <path d="M44 128C30 118 22 104 20 88" stroke="var(--green)" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <circle cx="19" cy="82" r="10" fill="var(--green)"/>
+  <path d="M158 134c10 8 16 18 18 28" stroke="var(--green)" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <use href="#body"/>
+  <circle cx="78" cy="98" r="17" fill="var(--white)"/><circle cx="122" cy="98" r="17" fill="var(--white)"/>
+  <circle cx="81" cy="101" r="9.5" fill="var(--ink)"/><circle cx="125" cy="101" r="9.5" fill="var(--ink)"/>
+  <circle cx="84" cy="97" r="3" fill="var(--white)"/><circle cx="128" cy="97" r="3" fill="var(--white)"/>
+  <path d="M88 124q12 16 24 0z" fill="var(--ink)"/>
+  <path d="M95 130q5-4 10 0" stroke="var(--cheek)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M8 66l-6-6M14 60l-1-8M2 76h-8" stroke="var(--dark)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+
+<!-- [Agent] The small one sits behind the card in DOM order, so the card itself hides its body: the "peeking" pose for free. -->
+<svg class="peek" viewBox="36 0 128 128" aria-hidden="true">
+  <use href="#body"/>
+  <path d="M66 100q12-14 24 0M110 100q12-14 24 0" stroke="var(--ink)" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>
+<div class="card">
+  <small>Still in use</small>
+  <b>1,284</b>
+  <span>projects made since 2019</span>
+</div>
+</body>
+</html>

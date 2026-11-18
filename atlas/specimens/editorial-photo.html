@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Editorial photography</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Instrument+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --paper: oklch(0.97 0.006 80);
+  --ink: oklch(0.18 0.01 60);
+  --grade-warm: oklch(0.75 0.06 60);
+  --grade-shadow: oklch(0.30 0.03 250);
+  --muted: oklch(0.45 0.01 60);
+  --rule: oklch(0.85 0.01 70);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--paper); }
+body { font-family: "Instrument Sans", sans-serif; color: var(--ink); position: relative; }
+
+.photo { position: absolute; left: 40px; top: 40px; width: 420px; height: 420px; display: block; }
+
+.copy { position: absolute; left: 500px; top: 40px; width: 260px; }
+.eyebrow { font: 400 11px/1 "DM Mono", monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 300 42px/1.02 "Newsreader", serif; letter-spacing: -.02em; margin: 16px 0 16px; }
+h1 em { font-style: italic; }
+p { font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0 0 20px; }
+.btn { display: inline-block; font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: 12px 18px; background: var(--ink); color: var(--paper); }
+
+.card { position: absolute; left: 500px; bottom: 40px; width: 260px; border-top: 1px solid var(--rule); padding-top: 12px; }
+.card small { font: 400 10px/1 "DM Mono", monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.card b { display: block; font: 300 34px/1 "Newsreader", serif; margin: 8px 0 4px; }
+.card span { font: 400 11px/1 "DM Mono", monospace; color: var(--muted); }
+</style>
+</head>
+<body>
+<!-- [Agent] A built still life standing in for a commissioned photo: window light on plaster, one vessel, long soft shadows, warm grade, grain. -->
+<svg class="photo" viewBox="0 0 420 420" aria-hidden="true">
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop offset="0" stop-color="oklch(0.66 0.035 65)"/><stop offset="1" stop-color="oklch(0.74 0.04 68)"/></linearGradient>
+    <linearGradient id="table" x2="0" y2="1"><stop offset="0" stop-color="oklch(0.58 0.05 58)"/><stop offset="1" stop-color="oklch(0.40 0.04 50)"/></linearGradient>
+    <linearGradient id="clay" x2="1"><stop offset="0" stop-color="oklch(0.93 0.02 80)"/><stop offset=".35" stop-color="oklch(0.86 0.025 75)"/><stop offset=".8" stop-color="oklch(0.56 0.03 60)"/><stop offset="1" stop-color="oklch(0.44 0.03 250)"/></linearGradient>
+    <linearGradient id="cup" x2="1"><stop offset="0" stop-color="oklch(0.62 0.07 45)"/><stop offset=".4" stop-color="oklch(0.52 0.07 42)"/><stop offset="1" stop-color="oklch(0.30 0.04 40)"/></linearGradient>
+    <radialGradient id="vignette" r=".75"><stop offset=".55" stop-color="oklch(0.30 0.03 250)" stop-opacity="0"/><stop offset="1" stop-color="oklch(0.30 0.03 250)" stop-opacity=".55"/></radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="softer" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="contact" x="-30%" y="-200%" width="160%" height="500%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="2"/><feColorMatrix type="saturate" values="0"/></filter>
+    <clipPath id="frame"><rect width="420" height="420"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="420" height="280" fill="url(#wall)"/>
+    <g filter="url(#soft)" fill="oklch(0.92 0.06 80)" opacity=".85">
+      <polygon points="168,34 330,14 352,226 196,238"/>
+    </g>
+    <g filter="url(#soft)" stroke="oklch(0.62 0.04 65)" stroke-width="9" opacity=".9">
+      <line x1="250" y1="22" x2="274" y2="234"/><line x1="182" y1="134" x2="342" y2="118"/>
+    </g>
+    <rect y="276" width="420" height="144" fill="url(#table)"/>
+    <rect y="274" width="420" height="4" fill="oklch(0.78 0.05 70)" opacity=".6"/>
+    <polygon points="200,282 360,282 420,350 250,360" fill="oklch(0.80 0.07 75)" opacity=".55" filter="url(#soft)"/>
+
+    <polygon points="160,330 205,330 380,354 330,368" fill="oklch(0.22 0.03 250)" opacity=".55" filter="url(#softer)"/>
+    <polygon points="258,350 300,348 400,370 380,380" fill="oklch(0.22 0.03 250)" opacity=".5" filter="url(#softer)"/>
+    <polygon points="216,262 250,248 330,250 300,266" fill="oklch(0.30 0.03 250)" opacity=".35" filter="url(#softer)"/>
+
+    <ellipse cx="178" cy="332" rx="34" ry="5" fill="oklch(0.18 0.02 250)" opacity=".7" filter="url(#contact)"/>
+    <ellipse cx="280" cy="354" rx="30" ry="4" fill="oklch(0.18 0.02 250)" opacity=".7" filter="url(#contact)"/>
+    <path d="M178 144c-1-10-6-26 6-34M184 112c8-22 2-40 16-58M200 54c8-6 12-18 10-28M191 92c-10-8-22-10-30-22M196 72c10-2 18-10 22-18" fill="none" stroke="oklch(0.30 0.03 50)" stroke-width="2" stroke-linecap="round"/>
+    <path fill="url(#clay)" d="M160 144h36l-2 8c-2 10 0 30 4 40 20 18 34 40 34 74 0 32-12 56-24 66h-60c-12-10-24-34-24-66 0-34 14-56 34-74 4-10 6-30 4-40z"/>
+    <ellipse cx="178" cy="144" rx="18" ry="4" fill="oklch(0.40 0.03 60)"/>
+    <path fill="url(#cup)" d="M248 304h60l-4 40c-1 6-6 10-12 10h-28c-6 0-11-4-12-10z"/>
+    <ellipse cx="278" cy="304" rx="30" ry="6" fill="oklch(0.30 0.03 40)"/>
+    <ellipse cx="278" cy="303" rx="30" ry="6" fill="none" stroke="oklch(0.70 0.06 50)" stroke-width="1.5"/>
+
+    <rect width="420" height="420" fill="oklch(0.80 0.07 60)" opacity=".12" style="mix-blend-mode:multiply"/>
+    <rect width="420" height="420" fill="url(#vignette)"/>
+    <rect width="420" height="420" filter="url(#grain)" opacity=".28" style="mix-blend-mode:overlay"/>
+  </g>
+</svg>
+
+<div class="copy">
+  <div class="eyebrow">Introducing Keep</div>
+  <h1>Make something <em>people keep</em></h1>
+  <p>Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+  <span class="btn">Start a project</span>
+</div>
+
+<div class="card">
+  <small>Still in use</small>
+  <b>1,284</b>
+  <span>projects made since 2019</span>
+</div>
+</body>
+</html>

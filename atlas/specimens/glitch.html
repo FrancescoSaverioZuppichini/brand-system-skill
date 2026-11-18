@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Glitch</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Rubik+Glitch&family=Space+Mono:wght@400;700&display=block">
+<style>
+:root {
+  color-scheme: dark;
+  --black: oklch(0.12 0 0);
+  --white: oklch(0.98 0 0);
+  --red: oklch(0.63 0.25 29);
+  --cyan: oklch(0.90 0.15 195);
+  --grey: oklch(0.65 0 0);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--black); }
+body { font-family: "Archivo", sans-serif; color: var(--white); position: relative; }
+/* [Agent] CRT scan lines over everything, page included, so type and image share one broken signal. */
+body::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, oklch(0 0 0 / .35) 0 1px, transparent 1px 3px); pointer-events: none; }
+
+.still { position: absolute; left: 392px; top: 0; width: 408px; height: 500px; }
+
+.copy { position: absolute; left: 44px; top: 56px; width: 330px; }
+.eyebrow { font: 700 12px/1 "Space Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--cyan); }
+h1 { font-size: 52px; font-weight: 800; line-height: .98; letter-spacing: -.02em; text-transform: uppercase; margin: 16px 0 18px; text-shadow: -3px 0 var(--red), 3px 0 var(--cyan); }
+h1 .glitch { font-family: "Rubik Glitch", sans-serif; font-weight: 400; text-shadow: -2px 0 var(--red); }
+/* [Agent] One torn slice through the headline: a copy clipped to a thin band and shoved sideways. */
+h1 { position: relative; }
+h1::after { content: "Make something"; position: absolute; left: 14px; top: 0; color: var(--white); clip-path: inset(30% 0 58% 0); text-shadow: -3px 0 var(--cyan); }
+p { font: 400 13px/1.6 "Space Mono", monospace; color: var(--grey); margin: 0 0 24px; }
+.btn { display: inline-block; font: 700 13px/1 "Space Mono", monospace; text-transform: uppercase; background: var(--white); color: var(--black); padding: 13px 18px; box-shadow: -4px 0 0 var(--red), 4px 0 0 var(--cyan); }
+
+.card { position: absolute; right: 24px; bottom: 24px; background: var(--black); border: 1px solid oklch(0.98 0 0 / .4); padding: 10px 14px; font-family: "Space Mono", monospace; display: flex; gap: 14px; align-items: center; }
+.card small { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--red); }
+.card b { font: 800 30px/1 "Archivo", sans-serif; text-shadow: -2px 0 var(--red), 2px 0 var(--cyan); }
+.card span { font-size: 11px; color: var(--grey); }
+</style>
+</head>
+<body>
+<svg class="still" viewBox="0 0 408 500" aria-hidden="true">
+  <defs>
+    <linearGradient id="lit" x2="1"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#8a8a8a"/><stop offset="1" stop-color="#151515"/></linearGradient>
+    <radialGradient id="bg" cx=".3" cy=".3" r=".8"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#000"/></radialGradient>
+    <g id="src">
+      <rect width="408" height="500" fill="url(#bg)"/>
+      <ellipse cx="204" cy="190" rx="78" ry="98" fill="url(#lit)"/>
+      <rect x="172" y="270" width="64" height="70" fill="url(#lit)"/>
+      <path d="M40 500c10-110 70-150 164-160 94 10 154 50 164 160z" fill="url(#lit)"/>
+      <rect x="0" y="120" width="408" height="3" fill="#fff" opacity=".7"/>
+    </g>
+    <!-- [Agent] Channel isolation: keep only red in one copy and only green+blue (cyan) in the other; screen-blending them back together rebuilds white where they still overlap. -->
+    <filter id="r"><feColorMatrix values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/></filter>
+    <filter id="c"><feColorMatrix values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/></filter>
+    <g id="split">
+      <rect width="408" height="500" fill="#000"/>
+      <use href="#src" filter="url(#r)" x="-9" style="mix-blend-mode:screen"/>
+      <use href="#src" filter="url(#c)" x="7" style="mix-blend-mode:screen"/>
+    </g>
+    <clipPath id="s1"><rect y="150" width="408" height="22"/></clipPath>
+    <clipPath id="s2"><rect y="236" width="408" height="10"/></clipPath>
+    <clipPath id="s3"><rect y="300" width="408" height="38"/></clipPath>
+    <clipPath id="s4"><rect y="410" width="408" height="16"/></clipPath>
+  </defs>
+  <use href="#split"/>
+  <use href="#split" clip-path="url(#s1)" transform="translate(-36 0)"/>
+  <use href="#split" clip-path="url(#s2)" transform="translate(28 0)"/>
+  <use href="#split" clip-path="url(#s3)" transform="translate(54 0)"/>
+  <use href="#split" clip-path="url(#s4)" transform="translate(-22 0)"/>
+  <g opacity=".9">
+    <rect x="150" y="338" width="6" height="162" fill="url(#lit)"/>
+    <rect x="236" y="338" width="10" height="162" fill="var(--cyan)" opacity=".5"/>
+    <rect x="262" y="338" width="3" height="162" fill="var(--red)"/>
+    <rect x="96" y="338" width="4" height="162" fill="#fff" opacity=".6"/>
+  </g>
+  <rect x="300" y="64" width="44" height="12" fill="var(--red)"/>
+  <rect x="60" y="214" width="26" height="8" fill="var(--cyan)"/>
+  <rect x="320" y="270" width="70" height="4" fill="#fff"/>
+</svg>
+
+<div class="copy">
+  <div class="eyebrow">Introducing Keep</div>
+  <h1>Make something people <span class="glitch">keep</span></h1>
+  <p>Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+  <span class="btn">Start a project</span>
+</div>
+
+<div class="card">
+  <b>1,284</b>
+  <div><small>Still in use</small><span>projects made since 2019</span></div>
+</div>
+</body>
+</html>
