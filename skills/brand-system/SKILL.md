@@ -92,7 +92,7 @@ The page and `branding.md` share one list of sections, in this order (page ids i
 
 Taste is the user's call, so the style is the one decision you never take alone. Render the same small piece of the #1 surface in 3 candidate recipes, each a real contrast (different families, not three shades of one). For developer tools, AI and other tech products, one of the three is `styles.md#devtool-dark` (Vercel / Linear-like), the quality bar of that category. Then ask:
 
-- **You can ask the user directly** (an ask-user tool): one question, the three recipes as options with your ★ first and labelled "(recommended)", each with its one-line recipe and the image path; then A/B the top two on a second piece of the surface if the answer is "between A and B".
+- **You can ask the user directly** (in Claude Code the `AskUserQuestion` tool: a multiple-choice popup in the chat, with a preview per option): one question, the three recipes as options with your ★ first and labelled "(recommended)", each with its one-line recipe and the image path; then A/B the top two on a second piece of the surface if the answer is "between A and B".
 - **You are a subagent:** put the three in a `<Gallery id="pick-style">` in the Direction section, each `<Media>` with its own id, plus `<Note id="pick-style-note" placeholder="Which style? 👍 one card, or write why">`. Tell the orchestrator the link, then read `$B/feedback.json` every 60 s for up to 10 minutes: a 👍 (`vote: "up"`) on one of the three ids, or a note, is the pick. With no answer, go on with your ★ and mark it ❓ on the page.
 
 Write the pick and why in branding.md § Direction; the runner-up stays on the page, small.
