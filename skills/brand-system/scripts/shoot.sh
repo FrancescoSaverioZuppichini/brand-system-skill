@@ -29,9 +29,10 @@ trap 'rm -rf "$prof" "$d/.shoot-m.html" "$d/.shoot-w.html"' EXIT
 probe() { python3 -c 'import sys; p, js, o = sys.argv[1:]; h = open(p).read(); t = f"<script>{js}</script>"
 open(o, "w").write(h.replace("</body>", t + "</body>", 1) if "</body>" in h else h + t)' "$page" "$1" "$d/.shoot-m.html"; }
 title_of() { "$CH" $flags --window-size=$2,900 --dump-dom "file://$1" 2>/dev/null | grep -o '<title>[A-Z]=[0-9x]*' | head -1 | sed 's/<title>[A-Z]=//'; }
-# [Agent] A family counts as missing when text set in it measures exactly like both generic fallbacks, which catches a
+# [Agent] Every family in use is loaded first (fonts load lazily, so an unused @font-face isn't a failure), then a
+# family counts as missing when text set in it measures exactly like both generic fallbacks, which catches a
 # failed @font-face and a Google Fonts stylesheet that never arrived (document.fonts.check can't see the latter).
-fonts_js='addEventListener("load",()=>document.fonts.ready.then(()=>{const c=document.createElement("canvas").getContext("2d");const w=f=>{c.font="40px "+f;return c.measureText("mmmmlli 0123 Wg").width};const fams=new Set([...document.querySelectorAll("body *")].map(e=>getComputedStyle(e).fontFamily.split(",")[0].trim().replace(/["\x27]/g,"")));const bad=[...fams].filter(f=>!/^(serif|sans-serif|monospace|system-ui|ui-.*|-apple-system|BlinkMacSystemFont|Helvetica|Arial|Times|Georgia|Menlo|Courier)/i.test(f)&&["monospace","serif"].every(g=>w(JSON.stringify(f)+","+g)===w(g)));document.title="F="+(bad.join("|")||"ok")}))'
+fonts_js='addEventListener("load",()=>document.fonts.ready.then(async()=>{const c=document.createElement("canvas").getContext("2d");const w=f=>{c.font="40px "+f;return c.measureText("mmmmlli 0123 Wg").width};const fams=new Set([...document.querySelectorAll("body *")].map(e=>getComputedStyle(e).fontFamily.split(",")[0].trim().replace(/["\x27]/g,"")));await Promise.all([...fams].map(f=>document.fonts.load("40px "+JSON.stringify(f)).catch(()=>[])));const bad=[...fams].filter(f=>!/^(serif|sans-serif|monospace|system-ui|ui-.*|-apple-system|BlinkMacSystemFont|Helvetica|Arial|Times|Georgia|Menlo|Courier)/i.test(f)&&["monospace","serif"].every(g=>w(JSON.stringify(f)+","+g)===w(g)));document.title="F="+(bad.join("|")||"ok")}))'
 missing_fonts() { probe "$fonts_js"; "$CH" $flags --window-size=1200,900 --dump-dom "file://$d/.shoot-m.html" 2>/dev/null | grep -o '<title>F=[^<]*' | head -1 | sed 's/<title>F=//'; }
 if [[ -n $d ]]; then
   m=$(missing_fonts); [[ $m == ok || -z $m ]] || { sleep 2; m=$(missing_fonts); }
