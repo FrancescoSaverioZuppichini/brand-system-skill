@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kids / playful</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800&display=block">
+<style>
+  :root {
+    color-scheme: light;
+    --white: oklch(0.99 0 0);
+    --green: oklch(0.75 0.20 135);
+    --green-edge: oklch(0.58 0.17 138);
+    --blue: oklch(0.66 0.15 240);
+    --blue-edge: oklch(0.52 0.14 245);
+    --yellow: oklch(0.88 0.16 92);
+    --yellow-edge: oklch(0.74 0.15 80);
+    --red: oklch(0.66 0.21 25);
+    --red-edge: oklch(0.52 0.19 25);
+    --ink: oklch(0.30 0.03 260);
+    --soft: oklch(0.55 0.03 260);
+    --line: oklch(0.91 0.01 260);
+    --line-edge: oklch(0.85 0.01 260);
+    --display: "Fredoka", sans-serif;
+    --text: "Nunito", sans-serif;
+  }
+  html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--white); }
+  body { position: relative; font-family: var(--text); color: var(--ink); }
+
+  .copy { position: absolute; left: 48px; top: 66px; }
+  .tag { display: inline-block; padding: 8px 16px; border-radius: 999px; background: var(--yellow); box-shadow: 0 4px 0 var(--yellow-edge); font-family: var(--display); font-weight: 600; font-size: 15px; }
+  h1 { font-family: var(--display); font-weight: 700; font-size: 60px; line-height: 0.98; letter-spacing: -0.01em; margin: 22px 0 18px; }
+  h1 span { color: var(--green-edge); }
+  p { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.5; color: var(--soft); white-space: nowrap; }
+  .cta { display: inline-block; margin-top: 28px; padding: 17px 34px; border-radius: 18px; background: var(--green); box-shadow: 0 5px 0 var(--green-edge); color: var(--white); font-family: var(--display); font-weight: 700; font-size: 19px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+  .bar { position: absolute; left: 470px; top: 40px; width: 300px; display: flex; align-items: center; gap: 12px; }
+  .track { flex: 1; height: 18px; border-radius: 999px; background: var(--line); }
+  .fill { width: 64%; height: 100%; border-radius: inherit; background: var(--green); box-shadow: inset 0 -5px 0 oklch(0.68 0.19 135), inset 0 4px 0 oklch(1 0 0 / 0.0); position: relative; }
+  .fill::after { content: ""; position: absolute; left: 10px; right: 10px; top: 4px; height: 4px; border-radius: 2px; background: oklch(1 0 0 / 0.45); }
+
+  .node { position: absolute; width: 74px; height: 68px; border-radius: 50%; display: grid; place-items: center; }
+  .node.green { background: var(--green); box-shadow: 0 7px 0 var(--green-edge); }
+  .node.blue { background: var(--blue); box-shadow: 0 7px 0 var(--blue-edge); }
+  .node.yellow { background: var(--yellow); box-shadow: 0 7px 0 var(--yellow-edge); }
+  .node.off { background: var(--line); box-shadow: 0 7px 0 var(--line-edge); }
+  .ring { position: absolute; width: 98px; height: 98px; border-radius: 50%; border: 8px solid var(--line); box-sizing: border-box; }
+  .ring::before { content: ""; position: absolute; inset: -8px; border-radius: 50%; border: 8px solid transparent; border-top-color: var(--green); border-right-color: var(--green); transform: rotate(-20deg); }
+
+  .card { position: absolute; left: 556px; top: 324px; width: 176px; padding: 16px 18px 14px; border-radius: 20px; background: var(--white); border: 3px solid var(--line); box-shadow: 0 5px 0 var(--line-edge); }
+  .card .label { font-family: var(--display); font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); }
+  .card .num { font-family: var(--display); font-weight: 700; font-size: 48px; line-height: 1.05; color: var(--blue-edge); }
+  .card .cap { font-size: 13.5px; font-weight: 700; color: var(--soft); }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <span class="tag">Introducing Keep</span>
+    <h1>Make something<br>people <span>keep</span></h1>
+    <p>Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <span class="cta">Start a project</span>
+  </div>
+
+  <div class="bar">
+    <svg width="28" height="26" viewBox="0 0 24 22"><path d="M12 21s-9-5.6-9-12A5 5 0 0 1 12 6a5 5 0 0 1 9 3c0 6.4-9 12-9 12Z" fill="var(--red)"/><ellipse cx="7.5" cy="8" rx="2" ry="1.4" fill="#fff" opacity="0.6"/></svg>
+    <div class="track"><div class="fill"></div></div>
+    <svg width="26" height="30" viewBox="0 0 24 28"><path d="M12 1c1 6 9 8 9 16a9 9 0 0 1-18 0c0-4 2-6 4-8 0 3 1 5 3 5-1-5 1-10 2-13Z" fill="oklch(0.74 0.18 55)"/><path d="M12 14c2 2 4 4 4 7a4 4 0 0 1-8 0c0-3 2-5 4-7Z" fill="var(--yellow)"/></svg>
+  </div>
+
+  <div class="ring" style="left:521px; top:94px"></div>
+  <div class="node green" style="left:533px; top:107px">
+    <svg width="34" height="34" viewBox="0 0 24 24"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7L12 2Z" fill="#fff"/></svg>
+  </div>
+  <div class="node blue" style="left:650px; top:146px">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+  </div>
+  <div class="node yellow" style="left:690px; top:226px">
+    <svg width="32" height="32" viewBox="0 0 24 24"><path d="M5 4h14v4a7 7 0 0 1-14 0V4Z" fill="#fff"/><path d="M5 6H2v2a4 4 0 0 0 4 4M19 6h3v2a4 4 0 0 1-4 4" fill="none" stroke="#fff" stroke-width="2"/><rect x="9" y="15" width="6" height="3" fill="#fff"/><rect x="7" y="18" width="10" height="3" rx="1" fill="#fff"/></svg>
+  </div>
+  <div class="node off" style="left:466px; top:286px">
+    <svg width="28" height="28" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3" fill="oklch(0.75 0.01 260)"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="oklch(0.75 0.01 260)" stroke-width="3"/></svg>
+  </div>
+
+  <div class="card">
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+
+  <svg width="800" height="500" viewBox="0 0 800 500" style="position:absolute;inset:0;pointer-events:none">
+    <circle cx="452" cy="230" r="7" fill="var(--blue)"/>
+    <rect x="740" y="120" width="14" height="14" rx="3" fill="var(--red)" transform="rotate(20 747 127)"/>
+    <path d="M440 420 l6 -14 l6 14 l14 6 l-14 6 l-6 14 l-6 -14 l-14 -6 Z" fill="var(--yellow)"/>
+    <circle cx="600" cy="470" r="6" fill="var(--green)"/>
+    <path d="M740 470 q10 -16 20 0 q10 16 20 0" fill="none" stroke="var(--blue)" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+</body>
+</html>

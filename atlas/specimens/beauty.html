@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Beauty / clean-girl</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=block">
+<style>
+  :root {
+    color-scheme: light;
+    --milk: oklch(0.97 0.01 60);
+    --blush: oklch(0.88 0.04 20);
+    --blush-soft: oklch(0.93 0.025 25);
+    --nude: oklch(0.80 0.05 55);
+    --nude-deep: oklch(0.70 0.06 50);
+    --cocoa: oklch(0.35 0.04 40);
+    --pop: oklch(0.62 0.20 15);
+    --serif: "Instrument Serif", serif;
+    --sans: "DM Sans", sans-serif;
+  }
+  html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--milk); }
+  body { position: relative; font-family: var(--sans); color: var(--cocoa); }
+
+  .copy { position: absolute; left: 56px; top: 92px; }
+  .eyebrow { font-size: 13px; letter-spacing: 0.02em; color: var(--pop); }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: 64px; line-height: 0.95; letter-spacing: -0.02em; margin: 14px 0 22px; }
+  h1 em { font-style: italic; }
+  p { margin: 0; font-size: 14px; line-height: 1.6; white-space: nowrap; }
+  .cta { display: inline-block; margin-top: 28px; padding: 14px 28px; border-radius: 999px; background: var(--cocoa); color: var(--milk); font-size: 14px; font-weight: 500; }
+
+  .stage { position: absolute; right: 0; top: 0; width: 360px; height: 500px; background: radial-gradient(90% 60% at 60% 45%, var(--blush-soft), var(--blush)); }
+  .card { position: absolute; right: 30px; top: 36px; padding: 14px 18px 14px; border-radius: 12px; background: oklch(0.97 0.01 60 / 0.7); }
+  .card .label { font-size: 12px; }
+  .card .num { font-family: var(--serif); font-size: 44px; line-height: 1.05; }
+  .card .cap { font-size: 12px; opacity: 0.8; }
+</style>
+</head>
+<body>
+  <div class="stage"></div>
+  <!-- [Agent] Product shot stand-in: a squeeze tube standing on its cap and a dropper bottle on a nude podium, lit from the left. -->
+  <svg width="800" height="500" viewBox="0 0 800 500" style="position:absolute;inset:0">
+    <defs>
+      <linearGradient id="tube" x1="0" x2="1">
+        <stop offset="0" stop-color="oklch(0.90 0.03 20)"/><stop offset="0.28" stop-color="oklch(0.99 0.006 40)"/><stop offset="0.6" stop-color="oklch(0.93 0.025 20)"/><stop offset="1" stop-color="oklch(0.80 0.05 20)"/>
+      </linearGradient>
+      <linearGradient id="cap" x1="0" x2="1">
+        <stop offset="0" stop-color="oklch(0.56 0.19 15)"/><stop offset="0.3" stop-color="oklch(0.72 0.17 15)"/><stop offset="1" stop-color="oklch(0.48 0.17 15)"/>
+      </linearGradient>
+      <linearGradient id="glass" x1="0" x2="1">
+        <stop offset="0" stop-color="oklch(0.78 0.06 55)"/><stop offset="0.25" stop-color="oklch(0.92 0.03 60)"/><stop offset="0.65" stop-color="oklch(0.82 0.05 55)"/><stop offset="1" stop-color="oklch(0.68 0.06 50)"/>
+      </linearGradient>
+      <linearGradient id="podium" x1="0" x2="1">
+        <stop offset="0" stop-color="oklch(0.76 0.05 50)"/><stop offset="0.35" stop-color="oklch(0.86 0.04 55)"/><stop offset="1" stop-color="oklch(0.70 0.05 45)"/>
+      </linearGradient>
+      <radialGradient id="drop" cx="0.35" cy="0.35" r="0.7">
+        <stop offset="0" stop-color="#fff" stop-opacity="0.95"/><stop offset="0.5" stop-color="oklch(0.92 0.03 20)" stop-opacity="0.4"/><stop offset="1" stop-color="oklch(0.70 0.08 20)" stop-opacity="0.5"/>
+      </radialGradient>
+      <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+    </defs>
+    <!-- swatch smear -->
+    <path d="M492 300 C 520 270 600 262 660 268 C 720 274 760 290 770 310 C 740 318 690 306 640 310 C 580 316 530 330 492 300 Z" fill="var(--pop)" opacity="0.9"/>
+    <path d="M510 296 C 560 280 640 276 720 290" stroke="#fff" stroke-opacity="0.45" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- podium -->
+    <ellipse cx="610" cy="470" rx="150" ry="34" fill="oklch(0.62 0.06 40)" opacity="0.35" filter="url(#blur)"/>
+    <path d="M470 392 v80 a140 30 0 0 0 280 0 v-80 Z" fill="url(#podium)"/>
+    <ellipse cx="610" cy="392" rx="140" ry="30" fill="oklch(0.88 0.035 55)"/>
+    <!-- tube -->
+    <ellipse cx="572" cy="398" rx="46" ry="10" fill="oklch(0.55 0.06 40)" opacity="0.35" filter="url(#blur)"/>
+    <path d="M538 178 h68 l-6 156 h-56 Z" fill="url(#tube)"/>
+    <rect x="533" y="168" width="78" height="16" rx="2" fill="oklch(0.94 0.02 20)"/>
+    <path d="M537 172 h70" stroke="oklch(0.80 0.04 20)" stroke-width="1" stroke-dasharray="2 3"/>
+    <rect x="544" y="334" width="56" height="62" rx="6" fill="url(#cap)"/>
+    <rect x="556" y="196" width="7" height="124" rx="3.5" fill="#fff" opacity="0.7"/>
+    <!-- dropper bottle -->
+    <ellipse cx="672" cy="402" rx="40" ry="8" fill="oklch(0.55 0.06 40)" opacity="0.35" filter="url(#blur)"/>
+    <rect x="636" y="290" width="72" height="110" rx="14" fill="url(#glass)" opacity="0.95"/>
+    <rect x="644" y="300" width="8" height="84" rx="4" fill="#fff" opacity="0.6"/>
+    <rect x="652" y="262" width="40" height="30" rx="3" fill="var(--cocoa)"/>
+    <path d="M656 262 c0 -32 32 -32 32 0 Z" fill="oklch(0.28 0.03 40)"/>
+    <!-- droplets -->
+    <circle cx="502" cy="210" r="9" fill="url(#drop)"/>
+    <circle cx="742" cy="200" r="14" fill="url(#drop)"/>
+    <circle cx="726" cy="240" r="6" fill="url(#drop)"/>
+    <circle cx="486" cy="250" r="5" fill="url(#drop)"/>
+  </svg>
+
+  <div class="copy">
+    <div class="eyebrow">introducing keep</div>
+    <h1>make something<br><em>people</em> keep</h1>
+    <p>Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <span class="cta">start a project</span>
+  </div>
+
+  <div class="card">
+    <div class="label">still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</body>
+</html>

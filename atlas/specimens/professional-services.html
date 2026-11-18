@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Professional services</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;1,400&family=Source+Sans+3:wght@400;600&display=block">
+<style>
+  :root {
+    color-scheme: light;
+    --white: oklch(0.99 0 0);
+    --navy: oklch(0.27 0.06 260);
+    --navy-2: oklch(0.36 0.06 258);
+    --stone: oklch(0.94 0.008 80);
+    --gold: oklch(0.68 0.08 80);
+    --grey: oklch(0.50 0.01 260);
+    --rule: oklch(0.86 0.01 260);
+    --serif: "Libre Baskerville", serif;
+    --sans: "Source Sans 3", sans-serif;
+  }
+  html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--white); }
+  body { position: relative; font-family: var(--sans); color: var(--navy); }
+
+  nav { position: absolute; left: 48px; right: 48px; top: 0; height: 66px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--rule); }
+  nav .tools { display: flex; gap: 22px; align-items: center; }
+
+  .copy { position: absolute; left: 48px; top: 112px; width: 360px; }
+  .eyebrow { display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey); }
+  .eyebrow i { width: 28px; height: 1px; background: var(--gold); }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: 40px; line-height: 1.2; letter-spacing: -0.01em; margin: 18px 0 18px; }
+  h1 em { font-style: italic; }
+  p { margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--grey); white-space: nowrap; }
+  .cta { display: inline-flex; align-items: center; gap: 14px; margin-top: 28px; padding: 14px 22px; background: var(--navy); color: var(--white); font-size: 15px; font-weight: 600; letter-spacing: 0.02em; }
+
+  .photo { position: absolute; left: 470px; top: 96px; width: 282px; height: 344px; }
+  .card { position: absolute; left: 430px; top: 352px; width: 196px; padding: 16px 20px 16px; background: var(--stone); border-top: 3px solid var(--gold); }
+  .card .label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--grey); }
+  .card .num { font-family: var(--serif); font-size: 34px; line-height: 1.2; margin-top: 6px; }
+  .card .cap { font-size: 13.5px; color: var(--grey); }
+</style>
+</head>
+<body>
+  <nav>
+    <!-- [Agent] Generic crest: shield, chevron and three roundels in navy and muted gold. -->
+    <svg width="34" height="40" viewBox="0 0 34 40"><path d="M2 2h30v16c0 10-7 17-15 20C9 35 2 28 2 18Z" fill="var(--navy)"/><path d="M5.5 5.5h23v12.5c0 8-5.5 13.5-11.5 16-6-2.5-11.5-8-11.5-16Z" fill="none" stroke="var(--gold)" stroke-width="1"/><path d="M8 24 17 14l9 10" fill="none" stroke="var(--gold)" stroke-width="2.4"/><circle cx="11" cy="10" r="1.8" fill="var(--gold)"/><circle cx="23" cy="10" r="1.8" fill="var(--gold)"/><circle cx="17" cy="29" r="1.8" fill="var(--gold)"/></svg>
+    <div class="tools">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="var(--navy)" stroke-width="1.5"><circle cx="7.5" cy="7.5" r="6"/><path d="m12 12 5 5"/></svg>
+      <svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="var(--navy)" stroke-width="1.5"><path d="M0 1h22M0 6h22M0 11h22"/></svg>
+    </div>
+  </nav>
+
+  <div class="copy">
+    <div class="eyebrow"><i></i>Introducing Keep</div>
+    <h1>Make something people <em>keep</em></h1>
+    <p>Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <span class="cta">Start a project
+      <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h17M13 1l4 4-4 4"/></svg>
+    </span>
+  </div>
+
+  <!-- [Agent] Architecture-photo stand-in: a glass tower shot from below, mullions converging on a vanishing point above the frame. -->
+  <svg class="photo" width="282" height="344" viewBox="0 0 282 344">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="oklch(0.90 0.02 250)"/><stop offset="1" stop-color="oklch(0.96 0.008 80)"/></linearGradient>
+      <linearGradient id="lit" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="oklch(0.52 0.05 255)"/><stop offset="1" stop-color="oklch(0.36 0.06 258)"/></linearGradient>
+      <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="oklch(0.30 0.06 260)"/><stop offset="1" stop-color="oklch(0.20 0.05 262)"/></linearGradient>
+    </defs>
+    <rect width="282" height="344" fill="url(#sky)"/>
+    <polygon points="150,0 172,0 120,344 0,344 0,250" fill="url(#lit)"/>
+    <polygon points="172,0 194,0 282,250 282,344 120,344" fill="url(#dark)"/>
+    <g fill="none" stroke="oklch(0.90 0.02 250)" stroke-opacity="0.35" stroke-width="1">
+      <path d="M152 0 L20 344 M156 0 L46 344 M160 0 L72 344 M164 0 L96 344 M168 0 L112 344"/>
+      <path d="M176 0 L150 344 M180 0 L180 344 M184 0 L210 344 M188 0 L240 344 M192 0 L270 344"/>
+    </g>
+    <g fill="none" stroke="oklch(0.90 0.02 250)" stroke-opacity="0.22" stroke-width="1">
+      <path d="M8 330 L120 300 L282 326 M30 270 L128 248 L282 272 M60 200 L136 186 L260 204 M96 120 L146 112 L230 122 M124 60 L156 56 L208 62"/>
+    </g>
+    <path d="M172 0 L120 344" stroke="oklch(0.95 0.01 80)" stroke-opacity="0.7" stroke-width="1.2"/>
+  </svg>
+
+  <div class="card">
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</body>
+</html>

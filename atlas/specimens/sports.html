@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sports / athletic</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@500;600&family=Barlow+Condensed:wght@600;700;800&display=block">
+<style>
+  :root {
+    color-scheme: dark;
+    --black: oklch(0.13 0 0);
+    --white: oklch(0.99 0 0);
+    --volt: oklch(0.93 0.21 120);
+    --red: oklch(0.58 0.23 27);
+    --grey: oklch(0.55 0 0);
+    --track: oklch(0.50 0.15 32);
+    --display: "Anton", sans-serif;
+    --text: "Barlow", sans-serif;
+    --stat: "Barlow Condensed", sans-serif;
+  }
+  html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--black); }
+  body { position: relative; color: var(--white); font-family: var(--text); }
+  svg.layer { position: absolute; inset: 0; }
+
+  .copy { position: absolute; left: 38px; top: 34px; }
+  .eyebrow { display: flex; align-items: center; gap: 10px; font-family: var(--stat); font-weight: 700; font-size: 16px; letter-spacing: 0.16em; text-transform: uppercase; }
+  .eyebrow i { width: 34px; height: 6px; background: var(--volt); transform: skewX(-24deg); }
+  /* [Agent] Anton has no italic, so the speed slant is a skew, kept on the block so line lengths stay true. */
+  h1 { font-family: var(--display); font-weight: 400; font-size: 100px; line-height: 0.9; text-transform: uppercase; letter-spacing: 0.005em; margin: 14px 0 18px; transform: skewX(-9deg); transform-origin: left bottom; }
+  h1 span { color: var(--volt); }
+  p { margin: 0; font-size: 15px; font-weight: 500; line-height: 1.5; color: oklch(0.99 0 0 / 0.78); white-space: nowrap; }
+  .cta { display: inline-flex; align-items: center; gap: 12px; margin-top: 22px; padding: 14px 34px 14px 26px; background: var(--volt); color: var(--black); font-family: var(--stat); font-weight: 800; font-size: 20px; letter-spacing: 0.06em; text-transform: uppercase; clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%); }
+
+  .stat { position: absolute; right: 0; bottom: 34px; width: 268px; padding: 14px 30px 14px 54px; background: var(--white); color: var(--black); clip-path: polygon(28px 0, 100% 0, 100% 100%, 0 100%); box-sizing: border-box; }
+  .stat .label { font-family: var(--stat); font-weight: 700; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); }
+  .stat .num { font-family: var(--display); font-size: 70px; line-height: 1; transform: skewX(-9deg); transform-origin: left bottom; margin: 2px 0; }
+  .stat .cap { font-family: var(--stat); font-weight: 600; font-size: 17px; letter-spacing: 0.02em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <!-- [Agent] Action-photo stand-in: a running track in hard perspective behind an angled cut, motion-blurred into speed lines. -->
+  <svg class="layer" width="800" height="500" viewBox="0 0 800 500">
+    <defs>
+      <clipPath id="cut"><polygon points="560,0 800,0 800,500 410,500"/></clipPath>
+      <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="0.5" stop-color="#000" stop-opacity="0"/></linearGradient>
+      <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0.65"/><stop offset="0.5" stop-color="#000" stop-opacity="0"/></linearGradient>
+      <filter id="speed" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="10 1.5"/></filter>
+    </defs>
+    <g clip-path="url(#cut)">
+      <rect width="800" height="500" fill="var(--track)"/>
+      <g stroke="oklch(0.97 0.01 60)" stroke-width="5" filter="url(#speed)">
+        <path d="M120 500 L1000 -150"/><path d="M290 500 L1010 -150"/><path d="M470 500 L1020 -150"/><path d="M660 500 L1030 -150"/><path d="M860 500 L1040 -150"/><path d="M1070 500 L1050 -150"/>
+      </g>
+      <g stroke="oklch(0.97 0.01 60)" stroke-opacity="0.35" stroke-width="2" filter="url(#speed)">
+        <path d="M480 120 H800"/><path d="M520 210 H800"/><path d="M440 330 H760"/><path d="M560 400 H800"/>
+      </g>
+      <rect width="800" height="500" fill="url(#fade)"/>
+      <rect width="800" height="500" fill="url(#shade)"/>
+    </g>
+    <polygon points="560,0 570,0 420,500 410,500" fill="var(--white)"/>
+    <g fill="var(--white)" opacity="0.9">
+      <polygon points="720,24 734,24 714,60 700,60"/><polygon points="742,24 756,24 736,60 722,60"/><polygon points="764,24 778,24 758,60 744,60"/>
+    </g>
+  </svg>
+
+  <div class="copy">
+    <div class="eyebrow"><i></i>Introducing Keep</div>
+    <h1>Make<br>something<br>people <span>keep</span></h1>
+    <p>Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <span class="cta">Start a project
+      <svg width="18" height="14" viewBox="0 0 18 14"><path d="M0 7h14M9 1l7 6-7 6" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+    </span>
+  </div>
+
+  <div class="stat">
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</body>
+</html>

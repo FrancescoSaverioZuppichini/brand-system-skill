@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Adult / nightlife (tasteful)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;800;900&family=Inter:wght@300;400&family=DM+Mono:wght@400&display=block">
+<style>
+  :root {
+    color-scheme: dark;
+    --black: oklch(0.12 0.01 20);
+    --red: oklch(0.52 0.21 25);
+    --magenta: oklch(0.60 0.24 345);
+    --skin: oklch(0.75 0.06 50);
+    --text: oklch(0.95 0.01 60);
+    --dim: oklch(0.95 0.01 60 / 0.62);
+    --hair: oklch(0.95 0.01 60 / 0.22);
+    --display: "Big Shoulders Display", sans-serif;
+    --ui: "Inter", sans-serif;
+    --mono: "DM Mono", monospace;
+  }
+  html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--black); }
+  body { position: relative; color: var(--text); font-family: var(--ui); }
+  svg.layer { position: absolute; inset: 0; }
+
+  .copy { position: absolute; left: 40px; top: 34px; }
+  .eyebrow { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
+  .eyebrow i { width: 7px; height: 7px; border-radius: 50%; background: var(--red); box-shadow: 0 0 10px var(--red); }
+  h1 { font-family: var(--display); font-weight: 900; font-size: 84px; line-height: 0.9; letter-spacing: 0.005em; text-transform: uppercase; margin: 16px 0 18px; }
+  h1 span { color: var(--magenta); text-shadow: 0 0 30px oklch(0.60 0.24 345 / 0.6); }
+  p { margin: 0; font-size: 12.5px; font-weight: 300; line-height: 1.65; color: var(--dim); white-space: nowrap; }
+  .cta { display: inline-block; margin-top: 20px; padding: 10px 18px; border: 1px solid var(--text); border-radius: 2px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; }
+
+  .card { position: absolute; left: 618px; top: 296px; width: 150px; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); padding: 12px 0 14px; }
+  .card .label { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); }
+  .card .label i { width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+  .card .num { font-family: var(--display); font-weight: 800; font-size: 64px; line-height: 0.95; margin: 6px 0 4px; }
+  .card .cap { font-size: 11.5px; font-weight: 300; color: var(--dim); }
+</style>
+</head>
+<body>
+  <!-- [Agent] Poster image stand-in: a red-lit doorway with a silhouette, its light blooming into the dark and pooling on the floor, under film grain. -->
+  <svg class="layer" width="800" height="500" viewBox="0 0 800 500">
+    <defs>
+      <linearGradient id="door" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="oklch(0.60 0.24 345)"/><stop offset="0.6" stop-color="oklch(0.52 0.21 25)"/><stop offset="1" stop-color="oklch(0.36 0.15 25)"/></linearGradient>
+      <radialGradient id="pool" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="oklch(0.52 0.21 25)" stop-opacity="0.6"/><stop offset="1" stop-color="oklch(0.52 0.21 25)" stop-opacity="0"/></radialGradient>
+      <filter id="bloom" x="-100%" y="-50%" width="300%" height="200%"><feGaussianBlur stdDeviation="34"/></filter>
+      <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 0.9  0 0 0 0 0.85  0 0 0 0.1 0"/></filter>
+    </defs>
+    <rect x="452" y="40" width="130" height="400" rx="65" fill="oklch(0.60 0.24 345)" opacity="0.7" filter="url(#bloom)"/>
+    <ellipse cx="517" cy="452" rx="170" ry="26" fill="url(#pool)"/>
+    <path d="M462 440 V125 A55 55 0 0 1 572 125 V440 Z" fill="url(#door)"/>
+    <g fill="oklch(0.10 0.01 20)">
+      <ellipse cx="527" cy="262" rx="15" ry="18"/>
+      <rect x="520" y="274" width="14" height="22" rx="5"/>
+      <path d="M496 440 L502 382 C 494 362 482 330 488 314 C 494 302 512 297 527 297 C 542 297 560 302 566 314 C 572 330 560 362 552 382 L558 440 Z"/>
+    </g>
+    <path d="M489 326 C 490 312 500 302 518 299" stroke="oklch(0.75 0.06 50)" stroke-opacity="0.45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M462 440 L420 500 H614 L572 440 Z" fill="oklch(0.52 0.21 25)" opacity="0.18"/>
+    <g fill="oklch(0.95 0.01 60)" opacity="0.5">
+      <circle cx="618" cy="64" r="2.5"/><circle cx="618" cy="84" r="2.5"/><circle cx="618" cy="104" r="2.5"/><circle cx="618" cy="124" r="2.5"/><circle cx="618" cy="144" r="2.5" fill="oklch(0.52 0.21 25)"/>
+    </g>
+    <rect width="800" height="500" filter="url(#grain)"/>
+  </svg>
+
+  <div class="copy">
+    <div class="eyebrow"><i></i>Introducing Keep</div>
+    <h1>Make<br>something<br>people<br><span>keep</span></h1>
+    <p>Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <span class="cta">Start a project</span>
+  </div>
+
+  <div class="card">
+    <div class="label"><i></i>Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</body>
+</html>

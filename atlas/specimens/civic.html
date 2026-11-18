@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Government / civic (GOV.UK)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=block">
+<style>
+  :root {
+    color-scheme: light;
+    --black: oklch(0.15 0.002 180);
+    --white: oklch(1 0 0);
+    --secondary: oklch(0.45 0.015 230);
+    --link: oklch(0.53 0.14 250);
+    --focus: oklch(0.91 0.16 98);
+    --green: oklch(0.47 0.12 155);
+    --green-shadow: oklch(0.28 0.06 155);
+    --border: oklch(0.76 0.008 230);
+    --light: oklch(0.96 0.003 90);
+    --tag-bg: oklch(0.90 0.03 245);
+    --tag-ink: oklch(0.30 0.07 250);
+    --font: "Public Sans", sans-serif;
+    --gutter: 30px;
+  }
+  html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--white); }
+  body { position: relative; font-family: var(--font); color: var(--black); font-size: 19px; line-height: 25px; }
+  .width { margin: 0 var(--gutter); }
+
+  header { background: var(--black); }
+  header .width { padding: 10px 0 0; height: 46px; border-bottom: 10px solid var(--link); box-sizing: content-box; }
+  /* [Agent] The logotype is shown in its keyboard-focus state: yellow fill, black text, thick black underline. */
+  .logo { display: inline-block; font-weight: 700; font-size: 30px; line-height: 30px; letter-spacing: -0.01em; padding: 3px 2px 1px; margin-top: 4px; color: var(--black); background: var(--focus); box-shadow: 0 -2px var(--focus), 0 4px var(--black); }
+
+  .phase { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .tag { display: inline-block; padding: 2px 8px 3px; background: var(--tag-bg); color: var(--tag-ink); font-size: 16px; line-height: 20px; }
+
+  main { display: grid; grid-template-columns: 2fr 1fr; gap: var(--gutter); padding-top: 30px; }
+  .caption { display: block; color: var(--secondary); font-size: 27px; line-height: 30px; margin-bottom: 5px; }
+  h1 { font-size: 48px; line-height: 50px; font-weight: 700; margin: 0 0 25px; letter-spacing: -0.005em; }
+  p { margin: 0 0 25px; }
+  .start { display: inline-flex; align-items: center; gap: 12px; padding: 11px 16px 9px 14px; background: var(--green); color: var(--white); font-weight: 700; font-size: 24px; line-height: 30px; box-shadow: 0 2px 0 var(--green-shadow); }
+
+  aside { border-top: 2px solid var(--link); padding-top: 12px; margin-top: 9px; }
+  aside h2 { font-size: 19px; line-height: 25px; font-weight: 700; margin: 0 0 8px; }
+  aside .num { font-size: 64px; line-height: 64px; font-weight: 700; letter-spacing: -0.01em; }
+  aside .cap { margin-top: 6px; }
+
+  footer { position: absolute; left: 0; right: 0; bottom: 0; height: 34px; background: var(--light); border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+  <header><div class="width"><span class="logo">Keep</span></div></header>
+  <div class="width phase"><span class="tag">Beta</span></div>
+
+  <main class="width">
+    <div>
+      <span class="caption">Introducing Keep</span>
+      <h1>Make something people keep</h1>
+      <p>Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+      <span class="start">Start a project
+        <svg width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true"><path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/></svg>
+      </span>
+    </div>
+    <aside>
+      <h2>Still in use</h2>
+      <div class="num">1,284</div>
+      <div class="cap">projects made since 2019</div>
+    </aside>
+  </main>
+
+  <footer></footer>
+</body>
+</html>
