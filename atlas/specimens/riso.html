@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Risograph</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Mono:wght@400;500&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --paper: oklch(0.95 0.02 90);
+  --pink: oklch(0.68 0.24 355);
+  --blue: oklch(0.52 0.15 250);
+  --yellow: oklch(0.90 0.17 100);
+  --ink: oklch(0.25 0.05 260);
+  --display: "Bricolage Grotesque", sans-serif;
+  --mono: "DM Mono", monospace;
+  /* [Agent] One noise tile, reused twice: as speckle that eats into the ink layers, and as paper grain on top. */
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.6 -0.55'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--paper); color: var(--ink); }
+body { position: relative; font-family: var(--display); }
+
+/* [Agent] Every ink is its own layer multiplied onto the paper, so overlaps mix like real overprint (pink × blue = purple, yellow × pink = red). */
+.ink { position: absolute; mix-blend-mode: multiply; }
+.pink { color: var(--pink); }
+.blue { color: var(--blue); }
+
+.sun { left: 466px; top: 28px; width: 300px; height: 300px; border-radius: 50%; background: var(--pink); }
+.dots { left: 600px; top: -40px; width: 240px; height: 240px; border-radius: 50%;
+  background: radial-gradient(circle, var(--blue) 42%, transparent 46%) 0 0 / 8px 8px;
+  mask-image: linear-gradient(200deg, #000 30%, transparent 85%); }
+.slab { left: 0; top: 330px; width: 520px; height: 170px; background: var(--yellow); }
+
+/* [Agent] The headline is printed twice, pink then blue, with the blue drum 3 px off: the misregistration is the look. */
+h1 { margin: 0; left: 40px; top: 70px; width: 470px; font: 800 74px/0.92 var(--display); letter-spacing: -0.03em; }
+h1.pink { transform: translate(-4px, 3px); }
+
+.eyebrow { left: 40px; top: 34px; font: 500 13px var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink); }
+.eyebrow::before { content: ""; display: inline-block; width: 26px; height: 10px; margin-right: 10px; background: var(--pink); vertical-align: 0; }
+.sub { left: 40px; top: 352px; margin: 0; width: 440px; font: 500 16px/1.4 var(--display); color: var(--ink); }
+.btn { position: absolute; left: 40px; top: 418px; border: 0; border-radius: 3px; background: var(--blue); color: var(--paper); font: 500 14px var(--mono); padding: 12px 18px; text-transform: uppercase; letter-spacing: 0.06em; }
+.btn-under { left: 44px; top: 422px; width: 172px; height: 41px; border-radius: 3px; background: var(--pink); }
+
+.card { left: 552px; top: 318px; width: 200px; padding: 14px 16px 16px; background: var(--yellow); color: var(--ink); transform: rotate(3deg); }
+.card .label { font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: 0.1em; }
+.card .num { font: 800 58px/1 var(--display); color: var(--blue); margin: 6px 0 2px; }
+.card .cap { font: 400 12px var(--mono); }
+
+.speckle { position: absolute; inset: 0; background: var(--noise); mix-blend-mode: screen; opacity: 0.55; filter: invert(1); pointer-events: none; }
+.grain { position: absolute; inset: 0; background: var(--noise); mix-blend-mode: multiply; opacity: 0.18; pointer-events: none; }
+</style>
+</head>
+<body>
+<div class="ink slab"></div>
+<div class="ink sun"></div>
+<div class="ink dots"></div>
+<div class="ink eyebrow">Introducing Keep</div>
+<h1 class="ink pink" aria-hidden="true">Make something people keep</h1>
+<h1 class="ink blue">Make something people keep</h1>
+<p class="ink sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+<div class="ink btn-under"></div>
+<button class="btn">Start a project</button>
+<div class="ink card">
+  <div class="label">Still in use</div>
+  <div class="num">1,284</div>
+  <div class="cap">projects made since 2019</div>
+</div>
+<div class="speckle"></div>
+<div class="grain"></div>
+</body>
+</html>

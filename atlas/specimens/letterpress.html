@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Letterpress</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --paper: oklch(0.95 0.02 85);
+  --ink: oklch(0.22 0.01 60);
+  --red: oklch(0.50 0.17 28);
+  --faded: oklch(0.45 0.01 60);
+  --wood: "Alfa Slab One", serif;
+  --book: "Libre Caslon Text", serif;
+  --display: "Libre Caslon Display", serif;
+  /* [Agent] The bite: a light lip under each stroke and a faint dark edge above reads as type pressed into the sheet, not printed on it. */
+  --deboss: 0 1px 0 oklch(1 0 0 / 0.65), 0 -1px 0 oklch(0 0 0 / 0.18);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; color: var(--ink); }
+body {
+  position: relative; font-family: var(--book); text-align: center;
+  background: var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04 0.6' numOctaves='3' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.28 0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23f)'/%3E%3C/svg%3E");
+}
+
+.frame { position: absolute; inset: 20px; border: 3px solid var(--ink); box-shadow: inset 0 0 0 4px var(--paper), inset 0 0 0 5px var(--ink), var(--deboss); }
+.press { position: absolute; inset: 20px; filter: url(#ink); text-shadow: var(--deboss); }
+
+.orn { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--red); }
+.orn::before, .orn::after { content: ""; width: 70px; height: 1px; background: currentColor; }
+.orn i { width: 7px; height: 7px; background: currentColor; transform: rotate(45deg); }
+.orn i:nth-child(2) { width: 10px; height: 10px; }
+
+.top { margin-top: 26px; }
+.eyebrow { margin-top: 10px; font: 400 13px var(--book); letter-spacing: 0.32em; text-transform: uppercase; color: var(--red); }
+h1 { margin: 6px 0 0; font-weight: 400; }
+h1 .lead { display: block; font: italic 400 44px/1 var(--display); }
+h1 .wood { display: block; margin-top: 10px; font: 400 90px/0.92 var(--wood); letter-spacing: 0.01em; text-transform: uppercase; filter: url(#wood); }
+.mid { margin-top: 14px; }
+.mid::before, .mid::after { width: 150px; }
+.sub { margin: 12px 0 0; font: 400 16px/1.45 var(--book); }
+
+.foot { position: absolute; left: 60px; right: 60px; bottom: 30px; display: grid; grid-template-columns: 1fr 1px 1fr; align-items: center; column-gap: 34px; }
+.foot .rule { height: 92px; background: var(--ink); }
+.card { justify-self: end; border: 1px solid var(--ink); outline: 1px solid var(--ink); outline-offset: 3px; padding: 8px 22px 9px; }
+.card .label { font: 700 11px var(--book); letter-spacing: 0.24em; text-transform: uppercase; }
+.card .num { font: 400 36px/1.1 var(--wood); color: var(--red); }
+.card .cap { font: italic 400 13px var(--book); color: var(--faded); }
+.btn { justify-self: start; border: 0; border-radius: 0; background: var(--red); color: var(--paper); font: 700 13px var(--book); letter-spacing: 0.24em; text-transform: uppercase; padding: 14px 24px; box-shadow: inset 0 1px 2px oklch(0 0 0 / 0.35), 0 1px 0 oklch(1 0 0 / 0.6); text-shadow: none; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position: absolute" aria-hidden="true">
+  <!-- [Agent] Uneven ink: fine noise is thresholded into tiny voids and cut out of every inked shape; wood type gets larger, blotchier voids. -->
+  <filter id="ink">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="2" result="n"/>
+    <feColorMatrix in="n" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -14 4.4" result="voids"/>
+    <feComposite in="SourceGraphic" in2="voids" operator="out"/>
+  </filter>
+  <filter id="wood">
+    <feTurbulence type="fractalNoise" baseFrequency="0.08 0.5" numOctaves="3" seed="9" result="n"/>
+    <feColorMatrix in="n" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -14 4.6" result="voids"/>
+    <feComposite in="SourceGraphic" in2="voids" operator="out"/>
+  </filter>
+</svg>
+<div class="frame"></div>
+<div class="press">
+  <div class="orn top"><i></i><i></i><i></i></div>
+  <div class="eyebrow">Introducing Keep</div>
+  <h1><span class="lead">Make something</span><span class="wood">People Keep</span></h1>
+  <div class="orn mid"><i></i></div>
+  <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+  <div class="foot">
+    <div class="card">
+      <div class="label">Still in use</div>
+      <div class="num">1,284</div>
+      <div class="cap">projects made since 2019</div>
+    </div>
+    <div class="rule"></div>
+    <button class="btn">Start a project</button>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Corporate modernism</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --white: oklch(0.99 0 0);
+  --ink: oklch(0.20 0.01 260);
+  --blue: oklch(0.47 0.19 262);
+  --grey: oklch(0.93 0.005 260);
+  --mid: oklch(0.55 0.01 260);
+  --sans: "IBM Plex Sans", sans-serif;
+  --mono: "IBM Plex Mono", monospace;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--white); color: var(--ink); }
+body { font-family: var(--sans); position: relative; }
+
+/* [Agent] A standards-manual page: the left third is the corporate colour field carrying the mark, the rest is a ruled 4-column grid. */
+.field { position: absolute; left: 0; top: 0; bottom: 0; width: 280px; background: var(--blue); color: var(--white); }
+
+/* [Agent] The mark is a plain disc cut by eight white bars, the IBM 8-bar trick: a striped mask over a circle, no image needed. */
+.mark {
+  position: absolute; left: 52px; top: 162px; width: 176px; height: 176px; border-radius: 50%;
+  background: var(--white);
+  mask-image: repeating-linear-gradient(to bottom, #000 0 15px, transparent 15px 22px);
+}
+.field .tag { position: absolute; left: 50px; bottom: 40px; font: 400 11px var(--mono); letter-spacing: 0.08em; opacity: 0.8; }
+
+.page { position: absolute; left: 320px; right: 40px; top: 0; bottom: 0; }
+.head { position: absolute; left: 0; right: 0; top: 36px; display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 10px; border-bottom: 2px solid var(--ink); font: 400 11px var(--mono); letter-spacing: 0.08em; color: var(--mid); }
+.head .eyebrow { font: 500 14px var(--sans); letter-spacing: 0; color: var(--blue); }
+h1 { position: absolute; left: 0; top: 90px; margin: 0; width: 420px; font: 500 48px/1.05 var(--sans); letter-spacing: -0.02em; }
+.sub { position: absolute; left: 0; top: 214px; margin: 0; width: 400px; font-size: 15px; line-height: 1.5; }
+.btn { position: absolute; left: 0; top: 288px; border: 0; border-radius: 0; background: var(--blue); color: var(--white); font: 500 14px var(--sans); padding: 13px 48px 13px 16px; text-align: left; }
+.btn::after { content: "→"; position: absolute; right: 16px; }
+.card { position: absolute; left: 0; right: 0; bottom: 40px; height: 112px; background: var(--grey); display: grid; grid-template-columns: 220px 1fr; align-items: end; padding: 16px; box-sizing: border-box; border-top: 4px solid var(--blue); }
+.card .label { margin-bottom: 8px; font: 500 11px var(--mono); letter-spacing: 0.08em; text-transform: uppercase; align-self: start; grid-row: 1; grid-column: 1 / 3; }
+.card .num { font: 300 52px/0.9 var(--sans); letter-spacing: -0.02em; grid-row: 2; }
+.card .cap { font-size: 13px; grid-row: 2; padding-bottom: 4px; color: var(--mid); }
+</style>
+</head>
+<body>
+<div class="field">
+  <div class="tag">Fig. 1</div>
+  <div class="mark"></div>
+</div>
+<div class="page">
+  <div class="head"><span class="eyebrow">Introducing Keep</span><span>No. 01</span></div>
+  <h1>Make something people keep</h1>
+  <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+  <button class="btn">Start a project</button>
+  <div class="card">
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</div>
+</body>
+</html>

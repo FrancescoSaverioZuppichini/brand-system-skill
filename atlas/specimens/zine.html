@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Zine / DIY</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Mansalva&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --copy: oklch(0.96 0.003 90);
+  --toner: oklch(0.15 0 0);
+  --grey: oklch(0.70 0 0);
+  --hi: oklch(0.93 0.19 110);
+  --tape: oklch(0.90 0.02 90 / 0.72);
+  --type: "Courier Prime", monospace;
+  --marker: "Mansalva", cursive;
+  --cut: "Archivo Black", sans-serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--copy); color: var(--toner); }
+body { position: relative; font-family: var(--type); }
+
+/* [Agent] Photocopier toner: sparse black specks from thresholded noise, two streaks from the drum, and darker edges where the lid did not close. */
+.toner { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply;
+  background:
+    linear-gradient(transparent 118px, oklch(0.15 0 0 / 0.08) 118px 120px, transparent 120px 431px, oklch(0.15 0 0 / 0.1) 431px 434px, transparent 434px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18 -13.9'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  box-shadow: inset 0 0 70px oklch(0.15 0 0 / 0.28), inset 0 0 8px oklch(0.15 0 0 / 0.5); }
+
+.eyebrow { position: absolute; left: 44px; top: 22px; font: 400 30px var(--marker); transform: rotate(-4deg); }
+.eyebrow svg { position: absolute; left: -4px; top: 34px; }
+
+/* [Agent] Ransom-note headline: every letter is its own cut-out; nth-child cycles paper, inverse, typewriter and highlighter so no two neighbours match. */
+h1 { position: absolute; left: 36px; top: 88px; width: 730px; margin: 0; font: 400 42px/1 var(--cut); text-transform: uppercase; }
+h1 .w { display: inline-block; margin: 0 20px 14px 0; white-space: nowrap; }
+h1 .w span { display: inline-block; padding: 4px 5px 2px; margin-right: 3px; background: #fff; box-shadow: 0 1px 0 var(--grey); transform: rotate(-3deg); }
+h1 .w span:nth-child(2n) { background: var(--toner); color: var(--copy); transform: rotate(2deg) translateY(3px); }
+h1 .w span:nth-child(3n) { font: 700 48px/0.9 var(--type); text-transform: lowercase; background: #fff; color: var(--toner); transform: rotate(4deg); }
+h1 .w span:nth-child(4n) { background: oklch(0.86 0 0); color: var(--toner); transform: rotate(-6deg) translateY(-3px); }
+h1 .w span:nth-child(5n) { background: var(--hi); color: var(--toner); transform: rotate(-5deg) translateY(-2px); }
+h1 .w span:nth-child(7n) { font-size: 50px; transform: rotate(1deg) translateY(4px); }
+
+.strip { position: absolute; left: 40px; top: 252px; width: 456px; margin: 0; padding: 12px 16px; background: #fff; box-shadow: 0 1px 0 var(--grey); transform: rotate(-1.2deg); font: 400 14px/1.55 var(--type); }
+.strip mark { background: linear-gradient(transparent 20%, var(--hi) 20% 88%, transparent 88%); color: inherit; }
+.tape { position: absolute; width: 86px; height: 24px; background: var(--tape); clip-path: polygon(3% 0, 97% 6%, 100% 40%, 96% 100%, 2% 94%, 0 55%); }
+
+.btn { position: absolute; left: 60px; top: 400px; border: 0; border-radius: 0; background: var(--toner); color: var(--copy); font: 700 16px var(--type); text-transform: uppercase; letter-spacing: 0.08em; padding: 12px 18px; transform: rotate(-2deg); }
+
+/* [Agent] The torn edge is a hand-picked jagged polygon, cheaper and crisper than a displacement filter. */
+.card { position: absolute; left: 540px; top: 252px; width: 200px; padding: 26px 22px 24px; background: #fff; transform: rotate(4deg); clip-path: polygon(0 3%, 9% 0, 22% 2%, 37% 0, 51% 3%, 66% 0, 80% 2%, 92% 0, 100% 3%, 98% 22%, 100% 41%, 97% 60%, 100% 79%, 98% 100%, 84% 97%, 70% 100%, 55% 97%, 41% 100%, 26% 97%, 12% 100%, 0 97%, 3% 76%, 0 54%, 2% 31%); filter: drop-shadow(0 1px 0 var(--grey)); }
+.card .label { font: 700 13px var(--type); text-transform: uppercase; letter-spacing: 0.06em; }
+.card .num { font: 400 58px/1 var(--cut); margin: 8px 0 6px; }
+.card .cap { font: 400 14px/1.3 var(--type); }
+
+.arrow { position: absolute; left: 286px; top: 352px; overflow: visible; }
+.staple { position: absolute; left: 6px; width: 4px; height: 30px; background: var(--grey); border-radius: 1px; box-shadow: 1px 0 0 oklch(0.4 0 0); }
+.s1 { top: 146px; }
+.s2 { top: 316px; }
+.t1 { left: 220px; top: 238px; transform: rotate(-6deg); }
+.t2 { left: 600px; top: 238px; transform: rotate(8deg); }
+</style>
+</head>
+<body>
+<span class="staple s1"></span>
+<span class="staple s2"></span>
+
+<div class="eyebrow">Introducing Keep
+  <svg width="200" height="14" viewBox="0 0 200 14" aria-hidden="true"><path d="M2 9 C40 3 90 12 140 6 S190 7 198 4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+</div>
+
+<h1 aria-label="Make something people keep">
+  <span class="w"><span>M</span><span>a</span><span>k</span><span>e</span></span><span class="w"><span>s</span><span>o</span><span>m</span><span>e</span><span>t</span><span>h</span><span>i</span><span>n</span><span>g</span></span><span class="w"><span>p</span><span>e</span><span>o</span><span>p</span><span>l</span><span>e</span></span><span class="w"><span>k</span><span>e</span><span>e</span><span>p</span></span>
+</h1>
+
+<p class="strip">Tools for small teams who make things <mark>slowly and well.</mark><br>Plan it, ship it, and look after it for years.</p>
+<span class="tape t1"></span>
+
+<button class="btn">Start a project</button>
+<svg class="arrow" width="220" height="90" viewBox="0 0 220 90" aria-hidden="true"><path d="M214 10 C170 70 90 84 22 62 M22 62 l18 -14 M22 62 l20 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+<div class="card">
+  <div class="label">Still in use</div>
+  <div class="num">1,284</div>
+  <div class="cap">projects made since 2019</div>
+</div>
+<span class="tape t2"></span>
+
+<div class="toner"></div>
+</body>
+</html>

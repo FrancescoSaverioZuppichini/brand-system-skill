@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Editorial / magazine</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,300;1,6..72,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --paper: oklch(0.98 0.006 85);
+  --ink: oklch(0.18 0.01 60);
+  --grey: oklch(0.50 0.01 60);
+  --oxblood: oklch(0.42 0.13 20);
+  --rule: oklch(0.82 0.01 60);
+  --display: "Newsreader", serif;
+  --text: "Source Serif 4", serif;
+  --label: "Instrument Sans", sans-serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--paper); color: var(--ink); }
+body { font-family: var(--text); position: relative; }
+
+.folio { position: absolute; left: 40px; right: 40px; top: 26px; display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid var(--ink); font: 600 11px var(--label); letter-spacing: 0.14em; text-transform: uppercase; }
+.folio .kicker { color: var(--oxblood); }
+.folio .no { color: var(--grey); font-weight: 500; }
+
+/* [Agent] Two unequal columns split by a hairline: the story on the wide left, the picture and its pull-stat on the narrow right. */
+.story { position: absolute; left: 40px; top: 72px; width: 438px; }
+h1 { margin: 0; font: 400 66px/0.98 var(--display); font-variation-settings: "opsz" 72; letter-spacing: -0.02em; }
+h1 em { font-weight: 300; color: var(--oxblood); }
+.standfirst { margin: 22px 0 0; font: italic 400 19px/1.4 var(--text); color: var(--ink); }
+.byline { margin-top: 26px; display: flex; align-items: center; gap: 20px; }
+.btn { border: 1px solid var(--ink); border-radius: 0; background: var(--ink); color: var(--paper); font: 600 12px var(--label); letter-spacing: 0.14em; text-transform: uppercase; padding: 12px 18px; }
+.byline .rule { flex: 1; height: 1px; background: var(--rule); }
+
+.divider { position: absolute; left: 510px; top: 72px; bottom: 32px; width: 1px; background: var(--rule); }
+.side { position: absolute; left: 540px; right: 40px; top: 72px; }
+figure { margin: 0; }
+figure svg { display: block; width: 220px; height: 220px; }
+figcaption { margin-top: 8px; font: 500 11px/1.4 var(--label); color: var(--grey); }
+figcaption b { color: var(--ink); font-weight: 600; }
+
+.card { margin-top: 18px; border-top: 3px double var(--ink); border-bottom: 1px solid var(--ink); padding: 10px 0 12px; }
+.card .label { font: 600 10px var(--label); letter-spacing: 0.16em; text-transform: uppercase; color: var(--oxblood); }
+.card .num { font: 400 48px/1 var(--display); font-variation-settings: "opsz" 72; margin: 4px 0 2px; }
+.card .cap { font: italic 400 14px var(--text); color: var(--grey); }
+</style>
+</head>
+<body>
+<div class="folio"><span class="kicker">Introducing Keep</span><span class="no">No. 01</span></div>
+
+<div class="story">
+  <h1>Make something people <em>keep</em></h1>
+  <p class="standfirst">Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</p>
+  <div class="byline"><button class="btn">Start a project</button><span class="rule"></span></div>
+</div>
+
+<div class="divider"></div>
+<div class="side">
+  <figure>
+    <!-- [Agent] A flat still life with a grain filter reads as a commissioned picture without using a photo. -->
+    <svg viewBox="0 0 220 220" aria-hidden="true">
+      <defs>
+        <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" result="n"/><feColorMatrix in="n" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.22 0"/><feComposite in2="SourceGraphic" operator="in"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+        <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="oklch(0.86 0.03 70)"/><stop offset="1" stop-color="oklch(0.74 0.04 60)"/></linearGradient>
+        <linearGradient id="vase" x1="0" x2="1"><stop offset="0" stop-color="oklch(0.48 0.13 22)"/><stop offset="0.55" stop-color="oklch(0.40 0.12 20)"/><stop offset="1" stop-color="oklch(0.26 0.07 20)"/></linearGradient>
+        <linearGradient id="bowl" x1="0" x2="1"><stop offset="0" stop-color="oklch(0.95 0.01 85)"/><stop offset="1" stop-color="oklch(0.72 0.02 70)"/></linearGradient>
+      </defs>
+      <g filter="url(#grain)">
+        <rect width="220" height="220" fill="url(#wall)"/>
+        <rect y="156" width="220" height="64" fill="oklch(0.58 0.04 55)"/>
+        <ellipse cx="96" cy="164" rx="44" ry="6" fill="oklch(0.42 0.04 50)" opacity="0.5"/>
+        <path d="M78 52 h28 v14 c0 10 22 22 22 56 c0 22 -10 36 -18 42 h-36 c-8 -6 -18 -20 -18 -42 c0 -34 22 -46 22 -56 z" fill="url(#vase)"/>
+        <ellipse cx="166" cy="170" rx="34" ry="5" fill="oklch(0.42 0.04 50)" opacity="0.45"/>
+        <path d="M132 146 h68 c0 16 -14 26 -34 26 s-34 -10 -34 -26 z" fill="url(#bowl)"/>
+        <circle cx="160" cy="134" r="13" fill="oklch(0.70 0.12 60)"/>
+      </g>
+    </svg>
+    <figcaption><b>Fig. 1</b></figcaption>
+  </figure>
+  <div class="card">
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</div>
+</body>
+</html>
