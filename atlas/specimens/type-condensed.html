@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Condensed / compressed · type-condensed</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800..900&family=Oswald:wght@500&family=Barlow:wght@500&display=block">
+<style>
+:root {
+  color-scheme: light;
+  --paper: oklch(0.99 0 0);
+  --ink: oklch(0.14 0 0);
+  --grey: oklch(0.42 0 0);
+  --accent: oklch(0.58 0.22 27);
+  --yellow: oklch(0.88 0.17 95);
+  --rule: oklch(0.14 0 0);
+  --card: var(--yellow);
+  --button: var(--accent);
+  --on-button: oklch(0.99 0 0);
+  --display: "Big Shoulders Display", sans-serif;
+  --label: "Oswald", sans-serif;
+  --text: "Barlow", sans-serif;
+  --radius: 0;
+}
+
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--paper); color: var(--ink); }
+body { position: relative; -webkit-font-smoothing: antialiased; }
+h1, p { margin: 0; font-weight: inherit; }
+.eyebrow { position: absolute; left: 56px; top: 52px; color: var(--accent); }
+.specimen { position: absolute; right: 56px; top: 46px; text-align: right; }
+.glyphs { display: block; color: var(--ink); }
+.names { display: block; margin-top: 8px; color: var(--grey); }
+/* [Agent] The headline hangs from its last line, so every voice ends at the same y whatever its size and leading. */
+h1 { position: absolute; left: 56px; bottom: 214px; width: 688px; white-space: nowrap; }
+.sub { position: absolute; left: 56px; top: 318px; color: var(--grey); white-space: nowrap; }
+.button { position: absolute; left: 56px; bottom: 56px; display: flex; align-items: center; height: 48px; padding: 0 24px; box-sizing: border-box; border-radius: var(--radius); background: var(--button); color: var(--on-button); text-decoration: none; }
+.card { position: absolute; right: 56px; bottom: 56px; width: 224px; box-sizing: border-box; padding: 16px 20px 18px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--card); }
+.num { margin: 6px 0 4px; color: var(--ink); }
+.cap { color: var(--grey); }
+
+/* [Agent] Everything above is the shared layout; everything below is the voice. Swap only this part to change voice. */
+body { font-family: var(--text); }
+.eyebrow { font: 500 14px/1 var(--label); letter-spacing: 0.2em; text-transform: uppercase; }
+.glyphs { font: 900 28px/1 var(--display); }
+.names { font: 500 10px/1 var(--label); letter-spacing: 0.16em; text-transform: uppercase; }
+h1 { font: 900 102px/0.84 var(--display); text-transform: uppercase; }
+.sub { font: 500 17px/1.45 var(--text); }
+.button { font: 500 15px/1 var(--label); letter-spacing: 0.18em; text-transform: uppercase; padding: 0 26px; }
+.card { border: 0; }
+.label { font: 500 12px/1 var(--label); letter-spacing: 0.2em; text-transform: uppercase; }
+.num { font: 900 60px/0.9 var(--display); }
+.cap { font: 500 14px/1.3 var(--text); color: var(--ink); }
+</style>
+</head>
+<body>
+<p class="eyebrow">Introducing Keep</p>
+<p class="specimen"><span class="glyphs">Aa 0123456789</span><span class="names">Big Shoulders Display · Oswald · Barlow</span></p>
+<h1>Make something<br>people keep</h1>
+<p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+<a class="button" href="#">Start a project</a>
+<div class="card">
+  <p class="label">Still in use</p>
+  <p class="num">1,284</p>
+  <p class="cap">projects made since 2019</p>
+</div>
+</body>
+</html>
