@@ -25,10 +25,7 @@ const teams = [
 			{ title: "Infrastructure engineer", where: "Berlin or remote", type: "Full-time" },
 		],
 	},
-	{
-		team: "Design",
-		roles: [{ title: "Product designer", where: "Remote, EU", type: "Full-time" }],
-	},
+	{ team: "Design", roles: [{ title: "Product designer", where: "Remote, EU", type: "Full-time" }] },
 	{
 		team: "Customers",
 		roles: [
@@ -46,8 +43,8 @@ export default function CareersRoles() {
 					<span className="text-sm text-muted-foreground">Careers at Keep</span>
 					<h1 className="text-4xl leading-tight md:text-5xl">Help small teams keep what they make</h1>
 					<p className="text-lg text-muted-foreground">
-						We are 23 people in Berlin, Lisbon and across Europe, building the tool we wanted at our last jobs.
-						Calm hours, written plans, and work that is still running years later.
+						We are 23 people in Berlin, Lisbon and across Europe, building the tool we wanted at our last
+						jobs. Calm hours, written plans, and work that is still running years later.
 					</p>
 					<Button size="lg" className="w-full sm:w-auto">
 						See 5 open roles

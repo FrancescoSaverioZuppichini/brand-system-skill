@@ -23,7 +23,9 @@ export default function VsColumns() {
 		<section className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-16 md:px-8 md:py-24">
 			<div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
 				<span className="text-sm text-muted-foreground">Keep vs Tasklist</span>
-				<h2 className="text-3xl leading-tight md:text-4xl">Tasklist tracks tasks. Keep looks after projects.</h2>
+				<h2 className="text-3xl leading-tight md:text-4xl">
+					Tasklist tracks tasks. Keep looks after projects.
+				</h2>
 				<p className="text-muted-foreground">
 					The difference shows a year after launch, when the sprint board is empty and the project still runs.
 				</p>
@@ -57,8 +59,8 @@ export default function VsColumns() {
 				</Card>
 			</div>
 			<p className="mx-auto max-w-2xl text-center text-sm text-muted-foreground">
-				Fair to say: Tasklist is the better pick if you need time tracking or Gantt charts. Compared on 12 Nov 2026
-				from Tasklist's public docs.
+				Fair to say: Tasklist is the better pick if you need time tracking or Gantt charts. Compared on 12 Nov
+				2026 from Tasklist's public docs.
 			</p>
 		</section>
 	)

@@ -45,7 +45,10 @@ export default function LegalSummary() {
 							<Check className="mt-1 size-4 shrink-0 text-primary" />
 							<span>
 								{section.summary}{" "}
-								<a href={`#section-${index + 1}`} className="text-sm text-muted-foreground underline underline-offset-4">
+								<a
+									href={`#section-${index + 1}`}
+									className="text-sm text-muted-foreground underline underline-offset-4"
+								>
 									§{index + 1}
 								</a>
 							</span>

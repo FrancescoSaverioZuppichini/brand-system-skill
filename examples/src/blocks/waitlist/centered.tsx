@@ -10,8 +10,8 @@ export default function WaitlistCentered() {
 			<Logo />
 			<h1 className="text-4xl leading-tight md:text-6xl">Keep, on your own servers</h1>
 			<p className="max-w-lg text-lg text-muted-foreground">
-				Self-hosted Keep arrives in spring 2027: one Docker image, your Postgres, the same app. Join the list and
-				we'll invite teams in the order they signed up.
+				Self-hosted Keep arrives in spring 2027: one Docker image, your Postgres, the same app. Join the list
+				and we'll invite teams in the order they signed up.
 			</p>
 			<form className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
 				<Input type="email" placeholder="you@company.com" aria-label="Work email" className="h-10" />

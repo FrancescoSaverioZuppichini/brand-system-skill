@@ -27,7 +27,9 @@ export default function CareersTable() {
 		<section className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-16 md:px-8 md:py-24">
 			<div className="flex flex-col gap-2">
 				<h1 className="text-4xl md:text-5xl">Open roles</h1>
-				<p className="text-muted-foreground">24 roles in 6 teams. We reply to every application within 10 working days.</p>
+				<p className="text-muted-foreground">
+					24 roles in 6 teams. We reply to every application within 10 working days.
+				</p>
 			</div>
 			<div className="flex flex-col gap-3 md:flex-row">
 				<InputGroup className="md:flex-1">

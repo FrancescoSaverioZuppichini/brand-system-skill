@@ -42,10 +42,7 @@ export default function TestimonialsCarousel() {
 				className="-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 [scrollbar-width:none] md:mx-0 md:scroll-px-0 md:px-0"
 			>
 				{cards.map((item) => (
-					<Card
-						key={item.name}
-						className="w-[85%] shrink-0 snap-start gap-5 p-6 md:w-[calc((100%-2rem)/3)]"
-					>
+					<Card key={item.name} className="w-[85%] shrink-0 snap-start gap-5 p-6 md:w-[calc((100%-2rem)/3)]">
 						<Stars count={item.stars} />
 						<blockquote className="flex-1 text-lg leading-relaxed">{item.text}</blockquote>
 						<figcaption className="flex items-center gap-3">

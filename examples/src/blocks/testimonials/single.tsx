@@ -8,7 +8,7 @@ export default function TestimonialsSingle() {
 				<span aria-hidden className="font-heading text-6xl leading-none text-muted-foreground">
 					“
 				</span>
-				<blockquote className="font-heading text-[22px] leading-snug md:text-4xl md:leading-tight">
+				<blockquote className="font-heading text-[22px] leading-snug md:text-5xl md:leading-tight">
 					{quote.text}
 				</blockquote>
 				<figcaption className="flex items-center gap-3 text-left">

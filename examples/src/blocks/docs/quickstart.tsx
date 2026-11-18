@@ -63,7 +63,10 @@ const stacks = [
 ]
 
 const next = [
-	{ title: "Move a project into care", text: "Give a shipped project an owner, health checks and a review date." },
+	{
+		title: "Move a project into care",
+		text: "Give a shipped project an owner, health checks and a review date.",
+	},
 	{ title: "Connect GitHub", text: "Link pull requests to releases and tick checks from CI." },
 	{ title: "Listen for webhooks", text: "Get release.shipped and care.review_due events on your server." },
 ]

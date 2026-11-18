@@ -10,7 +10,9 @@ export default function TestimonialsWall() {
 			<div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
 				<span className="text-sm text-muted-foreground">From 312 teams</span>
 				<h2 className="text-3xl leading-tight md:text-5xl">What teams say a year in</h2>
-				<p className="text-lg text-muted-foreground">4.8 out of 5 from 2,100 ratings. These are the short ones.</p>
+				<p className="text-lg text-muted-foreground">
+					4.8 out of 5 from 2,100 ratings. These are the short ones.
+				</p>
 			</div>
 			{/* [Agent] CSS columns give the masonry for free: cards keep their own height and flow top to bottom. On
 			    phones only the first three show, and the button stands in for the rest. */}

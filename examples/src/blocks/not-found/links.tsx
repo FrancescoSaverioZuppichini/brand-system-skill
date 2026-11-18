@@ -16,8 +16,8 @@ export default function NotFoundLinks() {
 				<p className="font-heading text-7xl leading-none text-muted-foreground md:text-8xl">404</p>
 				<h1 className="text-3xl md:text-4xl">This page moved or never existed</h1>
 				<p className="text-muted-foreground">
-					Check the address, or go where most people were heading. If a link on our site sent you here, tell us
-					and we'll fix it.
+					Check the address, or go where most people were heading. If a link on our site sent you here, tell
+					us and we'll fix it.
 				</p>
 				<Button size="lg" className="w-full sm:w-auto">
 					Back to home

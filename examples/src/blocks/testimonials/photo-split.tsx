@@ -13,7 +13,11 @@ export default function TestimonialsPhotoSplit() {
 	return (
 		<section className="bg-muted">
 			<div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 md:grid-cols-2 md:gap-16 md:px-8 md:py-24">
-				<Photo scene="person" label={`${author.name}, Fieldnote studio`} className="aspect-[4/3] rounded-xl md:aspect-[4/5]" />
+				<Photo
+					scene="person"
+					label={`${author.name}, Fieldnote studio`}
+					className="aspect-[4/3] rounded-xl md:aspect-[4/5]"
+				/>
 				<figure className="flex flex-col gap-6">
 					<Stars />
 					<blockquote className="font-heading text-2xl leading-snug md:text-3xl">
@@ -28,7 +32,9 @@ export default function TestimonialsPhotoSplit() {
 						{results.map((result) => (
 							<div key={result.label} className="flex flex-col gap-1">
 								<dt className="order-last text-sm text-muted-foreground">{result.label}</dt>
-								<dd className="font-heading text-3xl font-semibold tabular-nums md:text-4xl">{result.value}</dd>
+								<dd className="font-heading text-3xl font-semibold tabular-nums md:text-4xl">
+									{result.value}
+								</dd>
 							</div>
 						))}
 					</dl>

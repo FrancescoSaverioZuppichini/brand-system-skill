@@ -64,7 +64,8 @@ export default function VsSwitch() {
 			</div>
 			<Card className="gap-5 p-6 md:p-8">
 				<blockquote className="text-xl leading-snug md:text-2xl">
-					“We moved 40 projects from Tasklist on a Friday afternoon. On Monday nobody asked where anything was.”
+					“We moved 40 projects from Tasklist on a Friday afternoon. On Monday nobody asked where anything
+					was.”
 				</blockquote>
 				<div className="flex items-center gap-3 text-sm">
 					<Avatar>

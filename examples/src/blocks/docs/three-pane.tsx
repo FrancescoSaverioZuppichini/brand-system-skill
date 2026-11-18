@@ -65,7 +65,9 @@ export default function DocsThreePane() {
 									href="#page"
 									className={cn(
 										"rounded-md px-2 py-1",
-										page === active ? "bg-accent font-medium text-accent-foreground" : "text-muted-foreground",
+										page === active
+											? "bg-accent font-medium text-accent-foreground"
+											: "text-muted-foreground",
 									)}
 								>
 									{page}
@@ -90,13 +92,13 @@ export default function DocsThreePane() {
 						</SelectContent>
 					</Select>
 					<p className="leading-relaxed text-muted-foreground">
-						A project moves into care when its last planned release ships. It keeps an owner, gets a weekly health
-						check, and comes back for review once a year, so it never drifts without anyone noticing.
+						A project moves into care when its last planned release ships. It keeps an owner, gets a weekly
+						health check, and comes back for review once a year, so it never drifts without anyone noticing.
 					</p>
 					<h2 className="text-xl">Move it from the CLI</h2>
 					<p className="leading-relaxed text-muted-foreground">
-						Run <code className="font-mono text-sm text-foreground">keep care</code> in the project's folder. It
-						checks that every release is closed, then asks for an owner and a review date.
+						Run <code className="font-mono text-sm text-foreground">keep care</code> in the project's folder.
+						It checks that every release is closed, then asks for an owner and a review date.
 					</p>
 					<Code
 						title="Terminal"
@@ -109,8 +111,8 @@ export default function DocsThreePane() {
 					/>
 					<h2 className="text-xl">Choose an owner</h2>
 					<p className="leading-relaxed text-muted-foreground">
-						The owner answers health checks and runs the yearly review. Pick the person who will still be on the
-						team next year, not the one who shipped the last release.
+						The owner answers health checks and runs the yearly review. Pick the person who will still be on
+						the team next year, not the one who shipped the last release.
 					</p>
 					<Alert>
 						<Info />
