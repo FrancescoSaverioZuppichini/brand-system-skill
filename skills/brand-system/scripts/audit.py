@@ -4,7 +4,7 @@
 # ///
 # [Agent] Mechanical half of the crit: deliverables for the surfaces in brief.md, contrast, broken
 # pages. Taste is judged by eye on the PNGs.
-# usage: uv run audit.py ~/Documents/<brand>      (exit 1 when anything fails)
+# usage: uv run audit.py <brand-folder>      (exit 1 when anything fails)
 import json, re, sys, urllib.request
 from pathlib import Path
 

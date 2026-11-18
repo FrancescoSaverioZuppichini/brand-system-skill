@@ -29,7 +29,7 @@ Phases run in order and every later choice cites an earlier one. By default you 
 
 Bash state doesn't persist between calls and the working directory can reset. Find the folder this SKILL.md was read from, start every call with `S=<that folder>/scripts B=<absolute brand folder>`, and write every path as `$B/…`.
 
-The brand folder is `~/Documents/<slug>` unless the user names another place (with the artifacts app it is served at `http://127.0.0.1:8800/<slug>`). With no name yet it is `~/Documents/<category>-wip`: rename it once, after the phase 2 ★, and tell the user the new URL. Files inside use the brand slug (`<slug>-mark.svg`), also in parallel folders (`<slug>-a`).
+The brand folder is `<root>/<slug>`: `<root>` is the place the user names, else a folder the artifacts server watches (then it is served at `http://127.0.0.1:8800/<slug>`), else the current working directory. With no name yet it is `<root>/<category>-wip`: rename it once, after the phase 2 ★, and tell the user the new URL. Files inside use the brand slug (`<slug>-mark.svg`), also in parallel folders (`<slug>-a`).
 
 ```
 $B/
@@ -126,10 +126,10 @@ The only place with exact commands; phase files name the tool. Python scripts ca
 
 Only when the user asks for several complete brands to compare; for choosing a direction, § The pick is enough. You are the orchestrator:
 
-1. Run phases 0 and 1 once in `~/Documents/<slug>`: research, buyer voice, competitors, personas, assumptions and surfaces go into one `brief.md`. Copy it and `research/` into each designer folder (`<slug>-a`, `-b`, `-c`).
+1. Run phases 0 and 1 once in `<root>/<slug>`: research, buyer voice, competitors, personas, assumptions and surfaces go into one `brief.md`. Copy it and `research/` into each designer folder (`<slug>-a`, `-b`, `-c`).
 2. Spawn one senior-designer agent per direction (Opus unless told otherwise) with this skill's absolute path, its own folder, and its lens. Each runs phase 0 around the copied brief, starts branding.md § Strategy from it plus one line on its lens, then works from phase 2 (no name) or 3. None reads another's folder.
 3. Derive the lenses from the buyer types in the brief, each with a different style family (`style-picking.md` § Briefing parallel designers). Don't reuse an example lens blindly; one that leads into the client's dislikes is wrong.
-4. When all are done, view every PNG yourself and build the index page in `~/Documents/<slug>`: the #1 surface of each direction side by side, a table (vibe, target, recipe, logo, key line, theme), and your recommendation in two lines.
+4. When all are done, view every PNG yourself and build the index page in `<root>/<slug>`: the #1 surface of each direction side by side, a table (vibe, target, recipe, logo, key line, theme), and your recommendation in two lines.
 
 ## Crit (phase 8)
 
