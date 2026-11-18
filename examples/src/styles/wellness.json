@@ -1,0 +1,29 @@
+{
+	"tokens": {
+		"oat": [0.95, 0.02, 85, "page"],
+		"sand": [0.9, 0.035, 75, "the arch, quiet surfaces"],
+		"sage": [0.7, 0.05, 140, "pebbles, leaves"],
+		"lichen": [0.86, 0.035, 140, "soft sage cards"],
+		"terracotta": [0.62, 0.12, 45, "the sun, the accent word"],
+		"clay": [0.52, 0.12, 45, "terracotta dark enough for text"],
+		"olive": [0.42, 0.05, 120, "the button, labels, line drawings"],
+		"bark": [0.3, 0.03, 60, "text"],
+		"moss": [0.45, 0.03, 70, "secondary text"],
+		"rust": [0.5, 0.15, 30, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "oat", "foreground": "bark", "card": "lichen", "card-foreground": "bark", "popover": "oat", "popover-foreground": "bark", "primary": "olive", "primary-foreground": "oat", "secondary": "sand", "secondary-foreground": "bark", "muted": "sand", "muted-foreground": "moss", "accent": "lichen", "accent-foreground": "bark", "destructive": "rust", "border": "sand", "input": "sand", "ring": "olive", "chart-1": "terracotta", "chart-2": "sage", "chart-3": "olive", "chart-4": "sand", "chart-5": "bark"}
+	},
+	"default": "light",
+	"pairs": [
+		["bark", "oat", "body text"],
+		["moss", "oat", "muted text"],
+		["bark", "lichen", "card text on card"],
+		["oat", "olive", "primary text on primary"],
+		["bark", "sand", "secondary text on secondary"],
+		["moss", "sand", "muted text on muted"],
+		["moss", "lichen", "muted text on cards"],
+		["olive", "oat", "focus ring", "ui"],
+		["sand", "oat", "hairline", "decorative"]
+	]
+}

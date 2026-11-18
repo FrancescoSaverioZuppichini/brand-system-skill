@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"chalk": [0.96, 0.03, 330, "window bodies, page"],
+		"purple": [0.3, 0.12, 300, "deep purple: text, title bars"],
+		"pink": [0.78, 0.14, 350, "pink"],
+		"teal": [0.78, 0.11, 195, "teal"],
+		"lavender": [0.78, 0.1, 300, "lavender"],
+		"sunset": [0.75, 0.16, 50, "sunset orange"],
+		"silver": [0.8, 0, 0, "Windows 95 grey: chrome, buttons"],
+		"lilac": [0.91, 0.04, 300, "quiet surfaces"],
+		"dusk": [0.45, 0.08, 300, "secondary text"],
+		"soot": [0.15, 0, 0, "bevel shadow, button text"],
+		"cherry": [0.52, 0.2, 10, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "chalk", "foreground": "purple", "card": "chalk", "card-foreground": "purple", "popover": "chalk", "popover-foreground": "purple", "primary": "purple", "primary-foreground": "chalk", "secondary": "silver", "secondary-foreground": "soot", "muted": "lilac", "muted-foreground": "dusk", "accent": "pink", "accent-foreground": "soot", "destructive": "cherry", "border": "silver", "input": "silver", "ring": "purple", "chart-1": "pink", "chart-2": "teal", "chart-3": "lavender", "chart-4": "sunset", "chart-5": "purple"}
+	},
+	"default": "light",
+	"pairs": [
+		["purple", "chalk", "body text"],
+		["dusk", "chalk", "muted text"],
+		["chalk", "purple", "primary text on primary"],
+		["soot", "silver", "secondary text on secondary"],
+		["soot", "pink", "accent text on accent"],
+		["dusk", "lilac", "muted text on muted"],
+		["silver", "chalk", "hairline", "decorative"]
+	]
+}

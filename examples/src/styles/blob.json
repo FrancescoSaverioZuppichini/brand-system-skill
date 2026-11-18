@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"cream": [0.96, 0.02, 85, "page"],
+		"tangerine": [0.72, 0.18, 50, "the big blob"],
+		"berry": [0.52, 0.2, 355, "the button, the number"],
+		"ink": [0.25, 0.03, 300, "text"],
+		"lilac": [0.82, 0.08, 300, "soft blobs, pills"],
+		"plum": [0.45, 0.04, 300, "secondary text"],
+		"custard": [0.92, 0.035, 80, "quiet surfaces"],
+		"brick": [0.5, 0.18, 30, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "cream", "foreground": "ink", "card": "cream", "card-foreground": "ink", "popover": "cream", "popover-foreground": "ink", "primary": "berry", "primary-foreground": "cream", "secondary": "lilac", "secondary-foreground": "ink", "muted": "custard", "muted-foreground": "plum", "accent": "tangerine", "accent-foreground": "ink", "destructive": "brick", "border": "lilac", "input": "lilac", "ring": "berry", "chart-1": "berry", "chart-2": "tangerine", "chart-3": "lilac", "chart-4": "ink", "chart-5": "plum"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "cream", "body text"],
+		["plum", "cream", "muted text"],
+		["cream", "berry", "primary text on primary"],
+		["ink", "lilac", "secondary text on secondary"],
+		["ink", "tangerine", "accent text on accent"],
+		["plum", "custard", "muted text on muted"],
+		["berry", "cream", "focus ring", "ui"],
+		["lilac", "cream", "hairline", "decorative"]
+	]
+}

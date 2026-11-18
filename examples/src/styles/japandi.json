@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"linen": [0.96, 0.012, 85, "page"],
+		"oat": [0.93, 0.02, 80, "quiet surfaces"],
+		"charcoal": [0.28, 0.01, 60, "text, the button"],
+		"ash": [0.47, 0.012, 60, "secondary text"],
+		"clay": [0.55, 0.06, 50, "small caps, the warm accent"],
+		"sage": [0.7, 0.04, 140, "eucalyptus"],
+		"oak": [0.72, 0.06, 70, "shelf wood"],
+		"reed": [0.86, 0.02, 75, "hairlines"],
+		"rust": [0.5, 0.12, 35, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "linen", "foreground": "charcoal", "card": "linen", "card-foreground": "charcoal", "popover": "linen", "popover-foreground": "charcoal", "primary": "charcoal", "primary-foreground": "linen", "secondary": "oat", "secondary-foreground": "charcoal", "muted": "oat", "muted-foreground": "ash", "accent": "oat", "accent-foreground": "charcoal", "destructive": "rust", "border": "reed", "input": "reed", "ring": "clay", "chart-1": "clay", "chart-2": "sage", "chart-3": "oak", "chart-4": "charcoal", "chart-5": "reed"}
+	},
+	"default": "light",
+	"pairs": [
+		["charcoal", "linen", "body text"],
+		["ash", "linen", "muted text"],
+		["linen", "charcoal", "primary text on primary"],
+		["charcoal", "oat", "secondary text on secondary"],
+		["ash", "oat", "muted text on muted"],
+		["clay", "linen", "focus ring", "ui"],
+		["reed", "linen", "hairline", "decorative"]
+	]
+}

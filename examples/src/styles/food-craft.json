@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"cream": [0.95, 0.03, 85, "label stock, page"],
+		"parchment": [0.9, 0.04, 80, "quiet surfaces"],
+		"tomato": [0.55, 0.19, 32, "tomato red: the action, the badge"],
+		"mustard": [0.78, 0.14, 80, "mustard"],
+		"kraft": [0.66, 0.07, 65, "kraft paper"],
+		"bottle": [0.35, 0.06, 160, "bottle green: text, outlines"],
+		"glass": [0.45, 0.07, 160, "the bottle's highlight"],
+		"pine": [0.45, 0.05, 160, "secondary text"],
+		"char": [0.45, 0.17, 28, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "cream", "foreground": "bottle", "card": "cream", "card-foreground": "bottle", "popover": "cream", "popover-foreground": "bottle", "primary": "tomato", "primary-foreground": "cream", "secondary": "mustard", "secondary-foreground": "bottle", "muted": "parchment", "muted-foreground": "pine", "accent": "parchment", "accent-foreground": "bottle", "destructive": "char", "border": "bottle", "input": "kraft", "ring": "bottle", "chart-1": "tomato", "chart-2": "mustard", "chart-3": "bottle", "chart-4": "kraft", "chart-5": "glass"}
+	},
+	"default": "light",
+	"pairs": [
+		["bottle", "cream", "body text"],
+		["pine", "cream", "muted text"],
+		["cream", "tomato", "primary text on primary"],
+		["bottle", "mustard", "secondary text on secondary"],
+		["bottle", "parchment", "accent text on accent"],
+		["pine", "parchment", "muted text on muted"]
+	]
+}

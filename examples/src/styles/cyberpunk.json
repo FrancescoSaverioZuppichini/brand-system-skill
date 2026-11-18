@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"night": [0.13, 0.01, 280, "the black city, page"],
+		"gunmetal": [0.2, 0.015, 270, "panels"],
+		"chrome": [0.9, 0.01, 260, "text"],
+		"fog": [0.75, 0.02, 260, "secondary text"],
+		"steel": [0.45, 0.02, 260, "borders, rules"],
+		"acid": [0.92, 0.19, 105, "acid yellow: the action, the ID panel"],
+		"magenta": [0.65, 0.27, 345, "magenta neon, destructive"],
+		"cyan": [0.86, 0.14, 200, "cyan neon, focus"]
+	},
+	"roles": {
+		"dark": {"background": "night", "foreground": "chrome", "card": "gunmetal", "card-foreground": "chrome", "popover": "gunmetal", "popover-foreground": "chrome", "primary": "acid", "primary-foreground": "night", "secondary": "magenta", "secondary-foreground": "night", "muted": "gunmetal", "muted-foreground": "fog", "accent": "cyan", "accent-foreground": "night", "destructive": "magenta", "border": "steel", "input": "steel", "ring": "cyan", "chart-1": "acid", "chart-2": "magenta", "chart-3": "cyan", "chart-4": "fog", "chart-5": "steel"}
+	},
+	"default": "dark",
+	"pairs": [
+		["chrome", "night", "body text"],
+		["fog", "night", "muted text"],
+		["chrome", "gunmetal", "card text on card"],
+		["night", "acid", "primary text on primary"],
+		["night", "magenta", "secondary text on secondary"],
+		["night", "cyan", "accent text on accent"],
+		["fog", "gunmetal", "muted text on muted"],
+		["cyan", "night", "focus ring", "ui"],
+		["steel", "night", "hairline", "decorative"]
+	]
+}

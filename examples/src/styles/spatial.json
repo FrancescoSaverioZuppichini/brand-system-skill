@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"environment": [0.35, 0.03, 250, "the room behind the panels"],
+		"floor": [0.2, 0.02, 250, "the floor"],
+		"glass": [0.9, 0.006, 250, "panel glass, page"],
+		"chalk": [0.97, 0.005, 250, "lit panels, cards"],
+		"graphite": [0.18, 0.01, 250, "text"],
+		"slate": [0.42, 0.015, 250, "secondary text"],
+		"rim": [0.8, 0.01, 250, "panel edges, hairlines"],
+		"blue": [0.53, 0.155, 252, "the accent: buttons, orbs, focus"],
+		"sky": [0.66, 0.15, 250, "orb highlight, chart"],
+		"ember": [0.55, 0.2, 25, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "glass", "foreground": "graphite", "card": "chalk", "card-foreground": "graphite", "popover": "chalk", "popover-foreground": "graphite", "primary": "blue", "primary-foreground": "chalk", "secondary": "chalk", "secondary-foreground": "graphite", "muted": "glass", "muted-foreground": "slate", "accent": "chalk", "accent-foreground": "graphite", "destructive": "ember", "border": "rim", "input": "rim", "ring": "blue", "chart-1": "blue", "chart-2": "sky", "chart-3": "slate", "chart-4": "environment", "chart-5": "rim"}
+	},
+	"default": "light",
+	"pairs": [
+		["graphite", "glass", "body text"],
+		["slate", "glass", "muted text"],
+		["graphite", "chalk", "card text on card"],
+		["chalk", "blue", "primary text on primary"],
+		["slate", "chalk", "muted text on cards"],
+		["blue", "glass", "focus ring", "ui"],
+		["rim", "glass", "hairline", "decorative"]
+	]
+}

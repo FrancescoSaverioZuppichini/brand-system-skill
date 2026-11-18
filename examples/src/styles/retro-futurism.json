@@ -1,0 +1,25 @@
+{
+	"tokens": {
+		"cream": [0.93, 0.035, 85, "page, printed stock"],
+		"parchment": [0.89, 0.04, 80, "quiet surfaces"],
+		"navy": [0.26, 0.06, 260, "text, the CRT shell"],
+		"screen": [0.22, 0.05, 260, "the CRT glass"],
+		"brown": [0.4, 0.06, 55, "secondary text, the outer stripe"],
+		"orange": [0.66, 0.18, 45, "space orange: the action"],
+		"marigold": [0.78, 0.14, 75, "the third stripe"],
+		"avocado": [0.6, 0.1, 115, "the inner stripe"],
+		"rust": [0.5, 0.16, 30, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "cream", "foreground": "navy", "card": "cream", "card-foreground": "navy", "popover": "cream", "popover-foreground": "navy", "primary": "orange", "primary-foreground": "navy", "secondary": "navy", "secondary-foreground": "cream", "muted": "parchment", "muted-foreground": "brown", "accent": "marigold", "accent-foreground": "navy", "destructive": "rust", "border": "navy", "input": "brown", "ring": "navy", "chart-1": "orange", "chart-2": "avocado", "chart-3": "marigold", "chart-4": "brown", "chart-5": "navy"}
+	},
+	"default": "light",
+	"pairs": [
+		["navy", "cream", "body text"],
+		["brown", "cream", "muted text"],
+		["navy", "orange", "primary text on primary"],
+		["cream", "navy", "secondary text on secondary"],
+		["navy", "marigold", "accent text on accent"],
+		["brown", "parchment", "muted text on muted"]
+	]
+}

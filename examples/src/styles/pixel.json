@@ -1,0 +1,30 @@
+{
+	"tokens": {
+		"night": [0.22, 0.05, 280, "night sky, page"],
+		"panel": [0.3, 0.08, 270, "dialog boxes"],
+		"white": [0.97, 0, 0, "text, pixel borders"],
+		"lavender": [0.8, 0.04, 280, "secondary text"],
+		"red": [0.55, 0.22, 20, "PICO-8 red: the action, hearts"],
+		"yellow": [0.9, 0.17, 100, "coins, stars, titles"],
+		"green": [0.72, 0.18, 145, "grass, labels"],
+		"blue": [0.6, 0.15, 255, "overalls, chart"],
+		"orange": [0.75, 0.16, 60, "chest"],
+		"brown": [0.45, 0.08, 50, "wood, coin rims"],
+		"dirt": [0.38, 0.06, 45, "ground"],
+		"skin": [0.85, 0.06, 60, "the hero's face"]
+	},
+	"roles": {
+		"dark": {"background": "night", "foreground": "white", "card": "panel", "card-foreground": "white", "popover": "panel", "popover-foreground": "white", "primary": "red", "primary-foreground": "white", "secondary": "yellow", "secondary-foreground": "night", "muted": "panel", "muted-foreground": "lavender", "accent": "green", "accent-foreground": "night", "destructive": "red", "border": "white", "input": "white", "ring": "yellow", "chart-1": "red", "chart-2": "yellow", "chart-3": "green", "chart-4": "blue", "chart-5": "orange"}
+	},
+	"default": "dark",
+	"pairs": [
+		["white", "night", "body text"],
+		["lavender", "night", "muted text"],
+		["white", "panel", "card text on card"],
+		["white", "red", "primary text on primary"],
+		["night", "yellow", "secondary text on secondary"],
+		["night", "green", "accent text on accent"],
+		["lavender", "panel", "muted text on muted"],
+		["yellow", "night", "focus ring", "ui"]
+	]
+}

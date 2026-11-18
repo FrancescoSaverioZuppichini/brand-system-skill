@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "page, cards"],
+		"surface": [0.97, 0.005, 250, "quiet surfaces, the phone screen"],
+		"line": [0.92, 0.008, 250, "hairlines, table rules"],
+		"navy": [0.25, 0.06, 260, "text, the brand field"],
+		"twilight": [0.32, 0.07, 258, "the lit side of the navy panel"],
+		"slate": [0.48, 0.03, 260, "secondary text"],
+		"lime": [0.88, 0.2, 128, "the one bright accent: the action, the card"],
+		"moss": [0.78, 0.19, 130, "the lime card's shaded edge"],
+		"green": [0.6, 0.15, 150, "positive numbers, ratings"],
+		"red": [0.55, 0.2, 25, "negative numbers, destructive"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "navy", "card": "white", "card-foreground": "navy", "popover": "white", "popover-foreground": "navy", "primary": "lime", "primary-foreground": "navy", "secondary": "navy", "secondary-foreground": "white", "muted": "surface", "muted-foreground": "slate", "accent": "surface", "accent-foreground": "navy", "destructive": "red", "border": "line", "input": "line", "ring": "navy", "chart-1": "green", "chart-2": "navy", "chart-3": "lime", "chart-4": "slate", "chart-5": "red"}
+	},
+	"default": "light",
+	"pairs": [
+		["navy", "white", "body text"],
+		["slate", "white", "muted text"],
+		["navy", "lime", "primary text on primary"],
+		["white", "navy", "secondary text on secondary"],
+		["navy", "surface", "accent text on accent"],
+		["slate", "surface", "muted text on muted"],
+		["line", "white", "hairline", "decorative"]
+	]
+}

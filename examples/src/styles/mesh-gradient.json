@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "page below the field"],
+		"ink": [0.25, 0.04, 265, "text, the button"],
+		"slate": [0.45, 0.03, 265, "secondary text"],
+		"mist": [0.96, 0.006, 265, "quiet surfaces"],
+		"rule": [0.9, 0.01, 265, "hairlines, column guides"],
+		"orange": [0.74, 0.18, 55, "field orange"],
+		"magenta": [0.63, 0.26, 345, "field magenta"],
+		"purple": [0.52, 0.24, 295, "field purple, focus"],
+		"cyan": [0.8, 0.13, 215, "field cyan"],
+		"yellow": [0.86, 0.153, 85, "field yellow"],
+		"red": [0.55, 0.2, 27, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "ink", "card": "white", "card-foreground": "ink", "popover": "white", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "white", "secondary": "mist", "secondary-foreground": "ink", "muted": "mist", "muted-foreground": "slate", "accent": "mist", "accent-foreground": "ink", "destructive": "red", "border": "rule", "input": "rule", "ring": "purple", "chart-1": "magenta", "chart-2": "orange", "chart-3": "purple", "chart-4": "cyan", "chart-5": "yellow"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "white", "body text"],
+		["slate", "white", "muted text"],
+		["white", "ink", "primary text on primary"],
+		["ink", "mist", "secondary text on secondary"],
+		["slate", "mist", "muted text on muted"],
+		["purple", "white", "focus ring", "ui"],
+		["rule", "white", "hairline", "decorative"]
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"tokens": {
+		"canvas": [0.96, 0.003, 250, "grey app canvas"],
+		"panel": [1, 0, 0, "white panels and tiles"],
+		"ink": [0.25, 0.01, 250, "text"],
+		"graphite": [0.48, 0.01, 250, "secondary text, icons"],
+		"cobalt": [0.55, 0.18, 258, "the one action blue"],
+		"rule": [0.88, 0.005, 250, "panel borders, table rules"],
+		"selection": [0.95, 0.022, 258, "selected row"],
+		"shell": [0.21, 0, 0, "the top shell bar"],
+		"green": [0.6, 0.15, 150, "status: healthy"],
+		"amber": [0.78, 0.15, 80, "status: at risk"],
+		"red": [0.55, 0.2, 27, "status: failing, destructive"]
+	},
+	"roles": {
+		"light": {"background": "canvas", "foreground": "ink", "card": "panel", "card-foreground": "ink", "popover": "panel", "popover-foreground": "ink", "primary": "cobalt", "primary-foreground": "panel", "secondary": "canvas", "secondary-foreground": "ink", "muted": "canvas", "muted-foreground": "graphite", "accent": "selection", "accent-foreground": "ink", "destructive": "red", "border": "rule", "input": "rule", "ring": "cobalt", "chart-1": "cobalt", "chart-2": "green", "chart-3": "amber", "chart-4": "red", "chart-5": "graphite"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "canvas", "body text"],
+		["graphite", "canvas", "muted text"],
+		["ink", "panel", "card text on card"],
+		["panel", "cobalt", "primary text on primary"],
+		["ink", "selection", "accent text on accent"],
+		["graphite", "panel", "muted text on cards"],
+		["cobalt", "canvas", "focus ring", "ui"],
+		["rule", "canvas", "hairline", "decorative"]
+	]
+}

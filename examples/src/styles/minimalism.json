@@ -1,0 +1,24 @@
+{
+	"tokens": {
+		"white": [0.99, 0, 0, "page and cards"],
+		"black": [0.15, 0, 0, "text, the one button"],
+		"grey": [0.5, 0, 0, "secondary text"],
+		"line": [0.92, 0, 0, "the one hairline"],
+		"haze": [0.96, 0, 0, "quiet surfaces"],
+		"blue": [0.55, 0.15, 255, "the accent, used once"],
+		"alarm": [0.52, 0.19, 27, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "black", "card": "white", "card-foreground": "black", "popover": "white", "popover-foreground": "black", "primary": "black", "primary-foreground": "white", "secondary": "haze", "secondary-foreground": "black", "muted": "haze", "muted-foreground": "grey", "accent": "haze", "accent-foreground": "black", "destructive": "alarm", "border": "line", "input": "line", "ring": "blue", "chart-1": "black", "chart-2": "blue", "chart-3": "grey", "chart-4": "line", "chart-5": "haze"}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "white", "body text"],
+		["grey", "white", "muted text"],
+		["white", "black", "primary text on primary"],
+		["black", "haze", "secondary text on secondary"],
+		["grey", "haze", "muted text on muted"],
+		["blue", "white", "focus ring", "ui"],
+		["line", "white", "hairline", "decorative"]
+	]
+}

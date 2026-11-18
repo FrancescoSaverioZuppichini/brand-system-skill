@@ -1,0 +1,29 @@
+{
+	"tokens": {
+		"pearl": [0.96, 0.01, 300, "page"],
+		"white": [1, 0, 0, "cards"],
+		"ink": [0.25, 0.03, 290, "text, the button"],
+		"dusk": [0.48, 0.03, 290, "secondary text"],
+		"lilac": [0.85, 0.07, 300, "foil lilac, hairlines"],
+		"mint": [0.9, 0.07, 170, "foil mint"],
+		"peach": [0.89, 0.06, 55, "foil peach"],
+		"sky": [0.87, 0.07, 230, "foil sky"],
+		"violet": [0.55, 0.15, 300, "focus"],
+		"coral": [0.56, 0.18, 20, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "pearl", "foreground": "ink", "card": "white", "card-foreground": "ink", "popover": "white", "popover-foreground": "ink", "primary": "ink", "primary-foreground": "pearl", "secondary": "lilac", "secondary-foreground": "ink", "muted": "pearl", "muted-foreground": "dusk", "accent": "mint", "accent-foreground": "ink", "destructive": "coral", "border": "lilac", "input": "lilac", "ring": "violet", "chart-1": "lilac", "chart-2": "mint", "chart-3": "sky", "chart-4": "peach", "chart-5": "violet"}
+	},
+	"default": "light",
+	"pairs": [
+		["ink", "pearl", "body text"],
+		["dusk", "pearl", "muted text"],
+		["ink", "white", "card text on card"],
+		["pearl", "ink", "primary text on primary"],
+		["ink", "lilac", "secondary text on secondary"],
+		["ink", "mint", "accent text on accent"],
+		["dusk", "white", "muted text on cards"],
+		["violet", "pearl", "focus ring", "ui"],
+		["lilac", "pearl", "hairline", "decorative"]
+	]
+}

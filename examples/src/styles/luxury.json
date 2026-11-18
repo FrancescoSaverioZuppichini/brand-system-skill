@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"black": [0.12, 0, 0, "page, the campaign's black"],
+		"onyx": [0.17, 0.003, 60, "cards, the satin's base"],
+		"smoke": [0.3, 0.003, 60, "hairlines, quiet surfaces"],
+		"white": [1, 0, 0, "text, the underline"],
+		"ash": [0.75, 0.005, 80, "secondary text"],
+		"greige": [0.9, 0.01, 80, "satin highlights"],
+		"house": [0.66, 0.17, 50, "the one house colour, used sparingly"],
+		"garnet": [0.62, 0.19, 25, "destructive"]
+	},
+	"roles": {
+		"dark": {"background": "black", "foreground": "white", "card": "onyx", "card-foreground": "white", "popover": "onyx", "popover-foreground": "white", "primary": "white", "primary-foreground": "black", "secondary": "smoke", "secondary-foreground": "white", "muted": "onyx", "muted-foreground": "ash", "accent": "house", "accent-foreground": "black", "destructive": "garnet", "border": "smoke", "input": "smoke", "ring": "greige", "chart-1": "white", "chart-2": "house", "chart-3": "ash", "chart-4": "greige", "chart-5": "smoke"}
+	},
+	"default": "dark",
+	"pairs": [
+		["white", "black", "body text"],
+		["ash", "black", "muted text"],
+		["white", "onyx", "card text on card"],
+		["black", "white", "primary text on primary"],
+		["white", "smoke", "secondary text on secondary"],
+		["black", "house", "accent text on accent"],
+		["ash", "onyx", "muted text on muted"],
+		["greige", "black", "focus ring", "ui"],
+		["smoke", "black", "hairline", "decorative"]
+	]
+}

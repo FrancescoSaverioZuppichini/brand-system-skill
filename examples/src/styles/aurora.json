@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"night": [0.15, 0.03, 280, "the dark sky, page"],
+		"dusk": [0.2, 0.035, 280, "cards"],
+		"seam": [0.3, 0.035, 280, "hairlines, quiet surfaces"],
+		"frost": [0.97, 0.01, 280, "text, the white button"],
+		"mist": [0.72, 0.02, 280, "secondary text"],
+		"violet": [0.55, 0.25, 295, "violet bloom"],
+		"cyan": [0.75, 0.128, 210, "cyan bloom, focus"],
+		"pink": [0.68, 0.21, 350, "pink bloom"],
+		"mint": [0.8, 0.13, 165, "green bloom, chart"],
+		"flare": [0.66, 0.2, 25, "destructive"]
+	},
+	"roles": {
+		"dark": {"background": "night", "foreground": "frost", "card": "dusk", "card-foreground": "frost", "popover": "dusk", "popover-foreground": "frost", "primary": "frost", "primary-foreground": "night", "secondary": "seam", "secondary-foreground": "frost", "muted": "dusk", "muted-foreground": "mist", "accent": "seam", "accent-foreground": "frost", "destructive": "flare", "border": "seam", "input": "seam", "ring": "cyan", "chart-1": "violet", "chart-2": "cyan", "chart-3": "pink", "chart-4": "mint", "chart-5": "mist"}
+	},
+	"default": "dark",
+	"pairs": [
+		["frost", "night", "body text"],
+		["mist", "night", "muted text"],
+		["frost", "dusk", "card text on card"],
+		["night", "frost", "primary text on primary"],
+		["frost", "seam", "secondary text on secondary"],
+		["mist", "dusk", "muted text on muted"],
+		["cyan", "night", "focus ring", "ui"],
+		["seam", "night", "hairline", "decorative"]
+	]
+}

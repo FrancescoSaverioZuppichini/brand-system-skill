@@ -1,0 +1,28 @@
+{
+	"tokens": {
+		"white": [1, 0, 0, "the default white page"],
+		"black": [0, 0, 0, "default black text"],
+		"blue": [0.452, 0.313, 264.05, "pure RGB blue, links"],
+		"green": [0.866, 0.294, 142.5, "pure RGB green"],
+		"magenta": [0.7, 0.32, 328, "magenta"],
+		"yellow": [0.968, 0.209, 109.8, "highlighter yellow"],
+		"red": [0.628, 0.257, 29.2, "MS Paint red"],
+		"face": [0.95, 0, 0, "default button face"],
+		"edge": [0.45, 0, 0, "default button edge, muted text"]
+	},
+	"roles": {
+		"light": {"background": "white", "foreground": "black", "card": "green", "card-foreground": "black", "popover": "white", "popover-foreground": "black", "primary": "blue", "primary-foreground": "white", "secondary": "yellow", "secondary-foreground": "black", "muted": "face", "muted-foreground": "edge", "accent": "magenta", "accent-foreground": "black", "destructive": "red", "border": "black", "input": "edge", "ring": "blue", "chart-1": "blue", "chart-2": "magenta", "chart-3": "green", "chart-4": "yellow", "chart-5": "red"}
+	},
+	"default": "light",
+	"pairs": [
+		["black", "white", "body text"],
+		["edge", "white", "muted text"],
+		["black", "green", "card text on card"],
+		["white", "blue", "primary text on primary"],
+		["black", "yellow", "secondary text on secondary"],
+		["black", "magenta", "accent text on accent"],
+		["edge", "face", "muted text on muted"],
+		["edge", "green", "muted text on cards"],
+		["blue", "white", "focus ring", "ui"]
+	]
+}

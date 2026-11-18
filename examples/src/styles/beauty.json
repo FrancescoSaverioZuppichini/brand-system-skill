@@ -1,0 +1,26 @@
+{
+	"tokens": {
+		"milk": [0.97, 0.01, 60, "page, milky white"],
+		"blush": [0.88, 0.04, 20, "the pastel stage"],
+		"petal": [0.93, 0.025, 25, "quiet surfaces, the lit stage"],
+		"nude": [0.8, 0.05, 55, "podium, dropper glass"],
+		"cocoa": [0.35, 0.04, 40, "text, the button"],
+		"mocha": [0.48, 0.04, 40, "secondary text"],
+		"pop": [0.56, 0.2, 15, "the one brand pop: lipstick, small accents"],
+		"cherry": [0.5, 0.19, 25, "destructive"]
+	},
+	"roles": {
+		"light": {"background": "milk", "foreground": "cocoa", "card": "milk", "card-foreground": "cocoa", "popover": "milk", "popover-foreground": "cocoa", "primary": "cocoa", "primary-foreground": "milk", "secondary": "blush", "secondary-foreground": "cocoa", "muted": "petal", "muted-foreground": "mocha", "accent": "petal", "accent-foreground": "cocoa", "destructive": "cherry", "border": "blush", "input": "blush", "ring": "pop", "chart-1": "pop", "chart-2": "nude", "chart-3": "cocoa", "chart-4": "blush", "chart-5": "mocha"}
+	},
+	"default": "light",
+	"pairs": [
+		["cocoa", "milk", "body text"],
+		["mocha", "milk", "muted text"],
+		["milk", "cocoa", "primary text on primary"],
+		["cocoa", "blush", "secondary text on secondary"],
+		["cocoa", "petal", "accent text on accent"],
+		["mocha", "petal", "muted text on muted"],
+		["pop", "milk", "focus ring", "ui"],
+		["blush", "milk", "hairline", "decorative"]
+	]
+}

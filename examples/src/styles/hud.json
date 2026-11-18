@@ -1,0 +1,27 @@
+{
+	"tokens": {
+		"abyss": [0.15, 0.03, 250, "deep navy screen, page"],
+		"panel": [0.19, 0.035, 245, "readout panels"],
+		"cyan": [0.84, 0.13, 205, "the line colour: lines, text, focus"],
+		"amber": [0.8, 0.15, 75, "the second line colour: alerts, numbers"],
+		"dim": [0.45, 0.06, 220, "dim lines, ticks"],
+		"haze": [0.72, 0.03, 220, "secondary text"],
+		"white": [0.97, 0.01, 220, "headline text"],
+		"flare": [0.68, 0.19, 25, "destructive"]
+	},
+	"roles": {
+		"dark": {"background": "abyss", "foreground": "white", "card": "panel", "card-foreground": "white", "popover": "panel", "popover-foreground": "white", "primary": "cyan", "primary-foreground": "abyss", "secondary": "panel", "secondary-foreground": "cyan", "muted": "panel", "muted-foreground": "haze", "accent": "amber", "accent-foreground": "abyss", "destructive": "flare", "border": "dim", "input": "dim", "ring": "cyan", "chart-1": "cyan", "chart-2": "amber", "chart-3": "dim", "chart-4": "white", "chart-5": "flare"}
+	},
+	"default": "dark",
+	"pairs": [
+		["white", "abyss", "body text"],
+		["haze", "abyss", "muted text"],
+		["white", "panel", "card text on card"],
+		["abyss", "cyan", "primary text on primary"],
+		["cyan", "panel", "secondary text on secondary"],
+		["abyss", "amber", "accent text on accent"],
+		["haze", "panel", "muted text on muted"],
+		["cyan", "abyss", "focus ring", "ui"],
+		["dim", "abyss", "hairline", "decorative"]
+	]
+}
