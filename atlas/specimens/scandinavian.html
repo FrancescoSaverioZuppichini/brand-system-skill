@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scandinavian</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --white: oklch(0.99 0.002 90);
+  --birch: oklch(0.93 0.02 80);
+  --birch-deep: oklch(0.84 0.04 75);
+  --black: oklch(0.20 0.005 250);
+  --grey: oklch(0.48 0.005 250);
+  --tomato: oklch(0.63 0.19 32);
+  --forest: oklch(0.42 0.08 155);
+  --text: "Figtree", sans-serif;
+  --mono: "DM Mono", monospace;
+  --radius: 12px;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--white); }
+body { position: relative; font-family: var(--text); color: var(--black); }
+.abs { position: absolute; margin: 0; }
+
+.copy { left: 64px; top: 124px; width: 380px; }
+.eyebrow { margin: 0; font: 500 13px var(--text); color: var(--forest); display: flex; align-items: center; gap: 8px; }
+.eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--tomato); }
+h1 { margin: 16px 0 0; font: 600 50px/1.05 var(--text); letter-spacing: -.025em; }
+.sub { margin: 20px 0 0; font: 400 15px/1.6 var(--text); color: var(--grey); }
+.button { margin-top: 28px; padding: 13px 22px; border: 0; border-radius: 10px; background: var(--tomato); color: var(--white); font: 600 15px var(--text); }
+
+.room { left: 448px; top: 36px; width: 316px; height: 428px; border-radius: var(--radius); background: var(--birch); overflow: hidden; }
+.card { left: 404px; top: 350px; width: 176px; padding: 16px 18px; border-radius: var(--radius); background: var(--white); box-shadow: 0 2px 8px oklch(0.20 0.005 250 / .12); }
+.card .label { font: 400 11px var(--mono); color: var(--grey); text-transform: uppercase; letter-spacing: .08em; }
+.card .num { font: 700 34px/1.2 var(--text); letter-spacing: -.02em; }
+.card .cap { font: 400 13px var(--text); color: var(--grey); }
+</style>
+</head>
+<body>
+  <div class="abs copy">
+    <p class="eyebrow">Introducing Keep</p>
+    <h1>make something people keep</h1>
+    <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <button class="button">Start a project</button>
+  </div>
+
+  <!-- [Agent] Flat pictogram room in daylight: a few circles and rounded rectangles, one tomato accent, nothing shaded. -->
+  <svg class="abs room" viewBox="0 0 316 428" aria-hidden="true">
+    <rect x="186" y="44" width="96" height="140" rx="8" fill="var(--white)"/>
+    <path d="M234 44 V184 M186 114 H282" stroke="var(--birch)" stroke-width="6"/>
+    <line x1="112" y1="0" x2="112" y2="118" stroke="var(--black)" stroke-width="2"/>
+    <path d="M62 160 A50 44 0 0 1 162 160 Z" fill="var(--tomato)"/>
+    <rect x="104" y="114" width="16" height="10" rx="3" fill="var(--black)"/>
+    <ellipse cx="112" cy="163" rx="14" ry="5" fill="oklch(0.95 0.06 90)"/>
+    <rect y="372" width="316" height="56" fill="var(--birch-deep)"/>
+    <rect x="40" y="292" width="236" height="12" rx="6" fill="var(--black)"/>
+    <rect x="70" y="304" width="8" height="82" rx="4" fill="var(--black)"/>
+    <rect x="238" y="304" width="8" height="82" rx="4" fill="var(--black)"/>
+    <rect x="190" y="236" width="40" height="56" rx="10" fill="var(--white)"/>
+    <g fill="var(--forest)">
+      <ellipse cx="200" cy="214" rx="9" ry="24" transform="rotate(-24 200 214)"/>
+      <ellipse cx="222" cy="210" rx="9" ry="26" transform="rotate(20 222 210)"/>
+      <ellipse cx="211" cy="200" rx="8" ry="30"/>
+    </g>
+    <circle cx="94" cy="276" r="16" fill="var(--forest)" opacity=".18"/>
+    <rect x="80" y="266" width="44" height="26" rx="6" fill="var(--white)"/>
+  </svg>
+
+  <div class="abs card">
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</body>
+</html>

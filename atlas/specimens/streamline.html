@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Streamline Moderne</title>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Righteous&family=Jost:wght@400;500&family=Red+Hat+Mono:wght@500&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --cream: oklch(0.94 0.03 90);
+  --mint: oklch(0.88 0.05 165);
+  --chrome: oklch(0.80 0.01 250);
+  --red: oklch(0.56 0.20 27);
+  --navy: oklch(0.30 0.07 260);
+  --display: "Righteous", sans-serif;
+  --wide: "Michroma", sans-serif;
+  --text: "Jost", sans-serif;
+  --mono: "Red Hat Mono", monospace;
+  /* [Agent] Chrome is a hard-banded vertical gradient: bright sky reflection on top, a dark horizon line, bounce light below. */
+  --chrome-band: linear-gradient(to bottom, oklch(0.98 0.005 250) 0%, oklch(0.86 0.01 250) 34%, oklch(0.52 0.02 255) 50%, oklch(0.74 0.015 250) 62%, oklch(0.93 0.008 250) 100%);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--cream); }
+body { position: relative; font-family: var(--text); color: var(--navy); }
+.ornament { position: absolute; inset: 0; }
+
+.copy { position: absolute; left: 56px; top: 44px; width: 470px; }
+.eyebrow { margin: 0; font: 12px var(--wide); letter-spacing: .24em; text-transform: uppercase; color: var(--red); }
+/* [Agent] Righteous has no italic; a small skew gives the forward lean of 1930s speed lettering. */
+h1 { margin: 14px 0 0; font: 400 56px/0.98 var(--display); letter-spacing: -.005em; transform: skewX(-9deg); transform-origin: 0 100%; }
+.sub { margin: 18px 0 0; font: 400 16px/1.5 var(--text); }
+.button {
+  margin-top: 22px; padding: 12px 28px; border: 0; border-radius: 999px; color: var(--cream);
+  background: linear-gradient(to bottom, oklch(0.66 0.19 27), var(--red) 55%, oklch(0.48 0.18 27));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / .5), 0 0 0 3px var(--cream), 0 0 0 5px var(--chrome);
+  font: 500 15px var(--text); letter-spacing: .04em;
+}
+
+.badge {
+  position: absolute; left: 574px; top: 42px; width: 178px; padding: 16px 18px 14px; border-radius: 28px;
+  background: linear-gradient(to bottom, oklch(0.93 0.04 165), var(--mint));
+  box-shadow: inset 0 2px 0 oklch(1 0 0 / .7), 0 0 0 4px var(--navy), 0 0 0 9px var(--chrome), 0 0 0 10px oklch(0.55 0.02 255);
+}
+.badge .label { font: 500 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.badge .num { font: 400 44px/1.05 var(--display); transform: skewX(-9deg); }
+.badge .cap { font: 400 13px var(--text); }
+.badge .lines { margin: 10px 0 8px; height: 10px; background: repeating-linear-gradient(to bottom, var(--red) 0 2px, transparent 2px 4px); border-radius: 2px; }
+</style>
+</head>
+<body>
+  <svg class="ornament" viewBox="0 0 800 500" aria-hidden="true">
+    <defs>
+      <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="oklch(0.99 0.004 250)"/>
+        <stop offset=".3" stop-color="oklch(0.86 0.01 250)"/>
+        <stop offset=".48" stop-color="oklch(0.50 0.02 255)"/>
+        <stop offset=".6" stop-color="oklch(0.72 0.015 250)"/>
+        <stop offset="1" stop-color="oklch(0.92 0.008 250)"/>
+      </linearGradient>
+      <linearGradient id="enamel" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="oklch(0.42 0.08 260)"/>
+        <stop offset=".25" stop-color="var(--navy)"/>
+        <stop offset="1" stop-color="oklch(0.20 0.05 260)"/>
+      </linearGradient>
+    </defs>
+    <!-- floor band -->
+    <rect y="444" width="800" height="56" fill="var(--navy)"/>
+    <g fill="var(--cream)"><rect y="452" width="800" height="2"/><rect y="458" width="800" height="2"/><rect y="464" width="800" height="2"/></g>
+    <!-- speed lines trailing the teardrop, aligned to its chrome waist -->
+    <g fill="var(--red)">
+      <rect x="-20" y="359" width="440" height="6" rx="3"/>
+      <rect x="-20" y="370" width="400" height="6" rx="3"/>
+      <rect x="-20" y="381" width="360" height="6" rx="3"/>
+    </g>
+    <!-- [Agent] Teardrop body: the fat rounded nose leads to the right and the tail thins out, like the S1 locomotive and the Airstream. -->
+    <clipPath id="body"><path d="M360 373 C470 318 600 300 688 300 C750 300 790 334 790 373 C790 412 750 446 688 446 C600 446 470 428 360 373Z"/></clipPath>
+    <path fill="url(#enamel)" d="M360 373 C470 318 600 300 688 300 C750 300 790 334 790 373 C790 412 750 446 688 446 C600 446 470 428 360 373Z"/>
+    <g clip-path="url(#body)">
+      <ellipse cx="640" cy="318" rx="150" ry="10" fill="oklch(1 0 0 / .28)"/>
+      <rect x="340" y="356" width="460" height="34" fill="url(#chrome)"/>
+      <rect x="340" y="371" width="460" height="4" fill="var(--red)"/>
+    </g>
+    <circle cx="742" cy="373" r="22" fill="url(#chrome)" stroke="oklch(0.45 0.02 255)" stroke-width="2"/>
+    <circle cx="742" cy="373" r="12" fill="var(--navy)"/>
+  </svg>
+
+  <div class="copy">
+    <p class="eyebrow">Introducing Keep</p>
+    <h1>Make something<br>people keep</h1>
+    <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <button class="button">Start a project</button>
+  </div>
+
+  <div class="badge">
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="lines"></div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</body>
+</html>

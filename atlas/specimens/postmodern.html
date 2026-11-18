@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Postmodern / deconstructivist</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&family=IBM+Plex+Serif:ital,wght@0,400;1,400&family=Major+Mono+Display&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --grey: oklch(0.88 0.01 80);
+  --grey-mid: oklch(0.74 0.01 80);
+  --charcoal: oklch(0.25 0.01 80);
+  --acid: oklch(0.88 0.20 120);
+  --orange: oklch(0.66 0.19 42);
+  --display: "Syne", sans-serif;
+  --serif: "IBM Plex Serif", serif;
+  --mono: "Major Mono Display", monospace;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--grey); }
+body { position: relative; font-family: var(--serif); color: var(--charcoal); }
+.abs { position: absolute; margin: 0; }
+
+/* [Agent] A second, giant "keep" sits behind as an outline only: the same word read twice at two scales, the Cranbrook layering move. */
+.ghost { left: 300px; top: 168px; font: 800 300px/1 var(--display); color: transparent; -webkit-text-stroke: 1.4px oklch(0.62 0.01 80); letter-spacing: -.04em; }
+.sun { left: 600px; top: 26px; width: 150px; height: 150px; border-radius: 50%; background: var(--orange); }
+.slab { left: 384px; top: 222px; width: 250px; height: 92px; background: var(--acid); transform: rotate(-3deg); }
+.cut { left: 0; top: 330px; width: 800px; height: 1px; background: var(--charcoal); }
+
+.eyebrow { left: 18px; top: 40px; writing-mode: vertical-rl; transform: rotate(180deg); font: 15px var(--mono); letter-spacing: .3em; }
+h1 { left: 62px; top: 34px; width: 700px; height: 300px; font-weight: 400; }
+h1 span { position: absolute; white-space: nowrap; line-height: 1; }
+.h-make { left: 4px; top: 6px; font: italic 400 46px var(--serif); }
+.h-something { left: 0; top: 54px; font: 800 84px var(--display); letter-spacing: -.03em; }
+.h-people { left: 168px; top: 140px; font: 50px var(--mono); }
+.h-keep { left: 332px; top: 188px; font: 800 96px var(--display); letter-spacing: -.02em; }
+
+.sub1 { left: 62px; top: 346px; width: 170px; font: 13px/1.45 var(--serif); }
+.sub2 { left: 250px; top: 372px; width: 150px; font: italic 13px/1.45 var(--serif); }
+.button { left: 62px; top: 438px; padding: 10px 18px; border: 0; background: var(--charcoal); color: var(--acid); font: 800 14px var(--display); letter-spacing: .02em; }
+
+.bitmap { left: 430px; top: 352px; width: 128px; height: 96px; image-rendering: pixelated; }
+.fig { left: 430px; top: 454px; font: 12px var(--mono); }
+.card { left: 596px; top: 352px; width: 180px; border-left: 2px solid var(--charcoal); padding-left: 12px; }
+.card .label { font: 13px var(--mono); }
+.card .num { font: 800 44px/1 var(--display); color: var(--orange); margin-top: 6px; letter-spacing: -.03em; }
+.card .cap { font: italic 13px var(--serif); margin-top: 6px; }
+</style>
+</head>
+<body>
+  <div class="abs sun"></div>
+  <p class="abs ghost" aria-hidden="true">keep</p>
+  <div class="abs slab"></div>
+  <div class="abs cut"></div>
+
+  <p class="abs eyebrow">Introducing Keep</p>
+  <h1 class="abs" aria-label="Make something people keep">
+    <span class="h-make">Make</span><span class="h-something">something</span><span class="h-people">people</span><span class="h-keep">keep</span>
+  </h1>
+
+  <p class="abs sub1">Tools for small teams who make things slowly and well.</p>
+  <p class="abs sub2">Plan it, ship it, and look after it for years.</p>
+  <button class="abs button">Start a project</button>
+
+  <canvas class="abs bitmap" width="32" height="24" aria-hidden="true"></canvas>
+  <p class="abs fig">fig. 1</p>
+  <div class="abs card">
+    <div class="label">still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+
+  <script>
+    // [Agent] Low-res "scan": a 32x24 ordered-dither of a diagonal gradient, blown up with pixelated scaling.
+    const c = document.querySelector('.bitmap').getContext('2d'), B = [[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]];
+    for (let y = 0; y < 24; y++) for (let x = 0; x < 32; x++) {
+      const v = (x / 32 + y / 24) / 2 + 0.25 * Math.sin(x / 4) * Math.cos(y / 5);
+      c.fillStyle = v > (B[y % 4][x % 4] + 0.5) / 16 ? '#3d3a36' : '#e3dfd6';
+      c.fillRect(x, y, 1, 1);
+    }
+  </script>
+</body>
+</html>

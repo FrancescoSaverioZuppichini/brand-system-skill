@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pop art</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&family=Archivo+Black&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --white: oklch(0.99 0 0);
+  --black: oklch(0.15 0 0);
+  --red: oklch(0.60 0.23 28);
+  --yellow: oklch(0.90 0.18 100);
+  --blue: oklch(0.55 0.18 255);
+  --pink: oklch(0.70 0.20 355);
+  --display: "Bangers", sans-serif;
+  --heavy: "Archivo Black", sans-serif;
+  --bubble: "Comic Neue", sans-serif;
+  --line: 4px solid var(--black);
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--white); }
+body { position: relative; font-family: var(--bubble); color: var(--black); }
+
+/* [Agent] Ben-Day dots: two offset dot grids make the staggered screen of a comic print; one helper class per ink. */
+.dots-blue { background: radial-gradient(circle, var(--blue) 30%, transparent 33%) 0 0 / 16px 16px, radial-gradient(circle, var(--blue) 30%, transparent 33%) 8px 8px / 16px 16px, var(--white); }
+.dots-red { background: radial-gradient(circle, var(--red) 34%, transparent 37%) 0 0 / 18px 18px, radial-gradient(circle, var(--red) 34%, transparent 37%) 9px 9px / 18px 18px, var(--yellow); }
+.dots-pink { background: radial-gradient(circle, var(--pink) 34%, transparent 37%) 0 0 / 16px 16px, radial-gradient(circle, var(--pink) 34%, transparent 37%) 8px 8px / 16px 16px, var(--white); }
+
+.panel { position: absolute; box-sizing: border-box; border: var(--line); overflow: hidden; }
+.a { left: 14px; top: 14px; width: 470px; height: 472px; }
+.b { left: 498px; top: 14px; width: 288px; height: 268px; }
+.c { left: 498px; top: 296px; width: 288px; height: 190px; }
+
+.caption { position: absolute; background: var(--yellow); border: 3px solid var(--black); padding: 6px 12px; font: 700 15px/1.3 var(--bubble); text-transform: uppercase; }
+.a .caption.top { left: -3px; top: -3px; font-size: 17px; letter-spacing: .02em; }
+.a .caption.bottom { right: -3px; bottom: -3px; width: 330px; text-transform: none; font-size: 15px; }
+
+.speech { position: absolute; left: 14px; top: 64px; width: 440px; height: 300px; }
+h1 { position: absolute; left: 70px; top: 128px; width: 340px; margin: 0; text-align: center; font: 400 62px/0.95 var(--display); letter-spacing: .02em; transform: rotate(-2deg); }
+h1 em { font-style: normal; color: var(--red); }
+
+.burst { position: absolute; left: 6px; top: 8px; width: 270px; height: 250px; }
+.b .label { position: absolute; left: 0; right: 0; top: 76px; text-align: center; font: 700 14px var(--bubble); text-transform: uppercase; letter-spacing: .06em; }
+.b .num { position: absolute; left: 0; right: 0; top: 96px; text-align: center; font: 400 76px/1 var(--display); color: var(--red); -webkit-text-stroke: 2px var(--black); letter-spacing: .02em; }
+.b .caption { right: -3px; bottom: -3px; font-size: 13px; text-transform: none; }
+
+.c .button {
+  position: absolute; left: 34px; top: 58px; width: 212px; padding: 12px 0 10px; border: var(--line); background: var(--yellow);
+  font: 400 30px/1 var(--display); letter-spacing: .04em; color: var(--black); transform: rotate(-3deg);
+  box-shadow: 6px 6px 0 var(--black);
+}
+</style>
+</head>
+<body>
+  <section class="panel a dots-blue">
+    <svg class="speech" viewBox="0 0 440 300" aria-hidden="true">
+      <path d="M220 12 C340 12 430 64 430 140 C430 214 344 262 236 266 L210 296 L196 264 C86 256 10 210 10 140 C10 64 100 12 220 12Z" fill="var(--white)" stroke="var(--black)" stroke-width="4"/>
+    </svg>
+    <div class="caption top">Introducing Keep</div>
+    <h1>MAKE SOMETHING PEOPLE <em>KEEP</em></h1>
+    <div class="caption bottom">Tools for small teams who make things slowly and well. Plan it, ship it, and look after it for years.</div>
+  </section>
+
+  <section class="panel b dots-red">
+    <svg class="burst" viewBox="0 0 270 250" aria-hidden="true">
+      <!-- [Agent] The burst is one 16-point jagged polygon; uneven radii make it look inked, not computed. -->
+      <polygon fill="var(--white)" stroke="var(--black)" stroke-width="4" stroke-linejoin="round"
+        points="135,8 158,62 216,22 198,86 266,80 216,124 262,160 200,164 222,222 164,190 142,232 120,190 68,226 84,170 10,180 58,136 6,98 72,92 44,30 106,68"/>
+    </svg>
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="caption">projects made since 2019</div>
+  </section>
+
+  <section class="panel c dots-pink">
+    <svg viewBox="0 0 288 190" width="288" height="190" style="position:absolute;inset:0" aria-hidden="true">
+      <g stroke="var(--black)" stroke-width="3" stroke-linecap="round">
+        <line x1="10" y1="20" x2="60" y2="60"/><line x1="140" y1="6" x2="140" y2="44"/><line x1="276" y1="18" x2="232" y2="56"/>
+        <line x1="12" y1="172" x2="56" y2="140"/><line x1="276" y1="170" x2="236" y2="138"/>
+      </g>
+    </svg>
+    <button class="button">START A PROJECT</button>
+  </section>
+</body>
+</html>

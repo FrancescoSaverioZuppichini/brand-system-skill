@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Islamic geometric</title>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Amiri:ital@0;1&family=Marcellus&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --ivory: oklch(0.94 0.025 85);
+  --lapis: oklch(0.38 0.13 262);
+  --lapis-deep: oklch(0.28 0.10 262);
+  --turquoise: oklch(0.62 0.10 195);
+  --terracotta: oklch(0.58 0.13 40);
+  --gold: oklch(0.75 0.11 85);
+  --ink: oklch(0.24 0.04 262);
+  --display: "Reem Kufi", sans-serif;
+  --text: "Amiri", serif;
+  --label: "Marcellus", serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--lapis-deep); }
+body { position: relative; font-family: var(--text); color: var(--ink); }
+.field { position: absolute; inset: 0; }
+
+.panel { position: absolute; left: 230px; top: 96px; width: 340px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.eyebrow { margin: 0; font: 13px var(--label); letter-spacing: .3em; padding-left: .3em; text-transform: uppercase; color: var(--terracotta); }
+h1 { margin: 12px 0 0; font: 700 34px/1.12 var(--display); color: var(--lapis); }
+.rule { margin: 14px 0 12px; width: 14px; height: 14px; background: var(--gold); clip-path: polygon(50% 0, 64% 36%, 100% 50%, 64% 64%, 50% 100%, 36% 64%, 0 50%, 36% 36%); }
+.sub { margin: 0; font: 13.5px/1.55 var(--text); }
+.button { margin-top: 16px; padding: 9px 22px 8px; border: 0; background: var(--lapis); color: var(--ivory); font: 14px var(--label); letter-spacing: .12em; outline: 1px solid var(--gold); outline-offset: -4px; }
+.card { margin-top: 18px; display: flex; align-items: center; gap: 14px; padding-top: 12px; border-top: 1px solid var(--gold); }
+.card .label { font: 11px var(--label); letter-spacing: .2em; text-transform: uppercase; color: var(--terracotta); text-align: right; width: 96px; line-height: 1.3; }
+.card .num { font: 700 30px var(--display); color: var(--lapis); }
+.card .cap { font: italic 14px/1.2 var(--text); text-align: left; width: 92px; }
+</style>
+</head>
+<body>
+  <svg class="field" viewBox="0 0 800 500" aria-hidden="true">
+    <defs>
+      <!-- [Agent] Real construction, not clip art: Hankin's polygons-in-contact method on the octagon-and-square tiling.
+           From every edge midpoint two rays leave at 67.5 degrees and stop where they meet their neighbours; that gives the 8-point stars, the 4-point stars and the navy crosses between. -->
+      <pattern id="girih" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="translate(400 250) scale(.9) translate(-50 -50)">
+        <rect width="100" height="100" fill="var(--lapis-deep)"/>
+        <g stroke="var(--gold)" stroke-width="2.6" stroke-linejoin="miter">
+          <polygon fill="var(--turquoise)" points="50,0 60.36,25 85.36,14.64 75,39.64 100,50 75,60.36 85.36,85.36 60.36,75 50,100 39.64,75 14.64,85.36 25,60.36 0,50 25,39.64 14.64,14.64 39.64,25"/>
+          <g fill="var(--terracotta)">
+            <polygon points="14.64,-14.64 8.58,0 14.64,14.64 0,8.58 -14.64,14.64 -8.58,0 -14.64,-14.64 0,-8.58"/>
+            <polygon points="114.64,-14.64 108.58,0 114.64,14.64 100,8.58 85.36,14.64 91.42,0 85.36,-14.64 100,-8.58"/>
+            <polygon points="14.64,85.36 8.58,100 14.64,114.64 0,108.58 -14.64,114.64 -8.58,100 -14.64,85.36 0,91.42"/>
+            <polygon points="114.64,85.36 108.58,100 114.64,114.64 100,108.58 85.36,114.64 91.42,100 85.36,85.36 100,91.42"/>
+          </g>
+        </g>
+        <polygon points="50,40 53,47 60,50 53,53 50,60 47,53 40,50 47,47" fill="var(--ivory)"/>
+      </pattern>
+    </defs>
+    <rect width="800" height="500" fill="url(#girih)"/>
+    <!-- alfiz frame and pointed arch: two arcs of radius 230 whose centres sit inside the span -->
+    <rect x="196" y="-4" width="408" height="508" fill="none" stroke="var(--gold)" stroke-width="3"/>
+    <rect x="190" y="-4" width="420" height="508" fill="none" stroke="var(--lapis-deep)" stroke-width="6" opacity=".7"/>
+    <path d="M216 504 V240 A234 234 0 0 1 400 12 A234 234 0 0 1 584 240 V504Z" fill="var(--lapis-deep)"/>
+    <path d="M222 504 V240 A228 228 0 0 1 400 20 A228 228 0 0 1 578 240 V504Z" fill="var(--gold)"/>
+    <path d="M230 504 V240 A220 220 0 0 1 400 30 A220 220 0 0 1 570 240 V504Z" fill="var(--ivory)"/>
+    <path d="M238 504 V240 A212 212 0 0 1 400 40 A212 212 0 0 1 562 240 V504" fill="none" stroke="var(--lapis)" stroke-width="1"/>
+  </svg>
+
+  <div class="panel">
+    <p class="eyebrow">Introducing Keep</p>
+    <h1>Make something<br>people keep</h1>
+    <div class="rule"></div>
+    <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <button class="button">Start a project</button>
+    <div class="card">
+      <div class="label">Still in use</div>
+      <div class="num">1,284</div>
+      <div class="cap">projects made since 2019</div>
+    </div>
+  </div>
+</body>
+</html>

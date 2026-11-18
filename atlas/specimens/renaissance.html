@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Renaissance / classical</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --gesso: oklch(0.94 0.025 80);
+  --umber: oklch(0.28 0.03 55);
+  --umber-deep: oklch(0.17 0.02 55);
+  --sanguine: oklch(0.55 0.12 40);
+  --ochre: oklch(0.70 0.11 75);
+  --verdigris: oklch(0.55 0.06 170);
+  --lead-white: oklch(0.97 0.015 85);
+  --display: "Cormorant Garamond", serif;
+  --text: "EB Garamond", serif;
+  --inscription: "Cinzel", serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--gesso); }
+body { position: relative; font-family: var(--text); color: var(--umber); }
+
+/* [Agent] Faint gesso grain so the ground reads as a prepared panel, not a flat screen. */
+body::before {
+  content: ""; position: absolute; inset: 0; opacity: .35; mix-blend-mode: multiply;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .3 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.title {
+  position: absolute; left: 48px; top: 0; width: 356px; height: 500px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+.eyebrow { font: 500 12px var(--inscription); letter-spacing: .34em; color: var(--sanguine); margin: 0 0 20px; padding-left: .34em; }
+h1 { font: 500 58px/0.98 var(--display); margin: 0; letter-spacing: -.005em; }
+h1 em { display: block; font-style: italic; }
+.rule { display: flex; align-items: center; gap: 10px; margin: 24px 0 20px; }
+.rule::before, .rule::after { content: ""; width: 54px; height: 1px; background: var(--umber); opacity: .6; }
+.rule i { width: 5px; height: 5px; background: var(--sanguine); transform: rotate(45deg); }
+.sub { font-size: 17px; line-height: 1.5; margin: 0; }
+.button {
+  margin-top: 26px; padding: 11px 28px 12px; background: var(--umber); color: var(--lead-white);
+  font: 500 16px var(--text); font-variant: small-caps; letter-spacing: .1em; border: 0;
+}
+
+/* [Agent] The arched panel is a painted window: sfumato landscape above, a parapet below with a cartellino (the painted paper label of Bellini and Antonello) as the card. */
+.panel {
+  position: absolute; left: 440px; top: 34px; width: 304px; height: 432px;
+  border-radius: 152px 152px 0 0; overflow: hidden;
+  outline: 1px solid var(--umber); outline-offset: 8px;
+}
+.panel svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cartellino {
+  position: absolute; left: 488px; top: 362px; width: 196px; padding: 10px 14px 11px;
+  transform: rotate(-2.5deg); text-align: center; color: var(--umber);
+  background: linear-gradient(100deg, var(--lead-white) 0%, var(--gesso) 55%, oklch(0.86 0.035 78) 100%);
+  box-shadow: 5px 7px 9px oklch(0.10 0.02 55 / .55);
+}
+.cartellino .label { font: 500 10px var(--inscription); letter-spacing: .28em; color: var(--sanguine); }
+.cartellino .num { font: 500 36px/1 var(--display); margin: 4px 0 2px; }
+.cartellino .cap { font: italic 14px var(--text); }
+</style>
+</head>
+<body>
+  <div class="title">
+    <p class="eyebrow">Introducing Keep</p>
+    <h1>Make something <em>people keep</em></h1>
+    <div class="rule"><i></i></div>
+    <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <button class="button">Start a project</button>
+  </div>
+
+  <div class="panel">
+    <svg viewBox="0 0 304 432" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="oklch(0.30 0.035 220)"/>
+          <stop offset=".34" stop-color="oklch(0.62 0.045 185)"/>
+          <stop offset=".56" stop-color="oklch(0.90 0.05 85)"/>
+        </linearGradient>
+        <filter id="far" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="3"/></filter>
+        <filter id="mid" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="1.4"/></filter>
+        <!-- [Agent] Sfumato: a dark radial veil that dissolves the edges into smoke instead of drawing a border. -->
+        <radialGradient id="smoke" cx=".45" cy=".46" r=".72">
+          <stop offset=".45" stop-color="oklch(0.17 0.02 55)" stop-opacity="0"/>
+          <stop offset="1" stop-color="oklch(0.17 0.02 55)" stop-opacity=".92"/>
+        </radialGradient>
+        <!-- [Agent] Chiaroscuro on the parapet: hard light from the upper left falling into near-black. -->
+        <linearGradient id="stone" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="oklch(0.46 0.035 60)"/>
+          <stop offset=".45" stop-color="oklch(0.27 0.03 55)"/>
+          <stop offset="1" stop-color="oklch(0.12 0.015 55)"/>
+        </linearGradient>
+        <linearGradient id="ledge" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="oklch(0.78 0.05 75)"/>
+          <stop offset=".6" stop-color="oklch(0.42 0.035 60)"/>
+          <stop offset="1" stop-color="oklch(0.20 0.02 55)"/>
+        </linearGradient>
+      </defs>
+      <rect width="304" height="432" fill="url(#sky)"/>
+      <path filter="url(#far)" fill="oklch(0.74 0.04 180)" d="M-10 236 L14 214 L30 222 L52 176 L66 186 L84 150 L98 168 L116 160 L134 196 L156 188 L176 210 L198 172 L214 180 L236 150 L252 164 L270 158 L292 196 L314 190 V290 H-10Z"/>
+      <path filter="url(#mid)" fill="oklch(0.56 0.05 168)" d="M-10 262 C30 240 62 258 100 244 C140 230 168 256 214 240 C254 228 282 244 314 236 V320 H-10Z"/>
+      <path filter="url(#mid)" fill="oklch(0.88 0.04 85)" opacity=".75" d="M96 316 C120 296 168 300 196 284 C214 274 236 276 250 270 C236 286 210 290 190 302 C160 318 128 316 112 330Z"/>
+      <path fill="oklch(0.32 0.035 120)" d="M-10 300 C40 282 84 298 124 306 C170 316 220 290 314 292 V432 H-10Z"/>
+      <path fill="oklch(0.24 0.03 90)" d="M-10 318 C30 312 70 326 104 336 L-10 352Z"/>
+      <rect width="304" height="432" fill="url(#smoke)"/>
+      <rect y="322" width="304" height="110" fill="url(#stone)"/>
+      <rect y="316" width="304" height="8" fill="url(#ledge)"/>
+    </svg>
+  </div>
+
+  <div class="cartellino">
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</body>
+</html>

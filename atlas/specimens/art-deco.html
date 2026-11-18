@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Art Deco</title>
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Josefin+Sans:wght@400;600&family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --black: oklch(0.17 0.01 260);
+  --gold: oklch(0.78 0.12 85);
+  --gold-deep: oklch(0.58 0.10 75);
+  --cream: oklch(0.94 0.03 90);
+  --emerald: oklch(0.42 0.09 165);
+  --display: "Limelight", serif;
+  --label: "Josefin Sans", sans-serif;
+  --accent: "Bodoni Moda", serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--black); }
+body { position: relative; font-family: var(--label); color: var(--cream); }
+
+/* [Agent] The sunburst is one repeating conic gradient pinned to the bottom centre; a radial mask fades the rays before the frame. */
+.rays {
+  position: absolute; inset: 0;
+  background: repeating-conic-gradient(from -90deg at 50% 100%, var(--gold-deep) 0 .5deg, transparent .5deg 5deg);
+  mask: radial-gradient(circle at 50% 100%, transparent 0 116px, #000 117px, #000 300px, transparent 560px);
+  opacity: .8;
+}
+.ornament { position: absolute; inset: 0; }
+
+.panel { position: absolute; left: 180px; top: 104px; width: 440px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.eyebrow { margin: 0; font: 600 12px var(--label); letter-spacing: .5em; padding-left: .5em; color: var(--gold); text-transform: uppercase; }
+h1 { margin: 18px 0 0; font: 400 39px/1.12 var(--display); letter-spacing: .04em; text-transform: uppercase; color: var(--cream); }
+.rule { display: flex; align-items: center; gap: 8px; margin: 16px 0 14px; }
+.rule::before, .rule::after { content: ""; width: 70px; height: 1px; background: var(--gold); }
+.rule i { width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+.sub { margin: 0; font: italic 400 16px/1.5 var(--accent); color: oklch(0.94 0.03 90 / .85); }
+.button {
+  margin-top: 20px; padding: 11px 30px 9px; background: var(--emerald); color: var(--cream);
+  font: 600 12px var(--label); letter-spacing: .32em; text-transform: uppercase;
+  border: 1px solid var(--gold); outline: 1px solid var(--gold); outline-offset: 3px;
+}
+.sun { position: absolute; left: 300px; top: 416px; width: 200px; text-align: center; }
+.sun .label { font: 600 10px var(--label); letter-spacing: .4em; padding-left: .4em; color: var(--gold); text-transform: uppercase; }
+.sun .num { font: 32px/1.12 var(--display); color: var(--gold); letter-spacing: .04em; }
+.sun .cap { font: italic 13px var(--accent); color: oklch(0.94 0.03 90 / .8); }
+</style>
+</head>
+<body>
+  <div class="rays"></div>
+  <svg class="ornament" viewBox="0 0 800 500" aria-hidden="true">
+    <g fill="none" stroke="var(--gold)">
+      <path stroke-width="1.5" d="M18 42 H30 V30 H42 V18 H758 V30 H770 V42 H782 V458 H770 V470 H758 V482 H42 V470 H30 V458 H18Z"/>
+      <path stroke-width=".8" d="M28 50 H38 V38 H50 V28 H750 V38 H762 V50 H772 V450 H762 V462 H750 V472 H50 V462 H38 V450 H28Z"/>
+    </g>
+    <!-- ziggurat panel -->
+    <path fill="var(--black)" stroke="var(--gold)" stroke-width="1.5" d="M170 388 V88 H250 V64 H310 V40 H490 V64 H550 V88 H630 V388Z"/>
+    <path fill="none" stroke="var(--gold)" stroke-width=".8" d="M178 380 V96 H258 V72 H318 V48 H482 V72 H542 V96 H622 V380Z"/>
+    <g fill="var(--gold)">
+      <path d="M400 52 l10 12 l-10 12 l-10 -12Z"/>
+      <path d="M380 64 l4 5 l-4 5 l-4 -5Z M420 64 l4 5 l-4 5 l-4 -5Z"/>
+    </g>
+    <!-- chevrons in the shoulders -->
+    <g fill="none" stroke="var(--gold)" stroke-width="1">
+      <path d="M270 82 l10 -8 l10 8 M270 90 l10 -8 l10 8 M510 82 l10 -8 l10 8 M510 90 l10 -8 l10 8"/>
+    </g>
+    <!-- setting sun: the card -->
+    <circle cx="400" cy="500" r="114" fill="var(--black)" stroke="var(--gold)" stroke-width="1.5"/>
+    <circle cx="400" cy="500" r="106" fill="var(--emerald)"/>
+    <circle cx="400" cy="500" r="98" fill="none" stroke="var(--gold)" stroke-width=".8"/>
+  </svg>
+
+  <div class="panel">
+    <p class="eyebrow">Introducing Keep</p>
+    <h1>Make something<br>people keep</h1>
+    <div class="rule"><i></i></div>
+    <p class="sub">Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <button class="button">Start a project</button>
+  </div>
+  <div class="sun">
+    <div class="label">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</body>
+</html>

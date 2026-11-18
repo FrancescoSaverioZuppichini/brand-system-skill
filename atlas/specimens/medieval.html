@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Medieval / illuminated</title>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=block" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --vellum: oklch(0.92 0.04 85);
+  --ink: oklch(0.22 0.02 40);
+  --vermilion: oklch(0.58 0.19 35);
+  --ultramarine: oklch(0.42 0.17 268);
+  --gold: oklch(0.74 0.12 85);
+  --malachite: oklch(0.55 0.10 160);
+  --rule: oklch(0.58 0.19 35 / .22);
+  --display: "UnifrakturCook", serif;
+  --text: "EB Garamond", serif;
+}
+html, body { margin: 0; width: 800px; height: 500px; overflow: hidden; background: var(--vellum); }
+body { position: relative; font-family: var(--text); color: var(--ink); }
+.ornament { position: absolute; inset: 0; }
+
+/* [Agent] Vellum: low-frequency noise tinted brown gives uneven skin tone; it sits under everything with multiply. */
+body::before {
+  content: ""; position: absolute; inset: 0; mix-blend-mode: multiply; opacity: .5;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='500'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006 .012' numOctaves='4' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 .62 0 0 0 0 .5 0 0 0 0 .32 0 0 0 .55 -.12'/%3E%3C/filter%3E%3Crect width='800' height='500' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* [Agent] Drypoint ruling: the scribe's guide lines stay visible behind the text, as on a real folio. */
+.ruled {
+  position: absolute; left: 156px; top: 52px; width: 420px; height: 392px;
+  background: repeating-linear-gradient(to bottom, transparent 0 27px, var(--rule) 27px 28px);
+  border-left: 1px solid var(--rule); border-right: 1px solid var(--rule);
+}
+.rubric { position: absolute; left: 230px; top: 56px; margin: 0; font: 600 15px var(--text); letter-spacing: .2em; text-transform: uppercase; color: var(--vermilion); }
+h1 { position: absolute; left: 228px; top: 74px; margin: 0; font: 700 54px/56px var(--display); font-weight: 700; }
+.initial { position: absolute; left: 72px; top: 48px; width: 140px; height: 140px; }
+
+.body { position: absolute; left: 160px; top: 249px; width: 416px; }
+.sub { font-size: 17.5px; line-height: 28px; margin: 0; }
+.sub b { color: var(--vermilion); font-weight: 500; margin-right: 4px; }
+.button {
+  margin-top: 26px; padding: 9px 22px 10px; background: var(--ultramarine); color: var(--vellum);
+  font: 500 17px var(--text); font-variant: small-caps; letter-spacing: .1em;
+  border: 0; outline: 3px solid var(--gold); outline-offset: -6px;
+}
+
+.arms { position: absolute; left: 596px; top: 70px; width: 164px; text-align: center; }
+.motto { position: absolute; left: 0; right: 0; top: 13px; font: 600 13px var(--text); letter-spacing: .2em; text-transform: uppercase; color: var(--ink); }
+.arms .num { position: absolute; left: 0; right: 0; top: 112px; font: 600 38px var(--text); color: var(--gold); text-shadow: 0 1px 0 oklch(0.30 0.10 268); }
+.arms .cap { position: absolute; left: -10px; right: -10px; top: 262px; font: italic 16px var(--text); }
+</style>
+</head>
+<body>
+  <svg class="ornament" viewBox="0 0 800 500" aria-hidden="true">
+    <defs>
+      <!-- [Agent] White filigree on the blue ground, the penwork scribes laid over flat pigment. -->
+      <pattern id="filigree" width="12" height="12" patternUnits="userSpaceOnUse">
+        <rect width="12" height="12" fill="oklch(0.42 0.17 268)"/>
+        <g fill="oklch(0.96 0.02 85)"><circle cx="3" cy="3" r="1"/><circle cx="9" cy="9" r="1"/><circle cx="9" cy="3" r=".5"/><circle cx="3" cy="9" r=".5"/></g>
+      </pattern>
+      <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="oklch(0.86 0.12 90)"/>
+        <stop offset=".5" stop-color="oklch(0.72 0.12 82)"/>
+        <stop offset="1" stop-color="oklch(0.62 0.11 75)"/>
+      </linearGradient>
+      <path id="ivy" d="M0 0 C-6 -4 -9 -11 -5 -15 C-3 -17 0 -15 0 -12 C0 -15 3 -17 5 -15 C9 -11 6 -4 0 0Z"/>
+    </defs>
+
+    <!-- bar border: blue and red segments with gold edges, running from the initial down the margin -->
+    <rect x="128" y="188" width="10" height="268" fill="url(#leaf)"/>
+    <rect x="130" y="190" width="6" height="84" fill="oklch(0.42 0.17 268)"/>
+    <rect x="130" y="280" width="6" height="84" fill="oklch(0.58 0.19 35)"/>
+    <rect x="130" y="370" width="6" height="84" fill="oklch(0.42 0.17 268)"/>
+    <g fill="none" stroke="oklch(0.22 0.02 40)" stroke-width="1.2" stroke-linecap="round">
+      <path d="M128 230 C100 226 86 240 92 256 C96 266 108 262 104 254"/>
+      <path d="M128 330 C96 330 80 346 88 364 C92 374 106 370 102 360"/>
+      <path d="M128 420 C104 424 98 444 110 456 C118 462 126 454 120 448"/>
+      <path d="M138 456 C200 470 300 462 380 470 C460 476 520 466 560 472"/>
+      <path d="M212 120 C240 34 330 22 420 30 C500 36 540 24 572 34"/>
+    </g>
+    <g fill="url(#leaf)" stroke="oklch(0.22 0.02 40)" stroke-width=".8">
+      <use href="#ivy" transform="translate(92 256) rotate(200) scale(1.3)"/>
+      <use href="#ivy" transform="translate(88 364) rotate(190) scale(1.3)"/>
+      <use href="#ivy" transform="translate(250 466) rotate(95) scale(1.2)"/>
+      <use href="#ivy" transform="translate(470 474) rotate(80) scale(1.2)"/>
+      <use href="#ivy" transform="translate(372 27) rotate(-90) scale(1.2)"/>
+    </g>
+    <g stroke="oklch(0.22 0.02 40)" stroke-width=".8">
+      <use href="#ivy" fill="oklch(0.42 0.17 268)" transform="translate(110 456) rotate(220) scale(1.2)"/>
+      <use href="#ivy" fill="oklch(0.58 0.19 35)" transform="translate(104 254) rotate(150) scale(1.1)"/>
+      <use href="#ivy" fill="oklch(0.55 0.10 160)" transform="translate(360 468) rotate(-80) scale(1.2)"/>
+      <use href="#ivy" fill="oklch(0.58 0.19 35)" transform="translate(500 34) rotate(100) scale(1.2)"/>
+      <use href="#ivy" fill="oklch(0.55 0.10 160)" transform="translate(272 32) rotate(-110) scale(1.1)"/>
+    </g>
+    <g fill="url(#leaf)" stroke="oklch(0.22 0.02 40)" stroke-width=".6">
+      <circle cx="96" cy="236" r="3"/><circle cx="82" cy="348" r="3"/><circle cx="300" cy="470" r="3"/><circle cx="540" cy="474" r="3"/><circle cx="560" cy="30" r="3"/><circle cx="440" cy="28" r="3"/>
+    </g>
+
+    <!-- heraldic arms for the card: motto scroll, shield, gold bordure -->
+    <g transform="translate(596 70)">
+      <path fill="oklch(0.95 0.03 85)" stroke="oklch(0.22 0.02 40)" stroke-width="1.2" d="M-6 12 L8 6 L8 36 L-6 42 L2 27Z M170 12 L156 6 L156 36 L170 42 L162 27Z"/>
+      <path fill="oklch(0.96 0.025 85)" stroke="oklch(0.22 0.02 40)" stroke-width="1.2" d="M8 6 Q82 -4 156 6 L156 36 Q82 26 8 36Z"/>
+      <path transform="translate(14 56)" fill="url(#leaf)" stroke="oklch(0.22 0.02 40)" stroke-width="1.2" d="M0 0 H136 V78 C136 132 100 166 68 184 C36 166 0 132 0 78Z"/>
+      <path transform="translate(24 66)" fill="url(#filigree)" d="M0 0 H116 V70 C116 116 86 146 58 162 C30 146 0 116 0 70Z"/>
+      <path transform="translate(24 66)" fill="oklch(0.58 0.19 35)" d="M0 0 H116 V22 H0Z"/>
+      <g fill="url(#leaf)" transform="translate(82 77)"><circle cx="-34" r="5"/><circle r="5"/><circle cx="34" r="5"/></g>
+    </g>
+
+    <!-- illuminated initial M -->
+    <g transform="translate(72 48)">
+      <rect width="140" height="140" fill="oklch(0.58 0.19 35)"/>
+      <rect x="6" y="6" width="128" height="128" fill="url(#leaf)"/>
+      <rect x="10" y="10" width="120" height="120" fill="url(#filigree)"/>
+      <text x="70" y="114" text-anchor="middle" font-family="UnifrakturCook" font-weight="700" font-size="116" fill="url(#leaf)" stroke="oklch(0.22 0.02 40)" stroke-width="2" paint-order="stroke">M</text>
+    </g>
+  </svg>
+
+  <div class="ruled"></div>
+  <p class="rubric">Introducing Keep</p>
+  <h1 aria-label="Make something people keep"><span aria-hidden="true">ake something<br>people keep</span></h1>
+
+  <div class="body">
+    <p class="sub"><b>¶</b>Tools for small teams who make things slowly and well.<br>Plan it, ship it, and look after it for years.</p>
+    <button class="button">Start a project</button>
+  </div>
+
+  <div class="arms">
+    <div class="motto">Still in use</div>
+    <div class="num">1,284</div>
+    <div class="cap">projects made since 2019</div>
+  </div>
+</body>
+</html>
