@@ -19,7 +19,7 @@ Pick it with `style-picking.md` from `styles.md` (base + one device from a secon
 
 ## Three directions, the pick, then palette and type
 
-1. **Directions:** three cheap directions from three angles, each the same small piece of the #1 surface in `surfaces:` (a hero, a bag front, a sign band), as `src/html/direction-{a,b,c}.html` with its colours and fonts inline, shot into `img/`. Then stop for the user's pick (SKILL.md § The pick).
+1. **Directions:** three cheap directions from three angles, each the same small piece of the #1 surface in `surfaces:` (a hero, a bag front, a sign band), as `src/html/direction-{a,b,c}.html` with its colours inline and its fonts from the Google Fonts CSS link (no download yet), shot into `img/`. Then stop for the user's pick (SKILL.md § The pick).
 2. **Palette (after the pick):** write `src/colors-in.json` for the chosen direction (format in `system.md` § Colour) and run palette.py. Phase 5 finalises it; everything reads colors.json, so later changes are cheap.
 3. **Fonts (after the pick):** download the chosen OFL families into `fonts/` (Tools § Fonts); the logo needs them next.
 
