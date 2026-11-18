@@ -23,12 +23,12 @@ Each habit comes from a real failure.
 8. **Pictures early.** Create the review page with every section in phase 0, and put a real image in each section as soon as it exists. A page full of ⏳ reads as no work.
 9. **Honest placeholders.** On every designed screen, one "sample data" chip plus a footer line covers the ordinary numbers. Each hard claim (a stat, a price, a testimonial, a customer logo, the domain) carries its own placeholder label. Personas can have a name, age, role and context. Never invent physical or private details about people in copy (a mole, braces, health).
 10. **Images: rights and repetition.**
-    - Use only your own renders, OFL fonts, permissive icon sets (Lucide ISC, Phosphor MIT, Tabler MIT), and public-domain/PDM/CC0 artworks fetched with `scripts/commons.py`, every one credited in `CREDITS.md`.
+    - Use only your own renders, OFL fonts, permissive icon sets (Lucide ISC, Phosphor MIT, Tabler MIT), and public-domain/PDM/CC0 artworks fetched with `$S/commons.py`, every one credited in `CREDITS.md`.
     - No AI-generated people unless the user asks.
     - One source image appears at most once per designed surface (the landing, the product screen, one application). Screenshots of those surfaces on the review page don't count as repeats.
     - A famous source image gets the brand's treatment fully (e.g. entirely ASCII/pixel), never half.
     - Rotating visuals are welcome, with a static fallback for reduced motion.
-11. **One source of truth.** `colors-in.json` → `palette.py` → `src/colors.json`, `colors.css` and `colors.md`. Every generator (logo, mocks, site, page) reads colors.json; nothing hard-codes a hex. Generated numbers are never pasted into prose; link or embed the generated file.
+11. **One source of truth.** `src/colors-in.json` → `palette.py` → `src/colors.{json,css,md}`. Every generator (logo, mocks, site, page) reads colors.json; nothing hard-codes a hex. Generated numbers are never pasted into prose; link or embed the generated file.
 
 ## Inputs (assume rather than block)
 
@@ -60,10 +60,10 @@ Each habit comes from a real failure.
 |---|---|---|---|---|
 | 1 | Strategy | `strategy.md` | research table (6–10 competitors with links and screenshots), ≥5 buyer-voice phrases with source type, personas, the gap, positioning, personality; a name collision check even when the name is given | you can say why this brand wins for this buyer in one line |
 | 2 | Naming (only if there is no name) | `strategy.md` § Naming | 15–30 candidates, RDAP/DNS domain checks, a shortlist of 3, a ★ pick you build on (renaming later means re-running the wordmark) | the ★ is pronounceable, spellable, has no collision, and its domain status is known |
-| 3 | Direction | `style-picking.md`, `styles.md`, `strategy.md` §6–8 | the vibe sentence, the brand idea, the NOT list, a **style recipe** (base + device), 3 hero specimens in candidate styles, a **provisional** palette and type, the moodboard | the recipe contrasts with the category cliché, and the moodboard passes your own NOT list |
+| 3 | Direction | `direction.md`, `style-picking.md`, `styles.md` | the vibe sentence, the brand idea, the NOT list, a **style recipe** (base + device), 3 hero specimens in candidate styles, a **provisional** palette and type, the moodboard | the recipe contrasts with the category cliché, and the moodboard passes your own NOT list |
 | 4 | Logo | `logo.md` | ≥3 directions in `logo/sketches/`, a size test, a ★ pick with reasons, the refined mark + wordmark + lockups, a pixel favicon, app icon, avatar, usage rules, in-context mocks | it reads at 16 px and in one colour, tells the idea in one sentence, and the look-alike check is done |
 | 5 | System | `system.md` | final colour (palette.py), type, space, radii, icons, signature components, motion, imagery, voice; `branding.md` + `tokens.css` | `palette.py` exits 0, and every rule says why |
-| 6 | Product | `product.md` | the product screen with the product's own object states, and the landing in the 11-part structure; shots at 1440 and 390 | both look shippable at both widths, no OVERFLOW, every placeholder labelled |
+| 6 | Product | `product.md`, `layouts.md` | the product screen with the product's own object states, and the landing in the 11-part structure with one layout variant per part; shots at 1440 and 390 | both pass the slop tells in `product.md`, no OVERFLOW, every placeholder labelled |
 | 7 | Applications | `product.md` § Applications | OG, X header, profile grid, business card (others if the channel needs them) | each one is recognisable with the logo covered |
 | 8 | Review + crit | `review-page.md` | page complete, `audit.py` clean, the crit checklist, a screenshot of the rendered page | everything ✓, or each miss explained |
 
@@ -113,7 +113,7 @@ Run `python3 $S/audit.py <brand-folder>` first and fix every FAIL. Then, with yo
   - the look-alike sheet shows no clash
 - [ ] **Colour:** `palette.py` exits 0. Body and secondary text ≥ 4.5:1, large text and UI ≥ 3:1, decorative pairs labelled.
 - [ ] **Type:** OFL files present; the scale covers display → label on desktop and mobile; data uses tabular figures (or digits of equal width; check with fontTools).
-- [ ] **Landing:** has the 11-part structure from `product.md` (cuts explained). The product screen shows the product's own states.
+- [ ] **Landing:** has the 11-part structure from `product.md` (cuts explained), with layout variants from `layouts.md` that vary in rhythm. The product screen shows the product's own states. No slop tell from `product.md` (run the `web-unslop` skill too, if installed).
 - [ ] **Screenshots:** 1440 and 390 shots opened (tall ones tiled); no OVERFLOW, no text collision, no stretched image, not just the desktop shrunk.
 - [ ] **Images:** follow habit 10, and `CREDITS.md` covers every third-party asset.
 - [ ] **Placeholders:** follow habit 9.

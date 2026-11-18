@@ -17,7 +17,7 @@ A brand is proven inside the product, not on a poster. Design the one screen whe
 
 ## The landing page: 11 parts
 
-Cut a part only with a one-line reason on the page.
+Cut a part only with a one-line reason on the page. For each part, pick a layout variant from `layouts.md` ("Composing a landing"). Neighbouring sections should differ in rhythm and density; never stack three equal card grids.
 
 1. **Nav:** the lockup, 3–5 links, a secondary CTA and a primary CTA.
 2. **Hero:** a headline of 8 words or fewer (from the positioning), one subline saying what it is and for whom, two CTAs, and the signature visual (the brand idea, still or in motion).
@@ -58,6 +58,17 @@ Open each one, and the tiled sheet for tall shots. Check for:
 - OVERFLOW
 - an accent used for more than one meaning
 - an empty or half-drawn reduced-motion state
+
+**Slop tells (instant fails, from the `web-unslop` gate; run that skill too if installed):**
+- emoji used as icons
+- gradient circles with initials instead of avatars
+- rainbow or one-note palettes
+- the same KPI strip on several pages
+- cards that don't inform, navigate, compare, configure or act
+- rows of repeated buttons (use an overflow menu)
+- a decorative icon grid instead of real product UI
+- nested card stacks
+- hero-size type inside dashboards, sidebars or modals
 
 ## Phase 7 · Applications
 
