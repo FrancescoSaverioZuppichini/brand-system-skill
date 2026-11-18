@@ -31,7 +31,7 @@ export function Stepper({
 							className={cn(
 								"flex size-7 items-center justify-center rounded-full border font-mono",
 								index < current && "border-primary bg-primary text-primary-foreground",
-								index === current && "border-2 border-primary",
+								index === current && "border-2 border-foreground",
 								index > current && "text-muted-foreground",
 							)}
 						>

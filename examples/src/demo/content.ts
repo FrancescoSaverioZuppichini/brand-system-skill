@@ -7,7 +7,7 @@ export const product = {
 	kicker: "Introducing Keep",
 	primary: "Start a project",
 	secondary: "See how it works",
-	proof: "Used by 1,284 teams since 2019",
+	proof: "Used by 312 teams since 2019",
 	install: "npm i -g @keep/cli",
 	links: ["Product", "Customers", "Pricing", "Docs", "Changelog"],
 }
