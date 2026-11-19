@@ -29,7 +29,7 @@ Phases run in order and every later choice cites an earlier one. By default you 
 
 Bash state doesn't persist between calls and the working directory can reset. Find the folder this SKILL.md was read from, start every call with `S=<that folder>/scripts B=<absolute brand folder>`, and write every path as `$B/…`.
 
-The brand folder is `<root>/<slug>`: `<root>` is the place the user names, else the current working directory. With the artifacts app the page opens at `http://127.0.0.1:8800/?path=$B/page.mdx`. With no name yet it is `<root>/<category>-wip`: rename it once, after the phase 2 ★, and tell the user the new URL. Files inside use the brand slug (`<slug>-mark.svg`), also in parallel folders (`<slug>-a`).
+The brand folder is `<root>/<slug>`: `<root>` is the place the user names, else `~/Documents/local-artifacts` (the same home the local-artifacts skill uses; never a code repo or a scratch folder). With the local-artifacts app the page opens at `http://127.0.0.1:8800/?path=$B/page.mdx`. With no name yet it is `<root>/<category>-wip`: rename it once, after the phase 2 ★, and tell the user the new URL. Files inside use the brand slug (`<slug>-mark.svg`), also in parallel folders (`<slug>-a`).
 
 ```
 $B/
