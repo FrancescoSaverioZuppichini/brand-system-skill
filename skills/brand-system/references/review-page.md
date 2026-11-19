@@ -4,7 +4,7 @@ The brand book on screen is where the user judges the work, so it is part of the
 
 ## The artifacts app
 
-[artifacts](https://github.com/FrancescoSaverioZuppichini/artifacts) opens any `page.mdx` on disk at `http://127.0.0.1:8800/?path=<abs path>/page.mdx` (see its [AGENTS.md](https://github.com/FrancescoSaverioZuppichini/artifacts/blob/main/AGENTS.md)), and saves 👍/👎, notes and comments to `feedback.json`. If the `local-artifacts` skill is installed, use it; otherwise this is enough.
+[local-artifacts](https://github.com/FrancescoSaverioZuppichini/local-artifacts) opens any `page.mdx` on disk at `http://127.0.0.1:8800/?path=<abs path>/page.mdx` (see its [AGENTS.md](https://github.com/FrancescoSaverioZuppichini/local-artifacts/blob/main/AGENTS.md)), and saves 👍/👎, notes and comments to `feedback.json`. If the `local-artifacts` skill is installed, use it; otherwise this is enough.
 
 - **Is it up?** Run the page check (Tools § Review page). No answer: if the app is installed but down, keep writing `page.mdx` and tell the orchestrator or the user; if it isn't installed at all, write the same seven sections as a static `$B/review.html` (images, captions, the ❓ questions as a list) and give the user its file path or the PDF from shoot.sh pdf.
 - **Write it by hand.** The app re-renders when the file changes; no generator scripts or watchers. A section looks like:

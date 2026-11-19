@@ -454,7 +454,7 @@ The [skills CLI](https://github.com/vercel-labs/skills) installs to the standard
 - [uv](https://docs.astral.sh/uv/) runs the scripts
 - Google Chrome for screenshots and PDFs
 - Optional: `ffmpeg` (motion mp4), `potrace` (tracing a hand-drawn mark), `jq`
-- Optional: [artifacts](https://github.com/FrancescoSaverioZuppichini/artifacts) for the live review page with 👍/👎 and notes; without it the skill writes a static `review.html`
+- Optional: [local-artifacts](https://github.com/FrancescoSaverioZuppichini/local-artifacts) for the live review page with 👍/👎 and notes; without it the skill writes a static `review.html`
 
 ## FAQ
 
