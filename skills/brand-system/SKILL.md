@@ -92,7 +92,7 @@ The page and `branding.md` share one list of sections, in this order (page ids i
 
 Taste is the user's call, and a wrong direction is the most expensive mistake in this skill, so fail fast: show three cheap directions before anything gets polished.
 
-1. **Three angles.** Each direction comes from a different angle: a different buyer lens or cultural root from the brief, *and* a different style family (`style-picking.md`), never three shades of one idea. For developer tools, AI and other tech products one of the three is `styles.md#devtool-dark` (Vercel / Linear-like), that category's quality bar.
+1. **Three angles.** Each direction comes from a different angle: a different buyer lens or cultural root from the brief, *and* a different style family (`style-picking.md` § 7), never three shades of one idea. For developer tools, AI and other tech products one of the three is `styles.md#devtool-dark` (Vercel / Linear-like), that category's quality bar.
 2. **Cheap.** Per direction: the vibe in one line, the style recipe in one line, a one-line logo idea, and the same small piece of the #1 surface rendered (`src/html/direction-{a,b,c}.html`, colours inline, fonts from the Google Fonts CSS link, shot to `img/`). Minutes each; no logo work, no palette.py, no moodboard yet.
 3. **Stop and ask.** Put the three side by side in the Direction section, ★ on your recommendation with one line on why. Then end your turn with a short message: the page link, the three one-liners, your ★, and the question "A, B, C, or a mix?". Plain text works in every harness; a native multiple-choice tool is fine where one exists. As a subagent, that message is your final report to the orchestrator, which asks the user.
 4. **Continue only on an answer.** Build the chosen direction (a mix like "A's type with C's colour" is a recipe too); the others stay small on the page with the user's reason. If nobody can answer (a non-interactive run, or the user said "you decide"), take the ★ and say so.
@@ -115,7 +115,7 @@ The only place with exact commands; phase files name the tool. Python scripts ca
 - **Wordmark or letter:** `uv run $S/wordmark.py $B/fonts/<file>.ttf "<text>" $B/logo/sketches/<name>.svg [--axis wght=600] [--track -0.03] [--fill "#1A1614"] [--split]`; writes a `.json` sidecar with baseline, x-height and cap height.
 - **Size test:** `uv run $S/sizetest.py $B/img/sizetest.png $B/logo/<slug>-mark.svg $B/logo/<slug>-lockup.svg $B/logo/favicon-light.svg:$B/logo/favicon-dark.svg`; for sketches, `uv run $S/sizetest.py $B/img/sizetest-sketches.png $B/logo/sketches/*.svg`.
 - **PNG export:** `uv run $S/svg2png.py $B/logo/favicon-light.svg $B/logo/favicon-16.png 16 [HEIGHT]`.
-- **Trace a hand-drawn mark:** `potrace -s <sketch>.bmp -o <mark>.svg` (`/opt/homebrew/bin/potrace`; input BMP or PBM).
+- **Trace a hand-drawn mark** (optional, needs potrace): `potrace -s <sketch>.bmp -o <mark>.svg` (input BMP or PBM).
 - **Public-domain art:** `uv run $S/commons.py search "<query>"`, then `uv run $S/commons.py fetch "File:<name>" $B/img/<name>.jpg 1600 --credits $B/CREDITS.md`.
 - **Icons:** `curl -sLo $B/src/icons/<name>.svg https://unpkg.com/lucide-static/icons/<name>.svg` (or Phosphor, Tabler).
 - **Review page:** `curl -s "127.0.0.1:8800/api/check?path=$B/page.mdx"`; shoot it with `$S/shoot.sh view "http://127.0.0.1:8800/?path=$B/page.mdx" $B/img/page.png 1440 900` (URL-encode spaces as `%20`).
@@ -127,8 +127,8 @@ The only place with exact commands; phase files name the tool. Python scripts ca
 Only when the user asks for several complete brands to compare; for choosing a direction, § The pick is enough. You are the orchestrator:
 
 1. Run phases 0 and 1 once in `<root>/<slug>`: research, buyer voice, competitors, personas, assumptions and surfaces go into one `brief.md`. Copy it and `research/` into each designer folder (`<slug>-a`, `-b`, `-c`).
-2. Spawn one senior-designer agent per direction (Opus unless told otherwise) with this skill's absolute path, its own folder, and its lens. Each runs phase 0 around the copied brief, starts branding.md § Strategy from it plus one line on its lens, then works from phase 2 (no name) or 3. None reads another's folder.
-3. Derive the lenses from the buyer types in the brief, each with a different style family (`style-picking.md` § Briefing parallel designers). Don't reuse an example lens blindly; one that leads into the client's dislikes is wrong.
+2. Spawn one senior-designer agent per direction (Opus unless told otherwise) with this skill's absolute path, its own folder, and its lens. Each runs phase 0 around the copied brief, starts branding.md § Strategy from it plus one line on its lens, then works from phase 2 (no name) or 3, skipping § The pick because its lens fixes the direction. None reads another's folder.
+3. Derive the lenses from the buyer types in the brief, each with a different style family (`style-picking.md` § 7, which has the lens line for the spawn prompt). Don't reuse an example lens blindly; one that leads into the client's dislikes is wrong.
 4. When all are done, view every PNG yourself and build the index page in `<root>/<slug>`: the #1 surface of each direction side by side, a table (vibe, target, recipe, logo, key line, theme), and your recommendation in two lines.
 
 ## Crit (phase 8)

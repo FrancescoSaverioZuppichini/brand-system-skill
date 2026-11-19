@@ -1,6 +1,6 @@
 # Picking a style
 
-How to choose a style direction in phase 3 (Direction). The catalogue is `styles.md` (141 styles in 8 families, each with a specimen); this file is the method. The output is one line, the **style recipe**, plus three specimens that prove it: the same small piece of the #1 surface in `brief.md`'s `surfaces:` line, in three candidate recipes. The rule behind everything here: **the strategy picks the style, not taste.** A style you like that the strategy can't defend is a guess.
+The method for phase 3. `styles.md` holds the facts of each of the 141 styles; this file says how to choose. The output is the **style recipe** (one line) and three cheap directions for the user to pick from (SKILL.md § The pick). The strategy picks the style, not taste: a style you like that the strategy can't defend is a guess.
 
 ## Contents
 
@@ -9,10 +9,8 @@ How to choose a style direction in phase 3 (Direction). The catalogue is `styles
 3. [The method: cliché → base → device → recipe](#3-the-method-cliché--base--device--recipe)
 4. [Mixing rules](#4-mixing-rules)
 5. [Fit matrix](#5-fit-matrix)
-6. [Trend lifecycle](#6-trend-lifecycle)
-7. [Accessibility and performance cost](#7-accessibility-and-performance-cost)
-8. [The test before committing](#8-the-test-before-committing)
-9. [Briefing parallel designers](#briefing-parallel-designers)
+6. [Ageing and cost](#6-ageing-and-cost)
+7. [Three directions](#7-three-directions)
 
 ## 1. The axes a style varies on
 
@@ -34,7 +32,7 @@ The last axis is not a property of the style but of the client: how much image-m
 
 ## 2. Placing the brand on the axes
 
-Score the brand 1–5 on each axis from the strategy outputs, never from taste. Write the scores and the reason next to each.
+Score the brand 1–5 on each axis from the strategy outputs, never from taste, with the reason next to each.
 
 | Strategy output | Moves these axes | How |
 |---|---|---|
@@ -63,30 +61,14 @@ motion energy    4       2      ↓ one signature motion only
 ornament budget  -       2      small team: one device, not a world
 ```
 
-Now search `styles.md` for styles whose profile is close to the brand column. That is your candidate list for the base.
+The styles in `styles.md` whose profile is close to the brand column are your candidate bases.
 
 ## 3. The method: cliché → base → device → recipe
 
-### Step 1 · Map the category's dominant style (the cliché)
-
-Look at the 6–10 competitors from the strategy research and name the style most of them share, using the catalogue's names: "category = `aurora` + `glassmorphism` + `alegria` people". Most categories are a family-4 block (fintech, beauty, wellness, b2b-saas) plus one or two UI trends. Write it into the NOT list with concrete items (purple gradients, floating phone mocks, sparkles), after the client's own dislikes from `brief.md`, which go first and verbatim. A stated taste narrows the candidate styles; when the taste *is* the cliché, subvert it within that family instead of leaving it.
-
-Also list the category's **trust cues**: what a buyer must see to believe you're a real player. Fintech: numbers, security language, calm. Health: clinicians, plain language, accessibility. Dev tools: real code, docs, speed. Cues are not the style; you can keep them while changing the style.
-
-### Step 2 · Choose a base style that contrasts with the cliché but keeps the trust cues
-
-The base owns type, colour, radius, depth rule and layout. Pick it from the candidates in section 2, then check:
-
-- It differs from the cliché on 2–3 axes, visibly in a thumbnail.
-- It can carry every trust cue (a terminal base can carry "real code"; it can't carry "clinicians you can trust").
-- It survives the product screen, not just the hero: test it on a table, a form and an empty state.
-- It matches the price point and the ornament budget.
-
-Good bases are usually slow styles (section 6): `swiss`, `editorial`, `corporate-modernism`, `type-mono`-led, `japanese-ma`, `civic`, `technical-manual`, `minimalism`, `scandinavian`. Fast styles make poor bases and good accents.
-
-### Step 3 · Add one signature device from a second family
-
-The device is where the brand idea lives: one recognisable move from another family, used in the logo story, one signature component and the signature motion. Examples:
+1. **Name the cliché.** From the 6–10 competitors in the research, name the style most of them share, in the catalogue's names ("`aurora` + `glassmorphism` + `alegria` people"); usually a family-4 block plus one or two UI trends. Its concrete items (purple gradients, floating phone mocks, sparkles) go into the NOT list after the client's dislikes (`direction.md` § What the brand is NOT). When the client's taste *is* the cliché, subvert it within that family.
+2. **List the trust cues:** what a buyer must see to believe you're a real player. Fintech: numbers, security language, calm. Health: clinicians, plain language, accessibility. Dev tools: real code, docs, speed. Cues are not the style; a new style can keep all of them.
+3. **Choose the base.** It owns type, colour, radius, the depth rule and layout. From the candidates in section 2, take one that differs from the cliché on 2–3 axes (visible in a thumbnail), can carry every trust cue (a terminal base carries "real code", not "clinicians you can trust"), survives a table, a form and an empty state, and fits the price point and the ornament budget. Good bases are usually slow styles (section 6): `swiss`, `editorial`, `corporate-modernism`, `type-mono`-led, `japanese-ma`, `civic`, `technical-manual`, `minimalism`, `scandinavian`.
+4. **Add one device from a second family.** The device is where the brand idea lives: one recognisable move, used in the logo story, one signature component and the signature motion. A second device must be the same idea in another medium (the ASCII ramp as both the progress bar and the loading motion is one device). Each base's "Combines well with" line in `styles.md` suggests devices.
 
 | Device | From | Used as |
 |---|---|---|
@@ -99,20 +81,14 @@ The device is where the brand idea lives: one recognisable move from another fam
 | Hard offset shadow | `neobrutalism` | the primary button only |
 | A painted public-domain source | `painterly`, `renaissance` | the hero image, treated fully |
 
-One device. If you want a second, it has to be the same idea in another medium (the ASCII ramp as both the progress bar and the loading motion is one device).
+5. **Write the recipe in one line:** `<base> base + <device> device [+ <imagery> imagery] [· <motion> motion]`. Examples:
+   - "Swiss editorial base + ASCII resolve device + Renaissance imagery · stepped motion" (an AI image-production tool for agencies; cliché = aurora + glass + neon)
+   - "Broadsheet base + engraving device + documentary photography · no-motion" (a bank for freelancers; cliché = navy + lime + floating phone)
+   - "Bauhaus base + pixel device · spring motion" (a coding app for kids; cliché = chunky-green Duolingo clones)
+   - "Japanese-ma base + riso device + editorial photography" (a ceramics marketplace; cliché = beige Japandi with sage)
+   - "Technical-manual base + split-flap device · stepped motion" (an EV-charging network; cliché = dark studio with wide caps)
 
-### Step 4 · Write the style recipe in one line
-
-`<base> base + <device> device [+ <imagery> imagery] [· <motion> motion]`
-
-Examples:
-- "Swiss editorial base + ASCII resolve device + Renaissance imagery · stepped motion" (an AI image-production tool for agencies; cliché = aurora + glass + neon).
-- "Broadsheet base + engraving device + documentary photography · no-motion" (a bank for freelancers; cliché = navy + lime + floating phone).
-- "Bauhaus base + pixel device · spring motion" (a coding app for kids; cliché = chunky-green Duolingo clones).
-- "Japanese-ma base + riso device + editorial photography" (a ceramics marketplace; cliché = beige Japandi with sage).
-- "Technical-manual base + split-flap device · stepped motion" (an EV-charging network; cliché = dark studio with wide caps).
-
-Put the recipe at the top of the Direction section on the review page and in `branding.md`, with one sentence each on why the base and why the device. Everything after phase 3 cites it.
+   It goes at the top of branding.md § Direction and of the page's Direction section, with one sentence on why the base and one on why the device. Everything after phase 3 cites it.
 
 ## 4. Mixing rules
 
@@ -173,84 +149,61 @@ The **cliché** is what most of the category already looks like. **Recommended b
 | Professional services | `professional-services` (navy + serif) | `swiss`, `editorial`, `corporate-modernism`, `broadsheet` | `engraving`, `type-mono` figures, `documentary` | `neobrutalism` (challengers only) | `y2k`, `memphis` |
 | E-commerce DTC | `beauty`/`food-craft` + `layout-catalogue` | `swiss`, `editorial`, `scandinavian` | `studio-product`, `duotone`, `type-display` | `maximalism` | `enterprise-dense` |
 
-## 6. Trend lifecycle
+## 6. Ageing and cost
 
-Styles age at different speeds. The fast ones are fine for a campaign and dangerous as a base.
+**Speed.** Fast styles are fine for a campaign and dangerous as a base.
 
-| Speed | Styles | Typical life as "current" |
+- **Fast** (current for 1–3 years, then they date the work): `glassmorphism`, `neumorphism`, `claymorphism`, `alegria`, `aurora`, `holographic`, `blob`, `y2k`, `web3`, `neobrutalism`, `clay-3d`, Liquid Glass imitations (`apple-hig`), "dopamine" `maximalism`, `layout-bento` as the whole page.
+- **Medium** (3–7 years: a category's default, then its previous generation): `flat`, `material` (per version), `shadcn`, `devtool-dark`, `mesh-gradient`, `beauty` clean-girl, `wellness` sage, `food-craft` wonky serif, `isometric`, `flat-vector`, `type-geometric` (Circular-alikes).
+- **Slow** (10+ years; the risk is invisibility, not dating): `swiss`, `editorial`, `type-mono`, `corporate-modernism`, `wayfinding`, `civic`, `minimalism`, `japanese-ma`, `technical-manual`, `documentary`, `type-oldstyle`, `type-serif-editorial`, restrained `letterpress`.
+- **Cyclical** (back every 20–30 years, for 1–2): `y2k`, `frutiger-aero`, `grunge`, `retro-os`, `web1`, `vaporwave`, `synthwave`, `memphis`, `psychedelic`.
+
+Product UI sits on slow styles: people live in it for years, and re-skinning it every cycle costs money and breaks habits. Marketing may borrow a fast style for one campaign, with an end date. A slow base + a fast device is the safest way to look current: when the device dates, you swap the device, not the brand. Test: "if I saw this in five years, would I know the year it was made?" If yes, that part has to be the replaceable one.
+
+**Cost.** Every style has an accessibility and performance price. Name it in the recipe's rationale, with its fix.
+
+| Styles | Risk | Fix |
 |---|---|---|
-| **Fast (1–3 years)** | `glassmorphism`, `neumorphism`, `claymorphism`, `alegria`, `aurora`, `holographic`, `blob`, `y2k`, `web3`, `neobrutalism`, `clay-3d`, Liquid Glass imitations (`apple-hig`), "dopamine" `maximalism`, `layout-bento` as the whole page | peaks within a year of first Dribbble/Behance wave, then marks the year it was made |
-| **Medium (3–7 years)** | `flat`, `material` (per version), `shadcn`, `devtool-dark`, `mesh-gradient`, `beauty` clean-girl, `wellness` sage, `food-craft` wonky serif, `isometric`, `flat-vector`, `type-geometric` (Circular-alikes) | becomes "the default" of a category, then reads as the previous generation |
-| **Slow (10+ years)** | `swiss`, `editorial`, `type-mono`, `corporate-modernism`, `wayfinding`, `civic`, `minimalism` (sameness risk), `japanese-ma`, `technical-manual`, `documentary`, `type-oldstyle`, `type-serif-editorial`, `letterpress` (if restrained) | doesn't mark a year; risk is invisibility, not dating |
-| **Cyclical revivals** | `y2k`, `frutiger-aero`, `grunge`, `retro-os`, `web1`, `vaporwave`, `synthwave`, `memphis`, `psychedelic` | come back on a roughly 20–30-year nostalgia cycle, peak for 1–2 years, leave again |
+| `glassmorphism`, `apple-hig` (Liquid Glass), `fluent` acrylic | text contrast depends on what's behind the glass, often fails AA; `backdrop-filter` is janky on low-end Android | glass only on chrome over known backgrounds; solid fallback under `prefers-reduced-transparency` |
+| `neumorphism` | controls under 3:1 against the surface (WCAG 1.4.11); invisible focus and disabled states | don't use it for real UI |
+| `aurora`, `mesh-gradient`, `holographic` | gradient text and text over bright regions fail AA; blurred layers and WebGL cost GPU and battery | text on solid plates; static image fallback; pause off-screen |
+| `psychedelic`, `glitch`, `cyberpunk`, `synthwave` | flashing above 3 per second (2.3.1), vibrating colours, low legibility | no flashing; a reduced-motion static version |
+| `type-kinetic`, `motion-scroll`, `layout-long-scroll`, `motion-cinematic` | moving text is hard to read (2.2.2); parallax triggers vestibular issues (2.3.3); scroll-jacking breaks keyboards | CSS scroll timelines; never hijack scroll; reduced motion = static |
+| `spatial`, `clay-3d`, `generative`, `motion-generative` | motion sickness, content hidden in canvas; 3D/canvas costs CPU, battery and bundle size | static poster frame; render on demand; DOM text, not canvas text |
+| `pixel`, `type-handwritten`, `type-blackletter`, `type-display`, `retro-os` | low legibility at body size, dyslexia; extra font files | display sizes only; body in a text face |
+| `dithered`, `halftone`, `riso`, `grunge`, `zine`, `islamic-geometric` | texture behind text kills contrast; big textures weigh bytes | text on plain fields; small tiled SVG, not big PNGs |
+| `luxury`, `type-didone`, `japandi`, `beauty`, `japanese-ma` | tiny tracked caps, hairlines and beige-on-beige fail AA; heavy photography | ≥ 4.5:1 on all text; labels ≥ 12 px; responsive images |
+| `enterprise-dense`, `broadsheet`, `technical-manual` | small text, small targets | UI text ≥ 13–14 px; targets ≥ 24 px (2.5.8) |
+| `ascii-art`, `terminal` | screen readers read character soup | `aria-hidden` on the art plus real alt text |
+| `civic`, `swiss`, `type-humanist`, `wayfinding`, `motion-none` | lowest risk and cost | the baseline to measure the others against |
 
-Rules:
-- **Product UI sits on slow styles.** Users live there for years; re-skinning a product every trend cycle costs real money and breaks habits.
-- **Marketing may borrow a fast style** for one campaign, as an accent, with an end date.
-- **A slow base + a fast device** is the safest way to look current: when the device dates, you swap the device, not the brand.
-- **Check the date stamp.** Ask: "If I saw this in five years, would I know the year it was made?" If yes, the style is the fast part; make sure it is the replaceable part.
+## 7. Three directions
 
-## 7. Accessibility and performance cost
+SKILL.md § The pick shows the user three cheap directions. This is how to make them really differ, and what to render. The common failure is three shades of one "safe modern" look.
 
-Every style has a price. Note it in the recipe's rationale and plan the mitigation before you commit.
+1. **Three angles.** Derive one lens from each buyer type in `brief.md` (the owner who signs, the operator who uses it daily, the end customer who sees the output), not from a stock list, and drop any lens that leads into the client's dislikes. Give each lens a different style family (an operator lens suits families 1 or 3, a culture lens family 2) and a different distance from the cliché: near (keeps every trust cue, differs on 2 axes), mid, and far (differs on 4+ axes and says which cues it keeps). For dev tools, AI and other tech products, one of the three is `devtool-dark`.
+2. **The same piece of the #1 surface in each.** Take the first entry of `brief.md`'s `surfaces:` line and render its showpiece plus its hardest part, with the same copy at the same real size in all three:
 
-| Styles | Accessibility risk | Performance cost | Mitigation |
-|---|---|---|---|
-| `glassmorphism`, `apple-hig` (Liquid Glass), `fluent` acrylic | text contrast depends on what's behind the glass; often fails AA | `backdrop-filter` is GPU-heavy, janky on low-end Android | glass only on chrome over known backgrounds; solid fallback under `prefers-reduced-transparency` |
-| `neumorphism` | controls under 3:1 against the surface (WCAG 1.4.11); invisible focus and disabled states | low | don't use it for real UI |
-| `aurora`, `mesh-gradient`, `holographic` | gradient text and text over bright regions fail AA | large blurred layers and WebGL cost GPU and battery | text on solid plates; static image fallback; pause off-screen |
-| `psychedelic`, `glitch`, `cyberpunk`, `synthwave` | flashing above 3 per second (2.3.1); vibrating colours; low legibility | animated filters | no flashing; reduced-motion static version |
-| `type-kinetic`, `motion-scroll`, `layout-long-scroll`, `motion-cinematic` | moving text is hard to read (2.2.2); parallax triggers vestibular issues (2.3.3); scroll-jacking breaks keyboard use | main-thread scroll handlers | CSS scroll timelines; never hijack scroll; reduced motion = static |
-| `spatial`, `clay-3d`, `generative`, `motion-generative` | motion sickness; content hidden in canvas | real-time 3D/canvas: CPU/GPU, battery, bundle size | static poster frame; render on demand; DOM text, not canvas text |
-| `pixel`, `type-handwritten`, `type-blackletter`, `type-display`, `retro-os` | low legibility at body size; dyslexia | extra font files | keep these to display sizes; body in a text face |
-| `dithered`, `halftone`, `riso`, `grunge`, `zine`, `islamic-geometric` | texture or pattern behind text kills contrast | noise textures and large SVG patterns weigh bytes | text on plain fields; small tiled SVG, not big PNGs |
-| `luxury`, `type-didone`, `japandi`, `beauty`, `japanese-ma` | tiny tracked caps, hairlines and beige-on-beige fail AA | heavy photography | ≥ 4.5:1 on all text; labels ≥ 12 px; responsive images |
-| `enterprise-dense`, `broadsheet`, `technical-manual` | small text, small targets | low | 13–14 px minimum for UI text; 24 px minimum targets (2.5.8) |
-| `ascii-art`, `terminal` | screen readers read character soup | low | `aria-hidden` on art plus real alt text |
-| `civic`, `swiss`, `type-humanist`, `wayfinding`, `motion-none` | lowest risk | lowest cost | the baseline to measure the others against |
+| #1 surface | Render |
+|---|---|
+| `landing`, `product` | the hero (eyebrow, headline, subline, button) + one real product card (the core object with a number and a state); start from the atlas specimens of your bases (`atlas/<slug>.jpg`, themes in the repo's `examples/src/styles/<slug>.ts`) |
+| `packaging`, `signage` | the bag or box front + the shop sign band |
+| `social` | one post tile + the profile avatar |
+| `print` | the cover + a dense inside spread |
 
-## 8. The test before committing
-
-Never pick from the catalogue alone. Render, then decide.
-
-1. **Pick three candidates.** Three recipes that differ on at least two axes each (not three shades of one idea). Usually: one close to the category (keeps every trust cue), one in the middle, one far from it.
-2. **Render the same small piece of the #1 surface in each.** The surface comes from the `surfaces:` line in `brief.md`; pick the showpiece plus the hardest part of it. For software (`landing`, `product`) that is the hero (eyebrow, headline, subline, button) plus one real product card (the core object with a number and a state), and the atlas specimens of your bases (`atlas/<slug>.jpg`, rendered from the shadcn/ui themes in the repo's `examples/src/styles/<slug>.ts`) are the starting point. For a bakery (`packaging`, `signage`) it is the bag front plus the shop sign band; for `social`, one post tile plus the profile avatar; for `print`, the cover plus a dense inside spread. Same copy, same content, same real size in all three. Save them as `src/html/specimen-{a,b,c}.html` and shoot them into `img/`.
-3. **Put them next to the cliché.** One row: three competitors' versions of the same surface (as links or your own redraws, never their files), then your three candidates.
-4. **Score with the strategy, not with taste.** For each candidate, 0–2 points per line:
+   Save them as `src/html/direction-{a,b,c}.html` and shoot them into `img/`. Next to them, put three competitors' versions of the same surface (links, or your own redraws, never their files).
+3. **Your ★.** Score each direction 0–2 per line below. The highest total gets your ★ (on a tie, the one further from the cliché), and the scores go on the page. The ★ is a recommendation; the user picks.
 
 | Question | Evidence |
 |---|---|
-| Does it stand apart from the cliché in a thumbnail? | the row from step 3, viewed at 25 % |
-| Does it keep every trust cue from step 1? | list the cues, tick them |
+| Does it stand apart from the cliché in a thumbnail? | the row with the competitors, viewed at 25 % |
+| Does it keep every trust cue? | list the cues, tick them |
 | Can you derive it from the vibe sentence? | colour, type, motion and word each trace back to it |
 | Does it carry the brand idea? | the device expresses the one idea |
-| Does it survive the hardest part of the surface, not just the showpiece? | that part at real size: the product card at 390 px, a bag's side panel at print size, a sign read from across the street |
-| Is the accessibility and performance cost acceptable? | section 7 |
+| Does it survive the hardest part, not just the showpiece? | that part at real size: the product card at 390 px, a bag's side panel at print size, a sign read from across the street |
+| Is its cost acceptable? | section 6 |
 | Will it still look right in 3–5 years? | section 6 |
-| Can this team produce it every week? | ornament budget |
-
-5. **Pick the highest score.** On a tie, pick the one that is further from the cliché. Write the scores and the one-line reason on the review page, and mark the choice ★ with the other two kept, labelled, on the page. If the user wants to decide, mark it ❓ with your recommendation.
-
-## Briefing parallel designers
-
-When the user asks for options, `SKILL.md` § Several directions at once runs phase 1 once into a shared `brief.md` and spawns one designer per direction. The common failure is N versions of the same direction: everyone reads the same brief and lands on the same "safe modern" look. Force the spread when you write each designer's lens.
-
-1. **Derive the lenses from the buyer types in `brief.md`.** One lens per buyer type the brief names (the owner who signs, the operator who uses it daily, the end customer who sees the output), not a stock list. Drop any lens that leads into the client's dislikes.
-2. **Give each lens a different base family.** A family, not a style, so each designer still chooses: e.g. family 1 (modernist and print), family 2 (an art movement from the brand's cultural root), family 3 (a digital-native language) or family 6 (a type-led direction). No two designers share a family; pair each family with the lens it serves best (an operator lens suits families 1 or 3; a culture lens, family 2).
-3. **Assign a distance from the cliché.** Near (keeps every trust cue, differs on 2 axes), mid, and far (differs on 4+ axes and names which trust cues it keeps).
-4. **Share the brief's NOT list and cliché map.** Everyone avoids the same clichés, with the client's dislikes first, so their differences are real choices.
-5. **Ask for the recipe as line one** of each designer's Direction section, plus their axis scores. Before they build, compare the recipes: if two share a base family, or sit within one point on era or temperature, re-brief one of them.
-6. **Same test, same content.** Each one renders the same small piece of the #1 surface (section 8), with the same copy, so the index page can show them side by side.
-
-Lens line, one per designer (it goes into the spawn prompt next to the skill path and the folder):
-
-```
-Direction <A|B|C> · lens: <buyer type from brief.md> · base family: <family> · distance from cliché: <near|mid|far>
-Cliché and NOT list: as in brief.md (client's dislikes first) · Trust cues you must keep: <list>
-Deliver first: your style recipe in one line + axis scores (section 2) + why it wins for <that buyer type>.
-Then: the 3-candidate test inside your family (section 8), the ★ pick, and the remaining phases in your own folder.
-You will be compared against the other directions; commit to a clear stance.
-```
+| Can this team produce it every week? | the ornament budget |
 
 Example spreads (the lens is the brief's buyer type; the families differ):
 
@@ -260,3 +213,15 @@ Example spreads (the lens is the brief's buyer type; the families differ):
 | Bank for freelancers | `fintech` calm + `engraving` | `broadsheet` + `type-mono` | `scandinavian` + `mascot` |
 | Skincare | `beauty` + `studio-product` | `technical-manual` (clinical) + `duotone` | `art-nouveau` + `engraving` (botanical) |
 | Kids coding | `kids` + `pixel` | `bauhaus` + `motion-spring` | `de-stijl` + `riso` |
+
+### Several complete brands
+
+When the user asks for several finished brands (SKILL.md § Several directions at once), the same three angles become one designer each. A designer's direction is fixed by its lens, so it renders one direction, not three, and doesn't stop for a pick: the user compares the finished brands. Before they build, compare their recipes; if two share a base family, or sit within one point on era or temperature, re-brief one. The lens line for each spawn prompt, next to the skill path and the folder:
+
+```
+Direction <A|B|C> · lens: <buyer type from brief.md> · base family: <family> · distance from cliché: <near|mid|far>
+Cliché and NOT list: as in brief.md (client's dislikes first) · Trust cues you must keep: <list>
+Your direction is fixed: skip the three-direction pick and build this one through every phase in your own folder.
+Line one of your Direction section: the style recipe + axis scores (section 2) + why it wins for <that buyer type>.
+You will be compared against the other directions; commit to a clear stance.
+```

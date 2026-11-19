@@ -7,14 +7,22 @@
 #   shoot.sh strip  page.html out.png WIDTH HEIGHT ["0 150 300 600 1200"]   one frame per time in ms, side by side;
 #                                                                 MP4=1 also writes out.mp4, each frame held until the next time
 #   shoot.sh pdf    page.html|URL out.pdf                        print to PDF (boards for a client who won't open the app)
-# Env: THEME=light|dark (default light; otherwise shots follow the Mac's dark mode).
+# Env: CHROME=/path/to/chrome when it isn't found. THEME=light|dark (default light; otherwise shots follow the Mac's dark mode).
 #      MOTION=1 keeps animations; by default Chrome reports prefers-reduced-motion, so shots show the designed static
 #      state (and prove the fallback exists). strip always keeps them.
 # Mobile also prints OVERFLOW when the page is wider than WIDTH (horizontal scroll on phones).
 # Local files get a font check first: a web font that didn't load (a dropped Google Fonts request) is retried once,
 # then the shot fails with FONTS MISSING instead of silently saving a Helvetica fallback.
 set -e
-CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+# [Agent] CHROME wins; otherwise the Mac app, then any Chrome or Chromium on the PATH (Linux).
+CH=${CHROME:-}
+if [[ -z $CH ]]; then
+  for c in "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" google-chrome google-chrome-stable chromium chromium-browser; do
+    if [[ -x $c ]]; then CH=$c; break; fi
+    if (( $+commands[$c] )); then CH=$commands[$c]; break; fi
+  done
+fi
+[[ -n $CH ]] || { echo "Chrome not found: set CHROME=/path/to/chrome" >&2; exit 1; }
 mode=$1 page=$2 out=${3:A}
 flags=(--headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files --virtual-time-budget=8000)
 [[ ${THEME:-light} == dark ]] && flags+=(--force-dark-mode --blink-settings=preferredColorScheme=0) || flags+=(--blink-settings=preferredColorScheme=1)
@@ -74,7 +82,7 @@ sheet.save(sys.argv[1])" "$out" "$times" $prof/f*.png
     echo "$out ${#times} frames at $times ms"
     if [[ -n $MP4 ]]; then
       for i in {1..$#times}; do print -r -- "file '$prof/f$(printf %03d $i).png'"; print -r -- "duration $(( (${times[i+1]:-$(( times[i] + 500 ))} - times[i]) / 1000.0 ))"; done > "$prof/list.txt"
-      /opt/homebrew/bin/ffmpeg -y -loglevel error -f concat -safe 0 -i "$prof/list.txt" -vf "fps=30,scale=trunc(iw/2)*2:trunc(ih/2)*2,format=yuv420p" -movflags +faststart "${out:r}.mp4"
+      ffmpeg -y -loglevel error -f concat -safe 0 -i "$prof/list.txt" -vf "fps=30,scale=trunc(iw/2)*2:trunc(ih/2)*2,format=yuv420p" -movflags +faststart "${out:r}.mp4"
       echo "${out:r}.mp4"
     fi;;
   pdf)

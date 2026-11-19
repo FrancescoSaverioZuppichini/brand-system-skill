@@ -4,8 +4,6 @@
 
 ## How to use this file
 
-- **Name the category cliché.** It is usually a block in family 4 (industry) or 3 (UI eras). It goes into the NOT list.
-- **Pick a base and a device.** Choose a base style that stands apart from the cliché but keeps the category's trust cues. Add one signature device from a second family. Write the result as a one-line **style recipe**, e.g. "Swiss editorial base + ASCII resolve device + Renaissance imagery".
 - **Treat token sketches as provisional.** They get you to the 3 candidate hero specimens fast. The system phase then replaces them with the brand's own named pigments and runs `palette.py` for real contrast. Every font is on Google Fonts under the OFL, and every OKLCH value sits inside sRGB.
 - **Use the specimens.** Each style has the same small hero rendered at `atlas/<slug>.jpg` from the repo's shadcn/ui examples (`examples/`, route `/specimen/<slug>`). Its theme is `examples/src/styles/<slug>.json` (a colors-in.json that palette.py passes) and `<slug>.ts` (fonts, radius, borders, shadows, specimen css); copy your candidates' themes as the starting point for phase 3's specimens, and render any layout block in them with `/block/<section>/<variant>?style=<slug>`.
 - **A style is a grammar, not the brand.** The brand idea still decides the logo, the signature components and the copy. A brand that is only a style is a template.
