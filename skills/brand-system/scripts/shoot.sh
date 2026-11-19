@@ -7,7 +7,7 @@
 #   shoot.sh strip  page.html out.png WIDTH HEIGHT ["0 150 300 600 1200"]   one frame per time in ms, side by side;
 #                                                                 MP4=1 also writes out.mp4, each frame held until the next time
 #   shoot.sh pdf    page.html|URL out.pdf                        print to PDF (boards for a client who won't open the app)
-# Env: CHROME=/path/to/chrome when it isn't found. THEME=light|dark (default light; otherwise shots follow the Mac's dark mode).
+# Env: CHROME=/path/to/chrome when it isn't found. TIMEOUT=ms per Chrome call (default 30000). THEME=light|dark (default light; otherwise shots follow the Mac's dark mode).
 #      MOTION=1 keeps animations; by default Chrome reports prefers-reduced-motion, so shots show the designed static
 #      state (and prove the fallback exists). strip always keeps them.
 # Mobile also prints OVERFLOW when the page is wider than WIDTH (horizontal scroll on phones).
@@ -24,13 +24,18 @@ if [[ -z $CH ]]; then
 fi
 [[ -n $CH ]] || { echo "Chrome not found: set CHROME=/path/to/chrome" >&2; exit 1; }
 mode=$1 page=$2 out=${3:A}
-flags=(--headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files --virtual-time-budget=8000)
+# [Agent] --timeout caps a live site that never goes idle (virtual time stops while requests are pending, so the budget
+# alone can hang forever); a 1-byte disk cache keeps the throwaway profile small.
+flags=(--headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files --virtual-time-budget=8000
+  --timeout=${TIMEOUT:-30000} --disk-cache-size=1)
 [[ ${THEME:-light} == dark ]] && flags+=(--force-dark-mode --blink-settings=preferredColorScheme=0) || flags+=(--blink-settings=preferredColorScheme=1)
 [[ -z $MOTION && $mode != strip ]] && flags+=(--force-prefers-reduced-motion)
 prof=$(mktemp -d); flags+=(--user-data-dir=$prof)
 if [[ $page == http* ]]; then url=$page; [[ $mode == (view|pdf) ]] || { echo "full/mobile/strip need a local file" >&2; exit 2; }
 else page=${page:A}; [[ -f $page ]] || { echo "no such file: $page" >&2; exit 2; }; url="file://$page"; d=${page:h}; fi
-trap 'rm -rf "$prof" "$d/.shoot-m.html" "$d/.shoot-w.html"' EXIT
+# [Agent] A killed run used to leave its Chrome and its profile behind; now any exit kills the child and deletes both.
+trap 'pkill -f -- "--user-data-dir=$prof" 2>/dev/null || true; rm -rf "$prof" "$d/.shoot-m.html" "$d/.shoot-w.html"' EXIT
+trap 'exit 130' INT TERM HUP
 # [Agent] Inject a probe script before </body>, or at the end when the file has none (a silent failure otherwise).
 # [Agent] Python, not sed: sed reads "&" in the script as "the matched text", and zsh's ${x/a/b} splits on the "/" of
 # </body>. The probe goes before </body>, or at the end when the file has none.
@@ -48,7 +53,9 @@ if [[ -n $d ]]; then
 fi
 case $mode in
   view)
-    "$CH" $flags --force-device-scale-factor=${6:-1} --window-size=$4,$5 --screenshot="$out" "$url" >/dev/null 2>&1
+    # [Agent] Chrome often exits non-zero on live sites after writing the shot, so judge by the file, not the exit code.
+    "$CH" $flags --force-device-scale-factor=${6:-1} --window-size=$4,$5 --screenshot="$out" "$url" >/dev/null 2>&1 || true
+    [[ -s $out ]] || { echo "no screenshot written: $url" >&2; exit 1; }
     echo "$out $4x$5";;
   full)
     probe 'addEventListener("load",()=>setTimeout(()=>{document.title="H="+document.documentElement.scrollHeight},300))'
@@ -86,7 +93,8 @@ sheet.save(sys.argv[1])" "$out" "$times" $prof/f*.png
       echo "${out:r}.mp4"
     fi;;
   pdf)
-    "$CH" $flags --no-pdf-header-footer --print-to-pdf="$out" "$url" >/dev/null 2>&1
+    "$CH" $flags --no-pdf-header-footer --print-to-pdf="$out" "$url" >/dev/null 2>&1 || true
+    [[ -s $out ]] || { echo "no PDF written: $url" >&2; exit 1; }
     echo "$out";;
   *) echo "usage: shoot.sh view|full|mobile|strip|pdf page.html out.png ..." >&2; exit 2;;
 esac

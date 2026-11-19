@@ -101,7 +101,7 @@ Taste is the user's call, and a wrong direction is the most expensive mistake in
 
 The only place with exact commands; phase files name the tool. Python scripts carry their dependencies (PEP 723) and run with `uv run`. Write your own generators in `$B/src/` the same way (a `# /// script` header, `uv run $B/src/<name>.py`), never pip, and never name one after a stdlib module (`site.py`, `json.py`).
 
-- **Screenshots** (light theme and reduced motion by default; `THEME=dark` and `MOTION=1` override):
+- **Screenshots** (light theme and reduced motion by default; `THEME=dark` and `MOTION=1` override). Each call starts its own Chrome, capped at 30 s (`TIMEOUT=` ms), and cleans up after itself; shoot live sites at most 3 at a time, since a dozen Chromes at once can fill the disk and the machine:
   - `$S/shoot.sh view <file or URL> $B/research/<name>.png 1440 900`: the first screen
   - `$S/shoot.sh full $B/site/index.html $B/site/shots/index-1440.png 1440`: the whole page
   - `$S/shoot.sh mobile $B/site/index.html $B/site/shots/index-390.png 390 2`: a real 390 layout; prints `OVERFLOW` if it scrolls sideways
